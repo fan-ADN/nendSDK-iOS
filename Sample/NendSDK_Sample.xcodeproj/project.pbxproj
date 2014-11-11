@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B33423117990B9E001D0A08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33423017990B9E001D0A08 /* UIKit.framework */; };
+		3B33423317990B9E001D0A08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33423217990B9E001D0A08 /* Foundation.framework */; };
+		3B33423517990B9E001D0A08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33423417990B9E001D0A08 /* CoreGraphics.framework */; };
+		3B33423B17990B9E001D0A08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B33423917990B9E001D0A08 /* InfoPlist.strings */; };
+		3B33423D17990B9E001D0A08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B33423C17990B9E001D0A08 /* main.m */; };
+		3B33424117990B9E001D0A08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B33424017990B9E001D0A08 /* AppDelegate.m */; };
+		3B33424317990B9E001D0A08 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B33424217990B9E001D0A08 /* Default.png */; };
+		3B33424517990B9E001D0A08 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B33424417990B9E001D0A08 /* Default@2x.png */; };
+		3B33424717990B9E001D0A08 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B33424617990B9E001D0A08 /* Default-568h@2x.png */; };
+		3B33425817990BCD001D0A08 /* SelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B33425717990BCD001D0A08 /* SelectTableViewController.m */; };
+		3B33425E17991AC3001D0A08 /* Ad320_050ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B33425D17991AC3001D0A08 /* Ad320_050ViewController.m */; };
+		3B33426617991B79001D0A08 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33426517991B79001D0A08 /* Security.framework */; };
+		3B33426817991B7E001D0A08 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33426717991B7E001D0A08 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3B33426B179926DA001D0A08 /* Ad320_100ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B33426A179926DA001D0A08 /* Ad320_100ViewController.m */; };
+		3B33426E179927F5001D0A08 /* Ad300_100ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B33426D179927F5001D0A08 /* Ad300_100ViewController.m */; };
+		3B33427117992944001D0A08 /* Ad300_250ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B33427017992944001D0A08 /* Ad300_250ViewController.m */; };
+		3B33427417992A70001D0A08 /* Ad728_090ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B33427317992A70001D0A08 /* Ad728_090ViewController.m */; };
+		3B85803817F27B2500701EBF /* AdIconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B85803717F27B2500701EBF /* AdIconViewController.m */; };
+		6940D46A196FC63F00F14DBD /* AdInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6940D468196FC63F00F14DBD /* AdInterstitialViewController.m */; };
+		6940D46B196FC63F00F14DBD /* AdInterstitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6940D469196FC63F00F14DBD /* AdInterstitialViewController.xib */; };
+		694E595F199069D10031B69D /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 694E5958199069D10031B69D /* libNendAd.a */; };
+		694E5960199069D10031B69D /* NADView_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 694E595E199069D10031B69D /* NADView_readme.txt */; };
+		6998B67C193EA651009D70F6 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6998B67B193EA651009D70F6 /* ImageIO.framework */; };
+		B54CAE7E19DE5BA9003C6616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAE7D19DE5BA9003C6616 /* AppDelegate.swift */; };
+		B54CAE8019DE5BA9003C6616 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAE7F19DE5BA9003C6616 /* ViewController.swift */; };
+		B54CAE8319DE5BA9003C6616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54CAE8119DE5BA9003C6616 /* Main.storyboard */; };
+		B54CAE8519DE5BA9003C6616 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54CAE8419DE5BA9003C6616 /* Images.xcassets */; };
+		B54CAE8819DE5BA9003C6616 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54CAE8619DE5BA9003C6616 /* LaunchScreen.xib */; };
+		B54CAE9B19DE5CCC003C6616 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33426717991B7E001D0A08 /* AdSupport.framework */; };
+		B54CAE9C19DE5CD5003C6616 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6998B67B193EA651009D70F6 /* ImageIO.framework */; };
+		B54CAE9D19DE5CDD003C6616 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33426517991B79001D0A08 /* Security.framework */; };
+		B54CAE9E19DE5D18003C6616 /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 694E5958199069D10031B69D /* libNendAd.a */; };
+		B54CAEA419DE5DF9003C6616 /* BannerView300x100Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAE9F19DE5DF9003C6616 /* BannerView300x100Controller.swift */; };
+		B54CAEA519DE5DF9003C6616 /* BannerView300x250Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA019DE5DF9003C6616 /* BannerView300x250Controller.swift */; };
+		B54CAEA619DE5DF9003C6616 /* BannerView320x50Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA119DE5DF9003C6616 /* BannerView320x50Controller.swift */; };
+		B54CAEA719DE5DF9003C6616 /* BannerView320x100Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA219DE5DF9003C6616 /* BannerView320x100Controller.swift */; };
+		B54CAEA819DE5DF9003C6616 /* BannerView728x90Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */; };
+		B54CAEAA19DE5E0B003C6616 /* IconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA919DE5E0B003C6616 /* IconViewController.swift */; };
+		B54CAEAC19DE5E15003C6616 /* InterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */; };
+		B54CAEAE19DE6656003C6616 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54CAE8419DE5BA9003C6616 /* Images.xcassets */; };
+		B54CAEB019DE762B003C6616 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54CAEAF19DE762B003C6616 /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B33422D17990B9E001D0A08 /* NendSDK_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NendSDK_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B33423017990B9E001D0A08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3B33423217990B9E001D0A08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3B33423417990B9E001D0A08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3B33423817990B9E001D0A08 /* NendSDK_Sample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NendSDK_Sample-Info.plist"; sourceTree = "<group>"; };
+		3B33423A17990B9E001D0A08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B33423C17990B9E001D0A08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B33423E17990B9E001D0A08 /* NendSDK_Sample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NendSDK_Sample-Prefix.pch"; sourceTree = "<group>"; };
+		3B33423F17990B9E001D0A08 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3B33424017990B9E001D0A08 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3B33424217990B9E001D0A08 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3B33424417990B9E001D0A08 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3B33424617990B9E001D0A08 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3B33425617990BCD001D0A08 /* SelectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTableViewController.h; sourceTree = "<group>"; };
+		3B33425717990BCD001D0A08 /* SelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTableViewController.m; sourceTree = "<group>"; };
+		3B33425C17991AC3001D0A08 /* Ad320_050ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad320_050ViewController.h; sourceTree = "<group>"; };
+		3B33425D17991AC3001D0A08 /* Ad320_050ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad320_050ViewController.m; sourceTree = "<group>"; };
+		3B33426517991B79001D0A08 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3B33426717991B7E001D0A08 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		3B334269179926DA001D0A08 /* Ad320_100ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad320_100ViewController.h; sourceTree = "<group>"; };
+		3B33426A179926DA001D0A08 /* Ad320_100ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad320_100ViewController.m; sourceTree = "<group>"; };
+		3B33426C179927F5001D0A08 /* Ad300_100ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad300_100ViewController.h; sourceTree = "<group>"; };
+		3B33426D179927F5001D0A08 /* Ad300_100ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad300_100ViewController.m; sourceTree = "<group>"; };
+		3B33426F17992944001D0A08 /* Ad300_250ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad300_250ViewController.h; sourceTree = "<group>"; };
+		3B33427017992944001D0A08 /* Ad300_250ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad300_250ViewController.m; sourceTree = "<group>"; };
+		3B33427217992A70001D0A08 /* Ad728_090ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad728_090ViewController.h; sourceTree = "<group>"; };
+		3B33427317992A70001D0A08 /* Ad728_090ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad728_090ViewController.m; sourceTree = "<group>"; };
+		3B85803617F27B2500701EBF /* AdIconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdIconViewController.h; sourceTree = "<group>"; };
+		3B85803717F27B2500701EBF /* AdIconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdIconViewController.m; sourceTree = "<group>"; };
+		6940D467196FC63F00F14DBD /* AdInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdInterstitialViewController.h; sourceTree = "<group>"; };
+		6940D468196FC63F00F14DBD /* AdInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdInterstitialViewController.m; sourceTree = "<group>"; };
+		6940D469196FC63F00F14DBD /* AdInterstitialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdInterstitialViewController.xib; sourceTree = "<group>"; };
+		694E5958199069D10031B69D /* libNendAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNendAd.a; sourceTree = "<group>"; };
+		694E5959199069D10031B69D /* NADIconArrayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconArrayView.h; sourceTree = "<group>"; };
+		694E595A199069D10031B69D /* NADIconLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconLoader.h; sourceTree = "<group>"; };
+		694E595B199069D10031B69D /* NADIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconView.h; sourceTree = "<group>"; };
+		694E595C199069D10031B69D /* NADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADInterstitial.h; sourceTree = "<group>"; };
+		694E595D199069D10031B69D /* NADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADView.h; sourceTree = "<group>"; };
+		694E595E199069D10031B69D /* NADView_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NADView_readme.txt; sourceTree = "<group>"; };
+		6998B67B193EA651009D70F6 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		B54CAE7919DE5BA9003C6616 /* NendSDK_Swift_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NendSDK_Swift_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B54CAE7C19DE5BA9003C6616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B54CAE7D19DE5BA9003C6616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B54CAE7F19DE5BA9003C6616 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B54CAE8219DE5BA9003C6616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B54CAE8419DE5BA9003C6616 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B54CAE8719DE5BA9003C6616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B54CAE9F19DE5DF9003C6616 /* BannerView300x100Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView300x100Controller.swift; sourceTree = "<group>"; };
+		B54CAEA019DE5DF9003C6616 /* BannerView300x250Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView300x250Controller.swift; sourceTree = "<group>"; };
+		B54CAEA119DE5DF9003C6616 /* BannerView320x50Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView320x50Controller.swift; sourceTree = "<group>"; };
+		B54CAEA219DE5DF9003C6616 /* BannerView320x100Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView320x100Controller.swift; sourceTree = "<group>"; };
+		B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView728x90Controller.swift; sourceTree = "<group>"; };
+		B54CAEA919DE5E0B003C6616 /* IconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconViewController.swift; sourceTree = "<group>"; };
+		B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialViewController.swift; sourceTree = "<group>"; };
+		B54CAEAD19DE5E31003C6616 /* NendAd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NendAd-Bridging-Header.h"; sourceTree = "<group>"; };
+		B54CAEAF19DE762B003C6616 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B33422A17990B9E001D0A08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6998B67C193EA651009D70F6 /* ImageIO.framework in Frameworks */,
+				3B33426817991B7E001D0A08 /* AdSupport.framework in Frameworks */,
+				3B33426617991B79001D0A08 /* Security.framework in Frameworks */,
+				3B33423117990B9E001D0A08 /* UIKit.framework in Frameworks */,
+				3B33423317990B9E001D0A08 /* Foundation.framework in Frameworks */,
+				694E595F199069D10031B69D /* libNendAd.a in Frameworks */,
+				3B33423517990B9E001D0A08 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B54CAE7619DE5BA9003C6616 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B54CAE9E19DE5D18003C6616 /* libNendAd.a in Frameworks */,
+				B54CAE9D19DE5CDD003C6616 /* Security.framework in Frameworks */,
+				B54CAE9C19DE5CD5003C6616 /* ImageIO.framework in Frameworks */,
+				B54CAE9B19DE5CCC003C6616 /* AdSupport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B33422417990B9E001D0A08 = {
+			isa = PBXGroup;
+			children = (
+				694E5957199069D10031B69D /* NendAd */,
+				3B33423617990B9E001D0A08 /* NendSDK_Sample */,
+				B54CAE7A19DE5BA9003C6616 /* NendSDK_Swift_Sample */,
+				3B33422F17990B9E001D0A08 /* Frameworks */,
+				3B33422E17990B9E001D0A08 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B33422E17990B9E001D0A08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B33422D17990B9E001D0A08 /* NendSDK_Sample.app */,
+				B54CAE7919DE5BA9003C6616 /* NendSDK_Swift_Sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B33422F17990B9E001D0A08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6998B67B193EA651009D70F6 /* ImageIO.framework */,
+				3B33426717991B7E001D0A08 /* AdSupport.framework */,
+				3B33426517991B79001D0A08 /* Security.framework */,
+				3B33423017990B9E001D0A08 /* UIKit.framework */,
+				3B33423217990B9E001D0A08 /* Foundation.framework */,
+				3B33423417990B9E001D0A08 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B33423617990B9E001D0A08 /* NendSDK_Sample */ = {
+			isa = PBXGroup;
+			children = (
+				3B33423F17990B9E001D0A08 /* AppDelegate.h */,
+				3B33424017990B9E001D0A08 /* AppDelegate.m */,
+				3B33425617990BCD001D0A08 /* SelectTableViewController.h */,
+				3B33425717990BCD001D0A08 /* SelectTableViewController.m */,
+				3B33425C17991AC3001D0A08 /* Ad320_050ViewController.h */,
+				3B33425D17991AC3001D0A08 /* Ad320_050ViewController.m */,
+				3B334269179926DA001D0A08 /* Ad320_100ViewController.h */,
+				3B33426A179926DA001D0A08 /* Ad320_100ViewController.m */,
+				3B33426C179927F5001D0A08 /* Ad300_100ViewController.h */,
+				3B33426D179927F5001D0A08 /* Ad300_100ViewController.m */,
+				3B33426F17992944001D0A08 /* Ad300_250ViewController.h */,
+				3B33427017992944001D0A08 /* Ad300_250ViewController.m */,
+				3B33427217992A70001D0A08 /* Ad728_090ViewController.h */,
+				3B33427317992A70001D0A08 /* Ad728_090ViewController.m */,
+				3B85803617F27B2500701EBF /* AdIconViewController.h */,
+				3B85803717F27B2500701EBF /* AdIconViewController.m */,
+				6940D467196FC63F00F14DBD /* AdInterstitialViewController.h */,
+				6940D468196FC63F00F14DBD /* AdInterstitialViewController.m */,
+				6940D469196FC63F00F14DBD /* AdInterstitialViewController.xib */,
+				B54CAEAF19DE762B003C6616 /* Images.xcassets */,
+				3B33423717990B9E001D0A08 /* Supporting Files */,
+			);
+			path = NendSDK_Sample;
+			sourceTree = "<group>";
+		};
+		3B33423717990B9E001D0A08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B33423817990B9E001D0A08 /* NendSDK_Sample-Info.plist */,
+				3B33423917990B9E001D0A08 /* InfoPlist.strings */,
+				3B33423C17990B9E001D0A08 /* main.m */,
+				3B33423E17990B9E001D0A08 /* NendSDK_Sample-Prefix.pch */,
+				3B33424217990B9E001D0A08 /* Default.png */,
+				3B33424417990B9E001D0A08 /* Default@2x.png */,
+				3B33424617990B9E001D0A08 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		694E5957199069D10031B69D /* NendAd */ = {
+			isa = PBXGroup;
+			children = (
+				694E5958199069D10031B69D /* libNendAd.a */,
+				694E5959199069D10031B69D /* NADIconArrayView.h */,
+				694E595A199069D10031B69D /* NADIconLoader.h */,
+				694E595B199069D10031B69D /* NADIconView.h */,
+				694E595C199069D10031B69D /* NADInterstitial.h */,
+				694E595D199069D10031B69D /* NADView.h */,
+				694E595E199069D10031B69D /* NADView_readme.txt */,
+			);
+			name = NendAd;
+			path = ../NendAd;
+			sourceTree = "<group>";
+		};
+		B54CAE7A19DE5BA9003C6616 /* NendSDK_Swift_Sample */ = {
+			isa = PBXGroup;
+			children = (
+				B54CAE7D19DE5BA9003C6616 /* AppDelegate.swift */,
+				B54CAE7F19DE5BA9003C6616 /* ViewController.swift */,
+				B54CAEA119DE5DF9003C6616 /* BannerView320x50Controller.swift */,
+				B54CAEA219DE5DF9003C6616 /* BannerView320x100Controller.swift */,
+				B54CAE9F19DE5DF9003C6616 /* BannerView300x100Controller.swift */,
+				B54CAEA019DE5DF9003C6616 /* BannerView300x250Controller.swift */,
+				B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */,
+				B54CAEA919DE5E0B003C6616 /* IconViewController.swift */,
+				B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */,
+				B54CAEAD19DE5E31003C6616 /* NendAd-Bridging-Header.h */,
+				B54CAE8119DE5BA9003C6616 /* Main.storyboard */,
+				B54CAE8419DE5BA9003C6616 /* Images.xcassets */,
+				B54CAE8619DE5BA9003C6616 /* LaunchScreen.xib */,
+				B54CAE7B19DE5BA9003C6616 /* Supporting Files */,
+			);
+			path = NendSDK_Swift_Sample;
+			sourceTree = "<group>";
+		};
+		B54CAE7B19DE5BA9003C6616 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B54CAE7C19DE5BA9003C6616 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B33422C17990B9E001D0A08 /* NendSDK_Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B33425317990B9E001D0A08 /* Build configuration list for PBXNativeTarget "NendSDK_Sample" */;
+			buildPhases = (
+				3B33422917990B9E001D0A08 /* Sources */,
+				3B33422A17990B9E001D0A08 /* Frameworks */,
+				3B33422B17990B9E001D0A08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NendSDK_Sample;
+			productName = NendSDK_Sample;
+			productReference = 3B33422D17990B9E001D0A08 /* NendSDK_Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B54CAE7819DE5BA9003C6616 /* NendSDK_Swift_Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B54CAE9919DE5BA9003C6616 /* Build configuration list for PBXNativeTarget "NendSDK_Swift_Sample" */;
+			buildPhases = (
+				B54CAE7519DE5BA9003C6616 /* Sources */,
+				B54CAE7619DE5BA9003C6616 /* Frameworks */,
+				B54CAE7719DE5BA9003C6616 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NendSDK_Swift_Sample;
+			productName = NendSDK_Swift_Sample;
+			productReference = B54CAE7919DE5BA9003C6616 /* NendSDK_Swift_Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B33422517990B9E001D0A08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "F@N Communications";
+				TargetAttributes = {
+					3B33422C17990B9E001D0A08 = {
+						DevelopmentTeam = EH6M2BH4ZR;
+					};
+					B54CAE7819DE5BA9003C6616 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 3B33422817990B9E001D0A08 /* Build configuration list for PBXProject "NendSDK_Sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B33422417990B9E001D0A08;
+			productRefGroup = 3B33422E17990B9E001D0A08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B33422C17990B9E001D0A08 /* NendSDK_Sample */,
+				B54CAE7819DE5BA9003C6616 /* NendSDK_Swift_Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B33422B17990B9E001D0A08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B33423B17990B9E001D0A08 /* InfoPlist.strings in Resources */,
+				3B33424317990B9E001D0A08 /* Default.png in Resources */,
+				6940D46B196FC63F00F14DBD /* AdInterstitialViewController.xib in Resources */,
+				3B33424517990B9E001D0A08 /* Default@2x.png in Resources */,
+				B54CAEAE19DE6656003C6616 /* Images.xcassets in Resources */,
+				3B33424717990B9E001D0A08 /* Default-568h@2x.png in Resources */,
+				694E5960199069D10031B69D /* NADView_readme.txt in Resources */,
+				B54CAEB019DE762B003C6616 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B54CAE7719DE5BA9003C6616 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B54CAE8319DE5BA9003C6616 /* Main.storyboard in Resources */,
+				B54CAE8819DE5BA9003C6616 /* LaunchScreen.xib in Resources */,
+				B54CAE8519DE5BA9003C6616 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B33422917990B9E001D0A08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B33423D17990B9E001D0A08 /* main.m in Sources */,
+				3B33424117990B9E001D0A08 /* AppDelegate.m in Sources */,
+				3B33425817990BCD001D0A08 /* SelectTableViewController.m in Sources */,
+				3B33425E17991AC3001D0A08 /* Ad320_050ViewController.m in Sources */,
+				3B33426B179926DA001D0A08 /* Ad320_100ViewController.m in Sources */,
+				3B85803817F27B2500701EBF /* AdIconViewController.m in Sources */,
+				3B33426E179927F5001D0A08 /* Ad300_100ViewController.m in Sources */,
+				6940D46A196FC63F00F14DBD /* AdInterstitialViewController.m in Sources */,
+				3B33427117992944001D0A08 /* Ad300_250ViewController.m in Sources */,
+				3B33427417992A70001D0A08 /* Ad728_090ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B54CAE7519DE5BA9003C6616 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B54CAE8019DE5BA9003C6616 /* ViewController.swift in Sources */,
+				B54CAEA719DE5DF9003C6616 /* BannerView320x100Controller.swift in Sources */,
+				B54CAEAC19DE5E15003C6616 /* InterstitialViewController.swift in Sources */,
+				B54CAEA519DE5DF9003C6616 /* BannerView300x250Controller.swift in Sources */,
+				B54CAEAA19DE5E0B003C6616 /* IconViewController.swift in Sources */,
+				B54CAEA619DE5DF9003C6616 /* BannerView320x50Controller.swift in Sources */,
+				B54CAEA819DE5DF9003C6616 /* BannerView728x90Controller.swift in Sources */,
+				B54CAE7E19DE5BA9003C6616 /* AppDelegate.swift in Sources */,
+				B54CAEA419DE5DF9003C6616 /* BannerView300x100Controller.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3B33423917990B9E001D0A08 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B33423A17990B9E001D0A08 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B54CAE8119DE5BA9003C6616 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B54CAE8219DE5BA9003C6616 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B54CAE8619DE5BA9003C6616 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B54CAE8719DE5BA9003C6616 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B33425117990B9E001D0A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B33425217990B9E001D0A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B33425417990B9E001D0A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NendSDK_Sample/NendSDK_Sample-Prefix.pch";
+				INFOPLIST_FILE = "NendSDK_Sample/NendSDK_Sample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../NendAd,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3B33425517990B9E001D0A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NendSDK_Sample/NendSDK_Sample-Prefix.pch";
+				INFOPLIST_FILE = "NendSDK_Sample/NendSDK_Sample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../NendAd,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B54CAE9519DE5BA9003C6616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_Swift;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = NendSDK_Swift_Sample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					../NendAd,
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/NendSDK_Swift_Sample/NendAd-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B54CAE9619DE5BA9003C6616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_Swift;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = NendSDK_Swift_Sample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					../NendAd,
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/NendSDK_Swift_Sample/NendAd-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B33422817990B9E001D0A08 /* Build configuration list for PBXProject "NendSDK_Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B33425117990B9E001D0A08 /* Debug */,
+				3B33425217990B9E001D0A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B33425317990B9E001D0A08 /* Build configuration list for PBXNativeTarget "NendSDK_Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B33425417990B9E001D0A08 /* Debug */,
+				3B33425517990B9E001D0A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B54CAE9919DE5BA9003C6616 /* Build configuration list for PBXNativeTarget "NendSDK_Swift_Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B54CAE9519DE5BA9003C6616 /* Debug */,
+				B54CAE9619DE5BA9003C6616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B33422517990B9E001D0A08 /* Project object */;
+}

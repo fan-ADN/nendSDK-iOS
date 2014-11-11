@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Eb9-db-xk8">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NendSDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1eK-ls-kBH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="aGc-IT-qaX"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="AwK-ub-Lrc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1eK-ls-kBH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9g2-da-vFs"/>
+                            <constraint firstItem="1eK-ls-kBH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="P5X-Oq-DIn"/>
+                            <constraint firstAttribute="trailing" secondItem="1eK-ls-kBH" secondAttribute="trailing" id="bT4-zS-zhE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1eK-ls-kBH" secondAttribute="bottom" id="uFz-TT-pw6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pva-PX-AsL"/>
+                    <connections>
+                        <outlet property="tableView" destination="1eK-ls-kBH" id="db2-PM-BGq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1151" y="370"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BaO-N3-H7b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eb9-db-xk8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gTY-O4-5wc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ESD-N0-3ly"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ACK-Oh-AZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413" y="370"/>
+        </scene>
+        <!--Banner View32 0x50 Controller-->
+        <scene sceneID="ori-WB-sng">
+            <objects>
+                <viewController storyboardIdentifier="BannerView320x50Controller" id="iEI-q1-Nj2" customClass="BannerView320x50Controller" customModule="NendSDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kRi-LQ-OkA"/>
+                        <viewControllerLayoutGuide type="bottom" id="uHA-dm-Yg2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F2o-QI-JhL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XvV-XB-oXW" customClass="NADView">
+                                <rect key="frame" x="140" y="66" width="320" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8xN-Zg-Ihv"/>
+                                    <constraint firstAttribute="width" constant="320" id="Kgb-MY-R2e"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="a6eca9dd074372c898dd1df549301f277c53f2b9"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="3172"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="XvV-XB-oXW" secondAttribute="centerX" id="Lcr-Qh-mrB"/>
+                            <constraint firstItem="XvV-XB-oXW" firstAttribute="top" secondItem="kRi-LQ-OkA" secondAttribute="bottom" constant="46" id="svJ-bB-5bc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerViewFromNib" destination="XvV-XB-oXW" id="AP8-kk-10Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YEq-ql-tf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327" y="1092"/>
+        </scene>
+        <!--Banner View32 0x100 Controller-->
+        <scene sceneID="sI4-df-QbD">
+            <objects>
+                <viewController storyboardIdentifier="BannerView320x100Controller" id="NoC-a7-x3m" customClass="BannerView320x100Controller" customModule="NendSDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1i1-50-GQ2"/>
+                        <viewControllerLayoutGuide type="bottom" id="TCz-Vd-jLy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vlH-EM-Ut1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNH-4Z-Aje" customClass="NADView">
+                                <rect key="frame" x="140" y="72" width="320" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9g0-Ea-5BC"/>
+                                    <constraint firstAttribute="width" constant="320" id="uK6-rG-W5C"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="eb5ca11fa8e46315c2df1b8e283149049e8d235e"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70996"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dNH-4Z-Aje" firstAttribute="top" secondItem="1i1-50-GQ2" secondAttribute="bottom" constant="52" id="R1F-Wg-I4H"/>
+                            <constraint firstAttribute="centerX" secondItem="dNH-4Z-Aje" secondAttribute="centerX" id="zL8-mn-HBL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerViewFromNib" destination="dNH-4Z-Aje" id="vnw-x1-mWq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FD6-dg-4Q0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965" y="1092"/>
+        </scene>
+        <!--Banner View30 0x100 Controller-->
+        <scene sceneID="tZG-pf-Yft">
+            <objects>
+                <viewController storyboardIdentifier="BannerView300x100Controller" id="XRd-2o-ta8" customClass="BannerView300x100Controller" customModule="NendSDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cZh-Ud-ySM"/>
+                        <viewControllerLayoutGuide type="bottom" id="RRI-1u-3Q2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eIl-Ws-uPZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-V8-cZh" customClass="NADView">
+                                <rect key="frame" x="150" y="69" width="300" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="WNd-qc-LTG"/>
+                                    <constraint firstAttribute="width" constant="300" id="alh-6w-vHD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="25eb32adddc4f7311c3ec7b28eac3b72bbca5656"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70998"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zNg-V8-cZh" firstAttribute="top" secondItem="cZh-Ud-ySM" secondAttribute="bottom" constant="49" id="tp3-9c-W2U"/>
+                            <constraint firstAttribute="centerX" secondItem="zNg-V8-cZh" secondAttribute="centerX" id="zi4-zI-5Id"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerViewFromNib" destination="zNg-V8-cZh" id="5tg-B7-LtJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1l-Ob-rYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1641" y="1096"/>
+        </scene>
+        <!--Banner View30 0x250 Controller-->
+        <scene sceneID="oyw-VO-RHr">
+            <objects>
+                <viewController storyboardIdentifier="BannerView300x250Controller" id="aix-Tt-vRa" customClass="BannerView300x250Controller" customModule="NendSDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qTx-PM-LFi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zjd-kL-c3f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bvd-3K-jqr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4D-65-gRL" customClass="NADView">
+                                <rect key="frame" x="150" y="175" width="300" height="250"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="FMs-h3-bie"/>
+                                    <constraint firstAttribute="width" constant="300" id="LLU-eD-FQ4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="88d88a288fdea5c01d17ea8e494168e834860fd6"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70356"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="N4D-65-gRL" secondAttribute="centerX" id="Gf3-Bs-Bd2"/>
+                            <constraint firstAttribute="centerY" secondItem="N4D-65-gRL" secondAttribute="centerY" id="vPE-O8-Dkg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerViewFromNib" destination="N4D-65-gRL" id="neG-IB-yI7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tKP-C2-fP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2317" y="1096"/>
+        </scene>
+        <!--Banner View72 8x90 Controller-->
+        <scene sceneID="PCV-ok-iTo">
+            <objects>
+                <viewController storyboardIdentifier="BannerView728x90Controller" id="P7I-yc-QjD" customClass="BannerView728x90Controller" customModule="NendSDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eFT-XL-UFl"/>
+                        <viewControllerLayoutGuide type="bottom" id="XGR-y2-J9P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Ji-Gq-kNO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZh-Sy-8RU" customClass="NADView">
+                                <rect key="frame" x="-64" y="71" width="728" height="90"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="728" id="3Yq-fS-tXH"/>
+                                    <constraint firstAttribute="height" constant="90" id="tio-0M-hU5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="2e0b9e0b3f40d952e6000f1a8c4d455fffc4ca3a"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70999"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="jZh-Sy-8RU" secondAttribute="centerX" id="eXS-cP-XnL"/>
+                            <constraint firstItem="jZh-Sy-8RU" firstAttribute="top" secondItem="eFT-XL-UFl" secondAttribute="bottom" constant="51" id="haA-ef-q7N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerViewFromNib" destination="jZh-Sy-8RU" id="RPC-J8-yfe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvC-vP-k0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3001" y="1085"/>
+        </scene>
+        <!--Icon View Controller-->
+        <scene sceneID="C9N-KL-zq7">
+            <objects>
+                <viewController storyboardIdentifier="IconViewController" id="jda-cZ-t4V" customClass="IconViewController" customModule="NendSDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m4d-wo-jtg"/>
+                        <viewControllerLayoutGuide type="bottom" id="UZK-4B-YbA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j92-Gh-dR0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SnV-jz-pjH" customClass="NADIconArrayView">
+                                <rect key="frame" x="140" y="71" width="320" height="75"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="3tV-gN-SMy"/>
+                                    <constraint firstAttribute="height" constant="75" id="Rpw-Cc-m2b"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="2349edefe7c2742dfb9f434de23bc3c7ca55ad22"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="101281"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="icons" value="4"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SnV-jz-pjH" firstAttribute="top" secondItem="m4d-wo-jtg" secondAttribute="bottom" constant="51" id="7pm-zL-GxX"/>
+                            <constraint firstAttribute="centerX" secondItem="SnV-jz-pjH" secondAttribute="centerX" id="ITa-sJ-6a0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="iconArrayViewFromNib" destination="SnV-jz-pjH" id="MMy-ko-CHN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D7s-Cn-YFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327" y="1904"/>
+        </scene>
+        <!--Interstitial View Controller-->
+        <scene sceneID="o7J-mU-3OS">
+            <objects>
+                <viewController storyboardIdentifier="InterstitialViewController" id="wcr-nm-TrB" customClass="InterstitialViewController" customModule="NendSDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Idy-kK-TAV"/>
+                        <viewControllerLayoutGuide type="bottom" id="1KA-md-jNP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aYh-F2-wxS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9C-fl-6yf">
+                                <rect key="frame" x="245" y="285" width="110" height="30"/>
+                                <state key="normal" title="Show Interstitial">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="x9C-fl-6yf" secondAttribute="centerY" id="bch-qG-sUm"/>
+                            <constraint firstAttribute="centerX" secondItem="x9C-fl-6yf" secondAttribute="centerX" id="e09-2i-24S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="showButton" destination="x9C-fl-6yf" id="nqc-76-eYM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j27-wC-Zp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955" y="1904"/>
+        </scene>
+    </scenes>
+</document>

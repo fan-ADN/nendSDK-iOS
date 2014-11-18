@@ -41,7 +41,7 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
         // 読み込み開始(必須)
         nadViewManually.load()
         // 例) 問い合わせエラー時には60分間隔で再問い合わせする
-//        let dict0:Dictionary<String, String> = ["3600" : "retry"];
+//        let dict0:Dictionary<String, String> = ["3600" : "retry"]
 //        nadViewManually.load(["3600":"retry"])
         
         // 通知有無にかかわらずViewに乗せる場合

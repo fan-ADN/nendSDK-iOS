@@ -41,11 +41,11 @@
     [NADInterstitial sharedInstance].delegate = self;
 
 #ifdef ONLY_PORTRAIT
-    // iOS5用に広告の向きを縦向きのみに限定します
+    // 広告の向きを縦向きのみに限定します
     NSArray* array = @[[NSNumber numberWithInteger:UIInterfaceOrientationPortrait], [NSNumber numberWithInteger:UIInterfaceOrientationPortraitUpsideDown]];
     [NADInterstitial sharedInstance].supportedOrientations = array;
 #elif ONLY_LANDSCAPE
-    // iOS5用に広告の向きを横向きのみに限定します
+    // 広告の向きを横向きのみに限定します
     NSArray* array = @[[NSNumber numberWithInteger:UIInterfaceOrientationLandscapeLeft], [NSNumber numberWithInteger:UIInterfaceOrientationLandscapeRight]];
     [NADInterstitial sharedInstance].supportedOrientations = array;
 #endif
@@ -57,10 +57,10 @@
 - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
 #ifdef ONLY_PORTRAIT
-    // iOS5用に端末回転を縦向きのみに限定します
+    // 端末回転を縦向きのみに限定します
     return UIInterfaceOrientationIsPortrait(toInterfaceOrientation);
 #elif ONLY_LANDSCAPE
-    // iOS5用に端末回転を横向きのみに限定します
+    // 端末回転を横向きのみに限定します
     return UIInterfaceOrientationIsLandscape(toInterfaceOrientation);
 #else
     return YES;

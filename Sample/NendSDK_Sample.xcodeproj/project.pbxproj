@@ -24,6 +24,7 @@
 		3B33426E179927F5001D0A08 /* Ad300_100ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B33426D179927F5001D0A08 /* Ad300_100ViewController.m */; };
 		3B33427117992944001D0A08 /* Ad300_250ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B33427017992944001D0A08 /* Ad300_250ViewController.m */; };
 		3B33427417992A70001D0A08 /* Ad728_090ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B33427317992A70001D0A08 /* Ad728_090ViewController.m */; };
+		3B5806E31A0B2B33000D47CE /* UINavigationController+Rotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5806E21A0B2B33000D47CE /* UINavigationController+Rotation.m */; };
 		3B85803817F27B2500701EBF /* AdIconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B85803717F27B2500701EBF /* AdIconViewController.m */; };
 		6940D46A196FC63F00F14DBD /* AdInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6940D468196FC63F00F14DBD /* AdInterstitialViewController.m */; };
 		6940D46B196FC63F00F14DBD /* AdInterstitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6940D469196FC63F00F14DBD /* AdInterstitialViewController.xib */; };
@@ -78,6 +79,8 @@
 		3B33427017992944001D0A08 /* Ad300_250ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad300_250ViewController.m; sourceTree = "<group>"; };
 		3B33427217992A70001D0A08 /* Ad728_090ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad728_090ViewController.h; sourceTree = "<group>"; };
 		3B33427317992A70001D0A08 /* Ad728_090ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad728_090ViewController.m; sourceTree = "<group>"; };
+		3B5806E11A0B2B33000D47CE /* UINavigationController+Rotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Rotation.h"; sourceTree = "<group>"; };
+		3B5806E21A0B2B33000D47CE /* UINavigationController+Rotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Rotation.m"; sourceTree = "<group>"; };
 		3B85803617F27B2500701EBF /* AdIconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdIconViewController.h; sourceTree = "<group>"; };
 		3B85803717F27B2500701EBF /* AdIconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdIconViewController.m; sourceTree = "<group>"; };
 		6940D467196FC63F00F14DBD /* AdInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdInterstitialViewController.h; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 				6940D467196FC63F00F14DBD /* AdInterstitialViewController.h */,
 				6940D468196FC63F00F14DBD /* AdInterstitialViewController.m */,
 				6940D469196FC63F00F14DBD /* AdInterstitialViewController.xib */,
+				3B5806E11A0B2B33000D47CE /* UINavigationController+Rotation.h */,
+				3B5806E21A0B2B33000D47CE /* UINavigationController+Rotation.m */,
 				B54CAEAF19DE762B003C6616 /* Images.xcassets */,
 				3B33423717990B9E001D0A08 /* Supporting Files */,
 			);
@@ -365,6 +370,7 @@
 			files = (
 				3B33423D17990B9E001D0A08 /* main.m in Sources */,
 				3B33424117990B9E001D0A08 /* AppDelegate.m in Sources */,
+				3B5806E31A0B2B33000D47CE /* UINavigationController+Rotation.m in Sources */,
 				3B33425817990BCD001D0A08 /* SelectTableViewController.m in Sources */,
 				3B33425E17991AC3001D0A08 /* Ad320_050ViewController.m in Sources */,
 				3B33426B179926DA001D0A08 /* Ad320_100ViewController.m in Sources */,
@@ -618,6 +624,7 @@
 				B54CAE9619DE5BA9003C6616 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

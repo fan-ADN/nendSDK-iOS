@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath:NSIndexPath!) -> UITableViewCell! {
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
-        cell.textLabel.text = titles[indexPath.row]
+        cell.textLabel!.text = titles[indexPath.row]
         return cell
     }
     

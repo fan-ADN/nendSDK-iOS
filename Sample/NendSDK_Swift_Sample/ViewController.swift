@@ -64,37 +64,37 @@ class ViewController: UIViewController {
         
         switch indexPath.row{
         case 0:
-            let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("BannerView320x50Controller") as BannerView320x50Controller
+            let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("BannerView320x50Controller") as! BannerView320x50Controller
             viewController.title = "320x50"
             self.navigationController!.pushViewController(viewController, animated: true)
             
         case 1:
-            let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("BannerView320x100Controller") as BannerView320x100Controller
+            let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("BannerView320x100Controller") as! BannerView320x100Controller
             viewController.title = "320x100"
             self.navigationController!.pushViewController(viewController, animated: true)
             
         case 2:
-            let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("BannerView300x100Controller") as BannerView300x100Controller
+            let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("BannerView300x100Controller") as! BannerView300x100Controller
             viewController.title = "300x100"
             self.navigationController!.pushViewController(viewController, animated: true)
             
         case 3:
-            let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("BannerView300x250Controller") as BannerView300x250Controller
+            let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("BannerView300x250Controller") as! BannerView300x250Controller
             viewController.title = "300x250"
             self.navigationController!.pushViewController(viewController, animated: true)
             
         case 4:
-            let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("BannerView728x90Controller") as BannerView728x90Controller
+            let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("BannerView728x90Controller") as! BannerView728x90Controller
             viewController.title = "728x90"
             self.navigationController!.pushViewController(viewController, animated: true)
             
         case 5:
-            let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("IconViewController") as IconViewController
+            let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("IconViewController") as! IconViewController
             viewController.title = "Icon"
             self.navigationController!.pushViewController(viewController, animated: true)
             
         case 6:
-            let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("InterstitialViewController") as InterstitialViewController
+            let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("InterstitialViewController") as! InterstitialViewController
             viewController.title = "Interstitial"
             self.navigationController!.pushViewController(viewController, animated: true)
             

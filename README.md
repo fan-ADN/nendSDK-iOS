@@ -7,7 +7,12 @@ iOS版nendSDKのサンプルプロジェクトになります。
 Objective-CとSwiftでの基本的な実装方法と動作確認が行えます。
 
 ## Requirement
-* Xcode 5 以上
-* iOS 5 以上（SwiftはiOS 7以上）
-* SwiftのサンプルプロジェクトはSwift1.2用ため、最新版のXcodeが必要になります。
+* Objective-C  
+Xcode 5 , iOS 5以上
+
+* Swift  
+Xcode 6.3 , iOS 7以上  
+Swift 1.2
+
+## Usage
 * [nendの管理画面](https://www.nend.net/admin/login)からiOS版SDKをダウンロードし、Sampleフォルダと同じディレクトリにNendAdフォルダごと追加してください。

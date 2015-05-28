@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Eb9-db-xk8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Eb9-db-xk8">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -83,6 +83,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="a6eca9dd074372c898dd1df549301f277c53f2b9"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="3172"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -122,6 +123,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="eb5ca11fa8e46315c2df1b8e283149049e8d235e"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70996"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -161,6 +163,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="25eb32adddc4f7311c3ec7b28eac3b72bbca5656"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70998"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -200,6 +203,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="88d88a288fdea5c01d17ea8e494168e834860fd6"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70356"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>

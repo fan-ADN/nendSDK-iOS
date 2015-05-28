@@ -8,7 +8,7 @@ Objective-CとSwiftでの基本的な実装方法と動作確認が行えます�
 
 ## Requirement
 * **Objective-C**  
-Xcode 5 , iOS 5以上
+Xcode 6 , iOS 6以上
 
 * **Swift**  
 Xcode 6.3 , iOS 7以上  

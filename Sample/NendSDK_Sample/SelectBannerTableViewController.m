@@ -1,22 +1,16 @@
 //
-//  SelectTableViewController.m
+//  SelectBannerTableViewController.m
 //  NendSDK_Sample
 //
-//  Created by ADN on 2013/07/19.
-//  Copyright (c) 2013年 F@N Communications. All rights reserved.
+//  Created by ADN on 2015/05/27.
+//  Copyright (c) 2015年 F@N Communications. All rights reserved.
 //
 
-#import "SelectTableViewController.h"
-
 #import "SelectBannerTableViewController.h"
-#import "AdIconViewController.h"
-#import "AdInterstitialViewController.h"
 
-@interface SelectTableViewController ()
+#import "SelectSizeTableViewController.h"
 
-@end
-
-@implementation SelectTableViewController
+@implementation SelectBannerTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,16 +24,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0) {
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-    }    
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    }
 }
 
 #pragma mark - Table view data source
@@ -59,7 +47,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-
+    
     UITableViewCell *cell;
     
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0) {
@@ -79,17 +67,16 @@
     
     switch (row) {
         case 0:
-            [cell.textLabel setText:@"Banner"];
+            [cell.textLabel setText:@"default"];
             break;
             
         case 1:
-            [cell.textLabel setText:@"Icon"];
+            [cell.textLabel setText:@"adjust ad size"];
             break;
-
+            
         case 2:
-            [cell.textLabel setText:@"Interstitial"];
+            [cell.textLabel setText:@"interface builder"];
             break;
-
         default:
             break;
     }
@@ -103,20 +90,23 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = indexPath.row;
-    UIViewController *viewController;
+    SelectSizeTableViewController *viewController = [[SelectSizeTableViewController alloc] init];
     switch (row) {
         case 0:
-            viewController = [[SelectBannerTableViewController alloc] init];
+            viewController.isAdjustAdSize = NO;
+            viewController.isIB = NO;
             break;
-
+            
         case 1:
-            viewController = [[AdIconViewController alloc] init];
+            viewController.isAdjustAdSize = YES;
+            viewController.isIB = NO;
             break;
-
+            
         case 2:
-            viewController = [[AdInterstitialViewController alloc] init];
+            viewController.isAdjustAdSize = NO;
+            viewController.isIB = YES;
             break;
-
+            
         default:
             break;
     }
@@ -126,5 +116,6 @@
     
     [self.navigationController pushViewController:viewController animated:YES];
 }
+
 
 @end

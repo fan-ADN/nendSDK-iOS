@@ -1,20 +1,18 @@
 //
-//  Ad300_100ViewController.m
+//  Ad300_250ViewController.m
 //  NendSDK_Sample
 //
 //  Created by ADN on 2013/07/19.
 //  Copyright (c) 2013年 F@N Communications. All rights reserved.
 //
 
-#import "Ad300_100ViewController.h"
+#import "Ad300_250ViewController.h"
 
-#define NAD_VIEW_SIZE CGSizeMake(300, 100)
-
-@interface Ad300_100ViewController ()
+@interface Ad300_250ViewController ()
 
 @end
 
-@implementation Ad300_100ViewController
+@implementation Ad300_250ViewController
 
 @synthesize nadView;
 
@@ -37,8 +35,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.title = @"300×100";
-    
+    self.title = @"300×250";
+
     // Frameを指定してNADViewを生成
     nadView = [[NADView alloc] init];
     [self.nadView setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin];
@@ -47,7 +45,7 @@
     [nadView setIsOutputLog:YES];
     
     // 広告枠のapikey/spotidを設定します(必須)
-    [nadView setNendID:@"25eb32adddc4f7311c3ec7b28eac3b72bbca5656" spotID:@"70998"];
+    [nadView setNendID:@"88d88a288fdea5c01d17ea8e494168e834860fd6" spotID:@"70356"];
     
     // delegateを受けるオブジェクトを指定(必須)
     [self.nadView setDelegate:self];
@@ -58,8 +56,6 @@
     // 読み込み開始(必須)
     [self.nadView load];
     
-    // 通知有無にかかわらずViewに乗せる場合
-//    [self.view addSubview:self.nadView];
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -81,11 +77,6 @@
     // 注意：他アプリ起動から、自アプリが復帰した際に広告のリフレッシュを再開するには
     // AppDelegate applicationDidEnterBackground などを利用してください
     
-    // 広告位置設定例
-    // １．画面上部に広告を表示させる場合
-    //[self.nadView setFrame:CGRectMake((self.view.frame.size.width - NAD_VIEW_SIZE.width) /2, 0, NAD_VIEW_SIZE.width, NAD_VIEW_SIZE.height)];
-    // ２．画面下部に広告を表示させる場合
-    [self.nadView setFrame:CGRectMake((self.view.frame.size.width - NAD_VIEW_SIZE.width) /2, self.view.frame.size.height - NAD_VIEW_SIZE.height, NAD_VIEW_SIZE.width, NAD_VIEW_SIZE.height)];
 }
 
 // この画面が隠れたら、広告のリフレッシュを中断します
@@ -107,8 +98,14 @@
 #pragma mark - NADViewDelegate
 // 広告の受信に成功し表示できた場合に１度通知されます。必須メソッドです。
 -(void)nadViewDidFinishLoad:(NADView *)adView {
-    
-    // 広告の受信と表示の成功が通知されてからViewを乗せる場合はnadViewDidFinishLoadを利用します。
+    // 広告のロードが終了してからViewを乗せる場合はnadViewDidFinishLoadを利用します。
+
+    // 広告位置設定例
+    // １．画面上部に広告を表示させる場合
+    //[self.nadView setFrame:CGRectMake((self.view.frame.size.width - self.nadView.frame.size) /2, 0, self.nadView.frame.size, self.nadView.frame.size)];
+    // ２．画面下部に広告を表示させる場合
+    [self.nadView setFrame:CGRectMake((self.view.frame.size.width - self.nadView.frame.size.width) /2, self.view.frame.size.height - self.nadView.frame.size.height, self.nadView.frame.size.width, self.nadView.frame.size.height)];
+
     [self.view addSubview:self.nadView];
     
     NSLog(@"NADViewDelegate nadViewDidFinishLoad");

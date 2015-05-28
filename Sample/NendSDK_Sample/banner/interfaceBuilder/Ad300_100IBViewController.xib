@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7702"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Ad300_100IBViewController">
+            <connections>
+                <outlet property="bottomNadView" destination="kHf-hW-9qC" id="9fm-Ba-VeW"/>
+                <outlet property="upNadView" destination="xRq-eW-7UW" id="o1i-l5-K3C"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRq-eW-7UW" userLabel="NADView" customClass="NADView">
+                    <rect key="frame" x="150" y="0.0" width="300" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="cOs-tI-tMF"/>
+                        <constraint firstAttribute="width" constant="300" id="nW5-sa-M9w"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="25eb32adddc4f7311c3ec7b28eac3b72bbca5656"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70998"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHf-hW-9qC" userLabel="NADView" customClass="NADView">
+                    <rect key="frame" x="150" y="500" width="300" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="5v7-cy-EOD"/>
+                        <constraint firstAttribute="height" constant="100" id="6g5-to-3s9"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="25eb32adddc4f7311c3ec7b28eac3b72bbca5656"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70998"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="kHf-hW-9qC" secondAttribute="bottom" id="Dbs-Ur-obV"/>
+                <constraint firstAttribute="centerX" secondItem="kHf-hW-9qC" secondAttribute="centerX" id="Jfn-MI-lFs"/>
+                <constraint firstItem="xRq-eW-7UW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aue-WD-vj6"/>
+                <constraint firstAttribute="centerX" secondItem="xRq-eW-7UW" secondAttribute="centerX" id="z3r-4c-jCh"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

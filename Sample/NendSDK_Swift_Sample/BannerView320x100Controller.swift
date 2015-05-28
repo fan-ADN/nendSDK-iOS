@@ -26,7 +26,10 @@ class BannerView320x100Controller: UIViewController, NADViewDelegate {
         bannerViewFromNib.delegate = self
         
         // コードでバナー広告を生成
-        nadViewManually = NADView()
+//        nadViewManually = NADView()
+        // コードでバナー広告を生成(広告サイズの自動調整を行う場合)
+        nadViewManually = NADView(isAdjustAdSize: true)
+
         nadViewManually.autoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleTopMargin
         
         // 広告枠のapikey/spotidを設定(必須)
@@ -41,8 +44,6 @@ class BannerView320x100Controller: UIViewController, NADViewDelegate {
         // 読み込み開始(必須)
         nadViewManually.load()
         
-        // 通知有無にかかわらずViewに乗せる場合
-//        self.view.addSubview(nadViewManually)
     }
 
     // ------------------------------------------------------------------------------------------------
@@ -85,8 +86,6 @@ class BannerView320x100Controller: UIViewController, NADViewDelegate {
         // 注意：他アプリ起動から、自アプリが復帰した際に広告のリフレッシュを再開するには
         // AppDelegate applicationWillEnterForeground などを利用してください
         
-        // 画面下部に広告を表示させる場合
-        nadViewManually.frame = CGRect(x: (self.view.frame.size.width - 320)/2, y: self.view.frame.size.height - 100, width: 320, height: 100)
     }
     
     // この画面が隠れたら、広告のリフレッシュを中断します
@@ -115,7 +114,10 @@ class BannerView320x100Controller: UIViewController, NADViewDelegate {
         }else if (adView == nadViewManually){
             println("nadViewDidFinishLoad,nadViewManually:\(adView)")
             
-            // 広告の受信と表示の成功が通知されてからViewを乗せる場合はnadViewDidFinishLoadを利用します。
+            // 画面下部に広告を表示させる場合
+            nadViewManually.frame = CGRect(x: (self.view.frame.size.width - nadViewManually.frame.size.width)/2, y: self.view.frame.size.height - nadViewManually.frame.size.height, width: nadViewManually.frame.size.width, height: nadViewManually.frame.size.height)
+            
+            // 広告のロードが終了してからViewを乗せる場合はnadViewDidFinishLoadを利用します。
             self.view.addSubview(nadViewManually)
         }else{
             

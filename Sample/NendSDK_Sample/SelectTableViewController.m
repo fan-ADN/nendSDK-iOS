@@ -9,7 +9,6 @@
 #import "SelectTableViewController.h"
 
 #import "SelectBannerTableViewController.h"
-#import "AdIconViewController.h"
 #import "AdInterstitialViewController.h"
 
 @interface SelectTableViewController ()
@@ -53,7 +52,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -83,10 +82,6 @@
             break;
             
         case 1:
-            [cell.textLabel setText:@"Icon"];
-            break;
-
-        case 2:
             [cell.textLabel setText:@"Interstitial"];
             break;
 
@@ -110,10 +105,6 @@
             break;
 
         case 1:
-            viewController = [[AdIconViewController alloc] init];
-            break;
-
-        case 2:
             viewController = [[AdInterstitialViewController alloc] init];
             break;
 

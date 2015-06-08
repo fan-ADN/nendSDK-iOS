@@ -16,7 +16,6 @@ class ViewController: UIViewController {
         "300x100",
         "300x250",
         "728x90",
-        "Icon",
         "Interstitial"]
     
     @IBOutlet weak var tableView: UITableView!
@@ -89,11 +88,6 @@ class ViewController: UIViewController {
             self.navigationController!.pushViewController(viewController, animated: true)
             
         case 5:
-            let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("IconViewController") as! IconViewController
-            viewController.title = "Icon"
-            self.navigationController!.pushViewController(viewController, animated: true)
-            
-        case 6:
             let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("InterstitialViewController") as! InterstitialViewController
             viewController.title = "Interstitial"
             self.navigationController!.pushViewController(viewController, animated: true)

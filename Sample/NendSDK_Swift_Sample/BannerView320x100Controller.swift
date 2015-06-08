@@ -129,7 +129,7 @@ class BannerView320x100Controller: UIViewController, NADViewDelegate {
         if (adView == bannerViewFromNib){
             println("nadViewDidReceiveAd,bannerViewFromNib:\(adView)")
         }else if (adView == nadViewManually){
-            println("nadIconLoaderDidFinishLoad,nadViewManually:\(adView)")
+            println("nadViewDidReceiveAd,nadViewManually:\(adView)")
         }else{
             
         }

@@ -260,46 +260,6 @@
             </objects>
             <point key="canvasLocation" x="3001" y="1085"/>
         </scene>
-        <!--Icon View Controller-->
-        <scene sceneID="C9N-KL-zq7">
-            <objects>
-                <viewController storyboardIdentifier="IconViewController" id="jda-cZ-t4V" customClass="IconViewController" customModule="NendSDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="m4d-wo-jtg"/>
-                        <viewControllerLayoutGuide type="bottom" id="UZK-4B-YbA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="j92-Gh-dR0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SnV-jz-pjH" customClass="NADIconArrayView">
-                                <rect key="frame" x="140" y="71" width="320" height="75"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="3tV-gN-SMy"/>
-                                    <constraint firstAttribute="height" constant="75" id="Rpw-Cc-m2b"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="2349edefe7c2742dfb9f434de23bc3c7ca55ad22"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="101281"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="icons" value="4"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="SnV-jz-pjH" firstAttribute="top" secondItem="m4d-wo-jtg" secondAttribute="bottom" constant="51" id="7pm-zL-GxX"/>
-                            <constraint firstAttribute="centerX" secondItem="SnV-jz-pjH" secondAttribute="centerX" id="ITa-sJ-6a0"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="iconArrayViewFromNib" destination="SnV-jz-pjH" id="MMy-ko-CHN"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D7s-Cn-YFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="327" y="1904"/>
-        </scene>
         <!--Interstitial View Controller-->
         <scene sceneID="o7J-mU-3OS">
             <objects>

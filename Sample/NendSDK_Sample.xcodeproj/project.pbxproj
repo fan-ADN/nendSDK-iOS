@@ -43,7 +43,6 @@
 		3B7A866E1B15ACA500D9348B /* Ad300_250IBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7A866C1B15ACA500D9348B /* Ad300_250IBViewController.xib */; };
 		3B7A86721B15ACC800D9348B /* Ad728_090IBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A86701B15ACC800D9348B /* Ad728_090IBViewController.m */; };
 		3B7A86731B15ACC800D9348B /* Ad728_090IBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7A86711B15ACC800D9348B /* Ad728_090IBViewController.xib */; };
-		3B85803817F27B2500701EBF /* AdIconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B85803717F27B2500701EBF /* AdIconViewController.m */; };
 		6940D46A196FC63F00F14DBD /* AdInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6940D468196FC63F00F14DBD /* AdInterstitialViewController.m */; };
 		6940D46B196FC63F00F14DBD /* AdInterstitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6940D469196FC63F00F14DBD /* AdInterstitialViewController.xib */; };
 		694E595F199069D10031B69D /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 694E5958199069D10031B69D /* libNendAd.a */; };
@@ -63,7 +62,6 @@
 		B54CAEA619DE5DF9003C6616 /* BannerView320x50Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA119DE5DF9003C6616 /* BannerView320x50Controller.swift */; };
 		B54CAEA719DE5DF9003C6616 /* BannerView320x100Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA219DE5DF9003C6616 /* BannerView320x100Controller.swift */; };
 		B54CAEA819DE5DF9003C6616 /* BannerView728x90Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */; };
-		B54CAEAA19DE5E0B003C6616 /* IconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA919DE5E0B003C6616 /* IconViewController.swift */; };
 		B54CAEAC19DE5E15003C6616 /* InterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */; };
 		B54CAEAE19DE6656003C6616 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54CAE8419DE5BA9003C6616 /* Images.xcassets */; };
 		B54CAEB019DE762B003C6616 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54CAEAF19DE762B003C6616 /* Images.xcassets */; };
@@ -129,15 +127,10 @@
 		3B7A866F1B15ACC800D9348B /* Ad728_090IBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad728_090IBViewController.h; sourceTree = "<group>"; };
 		3B7A86701B15ACC800D9348B /* Ad728_090IBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad728_090IBViewController.m; sourceTree = "<group>"; };
 		3B7A86711B15ACC800D9348B /* Ad728_090IBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ad728_090IBViewController.xib; sourceTree = "<group>"; };
-		3B85803617F27B2500701EBF /* AdIconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdIconViewController.h; sourceTree = "<group>"; };
-		3B85803717F27B2500701EBF /* AdIconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdIconViewController.m; sourceTree = "<group>"; };
 		6940D467196FC63F00F14DBD /* AdInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdInterstitialViewController.h; sourceTree = "<group>"; };
 		6940D468196FC63F00F14DBD /* AdInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdInterstitialViewController.m; sourceTree = "<group>"; };
 		6940D469196FC63F00F14DBD /* AdInterstitialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdInterstitialViewController.xib; sourceTree = "<group>"; };
 		694E5958199069D10031B69D /* libNendAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNendAd.a; sourceTree = "<group>"; };
-		694E5959199069D10031B69D /* NADIconArrayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconArrayView.h; sourceTree = "<group>"; };
-		694E595A199069D10031B69D /* NADIconLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconLoader.h; sourceTree = "<group>"; };
-		694E595B199069D10031B69D /* NADIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconView.h; sourceTree = "<group>"; };
 		694E595C199069D10031B69D /* NADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADInterstitial.h; sourceTree = "<group>"; };
 		694E595D199069D10031B69D /* NADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADView.h; sourceTree = "<group>"; };
 		694E595E199069D10031B69D /* NADView_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NADView_readme.txt; sourceTree = "<group>"; };
@@ -154,7 +147,6 @@
 		B54CAEA119DE5DF9003C6616 /* BannerView320x50Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView320x50Controller.swift; sourceTree = "<group>"; };
 		B54CAEA219DE5DF9003C6616 /* BannerView320x100Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView320x100Controller.swift; sourceTree = "<group>"; };
 		B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView728x90Controller.swift; sourceTree = "<group>"; };
-		B54CAEA919DE5E0B003C6616 /* IconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconViewController.swift; sourceTree = "<group>"; };
 		B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialViewController.swift; sourceTree = "<group>"; };
 		B54CAEAD19DE5E31003C6616 /* NendAd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NendAd-Bridging-Header.h"; sourceTree = "<group>"; };
 		B54CAEAF19DE762B003C6616 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -235,8 +227,6 @@
 				3B2C44CE1B157B8200CD6360 /* SelectSizeTableViewController.h */,
 				3B2C44CF1B157B8200CD6360 /* SelectSizeTableViewController.m */,
 				3B7A86391B15882F00D9348B /* banner */,
-				3B85803617F27B2500701EBF /* AdIconViewController.h */,
-				3B85803717F27B2500701EBF /* AdIconViewController.m */,
 				6940D467196FC63F00F14DBD /* AdInterstitialViewController.h */,
 				6940D468196FC63F00F14DBD /* AdInterstitialViewController.m */,
 				6940D469196FC63F00F14DBD /* AdInterstitialViewController.xib */,
@@ -332,9 +322,6 @@
 			isa = PBXGroup;
 			children = (
 				694E5958199069D10031B69D /* libNendAd.a */,
-				694E5959199069D10031B69D /* NADIconArrayView.h */,
-				694E595A199069D10031B69D /* NADIconLoader.h */,
-				694E595B199069D10031B69D /* NADIconView.h */,
 				694E595C199069D10031B69D /* NADInterstitial.h */,
 				694E595D199069D10031B69D /* NADView.h */,
 				694E595E199069D10031B69D /* NADView_readme.txt */,
@@ -353,7 +340,6 @@
 				B54CAE9F19DE5DF9003C6616 /* BannerView300x100Controller.swift */,
 				B54CAEA019DE5DF9003C6616 /* BannerView300x250Controller.swift */,
 				B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */,
-				B54CAEA919DE5E0B003C6616 /* IconViewController.swift */,
 				B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */,
 				B54CAEAD19DE5E31003C6616 /* NendAd-Bridging-Header.h */,
 				B54CAE8119DE5BA9003C6616 /* Main.storyboard */,
@@ -504,7 +490,6 @@
 				3B5806E31A0B2B33000D47CE /* UINavigationController+Rotation.m in Sources */,
 				3B2C44CD1B1579C200CD6360 /* SelectBannerTableViewController.m in Sources */,
 				3B33425817990BCD001D0A08 /* SelectTableViewController.m in Sources */,
-				3B85803817F27B2500701EBF /* AdIconViewController.m in Sources */,
 				6940D46A196FC63F00F14DBD /* AdInterstitialViewController.m in Sources */,
 				3B7A86721B15ACC800D9348B /* Ad728_090IBViewController.m in Sources */,
 			);
@@ -518,7 +503,6 @@
 				B54CAEA719DE5DF9003C6616 /* BannerView320x100Controller.swift in Sources */,
 				B54CAEAC19DE5E15003C6616 /* InterstitialViewController.swift in Sources */,
 				B54CAEA519DE5DF9003C6616 /* BannerView300x250Controller.swift in Sources */,
-				B54CAEAA19DE5E0B003C6616 /* IconViewController.swift in Sources */,
 				B54CAEA619DE5DF9003C6616 /* BannerView320x50Controller.swift in Sources */,
 				B54CAEA819DE5DF9003C6616 /* BannerView728x90Controller.swift in Sources */,
 				B54CAE7E19DE5BA9003C6616 /* AppDelegate.swift in Sources */,

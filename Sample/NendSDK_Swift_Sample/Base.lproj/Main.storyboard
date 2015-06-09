@@ -235,7 +235,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZh-Sy-8RU" customClass="NADView">
                                 <rect key="frame" x="-64" y="71" width="728" height="90"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="728" id="3Yq-fS-tXH"/>
                                     <constraint firstAttribute="height" constant="90" id="tio-0M-hU5"/>

@@ -25,7 +25,7 @@ class BannerView300x100Controller: UIViewController, NADViewDelegate {
         // コードでバナー広告を生成(広告サイズの自動調整を行う場合)
         nadViewManually = NADView(isAdjustAdSize: true)
 
-        nadViewManually.autoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleTopMargin
+        nadViewManually.autoresizingMask = [.FlexibleRightMargin, .FlexibleLeftMargin, .FlexibleTopMargin]
         
         // 広告枠のapikey/spotidを設定(必須)
         nadViewManually.setNendID("25eb32adddc4f7311c3ec7b28eac3b72bbca5656", spotID: "70998")
@@ -105,9 +105,9 @@ class BannerView300x100Controller: UIViewController, NADViewDelegate {
     // 広告の受信に成功し表示できた場合に１度通知されます。必須メソッドです。
     func nadViewDidFinishLoad(adView: NADView!) {
         if (adView == bannerViewFromNib){
-            println("nadViewDidFinishLoad,bannerViewFromNib:\(adView)")
+            print("nadViewDidFinishLoad,bannerViewFromNib:\(adView)")
         }else if (adView == nadViewManually){
-            println("nadViewDidFinishLoad,nadViewManually:\(adView)")
+            print("nadViewDidFinishLoad,nadViewManually:\(adView)")
             
             // 画面下部に広告を表示させる場合
             nadViewManually.frame = CGRect(x: (self.view.frame.size.width - nadViewManually.frame.size.width)/2, y: self.view.frame.size.height - nadViewManually.frame.size.height, width: nadViewManually.frame.size.width, height: nadViewManually.frame.size.height)
@@ -122,9 +122,9 @@ class BannerView300x100Controller: UIViewController, NADViewDelegate {
     // 以下は広告受信成功ごとに通知される任意メソッドです。
     func nadViewDidReceiveAd(adView: NADView!) {
         if (adView == bannerViewFromNib){
-            println("nadViewDidReceiveAd,bannerViewFromNib:\(adView)")
+            print("nadViewDidReceiveAd,bannerViewFromNib:\(adView)")
         }else if (adView == nadViewManually){
-            println("nadViewDidReceiveAd,nadViewManually:\(adView)")
+            print("nadViewDidReceiveAd,nadViewManually:\(adView)")
         }else{
             
         }
@@ -133,15 +133,15 @@ class BannerView300x100Controller: UIViewController, NADViewDelegate {
     // 以下は広告受信失敗ごとに通知される任意メソッドです。
     func nadViewDidFailToReceiveAd(adView: NADView!) {
         
-        var error: NSError = adView.error
+        let error: NSError = adView.error
         
         // エラー発生時の情報をログに出力します
         if (adView == bannerViewFromNib){
-            println("nadViewDidFailToReceiveAd,bannerViewFromNib,code=\(error.code)")
-            println("nadViewDidFailToReceiveAd,bannerViewFromNib,domain=\(error.domain)")
+            print("nadViewDidFailToReceiveAd,bannerViewFromNib,code=\(error.code)")
+            print("nadViewDidFailToReceiveAd,bannerViewFromNib,domain=\(error.domain)")
         }else if (adView == nadViewManually){
-            println("nadViewDidFailToReceiveAd,nadViewManually,code=\(error.code)")
-            println("nadViewDidFailToReceiveAd,nadViewManually,domain=\(error.domain)")
+            print("nadViewDidFailToReceiveAd,nadViewManually,code=\(error.code)")
+            print("nadViewDidFailToReceiveAd,nadViewManually,domain=\(error.domain)")
         }else{
             
         }
@@ -150,9 +150,9 @@ class BannerView300x100Controller: UIViewController, NADViewDelegate {
     // 以下はバナー広告がクリックされるごとに通知される任意メソッドです。
     func nadViewDidClickAd(adView: NADView!){
         if (adView == bannerViewFromNib){
-            println("nadViewDidClickAd,bannerViewFromNib:\(adView)")
+            print("nadViewDidClickAd,bannerViewFromNib:\(adView)")
         }else if (adView == nadViewManually){
-            println("nadViewDidClickAd,nadViewManually:\(adView)")
+            print("nadViewDidClickAd,nadViewManually:\(adView)")
         }else{
             
         }

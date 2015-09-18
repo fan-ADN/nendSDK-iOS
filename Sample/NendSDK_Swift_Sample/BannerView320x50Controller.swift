@@ -30,7 +30,7 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
         // コードでバナー広告を生成(広告サイズの自動調整を行う場合)
         nadViewManually = NADView(isAdjustAdSize: true)
         
-        nadViewManually.autoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleTopMargin
+        nadViewManually.autoresizingMask = [.FlexibleRightMargin, .FlexibleLeftMargin, .FlexibleTopMargin]
         
         // 広告枠のapikey/spotidを設定(必須)
         nadViewManually.setNendID("a6eca9dd074372c898dd1df549301f277c53f2b9", spotID: "3172")
@@ -44,7 +44,6 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
         // 読み込み開始(必須)
         nadViewManually.load()
         // 例) 問い合わせエラー時には60分間隔で再問い合わせする
-//        let dict0:Dictionary<String, String> = ["3600" : "retry"]
 //        nadViewManually.load(["3600":"retry"])
         
     }
@@ -114,9 +113,9 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
     // 広告の受信に成功し表示できた場合に１度通知されます。必須メソッドです。
     func nadViewDidFinishLoad(adView: NADView!) {
         if (adView == bannerViewFromNib){
-            println("nadViewDidFinishLoad,bannerViewFromNib:\(adView)")
+            print("nadViewDidFinishLoad,bannerViewFromNib:\(adView)")
         }else if (adView == nadViewManually){
-            println("nadViewDidFinishLoad,nadViewManually:\(adView)")
+            print("nadViewDidFinishLoad,nadViewManually:\(adView)")
 
             // 画面下部に広告を表示させる場合
             nadViewManually.frame = CGRect(x: (self.view.frame.size.width - nadViewManually.frame.size.width)/2, y: self.view.frame.size.height - nadViewManually.frame.size.height, width: nadViewManually.frame.size.width, height: nadViewManually.frame.size.height)
@@ -131,9 +130,9 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
     // 以下は広告受信成功ごとに通知される任意メソッドです。
     func nadViewDidReceiveAd(adView: NADView!) {
         if (adView == bannerViewFromNib){
-            println("nadViewDidReceiveAd,bannerViewFromNib:\(adView)")
+            print("nadViewDidReceiveAd,bannerViewFromNib:\(adView)")
         }else if (adView == nadViewManually){
-            println("nadViewDidReceiveAd,nadViewManually:\(adView)")
+            print("nadViewDidReceiveAd,nadViewManually:\(adView)")
         }else{
             
         }
@@ -143,7 +142,7 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
     func nadViewDidFailToReceiveAd(adView: NADView!) {
         
         // エラーごとに処理を分岐する
-        var error: NSError = adView.error        
+        let error: NSError = adView.error
         
         switch (error.code){
         case NADViewErrorCode.NADVIEW_AD_SIZE_TOO_LARGE.hashValue:
@@ -167,11 +166,11 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
         
         // エラー発生時の情報をログに出力します
         if (adView == bannerViewFromNib){
-            println("nadViewDidFailToReceiveAd,bannerViewFromNib,code=\(error.code)")
-            println("nadViewDidFailToReceiveAd,bannerViewFromNib,domain=\(error.domain)")
+            print("nadViewDidFailToReceiveAd,bannerViewFromNib,code=\(error.code)")
+            print("nadViewDidFailToReceiveAd,bannerViewFromNib,domain=\(error.domain)")
         }else if (adView == nadViewManually){
-            println("nadViewDidFailToReceiveAd,nadViewManually,code=\(error.code)")
-            println("nadViewDidFailToReceiveAd,nadViewManually,domain=\(error.domain)")
+            print("nadViewDidFailToReceiveAd,nadViewManually,code=\(error.code)")
+            print("nadViewDidFailToReceiveAd,nadViewManually,domain=\(error.domain)")
         }else{
             
         }
@@ -180,9 +179,9 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
     // 以下はバナー広告がクリックされるごとに通知される任意メソッドです。
     func nadViewDidClickAd(adView: NADView!){
         if (adView == bannerViewFromNib){
-            println("nadViewDidClickAd,bannerViewFromNib:\(adView)")
+            print("nadViewDidClickAd,bannerViewFromNib:\(adView)")
         }else if (adView == nadViewManually){
-            println("nadViewDidClickAd,nadViewManually:\(adView)")
+            print("nadViewDidClickAd,nadViewManually:\(adView)")
         }else{
             
         }

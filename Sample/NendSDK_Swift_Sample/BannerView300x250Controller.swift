@@ -71,7 +71,7 @@ class BannerView300x250Controller: UIViewController, NADViewDelegate {
     // 広告の受信に成功し表示できた場合に１度通知されます。必須メソッドです。
     func nadViewDidFinishLoad(adView: NADView!) {
         if (adView == bannerViewFromNib){
-            println("nadViewDidFinishLoad,bannerViewFromNib:\(adView)")
+            print("nadViewDidFinishLoad,bannerViewFromNib:\(adView)")
         }else{
             
         }
@@ -80,7 +80,7 @@ class BannerView300x250Controller: UIViewController, NADViewDelegate {
     // 以下は広告受信成功ごとに通知される任意メソッドです。
     func nadViewDidReceiveAd(adView: NADView!) {
         if (adView == bannerViewFromNib){
-            println("nadViewDidReceiveAd,bannerViewFromNib:\(adView)")
+            print("nadViewDidReceiveAd,bannerViewFromNib:\(adView)")
         }else{
             
         }
@@ -89,12 +89,12 @@ class BannerView300x250Controller: UIViewController, NADViewDelegate {
     // 以下は広告受信失敗ごとに通知される任意メソッドです。
     func nadViewDidFailToReceiveAd(adView: NADView!) {
         
-        var error: NSError = adView.error
+        let error: NSError = adView.error
         
         // エラー発生時の情報をログに出力します
         if (adView == bannerViewFromNib){
-            println("nadViewDidFailToReceiveAd,bannerViewFromNib,code=\(error.code)")
-            println("nadViewDidFailToReceiveAd,bannerViewFromNib,domain=\(error.domain)")
+            print("nadViewDidFailToReceiveAd,bannerViewFromNib,code=\(error.code)")
+            print("nadViewDidFailToReceiveAd,bannerViewFromNib,domain=\(error.domain)")
         }else{
             
         }
@@ -103,7 +103,7 @@ class BannerView300x250Controller: UIViewController, NADViewDelegate {
     // 以下はバナー広告がクリックされるごとに通知される任意メソッドです。
     func nadViewDidClickAd(adView: NADView!){
         if (adView == bannerViewFromNib){
-            println("nadViewDidClickAd,bannerViewFromNib:\(adView)")
+            print("nadViewDidClickAd,bannerViewFromNib:\(adView)")
         }else{
             
         }

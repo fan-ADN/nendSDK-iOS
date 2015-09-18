@@ -23,12 +23,14 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
         NADInterstitial.sharedInstance().isOutputLog = true
         
         // 向き固定の場合の処理をここに書く
-//        var orientationArray =
-//        [
-//            UIInterfaceOrientationIsLandscape(UIInterfaceOrientation.LandscapeLeft),
-//            UIInterfaceOrientationIsLandscape(UIInterfaceOrientation.LandscapeRight)
-//        ]
-//        NADInterstitial.sharedInstance().supportedOrientations = orientationArray
+        let orientationArray =
+        [
+            UIInterfaceOrientation.Portrait.rawValue,
+            UIInterfaceOrientation.PortraitUpsideDown.rawValue,
+            UIInterfaceOrientation.LandscapeLeft.rawValue,
+            UIInterfaceOrientation.LandscapeRight.rawValue
+        ]
+        NADInterstitial.sharedInstance().supportedOrientations = orientationArray
 
     }
 
@@ -60,24 +62,24 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
         var showResult: NADInterstitialShowResult
         showResult = NADInterstitial.sharedInstance().showAd()
         
-        switch(showResult.value){
-        case AD_SHOW_SUCCESS.value:
-            println("AD_SHOW_SUCCESS")
+        switch(showResult.rawValue){
+        case AD_SHOW_SUCCESS.rawValue:
+            print("AD_SHOW_SUCCESS")
             break
-        case AD_LOAD_INCOMPLETE.value:
-            println("INVALID_RESPONSE_TYPE")
+        case AD_LOAD_INCOMPLETE.rawValue:
+            print("INVALID_RESPONSE_TYPE")
             break
-        case AD_REQUEST_INCOMPLETE.value:
-            println("FAILED_AD_REQUEST")
+        case AD_REQUEST_INCOMPLETE.rawValue:
+            print("FAILED_AD_REQUEST")
             break
-        case AD_DOWNLOAD_INCOMPLETE.value:
-            println("FAILED_AD_DOWNLOAD")
+        case AD_DOWNLOAD_INCOMPLETE.rawValue:
+            print("FAILED_AD_DOWNLOAD")
             break
-        case AD_FREQUENCY_NOT_REACHABLE.value:
-            println("AD_FREQUENCY_NOT_REACHABLE")
+        case AD_FREQUENCY_NOT_REACHABLE.rawValue:
+            print("AD_FREQUENCY_NOT_REACHABLE")
             break
-        case AD_SHOW_ALREADY.value:
-            println("AD_SHOW_ALREADY")
+        case AD_SHOW_ALREADY.rawValue:
+            print("AD_SHOW_ALREADY")
             break
         default:
             break
@@ -90,18 +92,18 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
     
     func didFinishLoadInterstitialAdWithStatus(status: NADInterstitialStatusCode) {
         
-        switch(status.value){
-        case SUCCESS.value:
-            println("SUCCESS")
+        switch(status.rawValue){
+        case SUCCESS.rawValue:
+            print("SUCCESS")
             break
-        case INVALID_RESPONSE_TYPE.value:
-            println("INVALID_RESPONSE_TYPE")
+        case INVALID_RESPONSE_TYPE.rawValue:
+            print("INVALID_RESPONSE_TYPE")
             break
-        case FAILED_AD_REQUEST.value:
-            println("FAILED_AD_REQUEST")
+        case FAILED_AD_REQUEST.rawValue:
+            print("FAILED_AD_REQUEST")
             break
-        case FAILED_AD_DOWNLOAD.value:
-            println("FAILED_AD_DOWNLOAD")
+        case FAILED_AD_DOWNLOAD.rawValue:
+            print("FAILED_AD_DOWNLOAD")
             break
         default:
             break
@@ -110,12 +112,12 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
     
     func didClickWithType(type: NADInterstitialClickType) {
         
-        switch(type.value){
-        case DOWNLOAD.value:
-            println("DOWNLOAD")
+        switch(type.rawValue){
+        case DOWNLOAD.rawValue:
+            print("DOWNLOAD")
             break
-        case CLOSE.value:
-            println("CLOSE")
+        case CLOSE.rawValue:
+            print("CLOSE")
             break
         default:
             break

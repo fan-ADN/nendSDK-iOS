@@ -13,8 +13,8 @@ extension UINavigationController{
         return true
     }
     
-    public override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.All.rawValue)
+    public override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.All
     }
 }
 
@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidEnterBackground(application: UIApplication) {
         
-        println("AppDelegate", __FUNCTION__)
+        print("AppDelegate", __FUNCTION__)
         
         // アプリがバックグラウンドに回った場合に広告のリフレッシュを中断するには
         // AppDelegate側やそれに準じるクラスでインスタンスを保持し、このメソッドを利用してNADViewをpauseするなどしてください
@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillEnterForeground(application: UIApplication) {
         
-        println("AppDelegate", __FUNCTION__)
+        print("AppDelegate", __FUNCTION__)
         
         // アプリがバックグラウンドから復帰した場合に広告のリフレッシュを再開するには
         // AppDelegate側やそれに準じるクラスでインスタンスを保持し、このメソッドを利用してNADViewをresumeするなどしてください

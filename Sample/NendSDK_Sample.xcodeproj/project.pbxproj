@@ -119,7 +119,6 @@
 		690C28E91B7989CB00C92232 /* AdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdViewController.m; sourceTree = "<group>"; };
 		690C28EB1B7989E000C92232 /* AdIBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdIBViewController.h; sourceTree = "<group>"; };
 		690C28EC1B7989E000C92232 /* AdIBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdIBViewController.m; sourceTree = "<group>"; };
-		690C28F11B798E2300C92232 /* .clang-format */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".clang-format"; sourceTree = "<group>"; };
 		690C28FA1B799F9E00C92232 /* NativeAdCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdCollectionViewController.h; sourceTree = "<group>"; };
 		690C28FB1B799F9E00C92232 /* NativeAdCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdCollectionViewController.m; sourceTree = "<group>"; };
 		690C28FC1B799F9E00C92232 /* NativeAdInFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdInFeedViewController.h; sourceTree = "<group>"; };
@@ -226,7 +225,6 @@
 		3B33422417990B9E001D0A08 = {
 			isa = PBXGroup;
 			children = (
-				690C28F11B798E2300C92232 /* .clang-format */,
 				B54CAE7A19DE5BA9003C6616 /* NendSDK_Swift_Sample */,
 				690C28751B797DF100C92232 /* NendSDK_Sample */,
 				3B33422F17990B9E001D0A08 /* Frameworks */,

@@ -11,39 +11,34 @@ Objective-CとSwiftでの基本的な実装方法と動作確認が行えます�
 * iOS7以上
 
 ## Usage
-## CocoaPodsをインストール
+### CocoaPodsをインストール
 
 ＜公式ガイド＞  
 http://guides.cocoapods.org/using/getting-started.html
 
-1. CocoaPodsをインストール
------
+#### 1. CocoaPodsをインストール
 ```
 $ sudo gem install cocoapods
 ```
 
-2. リポジトリ情報のセットアップ
------
+#### 2. リポジトリ情報のセットアップ
 ```
 $ pod setup
 ```
 
-## サンプルプロジェクトを動かす
+### サンプルプロジェクトを動かす
 
-1. サンプルプロジェクトを入手する
------
+#### 1. サンプルプロジェクトを入手する
 https://github.com/fan-ADN/nendSDK-iOS   
 こちらのリンクを開き、リポジトリをクローンまたはzipをダウンロードします。
 
-2. nendSDKをプロジェクトに導入する
------
+#### 2. nendSDKをプロジェクトに導入する
 ターミナルでSampleディレクトリに移動し、下記コマンドを実行します。
 ```
 $ pod install
 ```
 
-3. ワークスペースプロジェクトをXcodeで開く
------
+#### 3. ワークスペースプロジェクトをXcodeで開く
 Sampleディレクトリにある下記のワークスペースプロジェクトをXcodeで開きます。
 ```
 NendSDK_Sample.xcworkspace

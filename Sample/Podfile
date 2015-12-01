@@ -4,10 +4,10 @@ platform :ios, '7.0'
 # use_frameworks!
 
 target 'NendSDK_Swift_Sample' do
-pod 'NendSDK_iOS', :path=> './NendSDK_iOS_Sample_Local.podspec'
+pod 'NendSDK_iOS'
 end
 
 target 'NendSDK_Sample' do
-pod 'NendSDK_iOS', :path=> './NendSDK_iOS_Sample_Local.podspec'
+pod 'NendSDK_iOS'
 end
 

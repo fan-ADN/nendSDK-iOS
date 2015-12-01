@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>segue</key>
+		<string>PushMobileBigBanner</string>
+		<key>size</key>
+		<string>320x50</string>
+		<key>api_key</key>
+		<string>a6eca9dd074372c898dd1df549301f277c53f2b9</string>
+		<key>spot_id</key>
+		<string>3172</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>PushMobileBanner</string>
+		<key>size</key>
+		<string>320x100</string>
+		<key>api_key</key>
+		<string>eb5ca11fa8e46315c2df1b8e283149049e8d235e</string>
+		<key>spot_id</key>
+		<string>70996</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>PushRectangle</string>
+		<key>size</key>
+		<string>300x100</string>
+		<key>api_key</key>
+		<string>25eb32adddc4f7311c3ec7b28eac3b72bbca5656</string>
+		<key>spot_id</key>
+		<string>70998</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>PushMediumRectangle</string>
+		<key>size</key>
+		<string>300x250</string>
+		<key>api_key</key>
+		<string>88d88a288fdea5c01d17ea8e494168e834860fd6</string>
+		<key>spot_id</key>
+		<string>70356</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>PushBigBanner</string>
+		<key>size</key>
+		<string>728x90</string>
+		<key>api_key</key>
+		<string>2e0b9e0b3f40d952e6000f1a8c4d455fffc4ca3a</string>
+		<key>spot_id</key>
+		<string>70999</string>
+	</dict>
+</array>
+</plist>

@@ -10,24 +10,24 @@
 
 #import "SelectSizeTableViewController.h"
 
-@implementation SelectBannerTableViewController
+static NSString *const CellIdentifier = @"Cell";
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@interface SelectBannerTableViewController ()
+
+@property (nonatomic) NSArray<NSString *> *items;
+
+@end
+
+@implementation SelectBannerTableViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0) {
-        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-    }
+
+    self.title = @"Banner";
+
+    self.items = @[ @"default", @"adjust ad size", @"interface builder" ];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
 }
 
 #pragma mark - Table view data source
@@ -41,47 +41,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3;
+    return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell;
-    
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0) {
-        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    }
-    else{
-        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (!cell) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        }
-    }
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+
     // Configure the cell...
+    cell.textLabel.text = self.items[indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
-    NSInteger row = indexPath.row;
-    
-    switch (row) {
-        case 0:
-            [cell.textLabel setText:@"default"];
-            break;
-            
-        case 1:
-            [cell.textLabel setText:@"adjust ad size"];
-            break;
-            
-        case 2:
-            [cell.textLabel setText:@"interface builder"];
-            break;
-        default:
-            break;
-    }
-    
-    
+
     return cell;
 }
 
@@ -89,33 +59,34 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSInteger row = indexPath.row;
-    SelectSizeTableViewController *viewController = [[SelectSizeTableViewController alloc] init];
-    switch (row) {
+    [self performSegueWithIdentifier:@"PushSelectSize" sender:indexPath];
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    SelectSizeTableViewController *viewController = segue.destinationViewController;
+    NSIndexPath *indexPath = sender;
+    switch (indexPath.row) {
         case 0:
             viewController.isAdjustAdSize = NO;
             viewController.isIB = NO;
             break;
-            
         case 1:
             viewController.isAdjustAdSize = YES;
             viewController.isIB = NO;
             break;
-            
         case 2:
             viewController.isAdjustAdSize = NO;
             viewController.isIB = YES;
             break;
-            
         default:
             break;
     }
-    
+    viewController.title = self.items[indexPath.row];
     viewController.view.backgroundColor = [UIColor whiteColor];
     viewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-    
-    [self.navigationController pushViewController:viewController animated:YES];
 }
-
 
 @end

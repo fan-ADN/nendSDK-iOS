@@ -8,14 +8,15 @@
 
 #import "UINavigationController+Rotation.h"
 
-
 @implementation UINavigationController (Rotation)
 
-- (NSUInteger)supportedInterfaceOrientations{
+- (NSUInteger)supportedInterfaceOrientations
+{
     return UIInterfaceOrientationMaskAll;
 }
 
-- (BOOL)shouldAutorotate{
+- (BOOL)shouldAutorotate
+{
     return YES;
 }
 

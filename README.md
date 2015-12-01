@@ -7,12 +7,39 @@ iOS版nendSDKのサンプルプロジェクトになります。
 Objective-CとSwiftでの基本的な実装方法と動作確認が行えます。
 
 ## Requirement
-* **Objective-C**  
-Xcode 6 , iOS 6以上
-
-* **Swift**  
-Xcode 7 , iOS 7以上  
-Swift 2.0
+* **Xcode7.0**以上
+* iOS7以上
 
 ## Usage
-* [nendの管理画面](https://www.nend.net/admin/login)からiOS版SDKをダウンロードし、Sampleフォルダと同じディレクトリにNendAdフォルダごと追加してください。
+### CocoaPodsをインストール
+
+＜公式ガイド＞  
+http://guides.cocoapods.org/using/getting-started.html
+
+#### 1. CocoaPodsをインストール
+```
+$ sudo gem install cocoapods
+```
+
+#### 2. リポジトリ情報のセットアップ
+```
+$ pod setup
+```
+
+### サンプルプロジェクトを動かす
+
+#### 1. サンプルプロジェクトを入手する
+https://github.com/fan-ADN/nendSDK-iOS   
+こちらのリンクを開き、リポジトリをクローンまたはzipをダウンロードします。
+
+#### 2. nendSDKをプロジェクトに導入する
+ターミナルでSampleディレクトリに移動し、下記コマンドを実行します。
+```
+$ pod install
+```
+
+#### 3. ワークスペースプロジェクトをXcodeで開く
+Sampleディレクトリにある下記のワークスペースプロジェクトをXcodeで開きます。
+```
+NendSDK_Sample.xcworkspace
+```

@@ -10,29 +10,26 @@
 
 #import "SelectBannerTableViewController.h"
 #import "AdInterstitialViewController.h"
+#import "NativeAdViewController.h"
+
+static NSString *const CellIdentifier = @"Cell";
 
 @interface SelectTableViewController ()
+
+@property (nonatomic) NSArray<NSString *> *items;
 
 @end
 
 @implementation SelectTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0) {
-        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-    }    
+    self.title = @"Nend";
+
+    self.items = @[ @"Banner", @"Interstitial", @"Native" ];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,44 +49,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 2;
+    return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
-    UITableViewCell *cell;
-    
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0) {
-        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    }
-    else{
-        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (!cell) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        }
-    }
-    
     // Configure the cell...
+    cell.textLabel.text = self.items[indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
-    NSInteger row = indexPath.row;
-    
-    switch (row) {
-        case 0:
-            [cell.textLabel setText:@"Banner"];
-            break;
-            
-        case 1:
-            [cell.textLabel setText:@"Interstitial"];
-            break;
 
-        default:
-            break;
-    }
-    
-    
     return cell;
 }
 
@@ -97,25 +67,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSInteger row = indexPath.row;
-    UIViewController *viewController;
-    switch (row) {
-        case 0:
-            viewController = [[SelectBannerTableViewController alloc] init];
-            break;
+    NSString *identifier = [NSString stringWithFormat:@"Push%@", self.items[indexPath.row]];
+    [self performSegueWithIdentifier:identifier sender:nil];
+}
 
-        case 1:
-            viewController = [[AdInterstitialViewController alloc] init];
-            break;
+#pragma mark - Navigation
 
-        default:
-            break;
-    }
-    
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIViewController *viewController = segue.destinationViewController;
     viewController.view.backgroundColor = [UIColor whiteColor];
     viewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-    
-    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 @end

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>segue</key>
+		<string>PushSimpleNativeAd</string>
+		<key>title</key>
+		<string>SmallSquare + Text</string>
+		<key>spot</key>
+		<string>485500</string>
+		<key>api</key>
+		<string>10d9088b5bd36cf43b295b0774e5dcf7d20a4071</string>
+		<key>nib</key>
+		<string>NativeAdViewSmallSquare</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>PushSimpleNativeAd</string>
+		<key>title</key>
+		<string>SmallWide + Text</string>
+		<key>spot</key>
+		<string>485502</string>
+		<key>api</key>
+		<string>a3972604a76864dd110d0b02204f4b72adb092ae</string>
+		<key>nib</key>
+		<string>NativeAdViewSmallWide</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>PushSimpleNativeAd</string>
+		<key>title</key>
+		<string>LargeWide + Text</string>
+		<key>nib</key>
+		<string>NativeAdViewLargeWide</string>
+		<key>spot</key>
+		<string>485504</string>
+		<key>api</key>
+		<string>30fda4b3386e793a14b27bedb4dcd29f03d638e5</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>PushSimpleNativeAd</string>
+		<key>title</key>
+		<string>TextOnly</string>
+		<key>nib</key>
+		<string>NativeAdViewTextOnly</string>
+		<key>spot</key>
+		<string>485507</string>
+		<key>api</key>
+		<string>31e861edb574cfa0fb676ebdf0a0b9a0621e19fc</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>PushInFeedNativeAd</string>
+		<key>title</key>
+		<string>InFeed</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>PushCollectionNativeAd</string>
+		<key>title</key>
+		<string>Collection</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>PushPageableNativeAd</string>
+		<key>title</key>
+		<string>Page</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>PushRssNativeAd</string>
+		<key>title</key>
+		<string>RSS</string>
+	</dict>
+</array>
+</plist>

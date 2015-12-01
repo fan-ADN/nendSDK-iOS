@@ -8,31 +8,40 @@
 
 #import "SelectSizeTableViewController.h"
 
-#import "Ad320_050ViewController.h"
-#import "Ad320_100ViewController.h"
-#import "Ad300_100ViewController.h"
-#import "Ad300_250ViewController.h"
-#import "Ad728_090ViewController.h"
-#import "Ad320_050IBViewController.h"
-#import "Ad320_100IBViewController.h"
-#import "Ad300_100IBViewController.h"
-#import "Ad300_250IBViewController.h"
-#import "Ad728_090IBViewController.h"
-#import "Ad320_050AdjustViewController.h"
-#import "Ad320_100AdjustViewController.h"
-#import "Ad300_100AdjustViewController.h"
-#import "Ad300_250AdjustViewController.h"
-#import "Ad728_090AdjustViewController.h"
+#import "AdViewController.h"
+#import "AdAdjustViewController.h"
+
+static NSString *const CellIdentifier = @"Cell";
+
+@interface SelectSizeTableViewController ()
+
+@property (nonatomic) NSArray<NSDictionary *> *items;
+
+@end
 
 @implementation SelectSizeTableViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0) {
-        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"banner" ofType:@"plist"];
+    self.items = [NSArray arrayWithContentsOfFile:path];
+
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
+}
+
+- (NSString *)segueIdentifierForIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *identifier;
+    if (self.isAdjustAdSize) {
+        identifier = @"PushAdjust";
+    } else if (self.isIB) {
+        identifier = self.items[indexPath.row][@"segue"];
+    } else {
+        identifier = @"PushDefault";
     }
+    return identifier;
 }
 
 #pragma mark - Table view data source
@@ -46,56 +55,18 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 5;
+    return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell;
-    
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0) {
-        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    }
-    else{
-        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (!cell) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        }
-    }
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+
     // Configure the cell...
+    NSString *size = self.items[indexPath.row][@"size"];
+    cell.textLabel.text = size;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
-    NSInteger row = indexPath.row;
-    
-    switch (row) {
-        case 0:
-            [cell.textLabel setText:@"320×50"];
-            break;
-            
-        case 1:
-            [cell.textLabel setText:@"320×100"];
-            break;
-            
-        case 2:
-            [cell.textLabel setText:@"300×100"];
-            break;
-            
-        case 3:
-            [cell.textLabel setText:@"300×250"];
-            break;
-            
-        case 4:
-            [cell.textLabel setText:@"728×90"];
-            break;
-            
-        default:
-            break;
-    }
-    
-    
+
     return cell;
 }
 
@@ -103,90 +74,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSInteger row = indexPath.row;
-    UIViewController *viewController;
-    if (self.isAdjustAdSize) {
-        switch (row) {
-            case 0:
-                viewController = [[Ad320_050AdjustViewController alloc] init];
-                break;
-                
-            case 1:
-                viewController = [[Ad320_100AdjustViewController alloc] init];
-                break;
-                
-            case 2:
-                viewController = [[Ad300_100AdjustViewController alloc] init];
-                break;
-                
-            case 3:
-                viewController = [[Ad300_250AdjustViewController alloc] init];
-                break;
-                
-            case 4:
-                viewController = [[Ad728_090AdjustViewController alloc] init];
-                break;
-                
-            default:
-                break;
-        }
-    } else if (self.isIB){
-        switch (row) {
-            case 0:
-                viewController = [[Ad320_050IBViewController alloc] init];
-                break;
-                
-            case 1:
-                viewController = [[Ad320_100IBViewController alloc] init];
-                break;
-                
-            case 2:
-                viewController = [[Ad300_100IBViewController alloc] init];
-                break;
-                
-            case 3:
-                viewController = [[Ad300_250IBViewController alloc] init];
-                break;
-                
-            case 4:
-                viewController = [[Ad728_090IBViewController alloc] init];
-                break;
-                
-            default:
-                break;
-        }
-    } else{
-        switch (row) {
-            case 0:
-                viewController = [[Ad320_050ViewController alloc] init];
-                break;
-                
-            case 1:
-                viewController = [[Ad320_100ViewController alloc] init];
-                break;
-                
-            case 2:
-                viewController = [[Ad300_100ViewController alloc] init];
-                break;
-                
-            case 3:
-                viewController = [[Ad300_250ViewController alloc] init];
-                break;
-                
-            case 4:
-                viewController = [[Ad728_090ViewController alloc] init];
-                break;
-                
-            default:
-                break;
-        }
-    }
-    
-    viewController.view.backgroundColor = [UIColor whiteColor];
-    viewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-    
-    [self.navigationController pushViewController:viewController animated:YES];
+    [self performSegueWithIdentifier:[self segueIdentifierForIndexPath:indexPath] sender:self.items[indexPath.row]];
 }
 
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIViewController *viewController = segue.destinationViewController;
+    NSDictionary *item = sender;
+    if ([viewController isKindOfClass:[AdViewController class]]) {
+        ((AdViewController *)viewController).apiKey = item[@"api_key"];
+        ((AdViewController *)viewController).spotId = item[@"spot_id"];
+    } else if ([viewController isKindOfClass:[AdAdjustViewController class]]) {
+        ((AdAdjustViewController *)viewController).apiKey = item[@"api_key"];
+        ((AdAdjustViewController *)viewController).spotId = item[@"spot_id"];
+    }
+    viewController.view.backgroundColor = [UIColor whiteColor];
+    viewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+}
 
 @end

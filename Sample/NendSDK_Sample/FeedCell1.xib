@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell1" rowHeight="80" id="Q0g-aj-CiK">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q0g-aj-CiK" id="fHn-Pf-swY">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rYH-oD-K84" customClass="FeedView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="452" translatesAutoresizingMaskIntoConstraints="NO" id="geC-Tv-44j">
+                                <rect key="frame" x="8" y="8" width="304" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="412" translatesAutoresizingMaskIntoConstraints="NO" id="5kD-FD-8jE">
+                                <rect key="frame" x="8" y="50" width="304" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="7bQ-ws-Q61"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="geC-Tv-44j" secondAttribute="trailing" constant="8" id="1Bi-p1-NCb"/>
+                            <constraint firstItem="geC-Tv-44j" firstAttribute="leading" secondItem="rYH-oD-K84" secondAttribute="leading" constant="8" id="1QV-X7-c4V"/>
+                            <constraint firstAttribute="trailing" secondItem="5kD-FD-8jE" secondAttribute="trailing" constant="8" id="DwU-sg-3SG"/>
+                            <constraint firstItem="5kD-FD-8jE" firstAttribute="top" secondItem="geC-Tv-44j" secondAttribute="bottom" constant="1" id="HSg-L1-k4p"/>
+                            <constraint firstItem="geC-Tv-44j" firstAttribute="top" secondItem="rYH-oD-K84" secondAttribute="top" constant="8" id="JTe-Vt-F60"/>
+                            <constraint firstItem="5kD-FD-8jE" firstAttribute="leading" secondItem="rYH-oD-K84" secondAttribute="leading" constant="8" id="hw0-qw-Cal"/>
+                            <constraint firstAttribute="bottom" secondItem="5kD-FD-8jE" secondAttribute="bottom" constant="8" id="x6l-bs-JXv"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="category" destination="5kD-FD-8jE" id="1Mm-tJ-CTI"/>
+                            <outlet property="title" destination="geC-Tv-44j" id="K7o-sE-5gX"/>
+                        </connections>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="rYH-oD-K84" secondAttribute="trailing" id="DYi-Km-yoD"/>
+                    <constraint firstItem="rYH-oD-K84" firstAttribute="leading" secondItem="fHn-Pf-swY" secondAttribute="leading" id="Pka-FE-4Fi"/>
+                    <constraint firstAttribute="bottom" secondItem="rYH-oD-K84" secondAttribute="bottom" id="ZEM-oq-JXk"/>
+                    <constraint firstItem="rYH-oD-K84" firstAttribute="top" secondItem="fHn-Pf-swY" secondAttribute="top" id="g9G-zP-Y8j"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-63" y="-116"/>
+        </tableViewCell>
+    </objects>
+</document>

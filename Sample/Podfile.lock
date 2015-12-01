@@ -1,0 +1,14 @@
+PODS:
+  - NendSDK_iOS (3.0.0)
+
+DEPENDENCIES:
+  - NendSDK_iOS (from `./NendSDK_iOS_Sample_Local.podspec`)
+
+EXTERNAL SOURCES:
+  NendSDK_iOS:
+    :path: ./NendSDK_iOS_Sample_Local.podspec
+
+SPEC CHECKSUMS:
+  NendSDK_iOS: 132f7358370c2bd3151fde0849711624a85b6d10
+
+COCOAPODS: 0.39.0

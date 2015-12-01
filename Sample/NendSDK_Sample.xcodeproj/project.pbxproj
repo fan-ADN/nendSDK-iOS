@@ -7,134 +7,184 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B2C44CD1B1579C200CD6360 /* SelectBannerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C44CC1B1579C200CD6360 /* SelectBannerTableViewController.m */; };
-		3B2C44D01B157B8200CD6360 /* SelectSizeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C44CF1B157B8200CD6360 /* SelectSizeTableViewController.m */; };
-		3B2C44E11B15868900CD6360 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2C44E01B15868900CD6360 /* LaunchScreen.xib */; };
-		3B33423117990B9E001D0A08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33423017990B9E001D0A08 /* UIKit.framework */; };
-		3B33423317990B9E001D0A08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33423217990B9E001D0A08 /* Foundation.framework */; };
-		3B33423517990B9E001D0A08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33423417990B9E001D0A08 /* CoreGraphics.framework */; };
-		3B33423B17990B9E001D0A08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B33423917990B9E001D0A08 /* InfoPlist.strings */; };
-		3B33423D17990B9E001D0A08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B33423C17990B9E001D0A08 /* main.m */; };
-		3B33424117990B9E001D0A08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B33424017990B9E001D0A08 /* AppDelegate.m */; };
-		3B33424317990B9E001D0A08 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B33424217990B9E001D0A08 /* Default.png */; };
-		3B33424517990B9E001D0A08 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B33424417990B9E001D0A08 /* Default@2x.png */; };
-		3B33424717990B9E001D0A08 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B33424617990B9E001D0A08 /* Default-568h@2x.png */; };
-		3B33425817990BCD001D0A08 /* SelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B33425717990BCD001D0A08 /* SelectTableViewController.m */; };
-		3B33426617991B79001D0A08 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33426517991B79001D0A08 /* Security.framework */; };
-		3B33426817991B7E001D0A08 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33426717991B7E001D0A08 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		3B5806E31A0B2B33000D47CE /* UINavigationController+Rotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5806E21A0B2B33000D47CE /* UINavigationController+Rotation.m */; };
-		3B7A86501B15882F00D9348B /* Ad300_100AdjustViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A863C1B15882F00D9348B /* Ad300_100AdjustViewController.m */; };
-		3B7A86511B15882F00D9348B /* Ad300_250AdjustViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A863E1B15882F00D9348B /* Ad300_250AdjustViewController.m */; };
-		3B7A86521B15882F00D9348B /* Ad320_050AdjustViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A86401B15882F00D9348B /* Ad320_050AdjustViewController.m */; };
-		3B7A86531B15882F00D9348B /* Ad320_100AdjustViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A86421B15882F00D9348B /* Ad320_100AdjustViewController.m */; };
-		3B7A86541B15882F00D9348B /* Ad728_090AdjustViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A86441B15882F00D9348B /* Ad728_090AdjustViewController.m */; };
-		3B7A86551B15882F00D9348B /* Ad300_100ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A86471B15882F00D9348B /* Ad300_100ViewController.m */; };
-		3B7A86561B15882F00D9348B /* Ad300_250ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A86491B15882F00D9348B /* Ad300_250ViewController.m */; };
-		3B7A86571B15882F00D9348B /* Ad320_050ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A864B1B15882F00D9348B /* Ad320_050ViewController.m */; };
-		3B7A86581B15882F00D9348B /* Ad320_100ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A864D1B15882F00D9348B /* Ad320_100ViewController.m */; };
-		3B7A86591B15882F00D9348B /* Ad728_090ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A864F1B15882F00D9348B /* Ad728_090ViewController.m */; };
-		3B7A865E1B15AC2300D9348B /* Ad320_050IBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A865C1B15AC2300D9348B /* Ad320_050IBViewController.m */; };
-		3B7A865F1B15AC2300D9348B /* Ad320_050IBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7A865D1B15AC2300D9348B /* Ad320_050IBViewController.xib */; };
-		3B7A86631B15AC5100D9348B /* Ad320_100IBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A86611B15AC5100D9348B /* Ad320_100IBViewController.m */; };
-		3B7A86641B15AC5100D9348B /* Ad320_100IBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7A86621B15AC5100D9348B /* Ad320_100IBViewController.xib */; };
-		3B7A86681B15AC7900D9348B /* Ad300_100IBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A86661B15AC7900D9348B /* Ad300_100IBViewController.m */; };
-		3B7A86691B15AC7900D9348B /* Ad300_100IBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7A86671B15AC7900D9348B /* Ad300_100IBViewController.xib */; };
-		3B7A866D1B15ACA500D9348B /* Ad300_250IBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A866B1B15ACA500D9348B /* Ad300_250IBViewController.m */; };
-		3B7A866E1B15ACA500D9348B /* Ad300_250IBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7A866C1B15ACA500D9348B /* Ad300_250IBViewController.xib */; };
-		3B7A86721B15ACC800D9348B /* Ad728_090IBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A86701B15ACC800D9348B /* Ad728_090IBViewController.m */; };
-		3B7A86731B15ACC800D9348B /* Ad728_090IBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7A86711B15ACC800D9348B /* Ad728_090IBViewController.xib */; };
-		6940D46A196FC63F00F14DBD /* AdInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6940D468196FC63F00F14DBD /* AdInterstitialViewController.m */; };
-		6940D46B196FC63F00F14DBD /* AdInterstitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6940D469196FC63F00F14DBD /* AdInterstitialViewController.xib */; };
-		694E595F199069D10031B69D /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 694E5958199069D10031B69D /* libNendAd.a */; };
-		694E5960199069D10031B69D /* NADView_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 694E595E199069D10031B69D /* NADView_readme.txt */; };
-		6998B67C193EA651009D70F6 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6998B67B193EA651009D70F6 /* ImageIO.framework */; };
+		1871B75CBB679C438522EF04 /* libPods-NendSDK_Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF67E05B4082EEAFD7D32E3C /* libPods-NendSDK_Sample.a */; };
+		690C28791B797DF100C92232 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C28781B797DF100C92232 /* main.m */; };
+		690C287C1B797DF100C92232 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C287B1B797DF100C92232 /* AppDelegate.m */; };
+		690C28821B797DF100C92232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 690C28801B797DF100C92232 /* Main.storyboard */; };
+		690C28871B797DF100C92232 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690C28851B797DF100C92232 /* LaunchScreen.xib */; };
+		690C289B1B797FB200C92232 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 690C289A1B797FB200C92232 /* Images.xcassets */; };
+		690C289E1B79805B00C92232 /* SelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C289D1B79805B00C92232 /* SelectTableViewController.m */; };
+		690C28A11B7981F000C92232 /* AdInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C28A01B7981F000C92232 /* AdInterstitialViewController.m */; };
+		690C28A41B7984FB00C92232 /* SelectBannerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C28A31B7984FB00C92232 /* SelectBannerTableViewController.m */; };
+		690C28A71B7985CA00C92232 /* SelectSizeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C28A61B7985CA00C92232 /* SelectSizeTableViewController.m */; };
+		690C28E41B79888700C92232 /* banner.plist in Resources */ = {isa = PBXBuildFile; fileRef = 690C28E31B79888700C92232 /* banner.plist */; };
+		690C28E71B7989B800C92232 /* AdAdjustViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C28E61B7989B800C92232 /* AdAdjustViewController.m */; };
+		690C28EA1B7989CB00C92232 /* AdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C28E91B7989CB00C92232 /* AdViewController.m */; };
+		690C28ED1B7989E000C92232 /* AdIBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C28EC1B7989E000C92232 /* AdIBViewController.m */; };
+		690C29091B799F9E00C92232 /* NativeAdCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C28FB1B799F9E00C92232 /* NativeAdCollectionViewController.m */; };
+		690C290A1B799F9E00C92232 /* NativeAdInFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C28FD1B799F9E00C92232 /* NativeAdInFeedViewController.m */; };
+		690C290B1B799F9E00C92232 /* NativeAdPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C28FF1B799F9E00C92232 /* NativeAdPageContentViewController.m */; };
+		690C290C1B799F9E00C92232 /* NativeAdPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C29011B799F9E00C92232 /* NativeAdPageViewController.m */; };
+		690C290D1B799F9E00C92232 /* NativeAdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C29031B799F9E00C92232 /* NativeAdTableViewController.m */; };
+		690C290E1B799F9E00C92232 /* NativeAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C29051B799F9E00C92232 /* NativeAdViewController.m */; };
+		690C291B1B799FC400C92232 /* NativeAdCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C29121B799FC400C92232 /* NativeAdCellView.m */; };
+		690C291C1B799FC400C92232 /* NativeAdCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C29141B799FC400C92232 /* NativeAdCollectionView.m */; };
+		690C291D1B799FC400C92232 /* NativeAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C29161B799FC400C92232 /* NativeAdView.m */; };
+		690C291E1B799FC400C92232 /* NativeAdViewLargeWide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690C29171B799FC400C92232 /* NativeAdViewLargeWide.xib */; };
+		690C291F1B799FC400C92232 /* NativeAdViewSmallWide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690C29181B799FC400C92232 /* NativeAdViewSmallWide.xib */; };
+		690C29201B799FC400C92232 /* NativeAdViewSmallSquare.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690C29191B799FC400C92232 /* NativeAdViewSmallSquare.xib */; };
+		690C29211B799FC400C92232 /* NativeAdViewTextOnly.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690C291A1B799FC400C92232 /* NativeAdViewTextOnly.xib */; };
+		690C29231B79A22500C92232 /* native.plist in Resources */ = {isa = PBXBuildFile; fileRef = 690C29221B79A22500C92232 /* native.plist */; };
+		6933FCB81BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6933FCB71BD62F5500C26FB4 /* NativeAdRssViewController.m */; };
+		6933FCB91BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6933FCB71BD62F5500C26FB4 /* NativeAdRssViewController.m */; };
+		693A21711B79BDDB004B6680 /* NativeAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A21701B79BDDB004B6680 /* NativeAdViewController.swift */; };
+		693A21781B79EEC9004B6680 /* NativeAdMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A21771B79EEC9004B6680 /* NativeAdMenuViewController.swift */; };
+		696F3E351BDA0ADD00798F4F /* NativeAdRssTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696F3E341BDA0ADD00798F4F /* NativeAdRssTableViewController.swift */; };
+		69829E101BE1C2EA00EBFE0A /* FeedWithAdCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69829E0F1BE1C2EA00EBFE0A /* FeedWithAdCell3.xib */; };
+		698C8B061BE1F76C00BF8811 /* NativeAdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C8B051BE1F76C00BF8811 /* NativeAdPageViewController.swift */; };
+		698C8B081BE1F78B00BF8811 /* NativeAdPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C8B071BE1F78B00BF8811 /* NativeAdPageContentViewController.swift */; };
+		69C55FCD1BD9FC5300D0E34A /* NativeAdCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C55FCC1BD9FC5300D0E34A /* NativeAdCollectionViewController.swift */; };
+		69CEC63C1BD752D600F352DE /* FeedCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69CEC6311BD752D600F352DE /* FeedCell1.xib */; };
+		69CEC63D1BD752D600F352DE /* FeedCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69CEC6321BD752D600F352DE /* FeedCell2.xib */; };
+		69CEC63E1BD752D600F352DE /* FeedCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69CEC6331BD752D600F352DE /* FeedCell3.xib */; };
+		69CEC63F1BD752D600F352DE /* FeedCell4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69CEC6341BD752D600F352DE /* FeedCell4.xib */; };
+		69CEC6411BD752D600F352DE /* FeedWithAdCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69CEC6371BD752D600F352DE /* FeedWithAdCell2.xib */; };
+		69CEC6421BD752D600F352DE /* FeedWithAdCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69CEC6381BD752D600F352DE /* FeedWithAdCell3.xib */; };
+		69CEC6451BD7572300F352DE /* FeedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CEC6441BD7572300F352DE /* FeedView.m */; };
+		69CEC6491BD7581200F352DE /* FeedAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CEC6481BD7581200F352DE /* FeedAdView.m */; };
+		69CEC64B1BD76CA000F352DE /* FeedAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69CEC64A1BD76CA000F352DE /* FeedAdCell.xib */; };
+		69CEC64E1BD76CCC00F352DE /* FeedAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CEC64D1BD76CCC00F352DE /* FeedAdCell.m */; };
+		69D156761BD9DB9600ECD772 /* NativeAdInFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D156751BD9DB9600ECD772 /* NativeAdInFeedTableViewController.swift */; };
+		69D46BC61B7C96F60094294A /* UINavigationController+Rotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D46BC51B7C96F60094294A /* UINavigationController+Rotation.m */; };
+		69ED18721BD8BCEF00CBEDD0 /* NativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ED18711BD8BCEF00CBEDD0 /* NativeAdView.swift */; };
+		69ED18741BD8BE1B00CBEDD0 /* NativeAdCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ED18731BD8BE1B00CBEDD0 /* NativeAdCellView.swift */; };
+		69ED18761BD8BE8C00CBEDD0 /* NativeAdCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ED18751BD8BE8C00CBEDD0 /* NativeAdCollectionView.swift */; };
+		69ED187C1BD8BEF300CBEDD0 /* NativeAdViewLargeWide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69ED18781BD8BEF300CBEDD0 /* NativeAdViewLargeWide.xib */; };
+		69ED187D1BD8BEF300CBEDD0 /* NativeAdViewSmallWide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69ED18791BD8BEF300CBEDD0 /* NativeAdViewSmallWide.xib */; };
+		69ED187E1BD8BEF300CBEDD0 /* NativeAdViewSmallSquare.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69ED187A1BD8BEF300CBEDD0 /* NativeAdViewSmallSquare.xib */; };
+		69ED187F1BD8BEF300CBEDD0 /* NativeAdViewTextOnly.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69ED187B1BD8BEF300CBEDD0 /* NativeAdViewTextOnly.xib */; };
+		69ED18811BD8C8DC00CBEDD0 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ED18801BD8C8DC00CBEDD0 /* FeedView.swift */; };
+		69ED18831BD8C8F700CBEDD0 /* FeedAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ED18821BD8C8F700CBEDD0 /* FeedAdView.swift */; };
+		69ED18851BD8C92700CBEDD0 /* FeedAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ED18841BD8C92700CBEDD0 /* FeedAdCell.swift */; };
+		69ED188D1BD8CDC500CBEDD0 /* FeedAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69ED18861BD8CDC500CBEDD0 /* FeedAdCell.xib */; };
+		69ED188E1BD8CDC500CBEDD0 /* FeedCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69ED18871BD8CDC500CBEDD0 /* FeedCell1.xib */; };
+		69ED188F1BD8CDC500CBEDD0 /* FeedCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69ED18881BD8CDC500CBEDD0 /* FeedCell2.xib */; };
+		69ED18901BD8CDC500CBEDD0 /* FeedCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69ED18891BD8CDC500CBEDD0 /* FeedCell3.xib */; };
+		69ED18911BD8CDC500CBEDD0 /* FeedCell4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69ED188A1BD8CDC500CBEDD0 /* FeedCell4.xib */; };
+		69ED18921BD8CDC500CBEDD0 /* FeedWithAdCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69ED188B1BD8CDC500CBEDD0 /* FeedWithAdCell2.xib */; };
+		9EBA96B5026C73754EF3C438 /* libPods-NendSDK_Swift_Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D7904DF65B12AA2958812E7 /* libPods-NendSDK_Swift_Sample.a */; };
 		B54CAE7E19DE5BA9003C6616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAE7D19DE5BA9003C6616 /* AppDelegate.swift */; };
 		B54CAE8019DE5BA9003C6616 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAE7F19DE5BA9003C6616 /* ViewController.swift */; };
 		B54CAE8319DE5BA9003C6616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54CAE8119DE5BA9003C6616 /* Main.storyboard */; };
 		B54CAE8519DE5BA9003C6616 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54CAE8419DE5BA9003C6616 /* Images.xcassets */; };
 		B54CAE8819DE5BA9003C6616 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54CAE8619DE5BA9003C6616 /* LaunchScreen.xib */; };
-		B54CAE9B19DE5CCC003C6616 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33426717991B7E001D0A08 /* AdSupport.framework */; };
-		B54CAE9C19DE5CD5003C6616 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6998B67B193EA651009D70F6 /* ImageIO.framework */; };
-		B54CAE9D19DE5CDD003C6616 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33426517991B79001D0A08 /* Security.framework */; };
-		B54CAE9E19DE5D18003C6616 /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 694E5958199069D10031B69D /* libNendAd.a */; };
 		B54CAEA419DE5DF9003C6616 /* BannerView300x100Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAE9F19DE5DF9003C6616 /* BannerView300x100Controller.swift */; };
 		B54CAEA519DE5DF9003C6616 /* BannerView300x250Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA019DE5DF9003C6616 /* BannerView300x250Controller.swift */; };
 		B54CAEA619DE5DF9003C6616 /* BannerView320x50Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA119DE5DF9003C6616 /* BannerView320x50Controller.swift */; };
 		B54CAEA719DE5DF9003C6616 /* BannerView320x100Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA219DE5DF9003C6616 /* BannerView320x100Controller.swift */; };
 		B54CAEA819DE5DF9003C6616 /* BannerView728x90Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */; };
 		B54CAEAC19DE5E15003C6616 /* InterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */; };
-		B54CAEAE19DE6656003C6616 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54CAE8419DE5BA9003C6616 /* Images.xcassets */; };
-		B54CAEB019DE762B003C6616 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54CAEAF19DE762B003C6616 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B2C44CB1B1579C200CD6360 /* SelectBannerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectBannerTableViewController.h; sourceTree = "<group>"; };
-		3B2C44CC1B1579C200CD6360 /* SelectBannerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectBannerTableViewController.m; sourceTree = "<group>"; };
-		3B2C44CE1B157B8200CD6360 /* SelectSizeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectSizeTableViewController.h; sourceTree = "<group>"; };
-		3B2C44CF1B157B8200CD6360 /* SelectSizeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectSizeTableViewController.m; sourceTree = "<group>"; };
-		3B2C44E01B15868900CD6360 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		3B33422D17990B9E001D0A08 /* NendSDK_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NendSDK_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D7904DF65B12AA2958812E7 /* libPods-NendSDK_Swift_Sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NendSDK_Swift_Sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D57EBE1B2229B467319E4C8 /* Pods-NendSDK_Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendSDK_Sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NendSDK_Sample/Pods-NendSDK_Sample.debug.xcconfig"; sourceTree = "<group>"; };
+		2E0069FFAE5D37AF743DC66D /* Pods-NendSDK_Swift_Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendSDK_Swift_Sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NendSDK_Swift_Sample/Pods-NendSDK_Swift_Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		3B33423017990B9E001D0A08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B33423217990B9E001D0A08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3B33423417990B9E001D0A08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3B33423817990B9E001D0A08 /* NendSDK_Sample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NendSDK_Sample-Info.plist"; sourceTree = "<group>"; };
-		3B33423A17990B9E001D0A08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3B33423C17990B9E001D0A08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3B33423E17990B9E001D0A08 /* NendSDK_Sample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NendSDK_Sample-Prefix.pch"; sourceTree = "<group>"; };
-		3B33423F17990B9E001D0A08 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3B33424017990B9E001D0A08 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3B33424217990B9E001D0A08 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		3B33424417990B9E001D0A08 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		3B33424617990B9E001D0A08 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		3B33425617990BCD001D0A08 /* SelectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTableViewController.h; sourceTree = "<group>"; };
-		3B33425717990BCD001D0A08 /* SelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTableViewController.m; sourceTree = "<group>"; };
 		3B33426517991B79001D0A08 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3B33426717991B7E001D0A08 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		3B5806E11A0B2B33000D47CE /* UINavigationController+Rotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Rotation.h"; sourceTree = "<group>"; };
-		3B5806E21A0B2B33000D47CE /* UINavigationController+Rotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Rotation.m"; sourceTree = "<group>"; };
-		3B7A863B1B15882F00D9348B /* Ad300_100AdjustViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad300_100AdjustViewController.h; sourceTree = "<group>"; };
-		3B7A863C1B15882F00D9348B /* Ad300_100AdjustViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad300_100AdjustViewController.m; sourceTree = "<group>"; };
-		3B7A863D1B15882F00D9348B /* Ad300_250AdjustViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad300_250AdjustViewController.h; sourceTree = "<group>"; };
-		3B7A863E1B15882F00D9348B /* Ad300_250AdjustViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad300_250AdjustViewController.m; sourceTree = "<group>"; };
-		3B7A863F1B15882F00D9348B /* Ad320_050AdjustViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad320_050AdjustViewController.h; sourceTree = "<group>"; };
-		3B7A86401B15882F00D9348B /* Ad320_050AdjustViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad320_050AdjustViewController.m; sourceTree = "<group>"; };
-		3B7A86411B15882F00D9348B /* Ad320_100AdjustViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad320_100AdjustViewController.h; sourceTree = "<group>"; };
-		3B7A86421B15882F00D9348B /* Ad320_100AdjustViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad320_100AdjustViewController.m; sourceTree = "<group>"; };
-		3B7A86431B15882F00D9348B /* Ad728_090AdjustViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad728_090AdjustViewController.h; sourceTree = "<group>"; };
-		3B7A86441B15882F00D9348B /* Ad728_090AdjustViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad728_090AdjustViewController.m; sourceTree = "<group>"; };
-		3B7A86461B15882F00D9348B /* Ad300_100ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad300_100ViewController.h; sourceTree = "<group>"; };
-		3B7A86471B15882F00D9348B /* Ad300_100ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad300_100ViewController.m; sourceTree = "<group>"; };
-		3B7A86481B15882F00D9348B /* Ad300_250ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad300_250ViewController.h; sourceTree = "<group>"; };
-		3B7A86491B15882F00D9348B /* Ad300_250ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad300_250ViewController.m; sourceTree = "<group>"; };
-		3B7A864A1B15882F00D9348B /* Ad320_050ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad320_050ViewController.h; sourceTree = "<group>"; };
-		3B7A864B1B15882F00D9348B /* Ad320_050ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad320_050ViewController.m; sourceTree = "<group>"; };
-		3B7A864C1B15882F00D9348B /* Ad320_100ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad320_100ViewController.h; sourceTree = "<group>"; };
-		3B7A864D1B15882F00D9348B /* Ad320_100ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad320_100ViewController.m; sourceTree = "<group>"; };
-		3B7A864E1B15882F00D9348B /* Ad728_090ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad728_090ViewController.h; sourceTree = "<group>"; };
-		3B7A864F1B15882F00D9348B /* Ad728_090ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad728_090ViewController.m; sourceTree = "<group>"; };
-		3B7A865B1B15AC2300D9348B /* Ad320_050IBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad320_050IBViewController.h; sourceTree = "<group>"; };
-		3B7A865C1B15AC2300D9348B /* Ad320_050IBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad320_050IBViewController.m; sourceTree = "<group>"; };
-		3B7A865D1B15AC2300D9348B /* Ad320_050IBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ad320_050IBViewController.xib; sourceTree = "<group>"; };
-		3B7A86601B15AC5100D9348B /* Ad320_100IBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad320_100IBViewController.h; sourceTree = "<group>"; };
-		3B7A86611B15AC5100D9348B /* Ad320_100IBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad320_100IBViewController.m; sourceTree = "<group>"; };
-		3B7A86621B15AC5100D9348B /* Ad320_100IBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ad320_100IBViewController.xib; sourceTree = "<group>"; };
-		3B7A86651B15AC7900D9348B /* Ad300_100IBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad300_100IBViewController.h; sourceTree = "<group>"; };
-		3B7A86661B15AC7900D9348B /* Ad300_100IBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad300_100IBViewController.m; sourceTree = "<group>"; };
-		3B7A86671B15AC7900D9348B /* Ad300_100IBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ad300_100IBViewController.xib; sourceTree = "<group>"; };
-		3B7A866A1B15ACA500D9348B /* Ad300_250IBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad300_250IBViewController.h; sourceTree = "<group>"; };
-		3B7A866B1B15ACA500D9348B /* Ad300_250IBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad300_250IBViewController.m; sourceTree = "<group>"; };
-		3B7A866C1B15ACA500D9348B /* Ad300_250IBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ad300_250IBViewController.xib; sourceTree = "<group>"; };
-		3B7A866F1B15ACC800D9348B /* Ad728_090IBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad728_090IBViewController.h; sourceTree = "<group>"; };
-		3B7A86701B15ACC800D9348B /* Ad728_090IBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad728_090IBViewController.m; sourceTree = "<group>"; };
-		3B7A86711B15ACC800D9348B /* Ad728_090IBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ad728_090IBViewController.xib; sourceTree = "<group>"; };
-		6940D467196FC63F00F14DBD /* AdInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdInterstitialViewController.h; sourceTree = "<group>"; };
-		6940D468196FC63F00F14DBD /* AdInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdInterstitialViewController.m; sourceTree = "<group>"; };
-		6940D469196FC63F00F14DBD /* AdInterstitialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdInterstitialViewController.xib; sourceTree = "<group>"; };
-		694E5958199069D10031B69D /* libNendAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNendAd.a; sourceTree = "<group>"; };
-		694E595C199069D10031B69D /* NADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADInterstitial.h; sourceTree = "<group>"; };
-		694E595D199069D10031B69D /* NADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADView.h; sourceTree = "<group>"; };
-		694E595E199069D10031B69D /* NADView_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NADView_readme.txt; sourceTree = "<group>"; };
+		43FEA96744808C6AD92A703B /* Pods-NendSDK_Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendSDK_Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-NendSDK_Sample/Pods-NendSDK_Sample.release.xcconfig"; sourceTree = "<group>"; };
+		690C28741B797DF100C92232 /* NendSDK_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NendSDK_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		690C28771B797DF100C92232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		690C28781B797DF100C92232 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		690C287A1B797DF100C92232 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		690C287B1B797DF100C92232 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		690C28811B797DF100C92232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		690C28861B797DF100C92232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		690C289A1B797FB200C92232 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		690C289C1B79805B00C92232 /* SelectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTableViewController.h; sourceTree = "<group>"; };
+		690C289D1B79805B00C92232 /* SelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTableViewController.m; sourceTree = "<group>"; };
+		690C289F1B7981F000C92232 /* AdInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdInterstitialViewController.h; sourceTree = "<group>"; };
+		690C28A01B7981F000C92232 /* AdInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdInterstitialViewController.m; sourceTree = "<group>"; };
+		690C28A21B7984FB00C92232 /* SelectBannerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectBannerTableViewController.h; path = ../SelectBannerTableViewController.h; sourceTree = "<group>"; };
+		690C28A31B7984FB00C92232 /* SelectBannerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectBannerTableViewController.m; path = ../SelectBannerTableViewController.m; sourceTree = "<group>"; };
+		690C28A51B7985CA00C92232 /* SelectSizeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectSizeTableViewController.h; path = ../SelectSizeTableViewController.h; sourceTree = "<group>"; };
+		690C28A61B7985CA00C92232 /* SelectSizeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectSizeTableViewController.m; path = ../SelectSizeTableViewController.m; sourceTree = "<group>"; };
+		690C28E31B79888700C92232 /* banner.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = banner.plist; sourceTree = "<group>"; };
+		690C28E51B7989B800C92232 /* AdAdjustViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdAdjustViewController.h; sourceTree = "<group>"; };
+		690C28E61B7989B800C92232 /* AdAdjustViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdAdjustViewController.m; sourceTree = "<group>"; };
+		690C28E81B7989CB00C92232 /* AdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdViewController.h; sourceTree = "<group>"; };
+		690C28E91B7989CB00C92232 /* AdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdViewController.m; sourceTree = "<group>"; };
+		690C28EB1B7989E000C92232 /* AdIBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdIBViewController.h; sourceTree = "<group>"; };
+		690C28EC1B7989E000C92232 /* AdIBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdIBViewController.m; sourceTree = "<group>"; };
+		690C28F11B798E2300C92232 /* .clang-format */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".clang-format"; sourceTree = "<group>"; };
+		690C28FA1B799F9E00C92232 /* NativeAdCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdCollectionViewController.h; sourceTree = "<group>"; };
+		690C28FB1B799F9E00C92232 /* NativeAdCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdCollectionViewController.m; sourceTree = "<group>"; };
+		690C28FC1B799F9E00C92232 /* NativeAdInFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdInFeedViewController.h; sourceTree = "<group>"; };
+		690C28FD1B799F9E00C92232 /* NativeAdInFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdInFeedViewController.m; sourceTree = "<group>"; };
+		690C28FE1B799F9E00C92232 /* NativeAdPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdPageContentViewController.h; sourceTree = "<group>"; };
+		690C28FF1B799F9E00C92232 /* NativeAdPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdPageContentViewController.m; sourceTree = "<group>"; };
+		690C29001B799F9E00C92232 /* NativeAdPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdPageViewController.h; sourceTree = "<group>"; };
+		690C29011B799F9E00C92232 /* NativeAdPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdPageViewController.m; sourceTree = "<group>"; };
+		690C29021B799F9E00C92232 /* NativeAdTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdTableViewController.h; sourceTree = "<group>"; };
+		690C29031B799F9E00C92232 /* NativeAdTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdTableViewController.m; sourceTree = "<group>"; };
+		690C29041B799F9E00C92232 /* NativeAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdViewController.h; sourceTree = "<group>"; };
+		690C29051B799F9E00C92232 /* NativeAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdViewController.m; sourceTree = "<group>"; };
+		690C29111B799FC400C92232 /* NativeAdCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdCellView.h; sourceTree = "<group>"; };
+		690C29121B799FC400C92232 /* NativeAdCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdCellView.m; sourceTree = "<group>"; };
+		690C29131B799FC400C92232 /* NativeAdCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdCollectionView.h; sourceTree = "<group>"; };
+		690C29141B799FC400C92232 /* NativeAdCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdCollectionView.m; sourceTree = "<group>"; };
+		690C29151B799FC400C92232 /* NativeAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdView.h; sourceTree = "<group>"; };
+		690C29161B799FC400C92232 /* NativeAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdView.m; sourceTree = "<group>"; };
+		690C29171B799FC400C92232 /* NativeAdViewLargeWide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdViewLargeWide.xib; sourceTree = "<group>"; };
+		690C29181B799FC400C92232 /* NativeAdViewSmallWide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdViewSmallWide.xib; sourceTree = "<group>"; };
+		690C29191B799FC400C92232 /* NativeAdViewSmallSquare.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdViewSmallSquare.xib; sourceTree = "<group>"; };
+		690C291A1B799FC400C92232 /* NativeAdViewTextOnly.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdViewTextOnly.xib; sourceTree = "<group>"; };
+		690C29221B79A22500C92232 /* native.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = native.plist; sourceTree = "<group>"; };
+		6933FCB61BD62F5500C26FB4 /* NativeAdRssViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdRssViewController.h; sourceTree = "<group>"; };
+		6933FCB71BD62F5500C26FB4 /* NativeAdRssViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdRssViewController.m; sourceTree = "<group>"; };
+		693A21701B79BDDB004B6680 /* NativeAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdViewController.swift; sourceTree = "<group>"; };
+		693A21771B79EEC9004B6680 /* NativeAdMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdMenuViewController.swift; sourceTree = "<group>"; };
+		696F3E341BDA0ADD00798F4F /* NativeAdRssTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdRssTableViewController.swift; sourceTree = "<group>"; };
+		69829E0F1BE1C2EA00EBFE0A /* FeedWithAdCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedWithAdCell3.xib; sourceTree = "<group>"; };
+		698C8B051BE1F76C00BF8811 /* NativeAdPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdPageViewController.swift; sourceTree = "<group>"; };
+		698C8B071BE1F78B00BF8811 /* NativeAdPageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdPageContentViewController.swift; sourceTree = "<group>"; };
 		6998B67B193EA651009D70F6 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		69C55FCC1BD9FC5300D0E34A /* NativeAdCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdCollectionViewController.swift; sourceTree = "<group>"; };
+		69CEC6311BD752D600F352DE /* FeedCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell1.xib; sourceTree = "<group>"; };
+		69CEC6321BD752D600F352DE /* FeedCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell2.xib; sourceTree = "<group>"; };
+		69CEC6331BD752D600F352DE /* FeedCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell3.xib; sourceTree = "<group>"; };
+		69CEC6341BD752D600F352DE /* FeedCell4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell4.xib; sourceTree = "<group>"; };
+		69CEC6371BD752D600F352DE /* FeedWithAdCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedWithAdCell2.xib; sourceTree = "<group>"; };
+		69CEC6381BD752D600F352DE /* FeedWithAdCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedWithAdCell3.xib; sourceTree = "<group>"; };
+		69CEC6431BD7572300F352DE /* FeedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedView.h; sourceTree = "<group>"; };
+		69CEC6441BD7572300F352DE /* FeedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedView.m; sourceTree = "<group>"; };
+		69CEC6471BD7581200F352DE /* FeedAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedAdView.h; sourceTree = "<group>"; };
+		69CEC6481BD7581200F352DE /* FeedAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedAdView.m; sourceTree = "<group>"; };
+		69CEC64A1BD76CA000F352DE /* FeedAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedAdCell.xib; sourceTree = "<group>"; };
+		69CEC64C1BD76CCC00F352DE /* FeedAdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedAdCell.h; sourceTree = "<group>"; };
+		69CEC64D1BD76CCC00F352DE /* FeedAdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedAdCell.m; sourceTree = "<group>"; };
+		69D156751BD9DB9600ECD772 /* NativeAdInFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdInFeedTableViewController.swift; sourceTree = "<group>"; };
+		69D46BC41B7C96F60094294A /* UINavigationController+Rotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Rotation.h"; sourceTree = "<group>"; };
+		69D46BC51B7C96F60094294A /* UINavigationController+Rotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Rotation.m"; sourceTree = "<group>"; };
+		69ED18711BD8BCEF00CBEDD0 /* NativeAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdView.swift; sourceTree = "<group>"; };
+		69ED18731BD8BE1B00CBEDD0 /* NativeAdCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdCellView.swift; sourceTree = "<group>"; };
+		69ED18751BD8BE8C00CBEDD0 /* NativeAdCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdCollectionView.swift; sourceTree = "<group>"; };
+		69ED18781BD8BEF300CBEDD0 /* NativeAdViewLargeWide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdViewLargeWide.xib; sourceTree = "<group>"; };
+		69ED18791BD8BEF300CBEDD0 /* NativeAdViewSmallWide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdViewSmallWide.xib; sourceTree = "<group>"; };
+		69ED187A1BD8BEF300CBEDD0 /* NativeAdViewSmallSquare.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdViewSmallSquare.xib; sourceTree = "<group>"; };
+		69ED187B1BD8BEF300CBEDD0 /* NativeAdViewTextOnly.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdViewTextOnly.xib; sourceTree = "<group>"; };
+		69ED18801BD8C8DC00CBEDD0 /* FeedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		69ED18821BD8C8F700CBEDD0 /* FeedAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedAdView.swift; sourceTree = "<group>"; };
+		69ED18841BD8C92700CBEDD0 /* FeedAdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedAdCell.swift; sourceTree = "<group>"; };
+		69ED18861BD8CDC500CBEDD0 /* FeedAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedAdCell.xib; sourceTree = "<group>"; };
+		69ED18871BD8CDC500CBEDD0 /* FeedCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell1.xib; sourceTree = "<group>"; };
+		69ED18881BD8CDC500CBEDD0 /* FeedCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell2.xib; sourceTree = "<group>"; };
+		69ED18891BD8CDC500CBEDD0 /* FeedCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell3.xib; sourceTree = "<group>"; };
+		69ED188A1BD8CDC500CBEDD0 /* FeedCell4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell4.xib; sourceTree = "<group>"; };
+		69ED188B1BD8CDC500CBEDD0 /* FeedWithAdCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedWithAdCell2.xib; sourceTree = "<group>"; };
 		B54CAE7919DE5BA9003C6616 /* NendSDK_Swift_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NendSDK_Swift_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54CAE7C19DE5BA9003C6616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B54CAE7D19DE5BA9003C6616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,21 +199,16 @@
 		B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView728x90Controller.swift; sourceTree = "<group>"; };
 		B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialViewController.swift; sourceTree = "<group>"; };
 		B54CAEAD19DE5E31003C6616 /* NendAd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NendAd-Bridging-Header.h"; sourceTree = "<group>"; };
-		B54CAEAF19DE762B003C6616 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BF67E05B4082EEAFD7D32E3C /* libPods-NendSDK_Sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NendSDK_Sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC1BECE5B67F919DE29F9177 /* Pods-NendSDK_Swift_Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendSDK_Swift_Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-NendSDK_Swift_Sample/Pods-NendSDK_Swift_Sample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3B33422A17990B9E001D0A08 /* Frameworks */ = {
+		690C28711B797DF100C92232 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6998B67C193EA651009D70F6 /* ImageIO.framework in Frameworks */,
-				3B33426817991B7E001D0A08 /* AdSupport.framework in Frameworks */,
-				3B33426617991B79001D0A08 /* Security.framework in Frameworks */,
-				3B33423117990B9E001D0A08 /* UIKit.framework in Frameworks */,
-				3B33423317990B9E001D0A08 /* Foundation.framework in Frameworks */,
-				694E595F199069D10031B69D /* libNendAd.a in Frameworks */,
-				3B33423517990B9E001D0A08 /* CoreGraphics.framework in Frameworks */,
+				1871B75CBB679C438522EF04 /* libPods-NendSDK_Sample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,10 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B54CAE9E19DE5D18003C6616 /* libNendAd.a in Frameworks */,
-				B54CAE9D19DE5CDD003C6616 /* Security.framework in Frameworks */,
-				B54CAE9C19DE5CD5003C6616 /* ImageIO.framework in Frameworks */,
-				B54CAE9B19DE5CCC003C6616 /* AdSupport.framework in Frameworks */,
+				9EBA96B5026C73754EF3C438 /* libPods-NendSDK_Swift_Sample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,19 +226,20 @@
 		3B33422417990B9E001D0A08 = {
 			isa = PBXGroup;
 			children = (
-				694E5957199069D10031B69D /* NendAd */,
-				3B33423617990B9E001D0A08 /* NendSDK_Sample */,
+				690C28F11B798E2300C92232 /* .clang-format */,
 				B54CAE7A19DE5BA9003C6616 /* NendSDK_Swift_Sample */,
+				690C28751B797DF100C92232 /* NendSDK_Sample */,
 				3B33422F17990B9E001D0A08 /* Frameworks */,
 				3B33422E17990B9E001D0A08 /* Products */,
+				706E85ED480C2D1A9AB953A6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		3B33422E17990B9E001D0A08 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B33422D17990B9E001D0A08 /* NendSDK_Sample.app */,
 				B54CAE7919DE5BA9003C6616 /* NendSDK_Swift_Sample.app */,
+				690C28741B797DF100C92232 /* NendSDK_Sample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,129 +253,191 @@
 				3B33423017990B9E001D0A08 /* UIKit.framework */,
 				3B33423217990B9E001D0A08 /* Foundation.framework */,
 				3B33423417990B9E001D0A08 /* CoreGraphics.framework */,
+				BF67E05B4082EEAFD7D32E3C /* libPods-NendSDK_Sample.a */,
+				0D7904DF65B12AA2958812E7 /* libPods-NendSDK_Swift_Sample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3B33423617990B9E001D0A08 /* NendSDK_Sample */ = {
+		690C28751B797DF100C92232 /* NendSDK_Sample */ = {
 			isa = PBXGroup;
 			children = (
-				3B2C44E01B15868900CD6360 /* LaunchScreen.xib */,
-				3B33423F17990B9E001D0A08 /* AppDelegate.h */,
-				3B33424017990B9E001D0A08 /* AppDelegate.m */,
-				3B33425617990BCD001D0A08 /* SelectTableViewController.h */,
-				3B33425717990BCD001D0A08 /* SelectTableViewController.m */,
-				3B2C44CB1B1579C200CD6360 /* SelectBannerTableViewController.h */,
-				3B2C44CC1B1579C200CD6360 /* SelectBannerTableViewController.m */,
-				3B2C44CE1B157B8200CD6360 /* SelectSizeTableViewController.h */,
-				3B2C44CF1B157B8200CD6360 /* SelectSizeTableViewController.m */,
-				3B7A86391B15882F00D9348B /* banner */,
-				6940D467196FC63F00F14DBD /* AdInterstitialViewController.h */,
-				6940D468196FC63F00F14DBD /* AdInterstitialViewController.m */,
-				6940D469196FC63F00F14DBD /* AdInterstitialViewController.xib */,
-				3B5806E11A0B2B33000D47CE /* UINavigationController+Rotation.h */,
-				3B5806E21A0B2B33000D47CE /* UINavigationController+Rotation.m */,
-				B54CAEAF19DE762B003C6616 /* Images.xcassets */,
-				3B33423717990B9E001D0A08 /* Supporting Files */,
+				690C28F71B7994D900C92232 /* native */,
+				690C28F61B7994C700C92232 /* interstitial */,
+				690C28A81B7986C500C92232 /* banner */,
+				690C289C1B79805B00C92232 /* SelectTableViewController.h */,
+				690C289D1B79805B00C92232 /* SelectTableViewController.m */,
+				69D46BC41B7C96F60094294A /* UINavigationController+Rotation.h */,
+				69D46BC51B7C96F60094294A /* UINavigationController+Rotation.m */,
+				690C287A1B797DF100C92232 /* AppDelegate.h */,
+				690C287B1B797DF100C92232 /* AppDelegate.m */,
+				690C28801B797DF100C92232 /* Main.storyboard */,
+				690C28851B797DF100C92232 /* LaunchScreen.xib */,
+				690C289A1B797FB200C92232 /* Images.xcassets */,
+				690C28761B797DF100C92232 /* Supporting Files */,
 			);
 			path = NendSDK_Sample;
 			sourceTree = "<group>";
 		};
-		3B33423717990B9E001D0A08 /* Supporting Files */ = {
+		690C28761B797DF100C92232 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3B33423817990B9E001D0A08 /* NendSDK_Sample-Info.plist */,
-				3B33423917990B9E001D0A08 /* InfoPlist.strings */,
-				3B33423C17990B9E001D0A08 /* main.m */,
-				3B33423E17990B9E001D0A08 /* NendSDK_Sample-Prefix.pch */,
-				3B33424217990B9E001D0A08 /* Default.png */,
-				3B33424417990B9E001D0A08 /* Default@2x.png */,
-				3B33424617990B9E001D0A08 /* Default-568h@2x.png */,
+				690C28771B797DF100C92232 /* Info.plist */,
+				690C28781B797DF100C92232 /* main.m */,
+				690C28E31B79888700C92232 /* banner.plist */,
+				690C29221B79A22500C92232 /* native.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3B7A86391B15882F00D9348B /* banner */ = {
+		690C28A81B7986C500C92232 /* banner */ = {
 			isa = PBXGroup;
 			children = (
-				3B7A86451B15882F00D9348B /* default */,
-				3B7A865A1B15AB9700D9348B /* interfaceBuilder */,
-				3B7A863A1B15882F00D9348B /* adjustAdSize */,
+				690C28A21B7984FB00C92232 /* SelectBannerTableViewController.h */,
+				690C28A31B7984FB00C92232 /* SelectBannerTableViewController.m */,
+				690C28A51B7985CA00C92232 /* SelectSizeTableViewController.h */,
+				690C28A61B7985CA00C92232 /* SelectSizeTableViewController.m */,
+				690C28E51B7989B800C92232 /* AdAdjustViewController.h */,
+				690C28E61B7989B800C92232 /* AdAdjustViewController.m */,
+				690C28E81B7989CB00C92232 /* AdViewController.h */,
+				690C28E91B7989CB00C92232 /* AdViewController.m */,
+				690C28EB1B7989E000C92232 /* AdIBViewController.h */,
+				690C28EC1B7989E000C92232 /* AdIBViewController.m */,
 			);
 			path = banner;
 			sourceTree = "<group>";
 		};
-		3B7A863A1B15882F00D9348B /* adjustAdSize */ = {
+		690C28F61B7994C700C92232 /* interstitial */ = {
 			isa = PBXGroup;
 			children = (
-				3B7A863F1B15882F00D9348B /* Ad320_050AdjustViewController.h */,
-				3B7A86401B15882F00D9348B /* Ad320_050AdjustViewController.m */,
-				3B7A86411B15882F00D9348B /* Ad320_100AdjustViewController.h */,
-				3B7A86421B15882F00D9348B /* Ad320_100AdjustViewController.m */,
-				3B7A863B1B15882F00D9348B /* Ad300_100AdjustViewController.h */,
-				3B7A863C1B15882F00D9348B /* Ad300_100AdjustViewController.m */,
-				3B7A863D1B15882F00D9348B /* Ad300_250AdjustViewController.h */,
-				3B7A863E1B15882F00D9348B /* Ad300_250AdjustViewController.m */,
-				3B7A86431B15882F00D9348B /* Ad728_090AdjustViewController.h */,
-				3B7A86441B15882F00D9348B /* Ad728_090AdjustViewController.m */,
+				690C289F1B7981F000C92232 /* AdInterstitialViewController.h */,
+				690C28A01B7981F000C92232 /* AdInterstitialViewController.m */,
 			);
-			path = adjustAdSize;
+			name = interstitial;
 			sourceTree = "<group>";
 		};
-		3B7A86451B15882F00D9348B /* default */ = {
+		690C28F71B7994D900C92232 /* native */ = {
 			isa = PBXGroup;
 			children = (
-				3B7A864A1B15882F00D9348B /* Ad320_050ViewController.h */,
-				3B7A864B1B15882F00D9348B /* Ad320_050ViewController.m */,
-				3B7A864C1B15882F00D9348B /* Ad320_100ViewController.h */,
-				3B7A864D1B15882F00D9348B /* Ad320_100ViewController.m */,
-				3B7A86461B15882F00D9348B /* Ad300_100ViewController.h */,
-				3B7A86471B15882F00D9348B /* Ad300_100ViewController.m */,
-				3B7A86481B15882F00D9348B /* Ad300_250ViewController.h */,
-				3B7A86491B15882F00D9348B /* Ad300_250ViewController.m */,
-				3B7A864E1B15882F00D9348B /* Ad728_090ViewController.h */,
-				3B7A864F1B15882F00D9348B /* Ad728_090ViewController.m */,
+				690C29101B799FA500C92232 /* view */,
+				690C28FA1B799F9E00C92232 /* NativeAdCollectionViewController.h */,
+				690C28FB1B799F9E00C92232 /* NativeAdCollectionViewController.m */,
+				690C28FC1B799F9E00C92232 /* NativeAdInFeedViewController.h */,
+				690C28FD1B799F9E00C92232 /* NativeAdInFeedViewController.m */,
+				690C28FE1B799F9E00C92232 /* NativeAdPageContentViewController.h */,
+				690C28FF1B799F9E00C92232 /* NativeAdPageContentViewController.m */,
+				690C29001B799F9E00C92232 /* NativeAdPageViewController.h */,
+				690C29011B799F9E00C92232 /* NativeAdPageViewController.m */,
+				690C29021B799F9E00C92232 /* NativeAdTableViewController.h */,
+				690C29031B799F9E00C92232 /* NativeAdTableViewController.m */,
+				690C29041B799F9E00C92232 /* NativeAdViewController.h */,
+				690C29051B799F9E00C92232 /* NativeAdViewController.m */,
+				6933FCB61BD62F5500C26FB4 /* NativeAdRssViewController.h */,
+				6933FCB71BD62F5500C26FB4 /* NativeAdRssViewController.m */,
 			);
-			path = default;
+			name = native;
 			sourceTree = "<group>";
 		};
-		3B7A865A1B15AB9700D9348B /* interfaceBuilder */ = {
+		690C29101B799FA500C92232 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				3B7A865B1B15AC2300D9348B /* Ad320_050IBViewController.h */,
-				3B7A865C1B15AC2300D9348B /* Ad320_050IBViewController.m */,
-				3B7A865D1B15AC2300D9348B /* Ad320_050IBViewController.xib */,
-				3B7A86601B15AC5100D9348B /* Ad320_100IBViewController.h */,
-				3B7A86611B15AC5100D9348B /* Ad320_100IBViewController.m */,
-				3B7A86621B15AC5100D9348B /* Ad320_100IBViewController.xib */,
-				3B7A86651B15AC7900D9348B /* Ad300_100IBViewController.h */,
-				3B7A86661B15AC7900D9348B /* Ad300_100IBViewController.m */,
-				3B7A86671B15AC7900D9348B /* Ad300_100IBViewController.xib */,
-				3B7A866A1B15ACA500D9348B /* Ad300_250IBViewController.h */,
-				3B7A866B1B15ACA500D9348B /* Ad300_250IBViewController.m */,
-				3B7A866C1B15ACA500D9348B /* Ad300_250IBViewController.xib */,
-				3B7A866F1B15ACC800D9348B /* Ad728_090IBViewController.h */,
-				3B7A86701B15ACC800D9348B /* Ad728_090IBViewController.m */,
-				3B7A86711B15ACC800D9348B /* Ad728_090IBViewController.xib */,
+				69CEC6461BD7579100F352DE /* xib */,
+				69CEC6431BD7572300F352DE /* FeedView.h */,
+				69CEC6441BD7572300F352DE /* FeedView.m */,
+				69CEC6471BD7581200F352DE /* FeedAdView.h */,
+				69CEC6481BD7581200F352DE /* FeedAdView.m */,
+				69CEC64C1BD76CCC00F352DE /* FeedAdCell.h */,
+				69CEC64D1BD76CCC00F352DE /* FeedAdCell.m */,
+				690C29111B799FC400C92232 /* NativeAdCellView.h */,
+				690C29121B799FC400C92232 /* NativeAdCellView.m */,
+				690C29131B799FC400C92232 /* NativeAdCollectionView.h */,
+				690C29141B799FC400C92232 /* NativeAdCollectionView.m */,
+				690C29151B799FC400C92232 /* NativeAdView.h */,
+				690C29161B799FC400C92232 /* NativeAdView.m */,
 			);
-			path = interfaceBuilder;
+			name = view;
 			sourceTree = "<group>";
 		};
-		694E5957199069D10031B69D /* NendAd */ = {
+		69CEC6461BD7579100F352DE /* xib */ = {
 			isa = PBXGroup;
 			children = (
-				694E5958199069D10031B69D /* libNendAd.a */,
-				694E595C199069D10031B69D /* NADInterstitial.h */,
-				694E595D199069D10031B69D /* NADView.h */,
-				694E595E199069D10031B69D /* NADView_readme.txt */,
+				690C29171B799FC400C92232 /* NativeAdViewLargeWide.xib */,
+				690C29181B799FC400C92232 /* NativeAdViewSmallWide.xib */,
+				690C29191B799FC400C92232 /* NativeAdViewSmallSquare.xib */,
+				690C291A1B799FC400C92232 /* NativeAdViewTextOnly.xib */,
+				69CEC6311BD752D600F352DE /* FeedCell1.xib */,
+				69CEC6321BD752D600F352DE /* FeedCell2.xib */,
+				69CEC6331BD752D600F352DE /* FeedCell3.xib */,
+				69CEC6341BD752D600F352DE /* FeedCell4.xib */,
+				69CEC6371BD752D600F352DE /* FeedWithAdCell2.xib */,
+				69CEC6381BD752D600F352DE /* FeedWithAdCell3.xib */,
+				69CEC64A1BD76CA000F352DE /* FeedAdCell.xib */,
 			);
-			name = NendAd;
-			path = ../NendAd;
+			name = xib;
+			sourceTree = "<group>";
+		};
+		69ED186F1BD8BCA800CBEDD0 /* native */ = {
+			isa = PBXGroup;
+			children = (
+				69ED18701BD8BCDA00CBEDD0 /* view */,
+				693A21771B79EEC9004B6680 /* NativeAdMenuViewController.swift */,
+				693A21701B79BDDB004B6680 /* NativeAdViewController.swift */,
+				69D156751BD9DB9600ECD772 /* NativeAdInFeedTableViewController.swift */,
+				69C55FCC1BD9FC5300D0E34A /* NativeAdCollectionViewController.swift */,
+				696F3E341BDA0ADD00798F4F /* NativeAdRssTableViewController.swift */,
+				698C8B051BE1F76C00BF8811 /* NativeAdPageViewController.swift */,
+				698C8B071BE1F78B00BF8811 /* NativeAdPageContentViewController.swift */,
+			);
+			name = native;
+			sourceTree = "<group>";
+		};
+		69ED18701BD8BCDA00CBEDD0 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				69ED18771BD8BEE200CBEDD0 /* xib */,
+				69ED18711BD8BCEF00CBEDD0 /* NativeAdView.swift */,
+				69ED18731BD8BE1B00CBEDD0 /* NativeAdCellView.swift */,
+				69ED18751BD8BE8C00CBEDD0 /* NativeAdCollectionView.swift */,
+				69ED18801BD8C8DC00CBEDD0 /* FeedView.swift */,
+				69ED18821BD8C8F700CBEDD0 /* FeedAdView.swift */,
+				69ED18841BD8C92700CBEDD0 /* FeedAdCell.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		69ED18771BD8BEE200CBEDD0 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				69ED18861BD8CDC500CBEDD0 /* FeedAdCell.xib */,
+				69ED18871BD8CDC500CBEDD0 /* FeedCell1.xib */,
+				69ED18881BD8CDC500CBEDD0 /* FeedCell2.xib */,
+				69ED18891BD8CDC500CBEDD0 /* FeedCell3.xib */,
+				69ED188A1BD8CDC500CBEDD0 /* FeedCell4.xib */,
+				69ED188B1BD8CDC500CBEDD0 /* FeedWithAdCell2.xib */,
+				69829E0F1BE1C2EA00EBFE0A /* FeedWithAdCell3.xib */,
+				69ED18781BD8BEF300CBEDD0 /* NativeAdViewLargeWide.xib */,
+				69ED18791BD8BEF300CBEDD0 /* NativeAdViewSmallWide.xib */,
+				69ED187A1BD8BEF300CBEDD0 /* NativeAdViewSmallSquare.xib */,
+				69ED187B1BD8BEF300CBEDD0 /* NativeAdViewTextOnly.xib */,
+			);
+			name = xib;
+			sourceTree = "<group>";
+		};
+		706E85ED480C2D1A9AB953A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D57EBE1B2229B467319E4C8 /* Pods-NendSDK_Sample.debug.xcconfig */,
+				43FEA96744808C6AD92A703B /* Pods-NendSDK_Sample.release.xcconfig */,
+				2E0069FFAE5D37AF743DC66D /* Pods-NendSDK_Swift_Sample.debug.xcconfig */,
+				CC1BECE5B67F919DE29F9177 /* Pods-NendSDK_Swift_Sample.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		B54CAE7A19DE5BA9003C6616 /* NendSDK_Swift_Sample */ = {
 			isa = PBXGroup;
 			children = (
+				69ED186F1BD8BCA800CBEDD0 /* native */,
 				B54CAE7D19DE5BA9003C6616 /* AppDelegate.swift */,
 				B54CAE7F19DE5BA9003C6616 /* ViewController.swift */,
 				B54CAEA119DE5DF9003C6616 /* BannerView320x50Controller.swift */,
@@ -361,30 +466,36 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3B33422C17990B9E001D0A08 /* NendSDK_Sample */ = {
+		690C28731B797DF100C92232 /* NendSDK_Sample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B33425317990B9E001D0A08 /* Build configuration list for PBXNativeTarget "NendSDK_Sample" */;
+			buildConfigurationList = 690C28981B797DF200C92232 /* Build configuration list for PBXNativeTarget "NendSDK_Sample" */;
 			buildPhases = (
-				3B33422917990B9E001D0A08 /* Sources */,
-				3B33422A17990B9E001D0A08 /* Frameworks */,
-				3B33422B17990B9E001D0A08 /* Resources */,
+				99AF8CF794934647DD09F422 /* Check Pods Manifest.lock */,
+				690C28701B797DF100C92232 /* Sources */,
+				690C28711B797DF100C92232 /* Frameworks */,
+				690C28721B797DF100C92232 /* Resources */,
+				FF7AD2E33C513BD29B23D0CD /* Embed Pods Frameworks */,
+				D9D58A526E3E695F03F05D96 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = NendSDK_Sample;
-			productName = NendSDK_Sample;
-			productReference = 3B33422D17990B9E001D0A08 /* NendSDK_Sample.app */;
+			productName = NendSDK_Modern_Sample;
+			productReference = 690C28741B797DF100C92232 /* NendSDK_Sample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B54CAE7819DE5BA9003C6616 /* NendSDK_Swift_Sample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B54CAE9919DE5BA9003C6616 /* Build configuration list for PBXNativeTarget "NendSDK_Swift_Sample" */;
 			buildPhases = (
+				C70D6FAD436BF6E1E9812563 /* Check Pods Manifest.lock */,
 				B54CAE7519DE5BA9003C6616 /* Sources */,
 				B54CAE7619DE5BA9003C6616 /* Frameworks */,
 				B54CAE7719DE5BA9003C6616 /* Resources */,
+				4E1278C89E0231E4096AACB8 /* Embed Pods Frameworks */,
+				8AB2353883CCA04799923282 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -405,8 +516,8 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "F@N Communications";
 				TargetAttributes = {
-					3B33422C17990B9E001D0A08 = {
-						DevelopmentTeam = EH6M2BH4ZR;
+					690C28731B797DF100C92232 = {
+						CreatedOnToolsVersion = 6.4;
 					};
 					B54CAE7819DE5BA9003C6616 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -426,31 +537,33 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3B33422C17990B9E001D0A08 /* NendSDK_Sample */,
 				B54CAE7819DE5BA9003C6616 /* NendSDK_Swift_Sample */,
+				690C28731B797DF100C92232 /* NendSDK_Sample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3B33422B17990B9E001D0A08 /* Resources */ = {
+		690C28721B797DF100C92232 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B7A86691B15AC7900D9348B /* Ad300_100IBViewController.xib in Resources */,
-				3B2C44E11B15868900CD6360 /* LaunchScreen.xib in Resources */,
-				3B33423B17990B9E001D0A08 /* InfoPlist.strings in Resources */,
-				3B33424317990B9E001D0A08 /* Default.png in Resources */,
-				6940D46B196FC63F00F14DBD /* AdInterstitialViewController.xib in Resources */,
-				3B33424517990B9E001D0A08 /* Default@2x.png in Resources */,
-				B54CAEAE19DE6656003C6616 /* Images.xcassets in Resources */,
-				3B7A866E1B15ACA500D9348B /* Ad300_250IBViewController.xib in Resources */,
-				3B7A865F1B15AC2300D9348B /* Ad320_050IBViewController.xib in Resources */,
-				3B33424717990B9E001D0A08 /* Default-568h@2x.png in Resources */,
-				3B7A86731B15ACC800D9348B /* Ad728_090IBViewController.xib in Resources */,
-				3B7A86641B15AC5100D9348B /* Ad320_100IBViewController.xib in Resources */,
-				694E5960199069D10031B69D /* NADView_readme.txt in Resources */,
-				B54CAEB019DE762B003C6616 /* Images.xcassets in Resources */,
+				690C29231B79A22500C92232 /* native.plist in Resources */,
+				69CEC63D1BD752D600F352DE /* FeedCell2.xib in Resources */,
+				690C289B1B797FB200C92232 /* Images.xcassets in Resources */,
+				690C28821B797DF100C92232 /* Main.storyboard in Resources */,
+				690C291E1B799FC400C92232 /* NativeAdViewLargeWide.xib in Resources */,
+				690C29201B799FC400C92232 /* NativeAdViewSmallSquare.xib in Resources */,
+				69CEC64B1BD76CA000F352DE /* FeedAdCell.xib in Resources */,
+				69CEC63C1BD752D600F352DE /* FeedCell1.xib in Resources */,
+				690C28E41B79888700C92232 /* banner.plist in Resources */,
+				69CEC6421BD752D600F352DE /* FeedWithAdCell3.xib in Resources */,
+				69CEC63F1BD752D600F352DE /* FeedCell4.xib in Resources */,
+				69CEC6411BD752D600F352DE /* FeedWithAdCell2.xib in Resources */,
+				690C28871B797DF100C92232 /* LaunchScreen.xib in Resources */,
+				69CEC63E1BD752D600F352DE /* FeedCell3.xib in Resources */,
+				690C291F1B799FC400C92232 /* NativeAdViewSmallWide.xib in Resources */,
+				690C29211B799FC400C92232 /* NativeAdViewTextOnly.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,40 +572,145 @@
 			buildActionMask = 2147483647;
 			files = (
 				B54CAE8319DE5BA9003C6616 /* Main.storyboard in Resources */,
+				69ED18901BD8CDC500CBEDD0 /* FeedCell3.xib in Resources */,
+				69ED188E1BD8CDC500CBEDD0 /* FeedCell1.xib in Resources */,
+				69ED188F1BD8CDC500CBEDD0 /* FeedCell2.xib in Resources */,
 				B54CAE8819DE5BA9003C6616 /* LaunchScreen.xib in Resources */,
+				69ED187C1BD8BEF300CBEDD0 /* NativeAdViewLargeWide.xib in Resources */,
+				69ED188D1BD8CDC500CBEDD0 /* FeedAdCell.xib in Resources */,
+				69ED18921BD8CDC500CBEDD0 /* FeedWithAdCell2.xib in Resources */,
+				69ED18911BD8CDC500CBEDD0 /* FeedCell4.xib in Resources */,
+				69ED187E1BD8BEF300CBEDD0 /* NativeAdViewSmallSquare.xib in Resources */,
 				B54CAE8519DE5BA9003C6616 /* Images.xcassets in Resources */,
+				69ED187D1BD8BEF300CBEDD0 /* NativeAdViewSmallWide.xib in Resources */,
+				69ED187F1BD8BEF300CBEDD0 /* NativeAdViewTextOnly.xib in Resources */,
+				69829E101BE1C2EA00EBFE0A /* FeedWithAdCell3.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4E1278C89E0231E4096AACB8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NendSDK_Swift_Sample/Pods-NendSDK_Swift_Sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AB2353883CCA04799923282 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NendSDK_Swift_Sample/Pods-NendSDK_Swift_Sample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99AF8CF794934647DD09F422 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C70D6FAD436BF6E1E9812563 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D9D58A526E3E695F03F05D96 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NendSDK_Sample/Pods-NendSDK_Sample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF7AD2E33C513BD29B23D0CD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NendSDK_Sample/Pods-NendSDK_Sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		3B33422917990B9E001D0A08 /* Sources */ = {
+		690C28701B797DF100C92232 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B7A865E1B15AC2300D9348B /* Ad320_050IBViewController.m in Sources */,
-				3B7A86541B15882F00D9348B /* Ad728_090AdjustViewController.m in Sources */,
-				3B7A866D1B15ACA500D9348B /* Ad300_250IBViewController.m in Sources */,
-				3B7A86591B15882F00D9348B /* Ad728_090ViewController.m in Sources */,
-				3B7A86571B15882F00D9348B /* Ad320_050ViewController.m in Sources */,
-				3B33423D17990B9E001D0A08 /* main.m in Sources */,
-				3B7A86681B15AC7900D9348B /* Ad300_100IBViewController.m in Sources */,
-				3B7A86501B15882F00D9348B /* Ad300_100AdjustViewController.m in Sources */,
-				3B7A86631B15AC5100D9348B /* Ad320_100IBViewController.m in Sources */,
-				3B7A86551B15882F00D9348B /* Ad300_100ViewController.m in Sources */,
-				3B7A86531B15882F00D9348B /* Ad320_100AdjustViewController.m in Sources */,
-				3B2C44D01B157B8200CD6360 /* SelectSizeTableViewController.m in Sources */,
-				3B33424117990B9E001D0A08 /* AppDelegate.m in Sources */,
-				3B7A86521B15882F00D9348B /* Ad320_050AdjustViewController.m in Sources */,
-				3B7A86561B15882F00D9348B /* Ad300_250ViewController.m in Sources */,
-				3B7A86581B15882F00D9348B /* Ad320_100ViewController.m in Sources */,
-				3B7A86511B15882F00D9348B /* Ad300_250AdjustViewController.m in Sources */,
-				3B5806E31A0B2B33000D47CE /* UINavigationController+Rotation.m in Sources */,
-				3B2C44CD1B1579C200CD6360 /* SelectBannerTableViewController.m in Sources */,
-				3B33425817990BCD001D0A08 /* SelectTableViewController.m in Sources */,
-				6940D46A196FC63F00F14DBD /* AdInterstitialViewController.m in Sources */,
-				3B7A86721B15ACC800D9348B /* Ad728_090IBViewController.m in Sources */,
+				69CEC6451BD7572300F352DE /* FeedView.m in Sources */,
+				690C291D1B799FC400C92232 /* NativeAdView.m in Sources */,
+				690C290E1B799F9E00C92232 /* NativeAdViewController.m in Sources */,
+				690C290B1B799F9E00C92232 /* NativeAdPageContentViewController.m in Sources */,
+				690C289E1B79805B00C92232 /* SelectTableViewController.m in Sources */,
+				690C290A1B799F9E00C92232 /* NativeAdInFeedViewController.m in Sources */,
+				69D46BC61B7C96F60094294A /* UINavigationController+Rotation.m in Sources */,
+				690C291B1B799FC400C92232 /* NativeAdCellView.m in Sources */,
+				690C28ED1B7989E000C92232 /* AdIBViewController.m in Sources */,
+				690C28A11B7981F000C92232 /* AdInterstitialViewController.m in Sources */,
+				6933FCB91BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */,
+				690C28A71B7985CA00C92232 /* SelectSizeTableViewController.m in Sources */,
+				690C291C1B799FC400C92232 /* NativeAdCollectionView.m in Sources */,
+				690C290D1B799F9E00C92232 /* NativeAdTableViewController.m in Sources */,
+				690C28EA1B7989CB00C92232 /* AdViewController.m in Sources */,
+				69CEC6491BD7581200F352DE /* FeedAdView.m in Sources */,
+				690C29091B799F9E00C92232 /* NativeAdCollectionViewController.m in Sources */,
+				690C28E71B7989B800C92232 /* AdAdjustViewController.m in Sources */,
+				69CEC64E1BD76CCC00F352DE /* FeedAdCell.m in Sources */,
+				690C28A41B7984FB00C92232 /* SelectBannerTableViewController.m in Sources */,
+				690C290C1B799F9E00C92232 /* NativeAdPageViewController.m in Sources */,
+				690C287C1B797DF100C92232 /* AppDelegate.m in Sources */,
+				690C28791B797DF100C92232 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,13 +718,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69D156761BD9DB9600ECD772 /* NativeAdInFeedTableViewController.swift in Sources */,
 				B54CAE8019DE5BA9003C6616 /* ViewController.swift in Sources */,
+				6933FCB81BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */,
 				B54CAEA719DE5DF9003C6616 /* BannerView320x100Controller.swift in Sources */,
+				693A21781B79EEC9004B6680 /* NativeAdMenuViewController.swift in Sources */,
+				698C8B061BE1F76C00BF8811 /* NativeAdPageViewController.swift in Sources */,
+				69ED18741BD8BE1B00CBEDD0 /* NativeAdCellView.swift in Sources */,
+				69C55FCD1BD9FC5300D0E34A /* NativeAdCollectionViewController.swift in Sources */,
+				69ED18761BD8BE8C00CBEDD0 /* NativeAdCollectionView.swift in Sources */,
 				B54CAEAC19DE5E15003C6616 /* InterstitialViewController.swift in Sources */,
+				69ED18721BD8BCEF00CBEDD0 /* NativeAdView.swift in Sources */,
+				69ED18831BD8C8F700CBEDD0 /* FeedAdView.swift in Sources */,
+				69ED18811BD8C8DC00CBEDD0 /* FeedView.swift in Sources */,
+				693A21711B79BDDB004B6680 /* NativeAdViewController.swift in Sources */,
 				B54CAEA519DE5DF9003C6616 /* BannerView300x250Controller.swift in Sources */,
 				B54CAEA619DE5DF9003C6616 /* BannerView320x50Controller.swift in Sources */,
 				B54CAEA819DE5DF9003C6616 /* BannerView728x90Controller.swift in Sources */,
 				B54CAE7E19DE5BA9003C6616 /* AppDelegate.swift in Sources */,
+				69ED18851BD8C92700CBEDD0 /* FeedAdCell.swift in Sources */,
+				698C8B081BE1F78B00BF8811 /* NativeAdPageContentViewController.swift in Sources */,
+				696F3E351BDA0ADD00798F4F /* NativeAdRssTableViewController.swift in Sources */,
 				B54CAEA419DE5DF9003C6616 /* BannerView300x100Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,12 +746,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3B33423917990B9E001D0A08 /* InfoPlist.strings */ = {
+		690C28801B797DF100C92232 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3B33423A17990B9E001D0A08 /* en */,
+				690C28811B797DF100C92232 /* Base */,
 			);
-			name = InfoPlist.strings;
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		690C28851B797DF100C92232 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				690C28861B797DF100C92232 /* Base */,
+			);
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 		B54CAE8119DE5BA9003C6616 /* Main.storyboard */ = {
@@ -566,7 +806,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -592,7 +832,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
@@ -601,56 +841,71 @@
 			};
 			name = Release;
 		};
-		3B33425417990B9E001D0A08 /* Debug */ = {
+		690C28941B797DF200C92232 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D57EBE1B2229B467319E4C8 /* Pods-NendSDK_Sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NendSDK_Sample/NendSDK_Sample-Prefix.pch";
-				INFOPLIST_FILE = "NendSDK_Sample/NendSDK_Sample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
-				LIBRARY_SEARCH_PATHS = (
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
 					"$(inherited)",
-					../NendAd,
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/NendSDK_Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 armv7 armv7s";
-				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		3B33425517990B9E001D0A08 /* Release */ = {
+		690C28951B797DF200C92232 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43FEA96744808C6AD92A703B /* Pods-NendSDK_Sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NendSDK_Sample/NendSDK_Sample-Prefix.pch";
-				INFOPLIST_FILE = "NendSDK_Sample/NendSDK_Sample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					../NendAd,
-				);
-				OTHER_LDFLAGS = "-ObjC";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/NendSDK_Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 armv7 armv7s";
-				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 		B54CAE9519DE5BA9003C6616 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E0069FFAE5D37AF743DC66D /* Pods-NendSDK_Swift_Sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_Swift;
 				CLANG_ENABLE_MODULES = YES;
@@ -671,11 +926,9 @@
 				INFOPLIST_FILE = NendSDK_Swift_Sample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					../NendAd,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/NendSDK_Swift_Sample/NendAd-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -684,6 +937,7 @@
 		};
 		B54CAE9619DE5BA9003C6616 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC1BECE5B67F919DE29F9177 /* Pods-NendSDK_Swift_Sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_Swift;
 				CLANG_ENABLE_MODULES = YES;
@@ -701,11 +955,9 @@
 				INFOPLIST_FILE = NendSDK_Swift_Sample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					../NendAd,
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/NendSDK_Swift_Sample/NendAd-Bridging-Header.h";
 			};
@@ -723,11 +975,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B33425317990B9E001D0A08 /* Build configuration list for PBXNativeTarget "NendSDK_Sample" */ = {
+		690C28981B797DF200C92232 /* Build configuration list for PBXNativeTarget "NendSDK_Sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B33425417990B9E001D0A08 /* Debug */,
-				3B33425517990B9E001D0A08 /* Release */,
+				690C28941B797DF200C92232 /* Debug */,
+				690C28951B797DF200C92232 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

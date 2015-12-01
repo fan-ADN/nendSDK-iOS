@@ -15,13 +15,15 @@
 
 @interface AdInterstitialViewController () <NADInterstitialDelegate>
 
-- (IBAction) show:(id)sender;
+@property (nonatomic, weak) IBOutlet UIButton *showButton;
+
+- (IBAction)show:(id)sender;
 
 @end
 
 @implementation AdInterstitialViewController
 
-- (void) dealloc
+- (void)dealloc
 {
     // 解放時、デリゲートにnilを設定します
     [NADInterstitial sharedInstance].delegate = nil;
@@ -31,30 +33,32 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+
     self.title = @"Interstitial";
-    
+
     // エラーログの出力をONにします
     [NADInterstitial sharedInstance].isOutputLog = YES;
-    
+
     // デリゲートを設定します
     [NADInterstitial sharedInstance].delegate = self;
 
 #ifdef ONLY_PORTRAIT
     // 広告の向きを縦向きのみに限定します
-    NSArray* array = @[[NSNumber numberWithInteger:UIInterfaceOrientationPortrait], [NSNumber numberWithInteger:UIInterfaceOrientationPortraitUpsideDown]];
+    NSArray *array = @[ [NSNumber numberWithInteger:UIInterfaceOrientationPortrait], [NSNumber numberWithInteger:UIInterfaceOrientationPortraitUpsideDown] ];
     [NADInterstitial sharedInstance].supportedOrientations = array;
 #elif ONLY_LANDSCAPE
     // 広告の向きを横向きのみに限定します
-    NSArray* array = @[[NSNumber numberWithInteger:UIInterfaceOrientationLandscapeLeft], [NSNumber numberWithInteger:UIInterfaceOrientationLandscapeRight]];
+    NSArray *array = @[ [NSNumber numberWithInteger:UIInterfaceOrientationLandscapeLeft], [NSNumber numberWithInteger:UIInterfaceOrientationLandscapeRight] ];
     [NADInterstitial sharedInstance].supportedOrientations = array;
 #endif
 
     // 広告の読み込みを行います
     [[NADInterstitial sharedInstance] loadAdWithApiKey:@"308c2499c75c4a192f03c02b2fcebd16dcb45cc9" spotId:@"213208"];
+
+    self.showButton.enabled = NO;
 }
 
-- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
 #ifdef ONLY_PORTRAIT
     // 端末回転を縦向きのみに限定します
@@ -67,16 +71,17 @@
 #endif
 }
 
-- (IBAction) show:(id)sender
+- (IBAction)show:(id)sender
 {
+    NADInterstitialShowResult result = [[NADInterstitial sharedInstance] showAd];
+    self.showButton.enabled = result != AD_SHOW_SUCCESS;
     // 広告を表示します
-    NSLog(@"+++++ %@ +++++", [self stringForShowResult:[[NADInterstitial sharedInstance] showAd]]);
+    NSLog(@"+++++ %@ +++++", [self stringForShowResult:result]);
 }
 
 - (NSString *)stringForStatusCode:(NADInterstitialStatusCode)code
 {
-    switch ( code )
-    {
+    switch (code) {
         case SUCCESS:
             return @"SUCCESS";
         case FAILED_AD_DOWNLOAD:
@@ -90,10 +95,9 @@
     }
 }
 
-- (NSString *) stringForClickType:(NADInterstitialClickType)type
+- (NSString *)stringForClickType:(NADInterstitialClickType)type
 {
-    switch ( type )
-    {
+    switch (type) {
         case DOWNLOAD:
             return @"DOWNLOAD";
         case CLOSE:
@@ -103,10 +107,9 @@
     }
 }
 
-- (NSString *) stringForShowResult:(NADInterstitialShowResult)result
+- (NSString *)stringForShowResult:(NADInterstitialShowResult)result
 {
-    switch ( result )
-    {
+    switch (result) {
         case AD_SHOW_SUCCESS:
             return @"AD_SHOW_SUCCESS";
         case AD_DOWNLOAD_INCOMPLETE:
@@ -124,13 +127,14 @@
     }
 }
 
-- (void) didFinishLoadInterstitialAdWithStatus:(NADInterstitialStatusCode)status
+- (void)didFinishLoadInterstitialAdWithStatus:(NADInterstitialStatusCode)status
 {
     // 広告のロード結果を受け取ります
     NSLog(@"+++++ %@ +++++", [self stringForStatusCode:status]);
+    self.showButton.enabled = SUCCESS == status;
 }
 
-- (void) didClickWithType:(NADInterstitialClickType)type
+- (void)didClickWithType:(NADInterstitialClickType)type
 {
     // 広告上のクリックイベントを受け取ります
     NSLog(@"+++++ %@ +++++", [self stringForClickType:type]);

@@ -15,6 +15,8 @@ class BannerView300x250Controller: UIViewController, NADViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "300x250"
+        
         // InterfaceBuilderで生成したバナー広告にデリゲートを設定
         bannerViewFromNib.delegate = self
     }

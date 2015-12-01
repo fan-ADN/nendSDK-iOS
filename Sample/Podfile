@@ -1,0 +1,13 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '7.0'
+# Uncomment this line if you're using Swift
+# use_frameworks!
+
+target 'NendSDK_Swift_Sample' do
+pod 'NendSDK_iOS', :path=> './NendSDK_iOS_Sample_Local.podspec'
+end
+
+target 'NendSDK_Sample' do
+pod 'NendSDK_iOS', :path=> './NendSDK_iOS_Sample_Local.podspec'
+end
+

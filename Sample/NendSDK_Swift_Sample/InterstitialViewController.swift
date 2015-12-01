@@ -17,7 +17,7 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
 
         // Do any additional setup after loading the view.
         
-        showButton.addTarget(self, action: "buttonClicked:", forControlEvents: .TouchUpInside)
+        self.title = "InterstitialAd"
 
         NADInterstitial.sharedInstance().delegate = self
         NADInterstitial.sharedInstance().isOutputLog = true
@@ -31,7 +31,6 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
             UIInterfaceOrientation.LandscapeRight.rawValue
         ]
         NADInterstitial.sharedInstance().supportedOrientations = orientationArray
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,26 +38,13 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    deinit{
-        
+    deinit {
         NADInterstitial.sharedInstance().delegate = nil
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     // MARK: Actions
     
-    func buttonClicked(sender: UIButton) {
-        
+    @IBAction func buttonClicked(sender: UIButton) {
         var showResult: NADInterstitialShowResult
         showResult = NADInterstitial.sharedInstance().showAd()
         
@@ -84,14 +70,11 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
         default:
             break
         }
-        
     }
-
 
     // MARK: NADInterstitialDelegate
     
     func didFinishLoadInterstitialAdWithStatus(status: NADInterstitialStatusCode) {
-        
         switch(status.rawValue){
         case SUCCESS.rawValue:
             print("SUCCESS")
@@ -111,7 +94,6 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
     }
     
     func didClickWithType(type: NADInterstitialClickType) {
-        
         switch(type.rawValue){
         case DOWNLOAD.rawValue:
             print("DOWNLOAD")
@@ -122,6 +104,5 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
         default:
             break
         }
-
     }
 }

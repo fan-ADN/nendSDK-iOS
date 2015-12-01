@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3TE-Pa-UzM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="KpA-yG-kZy">
+            <objects>
+                <tableViewController id="Mrq-qI-SMF" customClass="SelectTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Hcb-Nt-IHr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="1al-1n-ijp">
+                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1al-1n-ijp" id="PUl-gD-kOW">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Mrq-qI-SMF" id="wyh-6H-Tsq"/>
+                            <outlet property="delegate" destination="Mrq-qI-SMF" id="6BQ-8o-l8e"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="F2R-mz-TRl"/>
+                    <connections>
+                        <segue destination="eZb-wj-DAi" kind="show" identifier="PushInterstitial" id="T4H-yD-Xe8"/>
+                        <segue destination="kYl-4q-con" kind="show" identifier="PushBanner" id="ugp-5k-My5"/>
+                        <segue destination="loV-jZ-Xna" kind="show" identifier="PushNative" id="usF-9c-KeC"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJI-Nj-uqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="835" y="382"/>
+        </scene>
+        <!--Select Banner Table View Controller-->
+        <scene sceneID="sn2-Rb-EST">
+            <objects>
+                <tableViewController id="kYl-4q-con" customClass="SelectBannerTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="X5V-ht-TeK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="xfs-aj-7J8">
+                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xfs-aj-7J8" id="oQy-ov-o71">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="niK-e6-ab7" kind="show" identifier="PushSelectSize" id="teL-Cw-5PK"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kYl-4q-con" id="R2h-RR-uRM"/>
+                            <outlet property="delegate" destination="kYl-4q-con" id="BW8-Qt-OFA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="48u-08-U07" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1639" y="382"/>
+        </scene>
+        <!--AdIB View Controller-->
+        <scene sceneID="OaP-CV-X7f">
+            <objects>
+                <viewController id="s1I-y9-1sd" customClass="AdIBViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OJZ-rF-HM3"/>
+                        <viewControllerLayoutGuide type="bottom" id="yQZ-TH-fuP"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="EDd-MJ-Ckz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwa-2H-hGX" userLabel="NADView" customClass="NADView">
+                                <rect key="frame" x="-64" y="0.0" width="728" height="90"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="ePY-B4-70M"/>
+                                    <constraint firstAttribute="width" constant="728" id="tcv-4Q-rZm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="2e0b9e0b3f40d952e6000f1a8c4d455fffc4ca3a"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70999"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cU-wV-zoF" userLabel="NADView" customClass="NADView">
+                                <rect key="frame" x="-64" y="510" width="728" height="90"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="728" id="Mbe-2B-vXH"/>
+                                    <constraint firstAttribute="height" constant="90" id="c57-dP-45T"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="2e0b9e0b3f40d952e6000f1a8c4d455fffc4ca3a"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70999"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Jwa-2H-hGX" secondAttribute="centerX" id="WBS-Z1-xmh"/>
+                            <constraint firstAttribute="centerX" secondItem="3cU-wV-zoF" secondAttribute="centerX" id="Z3u-lx-bW4"/>
+                            <constraint firstAttribute="bottom" secondItem="3cU-wV-zoF" secondAttribute="bottom" id="ZGe-8m-lNC"/>
+                            <constraint firstItem="Jwa-2H-hGX" firstAttribute="top" secondItem="EDd-MJ-Ckz" secondAttribute="top" id="uA8-D1-VbU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomNadView" destination="3cU-wV-zoF" id="9wa-A0-LMZ"/>
+                        <outlet property="upNadView" destination="Jwa-2H-hGX" id="F0s-w3-dYS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7he-lr-IhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1126" y="1284"/>
+        </scene>
+        <!--AdIB View Controller-->
+        <scene sceneID="rPg-EU-sGJ">
+            <objects>
+                <viewController id="zr2-g2-zTE" customClass="AdIBViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OCs-ui-FXz"/>
+                        <viewControllerLayoutGuide type="bottom" id="uIg-bb-S0a"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="bCv-6v-luG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuN-qf-glN" userLabel="NADView" customClass="NADView">
+                                <rect key="frame" x="150" y="0.0" width="300" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="D1P-Vc-ofW"/>
+                                    <constraint firstAttribute="width" constant="300" id="VIG-5r-oaS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="88d88a288fdea5c01d17ea8e494168e834860fd6"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70356"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZc-vn-6QQ" userLabel="NADView" customClass="NADView">
+                                <rect key="frame" x="150" y="350" width="300" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="5FX-MF-MzZ"/>
+                                    <constraint firstAttribute="height" constant="250" id="gyi-vT-VaQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="88d88a288fdea5c01d17ea8e494168e834860fd6"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70356"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="AuN-qf-glN" secondAttribute="centerX" id="ESy-Nm-EOl"/>
+                            <constraint firstItem="AuN-qf-glN" firstAttribute="top" secondItem="bCv-6v-luG" secondAttribute="top" id="ErN-1m-Uf5"/>
+                            <constraint firstAttribute="centerX" secondItem="QZc-vn-6QQ" secondAttribute="centerX" id="QHv-68-iXA"/>
+                            <constraint firstAttribute="bottom" secondItem="QZc-vn-6QQ" secondAttribute="bottom" id="T8P-X2-851"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomNadView" destination="QZc-vn-6QQ" id="mIL-6a-ByO"/>
+                        <outlet property="upNadView" destination="AuN-qf-glN" id="KdL-kZ-GMf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3cw-3E-xZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1779" y="1284"/>
+        </scene>
+        <!--Select Size Table View Controller-->
+        <scene sceneID="vk7-FH-sBq">
+            <objects>
+                <tableViewController id="niK-e6-ab7" customClass="SelectSizeTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JGO-xW-eDy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="yx3-jc-0rQ">
+                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yx3-jc-0rQ" id="uhv-tB-55J">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="niK-e6-ab7" id="qJE-xs-kOP"/>
+                            <outlet property="delegate" destination="niK-e6-ab7" id="nTm-NZ-VhU"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="eqR-O5-CVz" kind="show" identifier="PushDefault" id="OlT-fC-2BQ"/>
+                        <segue destination="tZc-1h-xJI" kind="show" identifier="PushAdjust" id="Atf-J9-afr"/>
+                        <segue destination="x60-HN-ttf" kind="show" identifier="PushMobileBigBanner" id="P4H-qJ-zBW"/>
+                        <segue destination="Oa6-fx-XlQ" kind="show" identifier="PushRectangle" id="uBx-yH-mY3"/>
+                        <segue destination="ET4-1l-hiL" kind="show" identifier="PushMobileBanner" id="u5n-Xe-E7R"/>
+                        <segue destination="zr2-g2-zTE" kind="show" identifier="PushMediumRectangle" id="HpS-dt-Lw8"/>
+                        <segue destination="s1I-y9-1sd" kind="show" identifier="PushBigBanner" id="1kq-n2-VcB"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nEp-ba-1AI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2428" y="382"/>
+        </scene>
+        <!--AdIB View Controller-->
+        <scene sceneID="9gF-c6-EHW">
+            <objects>
+                <viewController id="x60-HN-ttf" customClass="AdIBViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hX8-nv-mhd"/>
+                        <viewControllerLayoutGuide type="bottom" id="wvW-ht-4to"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="1ce-kn-7Xb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfB-qd-aea" userLabel="NADView" customClass="NADView">
+                                <rect key="frame" x="140" y="0.0" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UB6-6H-Gx4"/>
+                                    <constraint firstAttribute="width" constant="320" id="e0A-iJ-T9N"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="a6eca9dd074372c898dd1df549301f277c53f2b9"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="3172"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9Q-9f-BMg" userLabel="NADView" customClass="NADView">
+                                <rect key="frame" x="140" y="550" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="88W-NY-a8N"/>
+                                    <constraint firstAttribute="height" constant="50" id="Fw1-Yn-bn0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="a6eca9dd074372c898dd1df549301f277c53f2b9"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="3172"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="T9Q-9f-BMg" secondAttribute="centerX" id="58X-Sm-lhP"/>
+                            <constraint firstItem="xfB-qd-aea" firstAttribute="top" secondItem="1ce-kn-7Xb" secondAttribute="top" id="IMp-SL-adJ"/>
+                            <constraint firstAttribute="bottom" secondItem="T9Q-9f-BMg" secondAttribute="bottom" id="PKB-Se-Gxo"/>
+                            <constraint firstAttribute="centerX" secondItem="xfB-qd-aea" secondAttribute="centerX" id="e5N-1p-d04"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomNadView" destination="T9Q-9f-BMg" id="IT5-bs-jqm"/>
+                        <outlet property="upNadView" destination="xfB-qd-aea" id="jqt-hg-NYJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vlb-un-XfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2428" y="1284"/>
+        </scene>
+        <!--AdIB View Controller-->
+        <scene sceneID="C7q-bu-rao">
+            <objects>
+                <viewController id="Oa6-fx-XlQ" customClass="AdIBViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lyA-Mx-E8n"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wcr-Du-hUf"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="d1U-e0-ure">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Esw-xE-qsN" userLabel="NADView" customClass="NADView">
+                                <rect key="frame" x="150" y="0.0" width="300" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Ny1-IE-aZ3"/>
+                                    <constraint firstAttribute="width" constant="300" id="e20-yB-YZg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="25eb32adddc4f7311c3ec7b28eac3b72bbca5656"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70998"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rpn-fD-QFk" userLabel="NADView" customClass="NADView">
+                                <rect key="frame" x="150" y="500" width="300" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="qtd-Oa-zgk"/>
+                                    <constraint firstAttribute="height" constant="100" id="ygM-6l-8gP"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="25eb32adddc4f7311c3ec7b28eac3b72bbca5656"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70998"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Rpn-fD-QFk" secondAttribute="bottom" id="Hv9-DN-I8R"/>
+                            <constraint firstAttribute="centerX" secondItem="Esw-xE-qsN" secondAttribute="centerX" id="f83-yc-zU1"/>
+                            <constraint firstItem="Esw-xE-qsN" firstAttribute="top" secondItem="d1U-e0-ure" secondAttribute="top" id="ftL-ce-lZS"/>
+                            <constraint firstAttribute="centerX" secondItem="Rpn-fD-QFk" secondAttribute="centerX" id="ha8-av-Nlj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomNadView" destination="Rpn-fD-QFk" id="ReX-LF-2oW"/>
+                        <outlet property="upNadView" destination="Esw-xE-qsN" id="Zcl-E8-scE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wzi-6A-4w7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3092" y="1284"/>
+        </scene>
+        <!--AdIB View Controller-->
+        <scene sceneID="jAP-3w-ftB">
+            <objects>
+                <viewController id="ET4-1l-hiL" customClass="AdIBViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eGr-EP-BAj"/>
+                        <viewControllerLayoutGuide type="bottom" id="yab-Z1-El3"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="YWz-7P-jnx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmE-Ii-9cM" userLabel="NADView" customClass="NADView">
+                                <rect key="frame" x="140" y="0.0" width="320" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="pkI-Wn-sV4"/>
+                                    <constraint firstAttribute="height" constant="100" id="wBF-sY-gAN"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="eb5ca11fa8e46315c2df1b8e283149049e8d235e"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70996"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2G-HJ-Mn6" userLabel="NADView" customClass="NADView">
+                                <rect key="frame" x="140" y="500" width="320" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="FQi-eG-ENY"/>
+                                    <constraint firstAttribute="width" constant="320" id="mDg-Hz-hja"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="eb5ca11fa8e46315c2df1b8e283149049e8d235e"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70996"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="z2G-HJ-Mn6" secondAttribute="centerX" id="FXJ-Mq-w3t"/>
+                            <constraint firstAttribute="bottom" secondItem="z2G-HJ-Mn6" secondAttribute="bottom" id="Wyn-es-gNX"/>
+                            <constraint firstItem="nmE-Ii-9cM" firstAttribute="top" secondItem="YWz-7P-jnx" secondAttribute="top" id="aKq-v9-Z2c"/>
+                            <constraint firstAttribute="centerX" secondItem="nmE-Ii-9cM" secondAttribute="centerX" id="hgB-87-GQz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomNadView" destination="z2G-HJ-Mn6" id="hXo-HJ-gQv"/>
+                        <outlet property="upNadView" destination="nmE-Ii-9cM" id="Pwa-ax-83N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qgo-BC-WeS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3730" y="1284"/>
+        </scene>
+        <!--Ad View Controller-->
+        <scene sceneID="yl6-TB-bQi">
+            <objects>
+                <viewController id="eqR-O5-CVz" customClass="AdViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eMJ-eT-bc8"/>
+                        <viewControllerLayoutGuide type="bottom" id="GgF-3c-DPb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tzf-Gz-Bdm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q62-y1-GTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3216" y="382"/>
+        </scene>
+        <!--Ad Adjust View Controller-->
+        <scene sceneID="CZO-Db-PqQ">
+            <objects>
+                <viewController id="tZc-1h-xJI" customClass="AdAdjustViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="col-sJ-bPf"/>
+                        <viewControllerLayoutGuide type="bottom" id="k3a-bp-74S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u9j-g5-g7v">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1PC-Fv-vMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3216" y="-313"/>
+        </scene>
+        <!--Native Ad Table View Controller-->
+        <scene sceneID="Wl6-Vx-GDd">
+            <objects>
+                <tableViewController id="loV-jZ-Xna" customClass="NativeAdTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="aS8-52-ILZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="61I-Om-oqR">
+                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="61I-Om-oqR" id="bO7-mZ-AsR">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="loV-jZ-Xna" id="7rV-1y-e2h"/>
+                            <outlet property="delegate" destination="loV-jZ-Xna" id="ULw-qe-ica"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="f6m-lC-EaV" kind="show" identifier="PushSimpleNativeAd" id="Soo-ba-3GZ"/>
+                        <segue destination="aIi-jM-nme" kind="show" identifier="PushInFeedNativeAd" id="h3M-OI-CFE"/>
+                        <segue destination="9y0-jo-wPb" kind="show" identifier="PushCollectionNativeAd" id="BLc-kZ-T4A"/>
+                        <segue destination="P5F-HR-MXu" kind="show" identifier="PushPageableNativeAd" id="V9V-L8-k7z"/>
+                        <segue destination="6cB-cC-bDI" kind="show" identifier="PushRssNativeAd" id="J7G-Lm-Cbc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2hU-LB-z6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1639" y="-1008"/>
+        </scene>
+        <!--Native Ad Page View Controller-->
+        <scene sceneID="hv0-wI-WQR">
+            <objects>
+                <viewController id="P5F-HR-MXu" customClass="NativeAdPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zrh-wa-9bv"/>
+                        <viewControllerLayoutGuide type="bottom" id="a0O-Bu-T4V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zyP-6U-L55">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zz7-0Y-AF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479" y="-2257"/>
+        </scene>
+        <!--Native Ad Page Content View Controller-->
+        <scene sceneID="36v-iM-Sar">
+            <objects>
+                <viewController storyboardIdentifier="NativeAdPageContentViewController" id="AOx-iE-qck" customClass="NativeAdPageContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Hc-1a-XRh"/>
+                        <viewControllerLayoutGuide type="bottom" id="DDZ-ay-c5D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R1R-c5-7dE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEU-dN-g5x" customClass="NativeAdView">
+                                <rect key="frame" x="150" y="237" width="300" height="125"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dGu-NG-aZ2" customClass="NADNativeImageView">
+                                        <rect key="frame" x="8" y="8" width="80" height="80"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ShortText" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5K2-U7-Ymy" customClass="NADNativeLabel">
+                                        <rect key="frame" x="96" y="8" width="196" height="80"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sW3-pU-jOl" customClass="NADNativeLabel">
+                                        <rect key="frame" x="8" y="96" width="284" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="YIQ-jD-iCg"/>
+                                    <constraint firstAttribute="height" constant="125" id="g91-P3-DzI"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="adImageView" destination="dGu-NG-aZ2" id="PGz-AE-sEK"/>
+                                    <outlet property="prLabel" destination="sW3-pU-jOl" id="dzj-WV-GWP"/>
+                                    <outlet property="shortTextLabel" destination="5K2-U7-Ymy" id="aTR-pW-PyE"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgL-lr-xHB">
+                                <rect key="frame" x="276" y="370" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vgL-lr-xHB" firstAttribute="top" secondItem="XEU-dN-g5x" secondAttribute="bottom" constant="8" id="6Fp-UB-WP5"/>
+                            <constraint firstAttribute="centerY" secondItem="XEU-dN-g5x" secondAttribute="centerY" constant="0.5" id="98n-IQ-6nk"/>
+                            <constraint firstAttribute="centerX" secondItem="XEU-dN-g5x" secondAttribute="centerX" id="TSZ-ej-Jvn"/>
+                            <constraint firstAttribute="centerX" secondItem="vgL-lr-xHB" secondAttribute="centerX" id="gaj-Kq-W2E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adView" destination="XEU-dN-g5x" id="LEE-Sr-y4F"/>
+                        <outlet property="label" destination="vgL-lr-xHB" id="NmS-Rh-J3X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zh1-FG-w8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3216" y="-2257"/>
+        </scene>
+        <!--Native Ad Collection View Controller-->
+        <scene sceneID="42i-SN-UaL">
+            <objects>
+                <collectionViewController id="9y0-jo-wPb" customClass="NativeAdCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="WOw-d7-BTP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="1" id="1xm-HI-OnK">
+                            <size key="itemSize" width="106" height="160"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="hTq-TD-lW8">
+                                <rect key="frame" x="0.0" y="64" width="106" height="160"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="106" height="160"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AdCell" id="54a-Ci-XLh" customClass="NativeAdCollectionView">
+                                <rect key="frame" x="124" y="64" width="106" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="106" height="160"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ShortText" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="TFV-T2-mVI" customClass="NADNativeLabel">
+                                            <rect key="frame" x="8" y="76" width="90" height="47"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G5M-CS-Q8u" customClass="NADNativeImageView">
+                                            <rect key="frame" x="13" y="8" width="80" height="60"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7cz-4T-JoJ" customClass="NADNativeLabel">
+                                            <rect key="frame" x="8" y="131" width="40" height="21"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="adImageView" destination="G5M-CS-Q8u" id="QkD-ri-waD"/>
+                                    <outlet property="prTextLabel" destination="7cz-4T-JoJ" id="Dfw-dQ-4Hx"/>
+                                    <outlet property="shortTextLabel" destination="TFV-T2-mVI" id="wbC-55-8MT"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="9y0-jo-wPb" id="JaN-wn-I7j"/>
+                            <outlet property="delegate" destination="9y0-jo-wPb" id="TMs-Og-Bf9"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WqO-em-0IA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479" y="-1555"/>
+        </scene>
+        <!--Native Ad In Feed View Controller-->
+        <scene sceneID="JaY-pS-FBm">
+            <objects>
+                <tableViewController id="aIi-jM-nme" customClass="NativeAdInFeedViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5oP-ws-FPc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="WFf-zJ-gkY">
+                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WFf-zJ-gkY" id="OxD-g1-gX1">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdCell" rowHeight="96" id="74g-r1-FDO" customClass="NativeAdCellView">
+                                <rect key="frame" x="0.0" y="130" width="600" height="96"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="74g-r1-FDO" id="mdW-64-bSw">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="95"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ukP-qX-DkT" customClass="NADNativeImageView">
+                                            <rect key="frame" x="512" y="8" width="80" height="80"/>
+                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="4eS-6R-CMh"/>
+                                                <constraint firstAttribute="width" constant="80" id="Jy1-Np-9TL"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LongText" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="496" translatesAutoresizingMaskIntoConstraints="NO" id="HCn-wL-XOh" customClass="NADNativeLabel">
+                                            <rect key="frame" x="8" y="8" width="496" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rf2-Gw-QU2" customClass="NADNativeLabel">
+                                            <rect key="frame" x="464" y="70" width="40" height="17"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="ziV-xb-NU8"/>
+                                                <constraint firstAttribute="height" constant="17" id="zx9-G0-CYC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ActionButton" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="0Na-6D-fgq" customClass="NADNativeLabel">
+                                            <rect key="frame" x="8" y="71" width="98" height="17"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="1bP-hI-fgh"/>
+                                                <constraint firstAttribute="width" constant="98" id="Lgx-pq-Dq1"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ukP-qX-DkT" secondAttribute="trailing" id="1HM-HF-7fR"/>
+                                        <constraint firstItem="ukP-qX-DkT" firstAttribute="centerY" secondItem="mdW-64-bSw" secondAttribute="centerY" id="4Tj-55-In8"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="rf2-Gw-QU2" secondAttribute="bottom" id="Cea-sM-bs5"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="0Na-6D-fgq" secondAttribute="leading" id="I4h-wB-Ka9"/>
+                                        <constraint firstAttribute="topMargin" secondItem="HCn-wL-XOh" secondAttribute="top" id="YK9-vh-gb2"/>
+                                        <constraint firstItem="ukP-qX-DkT" firstAttribute="leading" secondItem="HCn-wL-XOh" secondAttribute="trailing" constant="8" id="YfQ-vc-SMt"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="HCn-wL-XOh" secondAttribute="leading" id="aYK-zg-A7Y"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="0Na-6D-fgq" secondAttribute="bottom" constant="-1" id="fbH-KZ-5iD"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="HCn-wL-XOh" secondAttribute="bottom" constant="29" id="grc-mC-8kP"/>
+                                        <constraint firstItem="ukP-qX-DkT" firstAttribute="leading" secondItem="rf2-Gw-QU2" secondAttribute="trailing" constant="8" id="vtr-VD-WbF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="actionButtonTextLabel" destination="0Na-6D-fgq" id="3wz-bx-Ps4"/>
+                                    <outlet property="adImageView" destination="ukP-qX-DkT" id="hWn-ns-jFC"/>
+                                    <outlet property="longTextLabel" destination="HCn-wL-XOh" id="4lE-FS-HXP"/>
+                                    <outlet property="prTextLabel" destination="rf2-Gw-QU2" id="D0m-1U-b5s"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aIi-jM-nme" id="0MK-78-sOc"/>
+                            <outlet property="delegate" destination="aIi-jM-nme" id="FZM-6O-Hwq"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ou5-Tm-WbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479" y="-825"/>
+        </scene>
+        <!--Native Ad Rss View Controller-->
+        <scene sceneID="4xP-5d-GcV">
+            <objects>
+                <tableViewController id="6cB-cC-bDI" customClass="NativeAdRssViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ug2-aA-75C">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="6cB-cC-bDI" id="PQh-qo-HYQ"/>
+                            <outlet property="delegate" destination="6cB-cC-bDI" id="UKk-9E-DhC"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vef-uW-7Ii" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479" y="-3679"/>
+        </scene>
+        <!--Native Ad View Controller-->
+        <scene sceneID="4CN-9I-EbX">
+            <objects>
+                <viewController id="f6m-lC-EaV" customClass="NativeAdViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k82-76-9Va"/>
+                        <viewControllerLayoutGuide type="bottom" id="uA6-oE-E4r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xg2-DX-OeX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="K5C-bz-kIP">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="K5C-bz-kIP" secondAttribute="centerX" constant="-0.5" id="TcV-VD-5zg"/>
+                            <constraint firstAttribute="centerY" secondItem="K5C-bz-kIP" secondAttribute="centerY" constant="0.5" id="nBQ-dy-I6u"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indicator" destination="K5C-bz-kIP" id="QLe-h3-P7r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qJp-X1-HZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479" y="-2991"/>
+        </scene>
+        <!--Ad Interstitial View Controller-->
+        <scene sceneID="Od3-Ox-rYU">
+            <objects>
+                <viewController id="eZb-wj-DAi" customClass="AdInterstitialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fuV-9c-LZQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="itC-TV-f1W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jqz-TP-NTn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaq-JD-OGB">
+                                <rect key="frame" x="281" y="285" width="38" height="30"/>
+                                <state key="normal" title="Show">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="show:" destination="eZb-wj-DAi" eventType="touchUpInside" id="2iQ-4X-POd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iaq-JD-OGB" firstAttribute="centerX" secondItem="jqz-TP-NTn" secondAttribute="centerX" id="Q67-m4-KpD"/>
+                            <constraint firstItem="iaq-JD-OGB" firstAttribute="centerY" secondItem="jqz-TP-NTn" secondAttribute="centerY" id="YYM-TW-Dvt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="showButton" destination="iaq-JD-OGB" id="hGL-Br-jeB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wj0-gM-xeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1639" y="-313"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="khT-kY-cv2">
+            <objects>
+                <navigationController id="3TE-Pa-UzM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b2a-mG-Snb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Mrq-qI-SMF" kind="relationship" relationship="rootViewController" id="HXd-Ti-DaK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zbx-jr-oGj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15" y="382"/>
+        </scene>
+    </scenes>
+</document>

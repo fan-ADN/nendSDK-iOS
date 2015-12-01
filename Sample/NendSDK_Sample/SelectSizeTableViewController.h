@@ -10,7 +10,7 @@
 
 @interface SelectSizeTableViewController : UITableViewController
 
-@property(nonatomic)BOOL isAdjustAdSize;
-@property(nonatomic)BOOL isIB;
+@property (nonatomic) BOOL isAdjustAdSize;
+@property (nonatomic) BOOL isIB;
 
 @end

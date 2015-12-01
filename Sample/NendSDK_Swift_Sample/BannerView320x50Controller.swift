@@ -1,5 +1,5 @@
 //
-//  BannerViewController.swift
+//  BannerView320x50Controller.swift
 //  NendSwiftSample
 //
 //  Created by ADN on 2014/09/10.
@@ -21,9 +21,10 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "320x50"
+        
         // InterfaceBuilderで生成したバナー広告にデリゲートを設定
         bannerViewFromNib.delegate = self
-        
         
         // コードでバナー広告を生成
 //        nadViewManually = NADView()

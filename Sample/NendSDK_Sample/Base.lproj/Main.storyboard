@@ -448,6 +448,7 @@
                         <segue destination="9y0-jo-wPb" kind="show" identifier="PushCollectionNativeAd" id="BLc-kZ-T4A"/>
                         <segue destination="P5F-HR-MXu" kind="show" identifier="PushPageableNativeAd" id="V9V-L8-k7z"/>
                         <segue destination="6cB-cC-bDI" kind="show" identifier="PushRssNativeAd" id="J7G-Lm-Cbc"/>
+                        <segue destination="D5T-rG-9GD" kind="show" identifier="PushNoNibNativeAd" id="4Eh-on-dSE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hU-LB-z6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -721,6 +722,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vef-uW-7Ii" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2479" y="-3679"/>
+        </scene>
+        <!--Native Ad No Nib View Controller-->
+        <scene sceneID="63N-dW-OUO">
+            <objects>
+                <viewController id="D5T-rG-9GD" customClass="NativeAdNoNibViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VJQ-H3-eYZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="T96-AB-hnn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="099-Ks-QLb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UaK-3Z-rSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479" y="-4354"/>
         </scene>
         <!--Native Ad View Controller-->
         <scene sceneID="4CN-9I-EbX">

@@ -74,5 +74,11 @@
 		<key>title</key>
 		<string>RSS</string>
 	</dict>
+	<dict>
+		<key>segue</key>
+		<string>PushNoNibNativeAd</string>
+		<key>title</key>
+		<string>NoNib</string>
+	</dict>
 </array>
 </plist>

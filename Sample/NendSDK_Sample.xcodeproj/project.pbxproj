@@ -56,6 +56,7 @@
 		69CEC64E1BD76CCC00F352DE /* FeedAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CEC64D1BD76CCC00F352DE /* FeedAdCell.m */; };
 		69D156761BD9DB9600ECD772 /* NativeAdInFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D156751BD9DB9600ECD772 /* NativeAdInFeedTableViewController.swift */; };
 		69D46BC61B7C96F60094294A /* UINavigationController+Rotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D46BC51B7C96F60094294A /* UINavigationController+Rotation.m */; };
+		69D9C3D21C151874007754FE /* NativeAdNoNibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D9C3D11C151874007754FE /* NativeAdNoNibViewController.m */; };
 		69ED18721BD8BCEF00CBEDD0 /* NativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ED18711BD8BCEF00CBEDD0 /* NativeAdView.swift */; };
 		69ED18741BD8BE1B00CBEDD0 /* NativeAdCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ED18731BD8BE1B00CBEDD0 /* NativeAdCellView.swift */; };
 		69ED18761BD8BE8C00CBEDD0 /* NativeAdCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ED18751BD8BE8C00CBEDD0 /* NativeAdCollectionView.swift */; };
@@ -168,6 +169,8 @@
 		69D156751BD9DB9600ECD772 /* NativeAdInFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdInFeedTableViewController.swift; sourceTree = "<group>"; };
 		69D46BC41B7C96F60094294A /* UINavigationController+Rotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Rotation.h"; sourceTree = "<group>"; };
 		69D46BC51B7C96F60094294A /* UINavigationController+Rotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Rotation.m"; sourceTree = "<group>"; };
+		69D9C3D01C151874007754FE /* NativeAdNoNibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdNoNibViewController.h; sourceTree = "<group>"; };
+		69D9C3D11C151874007754FE /* NativeAdNoNibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdNoNibViewController.m; sourceTree = "<group>"; };
 		69ED18711BD8BCEF00CBEDD0 /* NativeAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdView.swift; sourceTree = "<group>"; };
 		69ED18731BD8BE1B00CBEDD0 /* NativeAdCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdCellView.swift; sourceTree = "<group>"; };
 		69ED18751BD8BE8C00CBEDD0 /* NativeAdCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdCollectionView.swift; sourceTree = "<group>"; };
@@ -332,6 +335,8 @@
 				690C29051B799F9E00C92232 /* NativeAdViewController.m */,
 				6933FCB61BD62F5500C26FB4 /* NativeAdRssViewController.h */,
 				6933FCB71BD62F5500C26FB4 /* NativeAdRssViewController.m */,
+				69D9C3D01C151874007754FE /* NativeAdNoNibViewController.h */,
+				69D9C3D11C151874007754FE /* NativeAdNoNibViewController.m */,
 			);
 			name = native;
 			sourceTree = "<group>";
@@ -695,6 +700,7 @@
 				69D46BC61B7C96F60094294A /* UINavigationController+Rotation.m in Sources */,
 				690C291B1B799FC400C92232 /* NativeAdCellView.m in Sources */,
 				690C28ED1B7989E000C92232 /* AdIBViewController.m in Sources */,
+				69D9C3D21C151874007754FE /* NativeAdNoNibViewController.m in Sources */,
 				690C28A11B7981F000C92232 /* AdInterstitialViewController.m in Sources */,
 				6933FCB91BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */,
 				690C28A71B7985CA00C92232 /* SelectSizeTableViewController.m in Sources */,

@@ -30,7 +30,7 @@
 
     // AdjustAdSizeをYESにしてNADViewを生成
     self.nadView = [[NADView alloc] initWithIsAdjustAdSize:YES];
-    [self.nadView setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin];
+    (self.nadView).autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
 
     // nendSDKログ出力の設定(任意)
     [self.nadView setIsOutputLog:YES];
@@ -39,10 +39,10 @@
     [self.nadView setNendID:self.apiKey spotID:self.spotId];
 
     // delegateを受けるオブジェクトを指定(任意)
-    [self.nadView setDelegate:self];
+    (self.nadView).delegate = self;
 
     // 背景色を指定(任意)
-    [self.nadView setBackgroundColor:[UIColor cyanColor]];
+    (self.nadView).backgroundColor = [UIColor cyanColor];
 
     // 読み込み開始(必須)
     [self.nadView load];
@@ -96,8 +96,8 @@
     // １．画面上部に広告を表示させる場合
     // [self.nadView setFrame:CGRectMake((self.view.frame.size.width - self.nadView.frame.size) /2, 0, self.nadView.frame.size, self.nadView.frame.size)];
     // ２．画面下部に広告を表示させる場合
-    [self.nadView setFrame:CGRectMake((self.view.frame.size.width - self.nadView.frame.size.width) / 2, self.view.frame.size.height - self.nadView.frame.size.height, self.nadView.frame.size.width,
-                                      self.nadView.frame.size.height)];
+    (self.nadView).frame = CGRectMake((self.view.frame.size.width - self.nadView.frame.size.width) / 2, self.view.frame.size.height - self.nadView.frame.size.height, self.nadView.frame.size.width,
+                                      self.nadView.frame.size.height);
 
     [self.view addSubview:self.nadView];
 

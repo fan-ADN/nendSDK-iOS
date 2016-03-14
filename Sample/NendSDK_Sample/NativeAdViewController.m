@@ -31,7 +31,7 @@
 
      // Xibから広告Viewを生成
     UINib *nib = [UINib nibWithNibName:self.nib bundle:nil];
-    UIView<NADNativeViewRendering> *adView = [[nib instantiateWithOwner:nil options:nil] objectAtIndex:0];
+    UIView<NADNativeViewRendering> *adView = [nib instantiateWithOwner:nil options:nil][0];
     adView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
     adView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:adView];

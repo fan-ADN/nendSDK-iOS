@@ -199,7 +199,7 @@ typedef void (^CompletionBlock)(NSArray<Feed *> *_Nullable);
         if (feedArray.count >= size) {
             NSMutableArray<Feed *> *array = [NSMutableArray array];
             for (NSInteger i = 0; i < size; i++) {
-                Feed *feed = [feedArray firstObject];
+                Feed *feed = feedArray.firstObject;
                 [array addObject:feed];
                 [feedArray removeObjectAtIndex:0];
             }

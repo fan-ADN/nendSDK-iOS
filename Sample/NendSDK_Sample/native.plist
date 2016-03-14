@@ -80,5 +80,11 @@
 		<key>title</key>
 		<string>NoNib</string>
 	</dict>
+    <dict>
+        <key>segue</key>
+        <string>PushCarouselNativeAd</string>
+        <key>title</key>
+        <string>Carousel</string>
+    </dict>
 </array>
 </plist>

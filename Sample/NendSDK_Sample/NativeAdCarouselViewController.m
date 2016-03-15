@@ -69,13 +69,17 @@ static const int adRow = 3;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"cell";
-    
     if (indexPath.row == adRow) {
-        NativeAdCarouselCell *cell = [[NativeAdCarouselCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        static NSString *AdCellIdentifier = @"adcell";
+        NativeAdCarouselCell *cell= [tableView dequeueReusableCellWithIdentifier:AdCellIdentifier];
+        if (cell == nil) {
+            cell = [[NativeAdCarouselCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:AdCellIdentifier];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
         
         return cell;
     } else {
+        static NSString *CellIdentifier = @"cell";
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.text = self.items[indexPath.row];

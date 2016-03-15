@@ -14,25 +14,17 @@
 
 static const int adCount = 5; // 最大5枚
 
-@interface NativeAdCarouselCell ()<NADNativeDelegate, UIPageViewControllerDataSource, UIPageViewControllerDelegate> {
+@interface NativeAdCarouselCell ()<NADNativeDelegate, UIScrollViewDelegate> {
     UIImageView *logo;
     UILabel *shortLabel;
     UILabel *prLabel;
     UILabel *longLabel;
-    
-    // todo
-    UIImageView *image;
-    UILabel *nameLabel;
-    UILabel *urlLabel;
-    UILabel *buttonLabel;
 }
 
 @property (nonatomic) NADNativeClient *client;
 @property (nonatomic) NSMutableArray *adContentViews;
 @property (nonatomic) int index;
-
-@property (nonatomic) UIPageViewController *page;
-//@property (nonatomic) UIScrollView *scrollView;
+@property (nonatomic) UIScrollView *scrollView;
 
 @end
 
@@ -81,17 +73,15 @@ static const int adCount = 5; // 最大5枚
     [self.contentView addSubview:prLabel];
     [self.contentView addSubview:longLabel];
     
-    // todo
-    image = [[UIImageView alloc] initWithFrame:CGRectMake(10.f, 10.f, 300.f, 180.f)];
-    [self.contentView addSubview:longLabel];
-    nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.f, 190.f, 180.f, 30.f)];nameLabel.backgroundColor = [UIColor yellowColor];
-    urlLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.f, 220.f, 180.f, 30.f)];urlLabel.backgroundColor = [UIColor orangeColor];
-    buttonLabel = [[UILabel alloc] initWithFrame:CGRectMake(190.f, 200.f, 120.f, 30.f)];buttonLabel.backgroundColor = [UIColor blueColor];
-    
-    [self.contentView addSubview:image];
-    [self.contentView addSubview:nameLabel];
-    [self.contentView addSubview:urlLabel];
-    [self.contentView addSubview:buttonLabel];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 100, screenWidth, 260)];
+    self.scrollView.delegate = self;
+    self.scrollView.backgroundColor = [UIColor grayColor];
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.directionalLockEnabled = YES;
+    self.scrollView.pagingEnabled = NO;
+    self.scrollView.bounces = NO;
+    self.scrollView.decelerationRate = 0.3;
+    [self addSubview:self.scrollView];
     
     [self initAd];
     
@@ -114,8 +104,6 @@ static const int adCount = 5; // 最大5枚
                 if (ad) {
                     UIView<NADNativeViewRendering> *adView = [[AdContentView alloc] initWithFrame:CGRectMake(0.f, 0.f, 320, 260)];
                     
-//                    adView.index = weakSelf.adContentViews.count + 1;
-                    
                     [ad intoView:adView];
                     [weakSelf.adContentViews addObject:adView];
 
@@ -129,62 +117,68 @@ static const int adCount = 5; // 最大5枚
         dispatch_group_notify(group, dispatch_get_main_queue(), ^{
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             
-            if (!self.adContentViews.count > 0) {
-                return;
+            for (int i = 0; i < self.adContentViews.count; i ++) {
+                AdContentView *adView = [self.adContentViews objectAtIndex:i];
+                adView.frame = CGRectMake(320 * i, 0, 320, 260);
+                adView.backgroundColor = [UIColor whiteColor];
+                [self.scrollView addSubview:adView];
             }
             
-            self.page = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-            self.page.dataSource = self;
-            self.page.delegate = self;
-            self.page.view.frame = CGRectMake(0, 100, screenWidth, 260);
-            self.page.view.backgroundColor = [UIColor orangeColor];
-            
-            
-//            [self.page setViewControllers:@[ self.adContentViews[0]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
-            
-//            [self addSubview:self.page.view];
-            
-            [self updatePage];
+            self.scrollView.contentSize =  CGSizeMake(320 * adCount, 0);
+            [self updateHeader];
         });
         
     }
 }
 
--(void) updatePage {
+-(void) updateHeader {
     AdContentView *currentAdView = [self.adContentViews objectAtIndex:self.index];
     logo.image = currentAdView.nativeAdLogoImageView.image;
     shortLabel.text = currentAdView.nativeAdShortTextLabel.text;
     prLabel.text = currentAdView.nativeAdPrTextLabel.text;
     longLabel.text = currentAdView.nativeAdLongTextLabel.text;
+}
+
+#pragma mark UIScrollView
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    //
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    //
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self animation];
+}
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)_scrollView{
+    [self animation];
+}
+
+- (void) animation {
+    int x = self.scrollView.contentOffset.x;
     
-    // todo
-    image.image = currentAdView.nativeAdImageView.image;
-    nameLabel.text = currentAdView.nativeAdPromotionNameLabel.text;
-    urlLabel.text = currentAdView.nativeAdPromotionUrlLabel.text;
-    buttonLabel.text = currentAdView.nativeAdActionButtonTextLabel.text;
-}
-
-#pragma mark - UIPageViewControllerDataSource
-
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
-{
-    NSUInteger index = [self.adContentViews indexOfObject:(AdContentView *)viewController];
-    if (0 == index || NSNotFound == index) {
-        return nil;
+    if (x < 320 - screenWidth / 2) {
+        x = 0;
+        self.index = 0;
+    } else if (x < 640 - screenWidth / 2) {
+        x = 480 - screenWidth / 2;
+        self.index = 1;
+    } else if (x < 960 - screenWidth / 2) {
+        x = 800 - screenWidth / 2;
+        self.index = 2;
+    } else if (x < 1280 - screenWidth / 2) {
+        x = 1120 - screenWidth / 2;
+        self.index = 3;
+    } else {
+        x = 1600 - screenWidth;
+        self.index = 4;
     }
-    index--;
-    self.index = (int)index;
-    return self.adContentViews[index];
-}
-
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
-{
-    NSUInteger index = [self.adContentViews indexOfObject:(AdContentView *)viewController];
-    if (index == NSNotFound || ++index == self.adContentViews.count) {
-        return nil;
-    }
-    self.index = (int)index;
-    return self.adContentViews[index];
+    
+    [self updateHeader];
+    [self.scrollView setContentOffset:CGPointMake(x, 0) animated:YES];
 }
 
 @end
@@ -205,20 +199,22 @@ static const int adCount = 5; // 最大5枚
         _nativeAdLongTextLabel.minimumScaleFactor = 0.5f;
         _nativeAdImageView = [[NADNativeImageView alloc] initWithFrame:CGRectMake(10.f, 10.f, 300.f, 180.f)];
         _nativeAdPromotionNameLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(10.f, 190.f, 180.f, 30.f)];
+        _nativeAdPromotionNameLabel.backgroundColor = [UIColor yellowColor];
         _nativeAdPromotionUrlLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(10.f, 220.f, 180.f, 30.f)];
+        _nativeAdPromotionUrlLabel.backgroundColor = [UIColor blueColor];
         _nativeAdActionButtonTextLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(190.f, 200.f, 120.f, 30.f)];
+        _nativeAdActionButtonTextLabel.backgroundColor = [UIColor orangeColor];
         
-        [self addSubview:_nativeAdLogoImageView];
-        [self addSubview:_nativeAdShortTextLabel];
+//        [self addSubview:_nativeAdLogoImageView];
+//        [self addSubview:_nativeAdShortTextLabel];
         [self addSubview:_nativeAdPrTextLabel];
-        [self addSubview:_nativeAdLongTextLabel];
+//        [self addSubview:_nativeAdLongTextLabel];
         [self addSubview:_nativeAdImageView];
         [self addSubview:_nativeAdPromotionNameLabel];
         [self addSubview:_nativeAdPromotionUrlLabel];
         [self addSubview:_nativeAdActionButtonTextLabel];
         
-        self.layer.borderColor = [UIColor darkGrayColor].CGColor;
-        self.layer.borderWidth = 1.f;
+        self.layer.borderWidth = 0.f;
     }
     return self;
 }

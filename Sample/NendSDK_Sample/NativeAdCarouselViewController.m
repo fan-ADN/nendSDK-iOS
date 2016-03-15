@@ -61,7 +61,7 @@ static const int adRow = 3;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == adRow) {
-        return 360.f;
+        return 300.f;
     } else {
         return 44.f;
     }

@@ -9,7 +9,13 @@
 #import "NativeAdCarouselCell.h"
 #import "NADNativeClient.h"
 
+#define cellWidth   [UIScreen mainScreen].bounds.size.width
+
 static const int adCount = 5; // 最大5枚
+static const float adPortraitHeight = 325.f; // 立て向き 広告高さ
+static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
+static const float adPortraitWidth = 320.f; // 立て向き　広告横幅
+static const float adLandscapeWidth = 580.f; // 横向き　広告横幅
 
 @interface AdView : UIView <NADNativeViewRendering>
 
@@ -23,6 +29,7 @@ static const int adCount = 5; // 最大5枚
 @property (nonatomic, strong) NADNativeImageView *nativeAdLogoImageView;
 
 @property (nonatomic) int index;
+
 - (instancetype)initWithFrame:(CGRect)frame;
 
 @end
@@ -31,10 +38,9 @@ static const int adCount = 5; // 最大5枚
 
 @property (nonatomic) NADNativeClient *client;
 @property (nonatomic) NSMutableArray *adViews;
-@property (nonatomic) NSMutableArray *adContentViews;
 @property (nonatomic) UIScrollView *scrollView;
 
-@property (nonatomic) float cellWidth;
+// 広告の横幅
 @property (nonatomic) float adWidth;
 
 @end
@@ -55,7 +61,7 @@ static const int adCount = 5; // 最大5枚
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.f, 0.f, [UIScreen mainScreen].bounds.size.width, 325.f)];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.f, 0.f, cellWidth, adPortraitHeight)];
     self.scrollView.delegate = self;
     self.scrollView.backgroundColor = [UIColor clearColor];
     self.scrollView.showsHorizontalScrollIndicator = NO;
@@ -84,7 +90,7 @@ static const int adCount = 5; // 最大5枚
             dispatch_group_enter(group);
             [self.client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {
                 if (ad) {
-                    UIView<NADNativeViewRendering> *adView = [[AdView alloc] initWithFrame:CGRectMake(0.f, 0.f, 320.f, 325.f)];
+                    UIView<NADNativeViewRendering> *adView = [[AdView alloc] initWithFrame:CGRectMake(0.f, 0.f, adPortraitWidth, adPortraitHeight)];
                     [ad intoView:adView];
                     [weakSelf.adViews addObject:adView];
                     
@@ -101,10 +107,10 @@ static const int adCount = 5; // 最大5枚
             for (int i = 0; i < self.adViews.count; i ++) {
                 AdView *adView = [self.adViews objectAtIndex:i];
                 adView.index = i;
-                adView.backgroundColor = [UIColor whiteColor];
                 [self.scrollView addSubview:adView];
             }
             
+            // 画面レイアウト
             [self layoutSubviews];
         });
     }
@@ -112,26 +118,24 @@ static const int adCount = 5; // 最大5枚
 
 -(void) layoutSubviews {
     [super layoutSubviews];
-    float height = 325;
     
+    float height = adPortraitHeight;
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
     switch (orientation) {
         case UIInterfaceOrientationPortrait:
         case UIDeviceOrientationPortraitUpsideDown:
-            self.cellWidth = [UIScreen mainScreen].bounds.size.width;
-            self.adWidth = 320;
+            self.adWidth = adPortraitWidth;
             break;
         case UIDeviceOrientationLandscapeRight:
         case UIDeviceOrientationLandscapeLeft:
-            self.cellWidth = [UIScreen mainScreen].bounds.size.width;
-            self.adWidth = 580;
-            height = 200;
+            self.adWidth = adLandscapeWidth;
+            height = adLandscapeHeight;
             break;
         case UIDeviceOrientationUnknown:
             break;
     }
     
-    self.scrollView.frame = CGRectMake(0.f, 0.f, self.cellWidth, height);
+    self.scrollView.frame = CGRectMake(0.f, 0.f, cellWidth, height);
     self.scrollView.contentSize =  CGSizeMake(self.adWidth * adCount, 0);
 }
 
@@ -146,21 +150,21 @@ static const int adCount = 5; // 最大5枚
 }
 
 - (void) animation {
-    int x = self.scrollView.contentOffset.x;
+    int distance = self.scrollView.contentOffset.x;
     
-    if (x + self.cellWidth/2 < self.adWidth) {
-        x = 0;
-    } else if (x + self.cellWidth/2 < self.adWidth*2) {
-        x = self.adWidth*1.5 - self.cellWidth/2;
-    } else if (x  + self.cellWidth/2 < self.adWidth*3) {
-        x = self.adWidth*2.5 - self.cellWidth/2;
-    } else if (x  + self.cellWidth/2 < self.adWidth*4) {
-        x = self.adWidth*3.5 - self.cellWidth/2;
+    if (distance + cellWidth/2 < self.adWidth) {
+        distance = 0;
+    } else if (distance + cellWidth/2 < self.adWidth * 2) {
+        distance = self.adWidth * 1.5 - cellWidth / 2;
+    } else if (distance + cellWidth/2 < self.adWidth * 3) {
+        distance = self.adWidth * 2.5 - cellWidth / 2;
+    } else if (distance + cellWidth / 2 < self.adWidth * 4) {
+        distance = self.adWidth * 3.5 - cellWidth / 2;
     } else {
-        x = self.adWidth*5 - self.cellWidth;
+        distance = self.adWidth * 5 - cellWidth;
     }
     
-    [self.scrollView setContentOffset:CGPointMake(x, 0) animated:YES];
+    [self.scrollView setContentOffset:CGPointMake(distance, 0) animated:YES];
 }
 
 @end
@@ -174,7 +178,8 @@ static const int adCount = 5; // 最大5枚
     switch (orientation) {
         case UIInterfaceOrientationPortrait:
         case UIDeviceOrientationPortraitUpsideDown:
-            self.frame = CGRectMake(320 * self.index, 0, 320, 325);
+            // 立て向き画面のレイアウト
+            self.frame = CGRectMake(adPortraitWidth * self.index, 0, adPortraitWidth, adPortraitHeight);
             _nativeAdLogoImageView.frame = CGRectMake(10.f, 10.f, 40.f, 40.f);
             _nativeAdPromotionNameLabel.frame = CGRectMake(60.f, 10.f, 250.f, 20.f);
             _nativeAdPrTextLabel.frame = CGRectMake(60.f, 30.f, 40.f, 20.f);
@@ -186,7 +191,8 @@ static const int adCount = 5; // 最大5枚
             break;
         case UIDeviceOrientationLandscapeRight:
         case UIDeviceOrientationLandscapeLeft:
-            self.frame = CGRectMake(580 * self.index, 0, 580, 300);
+            // 横向き画面のレイアウト
+            self.frame = CGRectMake(adLandscapeWidth * self.index, 0, adLandscapeWidth, adLandscapeHeight);
             _nativeAdImageView.frame = CGRectMake(10.f, 10.f, 300.f, 180.f);
             _nativeAdPromotionNameLabel.frame = CGRectMake(320.f, 10.f, 180.f, 20.f);
             _nativeAdPrTextLabel.frame = CGRectMake(320.f, 40, 40.f, 20.f);

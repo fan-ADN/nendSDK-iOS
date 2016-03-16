@@ -10,9 +10,8 @@
 #import "NativeAdCarouselCell.h"
 
 static const int adRow = 3;
-
-#define screenWidth            [UIScreen mainScreen].bounds.size.width
-#define screenHeight           [UIScreen mainScreen].bounds.size.height
+static const float cellPortrait = 325.f;
+static const float cellLandscape = 200.f;
 
 @interface NativeAdCarouselViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -33,7 +32,6 @@ static const int adRow = 3;
     
     self.table.delegate = self;
     self.table.dataSource = self;
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,8 +56,9 @@ static const int adRow = 3;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == adRow) {
-        float height = 325;
+        float height = cellPortrait;
         
+        // 画面向きの判定
         UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
         switch (orientation) {
             case UIInterfaceOrientationPortrait:
@@ -67,7 +66,7 @@ static const int adRow = 3;
                 break;
             case UIDeviceOrientationLandscapeRight:
             case UIDeviceOrientationLandscapeLeft:
-                height = 200;
+                height = cellLandscape;
                 break;
             case UIDeviceOrientationUnknown:
                 break;
@@ -92,9 +91,12 @@ static const int adRow = 3;
         return cell;
     } else {
         static NSString *CellIdentifier = @"cell";
-        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.textLabel.text = self.items[indexPath.row];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell.textLabel.text = self.items[indexPath.row];
+        }
         
         return cell;
     }
@@ -102,7 +104,6 @@ static const int adRow = 3;
 
 #pragma mark - Table view delegate
 
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //

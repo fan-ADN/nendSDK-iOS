@@ -751,9 +751,30 @@
                     <view key="view" contentMode="scaleToFill" id="sq6-oq-O7e">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AdB-Qa-RQL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QIC-an-Cdb" firstAttribute="top" secondItem="AdB-Qa-RQL" secondAttribute="bottom" id="3RP-p0-SVe"/>
+                            <constraint firstItem="AdB-Qa-RQL" firstAttribute="leading" secondItem="sq6-oq-O7e" secondAttribute="leading" id="IDp-8r-77u"/>
+                            <constraint firstItem="AdB-Qa-RQL" firstAttribute="top" secondItem="DPC-B2-RCw" secondAttribute="bottom" id="S8k-c0-A4f"/>
+                            <constraint firstAttribute="trailing" secondItem="AdB-Qa-RQL" secondAttribute="trailing" id="SSw-w4-c9U"/>
+                            <constraint firstItem="AdB-Qa-RQL" firstAttribute="top" secondItem="sq6-oq-O7e" secondAttribute="top" id="oV0-E1-aeq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="S8k-c0-A4f"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="4IG-Az-l1y"/>
+                    <connections>
+                        <outlet property="table" destination="AdB-Qa-RQL" id="fkf-O1-U5q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UuG-TK-qvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

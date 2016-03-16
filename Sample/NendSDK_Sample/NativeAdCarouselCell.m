@@ -9,9 +9,6 @@
 #import "NativeAdCarouselCell.h"
 #import "NADNativeClient.h"
 
-#define screenWidth            [UIScreen mainScreen].bounds.size.width
-#define screenHeight           [UIScreen mainScreen].bounds.size.height
-
 static const int adCount = 5; // 最大5枚
 
 @interface AdView : UIView <NADNativeViewRendering>
@@ -25,6 +22,7 @@ static const int adCount = 5; // 最大5枚
 @property (nonatomic, strong) NADNativeImageView *nativeAdImageView;
 @property (nonatomic, strong) NADNativeImageView *nativeAdLogoImageView;
 
+@property (nonatomic) int index;
 - (instancetype)initWithFrame:(CGRect)frame;
 
 @end
@@ -35,7 +33,9 @@ static const int adCount = 5; // 最大5枚
 @property (nonatomic) NSMutableArray *adViews;
 @property (nonatomic) NSMutableArray *adContentViews;
 @property (nonatomic) UIScrollView *scrollView;
-@property (nonatomic) int index;
+
+@property (nonatomic) float cellWidth;
+@property (nonatomic) float adWidth;
 
 @end
 
@@ -55,11 +55,7 @@ static const int adCount = 5; // 最大5枚
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
-//    self.headerView = [[AdBodyView alloc] init];
-//    self.headerView.frame = CGRectMake(0, 0, 320, 260);
-//    [self addSubview:self.headerView];
-    
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, 300)];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.f, 0.f, [UIScreen mainScreen].bounds.size.width, 325.f)];
     self.scrollView.delegate = self;
     self.scrollView.backgroundColor = [UIColor clearColor];
     self.scrollView.showsHorizontalScrollIndicator = NO;
@@ -88,7 +84,7 @@ static const int adCount = 5; // 最大5枚
             dispatch_group_enter(group);
             [self.client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {
                 if (ad) {
-                    UIView<NADNativeViewRendering> *adView = [[AdView alloc] initWithFrame:CGRectMake(0.f, 0.f, 320, 300)];
+                    UIView<NADNativeViewRendering> *adView = [[AdView alloc] initWithFrame:CGRectMake(0.f, 0.f, 320.f, 325.f)];
                     [ad intoView:adView];
                     [weakSelf.adViews addObject:adView];
                     
@@ -104,14 +100,39 @@ static const int adCount = 5; // 最大5枚
             
             for (int i = 0; i < self.adViews.count; i ++) {
                 AdView *adView = [self.adViews objectAtIndex:i];
-                adView.frame = CGRectMake(320 * i, 0, 320, 300);
+                adView.index = i;
                 adView.backgroundColor = [UIColor whiteColor];
                 [self.scrollView addSubview:adView];
             }
             
-            self.scrollView.contentSize =  CGSizeMake(320 * adCount, 0);
+            [self layoutSubviews];
         });
     }
+}
+
+-(void) layoutSubviews {
+    [super layoutSubviews];
+    float height = 325;
+    
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    switch (orientation) {
+        case UIInterfaceOrientationPortrait:
+        case UIDeviceOrientationPortraitUpsideDown:
+            self.cellWidth = [UIScreen mainScreen].bounds.size.width;
+            self.adWidth = 320;
+            break;
+        case UIDeviceOrientationLandscapeRight:
+        case UIDeviceOrientationLandscapeLeft:
+            self.cellWidth = [UIScreen mainScreen].bounds.size.width;
+            self.adWidth = 580;
+            height = 200;
+            break;
+        case UIDeviceOrientationUnknown:
+            break;
+    }
+    
+    self.scrollView.frame = CGRectMake(0.f, 0.f, self.cellWidth, height);
+    self.scrollView.contentSize =  CGSizeMake(self.adWidth * adCount, 0);
 }
 
 #pragma mark UIScrollView
@@ -127,21 +148,16 @@ static const int adCount = 5; // 最大5枚
 - (void) animation {
     int x = self.scrollView.contentOffset.x;
     
-    if (x < 320 - screenWidth / 2) {
+    if (x + self.cellWidth/2 < self.adWidth) {
         x = 0;
-        self.index = 0;
-    } else if (x < 640 - screenWidth / 2) {
-        x = 480 - screenWidth / 2;
-        self.index = 1;
-    } else if (x < 960 - screenWidth / 2) {
-        x = 800 - screenWidth / 2;
-        self.index = 2;
-    } else if (x < 1280 - screenWidth / 2) {
-        x = 1120 - screenWidth / 2;
-        self.index = 3;
+    } else if (x + self.cellWidth/2 < self.adWidth*2) {
+        x = self.adWidth*1.5 - self.cellWidth/2;
+    } else if (x  + self.cellWidth/2 < self.adWidth*3) {
+        x = self.adWidth*2.5 - self.cellWidth/2;
+    } else if (x  + self.cellWidth/2 < self.adWidth*4) {
+        x = self.adWidth*3.5 - self.cellWidth/2;
     } else {
-        x = 1600 - screenWidth;
-        self.index = 4;
+        x = self.adWidth*5 - self.cellWidth;
     }
     
     [self.scrollView setContentOffset:CGPointMake(x, 0) animated:YES];
@@ -151,28 +167,71 @@ static const int adCount = 5; // 最大5枚
 
 @implementation AdView
 
+-(void) layoutSubviews {
+    [super layoutSubviews];
+    
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    switch (orientation) {
+        case UIInterfaceOrientationPortrait:
+        case UIDeviceOrientationPortraitUpsideDown:
+            self.frame = CGRectMake(320 * self.index, 0, 320, 325);
+            _nativeAdLogoImageView.frame = CGRectMake(10.f, 10.f, 40.f, 40.f);
+            _nativeAdPromotionNameLabel.frame = CGRectMake(60.f, 10.f, 250.f, 20.f);
+            _nativeAdPrTextLabel.frame = CGRectMake(60.f, 30.f, 40.f, 20.f);
+            _nativeAdLongTextLabel.frame = CGRectMake(10.f, 55.f, 300.f, 30.f);
+            _nativeAdImageView.frame = CGRectMake(10.f, 90.f, 300.f, 180.f);
+            _nativeAdShortTextLabel.frame = CGRectMake(10.f, 275.f, 200.f, 20.f);
+            _nativeAdPromotionUrlLabel.frame = CGRectMake(10.f, 295.f, 180.f, 20.f);
+            _nativeAdActionButtonTextLabel.frame = CGRectMake(190.f, 295.f, 120.f, 20.f);
+            break;
+        case UIDeviceOrientationLandscapeRight:
+        case UIDeviceOrientationLandscapeLeft:
+            self.frame = CGRectMake(580 * self.index, 0, 580, 300);
+            _nativeAdImageView.frame = CGRectMake(10.f, 10.f, 300.f, 180.f);
+            _nativeAdPromotionNameLabel.frame = CGRectMake(320.f, 10.f, 180.f, 20.f);
+            _nativeAdPrTextLabel.frame = CGRectMake(320.f, 40, 40.f, 20.f);
+            _nativeAdLongTextLabel.frame = CGRectMake(320.f, 65.f, 250.f, 40.f);
+            _nativeAdShortTextLabel.frame = CGRectMake(320.f, 110.f, 250.f, 20.f);
+            _nativeAdPromotionUrlLabel.frame = CGRectMake(320.f, 140.f, 200.f, 20.f);
+            _nativeAdActionButtonTextLabel.frame = CGRectMake(320.f, 170.f, 120.f, 20.f);
+            _nativeAdLogoImageView.frame = CGRectMake(530.f, 150.f, 40.f, 40.f);
+            break;
+        case UIDeviceOrientationUnknown:
+            break;
+    }
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
         _nativeAdLogoImageView = [[NADNativeImageView alloc] initWithFrame:CGRectMake(10.f, 10.f, 40.f, 40.f)];
-        _nativeAdShortTextLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(60.f, 10.f, 250.f, 20.f)];
-        _nativeAdShortTextLabel.adjustsFontSizeToFitWidth = YES;
-        _nativeAdShortTextLabel.minimumScaleFactor = 0.5f;
-        _nativeAdPrTextLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(60.f, 30.f, 250.f, 20.f)];
+        _nativeAdPromotionNameLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(60.f, 10.f, 250.f, 20.f)];
+        _nativeAdPromotionNameLabel.adjustsFontSizeToFitWidth = YES;
+        _nativeAdPromotionNameLabel.font = [UIFont boldSystemFontOfSize:18];
+        _nativeAdPromotionNameLabel.minimumScaleFactor = 0.5f;
+        _nativeAdPrTextLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(60.f, 30.f, 40.f, 20.f)];
+        _nativeAdPrTextLabel.textAlignment = NSTextAlignmentCenter;
+        _nativeAdPrTextLabel.backgroundColor = [UIColor grayColor];
+        _nativeAdPrTextLabel.textColor = [UIColor whiteColor];
         _nativeAdPrTextLabel.adjustsFontSizeToFitWidth = YES;
         _nativeAdPrTextLabel.minimumScaleFactor = 0.5f;
-        _nativeAdLongTextLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(10.f, 50.f, 300.f, 30.f)];
+        _nativeAdLongTextLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(10.f, 55.f, 300.f, 30.f)];
         _nativeAdLongTextLabel.adjustsFontSizeToFitWidth = YES;
         _nativeAdLongTextLabel.minimumScaleFactor = 0.5f;
-        _nativeAdImageView = [[NADNativeImageView alloc] initWithFrame:CGRectMake(10.f, 80.f, 300.f, 180.f)];
-        _nativeAdPromotionNameLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(10.f, 260.f, 190.f, 20.f)];
-        _nativeAdPromotionNameLabel.adjustsFontSizeToFitWidth = YES;
-        _nativeAdPromotionNameLabel.minimumScaleFactor = 0.5f;
-        _nativeAdPromotionUrlLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(10.f, 280.f, 190.f, 20.f)];
+        _nativeAdImageView = [[NADNativeImageView alloc] initWithFrame:CGRectMake(10.f, 90.f, 300.f, 180.f)];
+        _nativeAdShortTextLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(10.f, 275.f, 200.f, 20.f)];
+        _nativeAdShortTextLabel.adjustsFontSizeToFitWidth = YES;
+        _nativeAdShortTextLabel.minimumScaleFactor = 0.5f;
+        _nativeAdPromotionUrlLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(10.f, 295.f, 180.f, 20.f)];
         _nativeAdPromotionUrlLabel.adjustsFontSizeToFitWidth = YES;
         _nativeAdPromotionUrlLabel.minimumScaleFactor = 0.5f;
-        _nativeAdActionButtonTextLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(200.f, 270.f, 120.f, 20.f)];
+        _nativeAdActionButtonTextLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(190.f, 295.f, 120.f, 20.f)];
+        _nativeAdActionButtonTextLabel.textColor = [UIColor blueColor];
+        _nativeAdActionButtonTextLabel.layer.borderWidth = 1.f;
+        _nativeAdActionButtonTextLabel.layer.borderColor = [[UIColor blueColor] CGColor];
+        _nativeAdActionButtonTextLabel.textAlignment = NSTextAlignmentCenter;
         _nativeAdActionButtonTextLabel.adjustsFontSizeToFitWidth = YES;
         _nativeAdActionButtonTextLabel.minimumScaleFactor = 0.5f;
         

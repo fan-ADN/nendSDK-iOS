@@ -14,10 +14,9 @@ static const int adRow = 3;
 #define screenWidth            [UIScreen mainScreen].bounds.size.width
 #define screenHeight           [UIScreen mainScreen].bounds.size.height
 
-@interface NativeAdCarouselViewController ()<UITableViewDataSource, UITableViewDelegate> {
-    UITableView *table;
-}
+@interface NativeAdCarouselViewController ()<UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic) IBOutlet UITableView *table;
 @property (nonatomic) NSMutableArray<NSString *> *items;
 
 @end
@@ -32,10 +31,8 @@ static const int adRow = 3;
         [self.items addObject:[NSString stringWithFormat:@"item%d", i + 1]];
     }
     
-    table = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight) style:UITableViewStylePlain];
-    table.delegate = self;
-    table.dataSource = self;
-    [self.view addSubview:table];
+    self.table.delegate = self;
+    self.table.dataSource = self;
 
 }
 
@@ -61,7 +58,22 @@ static const int adRow = 3;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == adRow) {
-        return 300.f;
+        float height = 325;
+        
+        UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+        switch (orientation) {
+            case UIInterfaceOrientationPortrait:
+            case UIDeviceOrientationPortraitUpsideDown:
+                break;
+            case UIDeviceOrientationLandscapeRight:
+            case UIDeviceOrientationLandscapeLeft:
+                height = 200;
+                break;
+            case UIDeviceOrientationUnknown:
+                break;
+        }
+        
+        return height;
     } else {
         return 44.f;
     }

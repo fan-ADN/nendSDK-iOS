@@ -449,7 +449,7 @@
                         <segue destination="P5F-HR-MXu" kind="show" identifier="PushPageableNativeAd" id="V9V-L8-k7z"/>
                         <segue destination="6cB-cC-bDI" kind="show" identifier="PushRssNativeAd" id="J7G-Lm-Cbc"/>
                         <segue destination="D5T-rG-9GD" kind="show" identifier="PushNoNibNativeAd" id="4Eh-on-dSE"/>
-                        <segue destination="lDT-g2-2i5" kind="show" identifier="PushCarouselNativeAd" id="LEz-5x-zbS"/>
+                        <segue destination="H5C-3J-8AW" kind="show" identifier="PushCarouselNativeAd" id="Aju-6r-uNS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hU-LB-z6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -722,6 +722,35 @@
             </objects>
             <point key="canvasLocation" x="2479" y="-825"/>
         </scene>
+        <!--Native Ad Carousel View Controller-->
+        <scene sceneID="4ea-1Q-Ckb">
+            <objects>
+                <tableViewController id="H5C-3J-8AW" customClass="NativeAdCarouselViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MKz-dq-hUh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eNR-Me-SNE">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eNR-Me-SNE" id="Kh8-3a-OpH">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="H5C-3J-8AW" id="L2x-xd-s2E"/>
+                            <outlet property="delegate" destination="H5C-3J-8AW" id="k6E-P7-Oq6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="dcy-js-cph"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mjP-1q-LFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479" y="-5021"/>
+        </scene>
         <!--Native Ad Rss View Controller-->
         <scene sceneID="4xP-5d-GcV">
             <objects>
@@ -739,46 +768,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vef-uW-7Ii" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2479" y="-3679"/>
-        </scene>
-        <!--Native Ad Carousel View Controller-->
-        <scene sceneID="FdG-v1-Y8a">
-            <objects>
-                <viewController id="lDT-g2-2i5" customClass="NativeAdCarouselViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DPC-B2-RCw"/>
-                        <viewControllerLayoutGuide type="bottom" id="QIC-an-Cdb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sq6-oq-O7e">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AdB-Qa-RQL">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="QIC-an-Cdb" firstAttribute="top" secondItem="AdB-Qa-RQL" secondAttribute="bottom" id="3RP-p0-SVe"/>
-                            <constraint firstItem="AdB-Qa-RQL" firstAttribute="leading" secondItem="sq6-oq-O7e" secondAttribute="leading" id="IDp-8r-77u"/>
-                            <constraint firstItem="AdB-Qa-RQL" firstAttribute="top" secondItem="DPC-B2-RCw" secondAttribute="bottom" id="S8k-c0-A4f"/>
-                            <constraint firstAttribute="trailing" secondItem="AdB-Qa-RQL" secondAttribute="trailing" id="SSw-w4-c9U"/>
-                            <constraint firstItem="AdB-Qa-RQL" firstAttribute="top" secondItem="sq6-oq-O7e" secondAttribute="top" id="oV0-E1-aeq"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="S8k-c0-A4f"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <navigationItem key="navigationItem" id="4IG-Az-l1y"/>
-                    <connections>
-                        <outlet property="table" destination="AdB-Qa-RQL" id="fkf-O1-U5q"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UuG-TK-qvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2479" y="-5022"/>
         </scene>
         <!--Native Ad No Nib View Controller-->
         <scene sceneID="63N-dW-OUO">

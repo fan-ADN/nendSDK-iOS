@@ -2,7 +2,6 @@
 //  NativeAdCarouselViewController.m
 //  NendSDK_Sample
 //
-//  Created by 于超 on 2016/03/10.
 //  Copyright © 2016年 F@N Communications. All rights reserved.
 //
 
@@ -15,7 +14,6 @@ static const float cellLandscape = 200.f;
 
 @interface NativeAdCarouselViewController ()<UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic) IBOutlet UITableView *table;
 @property (nonatomic) NSMutableArray<NSString *> *items;
 
 @end
@@ -29,9 +27,7 @@ static const float cellLandscape = 200.f;
     for (int i = 0; i < 100; i++) {
         [self.items addObject:[NSString stringWithFormat:@"item%d", i + 1]];
     }
-    
-    self.table.delegate = self;
-    self.table.dataSource = self;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -95,8 +91,8 @@ static const float cellLandscape = 200.f;
         if (cell == nil) {
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.textLabel.text = self.items[indexPath.row];
         }
+        cell.textLabel.text = self.items[indexPath.row];
         
         return cell;
     }

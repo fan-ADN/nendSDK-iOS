@@ -75,6 +75,8 @@
 		69ED18921BD8CDC500CBEDD0 /* FeedWithAdCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69ED188B1BD8CDC500CBEDD0 /* FeedWithAdCell2.xib */; };
 		8BCB34331C9655970025E24D /* NativeAdCarouselCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCB34321C9655970025E24D /* NativeAdCarouselCell.m */; };
 		8BCDDEB01C910BBE00EF379C /* NativeAdCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCDDEAF1C910BBE00EF379C /* NativeAdCarouselViewController.m */; };
+		8BD078EA1C9A3B4A003ABB82 /* NativeAdCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD078E91C9A3B4A003ABB82 /* NativeAdCarouselView.m */; };
+		8BD078EC1C9A42B0003ABB82 /* NativeAdCarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BD078EB1C9A42B0003ABB82 /* NativeAdCarouselView.xib */; };
 		9EBA96B5026C73754EF3C438 /* libPods-NendSDK_Swift_Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D7904DF65B12AA2958812E7 /* libPods-NendSDK_Swift_Sample.a */; };
 		B54CAE7E19DE5BA9003C6616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAE7D19DE5BA9003C6616 /* AppDelegate.swift */; };
 		B54CAE8019DE5BA9003C6616 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAE7F19DE5BA9003C6616 /* ViewController.swift */; };
@@ -193,6 +195,9 @@
 		8BCB34321C9655970025E24D /* NativeAdCarouselCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdCarouselCell.m; sourceTree = "<group>"; };
 		8BCDDEAE1C910BBE00EF379C /* NativeAdCarouselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdCarouselViewController.h; sourceTree = "<group>"; };
 		8BCDDEAF1C910BBE00EF379C /* NativeAdCarouselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdCarouselViewController.m; sourceTree = "<group>"; };
+		8BD078E81C9A3B4A003ABB82 /* NativeAdCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdCarouselView.h; sourceTree = "<group>"; };
+		8BD078E91C9A3B4A003ABB82 /* NativeAdCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdCarouselView.m; sourceTree = "<group>"; };
+		8BD078EB1C9A42B0003ABB82 /* NativeAdCarouselView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdCarouselView.xib; sourceTree = "<group>"; };
 		B54CAE7919DE5BA9003C6616 /* NendSDK_Swift_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NendSDK_Swift_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54CAE7C19DE5BA9003C6616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B54CAE7D19DE5BA9003C6616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -367,6 +372,8 @@
 				690C29141B799FC400C92232 /* NativeAdCollectionView.m */,
 				690C29151B799FC400C92232 /* NativeAdView.h */,
 				690C29161B799FC400C92232 /* NativeAdView.m */,
+				8BD078E81C9A3B4A003ABB82 /* NativeAdCarouselView.h */,
+				8BD078E91C9A3B4A003ABB82 /* NativeAdCarouselView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -385,6 +392,7 @@
 				69CEC6371BD752D600F352DE /* FeedWithAdCell2.xib */,
 				69CEC6381BD752D600F352DE /* FeedWithAdCell3.xib */,
 				69CEC64A1BD76CA000F352DE /* FeedAdCell.xib */,
+				8BD078EB1C9A42B0003ABB82 /* NativeAdCarouselView.xib */,
 			);
 			name = xib;
 			sourceTree = "<group>";
@@ -576,6 +584,7 @@
 				690C28871B797DF100C92232 /* LaunchScreen.xib in Resources */,
 				69CEC63E1BD752D600F352DE /* FeedCell3.xib in Resources */,
 				690C291F1B799FC400C92232 /* NativeAdViewSmallWide.xib in Resources */,
+				8BD078EC1C9A42B0003ABB82 /* NativeAdCarouselView.xib in Resources */,
 				690C29211B799FC400C92232 /* NativeAdViewTextOnly.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -716,6 +725,7 @@
 				690C28A11B7981F000C92232 /* AdInterstitialViewController.m in Sources */,
 				6933FCB91BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */,
 				690C28A71B7985CA00C92232 /* SelectSizeTableViewController.m in Sources */,
+				8BD078EA1C9A3B4A003ABB82 /* NativeAdCarouselView.m in Sources */,
 				690C291C1B799FC400C92232 /* NativeAdCollectionView.m in Sources */,
 				690C290D1B799F9E00C92232 /* NativeAdTableViewController.m in Sources */,
 				690C28EA1B7989CB00C92232 /* AdViewController.m in Sources */,

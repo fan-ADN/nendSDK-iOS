@@ -54,8 +54,6 @@ static const float adLandscapeWidth = 580.f; // 横向き　広告横幅
     self.scrollView.decelerationRate = 0.3;
     [self addSubview:self.scrollView];
     
-    [self initAd];
-    
     return self;
 }
 
@@ -73,7 +71,9 @@ static const float adLandscapeWidth = 580.f; // 横向き　広告横幅
             dispatch_group_enter(group);
             [self.client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {
                 if (ad) {
-                    UIView<NADNativeViewRendering> *adView = [[NativeAdCarouselView alloc] initWithFrame:CGRectMake(0.f, 0.f, adPortraitWidth, adPortraitHeight)];
+                    UINib *nib = [UINib nibWithNibName:@"NativeAdCarouselView" bundle:nil];
+                    UIView<NADNativeViewRendering> *adView = [[nib instantiateWithOwner:nil options:nil] objectAtIndex:0];
+                    
                     [ad intoView:adView];
                     [weakSelf.adViews addObject:adView];
                     
@@ -89,6 +89,7 @@ static const float adLandscapeWidth = 580.f; // 横向き　広告横幅
             
             for (int i = 0; i < self.adViews.count; i ++) {
                 NativeAdCarouselView *adView = [self.adViews objectAtIndex:i];
+                adView.frame = CGRectMake(i*320, 0, 320, 325);
                 adView.index = i;
                 [self.scrollView addSubview:adView];
             }

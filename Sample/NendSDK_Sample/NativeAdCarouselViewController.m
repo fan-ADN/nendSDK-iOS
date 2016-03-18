@@ -81,7 +81,8 @@ static const float cellLandscape = 200.f;
         NativeAdCarouselCell *cell= [tableView dequeueReusableCellWithIdentifier:AdCellIdentifier];
         if (cell == nil) {
             cell = [[NativeAdCarouselCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:AdCellIdentifier];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.selectionStyle = UITableViewCellAccessoryDisclosureIndicator;
+            [cell initAd];
         }
         
         return cell;

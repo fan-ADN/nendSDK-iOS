@@ -11,275 +11,110 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y9l-Sh-cRU" customClass="NADNativeImageView">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NLy-uB-cjw" customClass="NADNativeImageView">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="X4j-sV-sAI"/>
-                        <constraint firstAttribute="width" constant="40" id="kHI-Xo-w8r"/>
-                    </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="X4j-sV-sAI"/>
-                            <exclude reference="kHI-Xo-w8r"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="X4j-sV-sAI"/>
-                            <include reference="kHI-Xo-w8r"/>
-                        </mask>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="10" y="90" width="300" height="180"/>
                     </variation>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="proName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUz-n5-223" customClass="NADNativeLabel">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="short" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p8-IZ-h7R" customClass="NADNativeLabel">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="1s1-MH-NH9"/>
-                        <constraint firstAttribute="width" constant="250" id="KmP-4M-Mze"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="1s1-MH-NH9"/>
-                            <exclude reference="KmP-4M-Mze"/>
-                        </mask>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="10" y="275" width="190" height="20"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="1s1-MH-NH9"/>
-                            <include reference="KmP-4M-Mze"/>
-                        </mask>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="proUrl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKt-YF-lzf" customClass="NADNativeLabel">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="10" y="295" width="190" height="20"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="button" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PqB-YR-So4" customClass="NADNativeLabel">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="200" y="290" width="110" height="20"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="proName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeO-yR-A9r" customClass="NADNativeLabel">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="60" y="10" width="250" height="20"/>
                     </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nJ-nf-8ml" customClass="NADNativeLabel">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="40" id="BTa-gN-Wq9"/>
-                        <constraint firstAttribute="height" constant="20" id="el9-bz-URy"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="BTa-gN-Wq9"/>
-                            <exclude reference="el9-bz-URy"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="BTa-gN-Wq9"/>
-                            <include reference="el9-bz-URy"/>
-                        </mask>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="60" y="30" width="40" height="20"/>
                     </variation>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="long" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxp-DQ-bUp" customClass="NADNativeLabel">
-                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="IsW-uM-XNx"/>
-                        <constraint firstAttribute="width" constant="300" id="up4-0Y-ltH"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="IsW-uM-XNx"/>
-                            <exclude reference="up4-0Y-ltH"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="IsW-uM-XNx"/>
-                            <include reference="up4-0Y-ltH"/>
-                        </mask>
-                    </variation>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NLy-uB-cjw" customClass="NADNativeImageView">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eiz-UN-IGW" customClass="NADNativeImageView">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="300" id="IUu-vS-CoW"/>
-                        <constraint firstAttribute="height" constant="180" id="x6P-yc-qD4"/>
-                    </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="IUu-vS-CoW"/>
-                            <exclude reference="x6P-yc-qD4"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="IUu-vS-CoW"/>
-                            <include reference="x6P-yc-qD4"/>
-                        </mask>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="10" y="10" width="40" height="40"/>
                     </variation>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="short" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p8-IZ-h7R" customClass="NADNativeLabel">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="long" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAp-Zr-Irk" customClass="NADNativeLabel">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="hr2-9E-89T"/>
-                        <constraint firstAttribute="width" constant="200" id="v7F-L3-C5z"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="hr2-9E-89T"/>
-                            <exclude reference="v7F-L3-C5z"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="hr2-9E-89T"/>
-                            <include reference="v7F-L3-C5z"/>
-                        </mask>
-                    </variation>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="url" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFX-u5-Q5M" customClass="NADNativeLabel">
-                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="180" id="HmE-xx-HJz"/>
-                        <constraint firstAttribute="height" constant="20" id="Rrr-Sq-flY"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="HmE-xx-HJz"/>
-                            <exclude reference="Rrr-Sq-flY"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="HmE-xx-HJz"/>
-                            <include reference="Rrr-Sq-flY"/>
-                        </mask>
-                    </variation>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="button" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imf-Zx-BN2" customClass="NADNativeLabel">
-                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="120" id="Gpf-i8-RXj"/>
-                        <constraint firstAttribute="height" constant="20" id="YxP-ey-qil"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                            <integer key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="Gpf-i8-RXj"/>
-                            <exclude reference="YxP-ey-qil"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="Gpf-i8-RXj"/>
-                            <include reference="YxP-ey-qil"/>
-                        </mask>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="10" y="55" width="300" height="30"/>
                     </variation>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="imf-Zx-BN2" firstAttribute="leading" secondItem="bFX-u5-Q5M" secondAttribute="trailing" id="0Ia-b7-Jvv"/>
-                <constraint firstItem="2p8-IZ-h7R" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="63z-K2-Qhe"/>
-                <constraint firstItem="y9l-Sh-cRU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="AVl-VI-qQJ"/>
-                <constraint firstItem="y9l-Sh-cRU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="AdK-GB-cRa"/>
-                <constraint firstItem="2p8-IZ-h7R" firstAttribute="top" secondItem="NLy-uB-cjw" secondAttribute="bottom" constant="5" id="CFu-7w-sT1"/>
-                <constraint firstItem="3nJ-nf-8ml" firstAttribute="leading" secondItem="y9l-Sh-cRU" secondAttribute="trailing" constant="10" id="CYM-bB-E7t"/>
-                <constraint firstItem="bFX-u5-Q5M" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="IXR-Ta-rzp"/>
-                <constraint firstItem="NLy-uB-cjw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="MFf-K8-x2J"/>
-                <constraint firstItem="3nJ-nf-8ml" firstAttribute="top" secondItem="yUz-n5-223" secondAttribute="bottom" id="ST5-B8-gpx"/>
-                <constraint firstItem="NLy-uB-cjw" firstAttribute="top" secondItem="Qxp-DQ-bUp" secondAttribute="bottom" constant="5" id="ScY-eX-2vK"/>
-                <constraint firstItem="bFX-u5-Q5M" firstAttribute="top" secondItem="2p8-IZ-h7R" secondAttribute="bottom" id="UNe-I9-eyH"/>
-                <constraint firstItem="yUz-n5-223" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="ZOD-YH-X7u"/>
-                <constraint firstItem="imf-Zx-BN2" firstAttribute="top" secondItem="2p8-IZ-h7R" secondAttribute="bottom" id="ZlW-eh-sXf"/>
-                <constraint firstItem="Qxp-DQ-bUp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="htr-7I-qPc"/>
-                <constraint firstItem="Qxp-DQ-bUp" firstAttribute="top" secondItem="3nJ-nf-8ml" secondAttribute="bottom" constant="5" id="sDd-mK-sG7"/>
-                <constraint firstItem="yUz-n5-223" firstAttribute="leading" secondItem="y9l-Sh-cRU" secondAttribute="trailing" constant="10" id="xRD-Gz-xgU"/>
-            </constraints>
             <variation key="default">
                 <mask key="subviews">
-                    <exclude reference="y9l-Sh-cRU"/>
-                    <exclude reference="yUz-n5-223"/>
-                    <exclude reference="3nJ-nf-8ml"/>
-                    <exclude reference="Qxp-DQ-bUp"/>
                     <exclude reference="NLy-uB-cjw"/>
                     <exclude reference="2p8-IZ-h7R"/>
-                    <exclude reference="bFX-u5-Q5M"/>
-                    <exclude reference="imf-Zx-BN2"/>
-                </mask>
-                <mask key="constraints">
-                    <exclude reference="63z-K2-Qhe"/>
-                    <exclude reference="CFu-7w-sT1"/>
-                    <exclude reference="CYM-bB-E7t"/>
-                    <exclude reference="ST5-B8-gpx"/>
-                    <exclude reference="htr-7I-qPc"/>
-                    <exclude reference="sDd-mK-sG7"/>
-                    <exclude reference="IXR-Ta-rzp"/>
-                    <exclude reference="UNe-I9-eyH"/>
-                    <exclude reference="0Ia-b7-Jvv"/>
-                    <exclude reference="ZlW-eh-sXf"/>
-                    <exclude reference="ZOD-YH-X7u"/>
-                    <exclude reference="xRD-Gz-xgU"/>
-                    <exclude reference="MFf-K8-x2J"/>
-                    <exclude reference="ScY-eX-2vK"/>
-                    <exclude reference="AVl-VI-qQJ"/>
-                    <exclude reference="AdK-GB-cRa"/>
+                    <exclude reference="bKt-YF-lzf"/>
+                    <exclude reference="PqB-YR-So4"/>
+                    <exclude reference="SeO-yR-A9r"/>
+                    <exclude reference="3nJ-nf-8ml"/>
+                    <exclude reference="eiz-UN-IGW"/>
+                    <exclude reference="sAp-Zr-Irk"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
-                    <include reference="y9l-Sh-cRU"/>
-                    <include reference="yUz-n5-223"/>
-                    <include reference="3nJ-nf-8ml"/>
-                    <include reference="Qxp-DQ-bUp"/>
                     <include reference="NLy-uB-cjw"/>
                     <include reference="2p8-IZ-h7R"/>
-                    <include reference="bFX-u5-Q5M"/>
-                    <include reference="imf-Zx-BN2"/>
-                </mask>
-                <mask key="constraints">
-                    <include reference="63z-K2-Qhe"/>
-                    <include reference="CFu-7w-sT1"/>
-                    <include reference="CYM-bB-E7t"/>
-                    <include reference="ST5-B8-gpx"/>
-                    <include reference="htr-7I-qPc"/>
-                    <include reference="sDd-mK-sG7"/>
-                    <include reference="IXR-Ta-rzp"/>
-                    <include reference="UNe-I9-eyH"/>
-                    <include reference="0Ia-b7-Jvv"/>
-                    <include reference="ZlW-eh-sXf"/>
-                    <include reference="ZOD-YH-X7u"/>
-                    <include reference="xRD-Gz-xgU"/>
-                    <include reference="MFf-K8-x2J"/>
-                    <include reference="ScY-eX-2vK"/>
-                    <include reference="AVl-VI-qQJ"/>
-                    <include reference="AdK-GB-cRa"/>
+                    <include reference="bKt-YF-lzf"/>
+                    <include reference="PqB-YR-So4"/>
+                    <include reference="SeO-yR-A9r"/>
+                    <include reference="3nJ-nf-8ml"/>
+                    <include reference="eiz-UN-IGW"/>
+                    <include reference="sAp-Zr-Irk"/>
                 </mask>
             </variation>
             <connections>
-                <outlet property="nativeAdActionButtonTextLabel" destination="imf-Zx-BN2" id="QSL-VF-7YF"/>
-                <outlet property="nativeAdImageView" destination="NLy-uB-cjw" id="FU8-vQ-z3s"/>
-                <outlet property="nativeAdLogoImageView" destination="y9l-Sh-cRU" id="IOi-zO-CM1"/>
-                <outlet property="nativeAdLongTextLabel" destination="Qxp-DQ-bUp" id="U5C-ac-j1m"/>
-                <outlet property="nativeAdPrTextLabel" destination="3nJ-nf-8ml" id="BjY-Zh-4ed"/>
-                <outlet property="nativeAdPromotionNameLabel" destination="yUz-n5-223" id="GQg-qH-wX6"/>
-                <outlet property="nativeAdPromotionUrlLabel" destination="bFX-u5-Q5M" id="SxG-iX-F03"/>
-                <outlet property="nativeAdShortTextLabel" destination="2p8-IZ-h7R" id="YaH-4I-zdG"/>
+                <outlet property="nativeAdActionButtonTextLabel" destination="PqB-YR-So4" id="w67-QQ-VLZ"/>
+                <outlet property="nativeAdImageView" destination="NLy-uB-cjw" id="cwi-Lf-uGq"/>
+                <outlet property="nativeAdLogoImageView" destination="eiz-UN-IGW" id="xlW-Ta-PZG"/>
+                <outlet property="nativeAdLongTextLabel" destination="sAp-Zr-Irk" id="RZs-5q-iRd"/>
+                <outlet property="nativeAdPrTextLabel" destination="3nJ-nf-8ml" id="cZu-dl-Kzy"/>
+                <outlet property="nativeAdPromotionNameLabel" destination="SeO-yR-A9r" id="Icx-4X-m55"/>
+                <outlet property="nativeAdPromotionUrlLabel" destination="bKt-YF-lzf" id="JN9-aE-lYN"/>
+                <outlet property="nativeAdShortTextLabel" destination="2p8-IZ-h7R" id="Joi-g2-A7a"/>
             </connections>
+            <point key="canvasLocation" x="422" y="247.5"/>
         </view>
     </objects>
 </document>

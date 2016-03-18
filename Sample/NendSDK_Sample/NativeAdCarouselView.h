@@ -9,18 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "NADNativeViewRendering.h"
 
-@interface NativeAdCarouselView : UIView<NADNativeViewRendering>
-@property (nonatomic, weak) IBOutlet NADNativeImageView *nativeAdLogoImageView;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdPromotionNameLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdPrTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdLongTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeImageView *nativeAdImageView;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdShortTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdPromotionUrlLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdActionButtonTextLabel;
+@interface NativeAdCarouselView : UIView
 
 @property (nonatomic) int index;
-
-- (instancetype)initWithFrame:(CGRect)frame;
 
 @end

@@ -14,6 +14,7 @@
 static const int adCount = 5; // 最大5枚
 static const float adPortraitWidth = 320.f; // 立て向き　広告横幅
 static const float adPortraitHeight = 325.f; // 立て向き 広告高さ
+static const float adLandscapeWidth = 580.f; // 横向き　広告横幅
 static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
 
 @interface NativeAdCarouselCell ()<NADNativeDelegate, UIScrollViewDelegate>
@@ -53,8 +54,6 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
     self.scrollView.bounces = NO;
     self.scrollView.decelerationRate = 0.3;
     [self addSubview:self.scrollView];
-    
-    self.adLandscapeWidth = cellWidth - 100.f;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(layoutUpdate:) name:@"layoutUpdate" object:nil];
     
     return self;
@@ -103,9 +102,6 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
                 dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                     NADNative *ad = [self.ads objectAtIndex:i];
                     [ad intoView:(UIView<NADNativeViewRendering> *)viewP];
-                    if ([self.direction integerValue] == 1) {
-                        [self.scrollView addSubview:viewP];
-                    }
                 });
             }
             
@@ -118,13 +114,10 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
                 dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                     NADNative *ad = [self.ads objectAtIndex:i];
                     [ad intoView:(UIView<NADNativeViewRendering> *)viewL];
-                    if ([self.direction integerValue] == 2) {
-                        [self.scrollView addSubview:viewL];
-                    }
                 });
             }
             
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"layoutUpdate" object:self.direction];
+            [self layoutUpdate];
         });
     }
 }
@@ -165,8 +158,10 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
 
 - (void) layoutUpdate:(NSNotification*) notification {
     self.direction = [notification object];
-    self.adLandscapeWidth = cellWidth - 100.f;
-    
+    [self layoutUpdate];
+}
+
+- (void) layoutUpdate {
     float width;
     float height;
     
@@ -175,19 +170,30 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
     }
     
     if ([self.direction integerValue] == 1) {
-        width = adPortraitWidth;
+        self.adLandscapeWidth = adPortraitWidth;
+        width = self.adLandscapeWidth;
         height = adPortraitHeight;
         
-        for (UIView *adViewP in self.adViewsP) {
+        for (int i = 0; i < self.adViewsP.count; i ++) {
+            NativeAdCarouselView *adViewP = [self.adViewsP objectAtIndex:i];
+            adViewP.index = i;
+            [adViewP frameUpdate:self.direction];
             [self.scrollView addSubview:adViewP];
+            
         }
     } else {
+        if (cellWidth < adLandscapeWidth) {
+            self.adLandscapeWidth = cellWidth - 20;
+        } else {
+            self.adLandscapeWidth = adLandscapeWidth;
+        }
         width = self.adLandscapeWidth;
         height = adLandscapeHeight;
         
         for (int i = 0; i < self.adViewsL.count; i ++) {
-            UIView *adViewL = [self.adViewsL objectAtIndex:i];
-            adViewL.frame = CGRectMake(i * self.adLandscapeWidth, 0, self.adLandscapeWidth, adLandscapeHeight);
+            NativeAdCarouselView *adViewL = [self.adViewsL objectAtIndex:i];
+            adViewL.index = i;
+            [adViewL frameUpdate:self.direction];
             [self.scrollView addSubview:adViewL];
         }
     }

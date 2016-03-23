@@ -11,4 +11,8 @@
 
 @interface NativeAdCarouselView : UIView
 
+@property (nonatomic) int index;
+
+- (void) frameUpdate:(NSNumber *) direction;
+
 @end

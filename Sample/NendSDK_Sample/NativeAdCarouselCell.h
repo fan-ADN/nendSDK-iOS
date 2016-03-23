@@ -9,6 +9,8 @@
 
 @interface NativeAdCarouselCell : UITableViewCell
 
+@property (nonatomic) NSNumber *direction;
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 
 - (void) initAd;

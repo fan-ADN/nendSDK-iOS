@@ -12,19 +12,19 @@
 #define cellWidth   [UIScreen mainScreen].bounds.size.width
 
 static const int adCount = 5; // 最大5枚
+static const float adPortraitWidth = 320.f; // 立て向き　広告横幅
 static const float adPortraitHeight = 325.f; // 立て向き 広告高さ
 static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
-static const float adPortraitWidth = 320.f; // 立て向き　広告横幅
-static const float adLandscapeWidth = 580.f; // 横向き　広告横幅
 
 @interface NativeAdCarouselCell ()<NADNativeDelegate, UIScrollViewDelegate>
 
 @property (nonatomic) NADNativeClient *client;
-@property (nonatomic) NSMutableArray *adViews;
+@property (nonatomic) NSMutableArray *adViewsP;
+@property (nonatomic) NSMutableArray *adViewsL;
+@property (nonatomic) NSMutableArray *ads;
 @property (nonatomic) UIScrollView *scrollView;
 
-// 広告の横幅
-@property (nonatomic) float adWidth;
+@property (nonatomic) float adLandscapeWidth; // 横向き　広告横幅
 
 @end
 
@@ -44,7 +44,7 @@ static const float adLandscapeWidth = 580.f; // 横向き　広告横幅
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.f, 0.f, cellWidth, adPortraitHeight)];
+    self.scrollView = [[UIScrollView alloc] init];
     self.scrollView.delegate = self;
     self.scrollView.backgroundColor = [UIColor clearColor];
     self.scrollView.showsHorizontalScrollIndicator = NO;
@@ -54,6 +54,9 @@ static const float adLandscapeWidth = 580.f; // 横向き　広告横幅
     self.scrollView.decelerationRate = 0.3;
     [self addSubview:self.scrollView];
     
+    self.adLandscapeWidth = cellWidth - 100.f;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(layoutUpdate:) name:@"layoutUpdate" object:nil];
+    
     return self;
 }
 
@@ -61,7 +64,9 @@ static const float adLandscapeWidth = 580.f; // 横向き　広告横幅
     if (self) {
         self.client = [[NADNativeClient alloc] initWithSpotId:@"485504" apiKey:@"30fda4b3386e793a14b27bedb4dcd29f03d638e5" advertisingExplicitly:NADNativeAdvertisingExplicitlyPR];
         self.client.delegate = self;
-        self.adViews = [NSMutableArray array];
+        self.ads = [NSMutableArray array];
+        self.adViewsP = [NSMutableArray array];
+        self.adViewsL = [NSMutableArray array];
         
         // 5ページ分の広告を先にまとめて取得
         [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -71,12 +76,14 @@ static const float adLandscapeWidth = 580.f; // 横向き　広告横幅
             dispatch_group_enter(group);
             [self.client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {
                 if (ad) {
-                    UINib *nib = [UINib nibWithNibName:@"NativeAdCarouselView" bundle:nil];
-                    UIView<NADNativeViewRendering> *adView = [[nib instantiateWithOwner:nil options:nil] objectAtIndex:0];
+                    UINib *nibP = [UINib nibWithNibName:@"NativeAdCarouselPortraitView" bundle:nil];
+                    UINib *nibL = [UINib nibWithNibName:@"NativeAdCarouselLandscapeView" bundle:nil];
+                    UIView<NADNativeViewRendering> *viewP = [[nibP instantiateWithOwner:nil options:nil] objectAtIndex:0];
+                    UIView<NADNativeViewRendering> *viewL = [[nibL instantiateWithOwner:nil options:nil] objectAtIndex:0];
                     
-                    [ad intoView:adView];
-                    [weakSelf.adViews addObject:adView];
-                    
+                    [weakSelf.ads addObject:ad];
+                    [weakSelf.adViewsP addObject:viewP];
+                    [weakSelf.adViewsL addObject:viewL];
                 } else {
                     NSLog(@"%@", error);
                 }
@@ -87,40 +94,39 @@ static const float adLandscapeWidth = 580.f; // 横向き　広告横幅
         dispatch_group_notify(group, dispatch_get_main_queue(), ^{
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             
-            for (int i = 0; i < self.adViews.count; i ++) {
-                NativeAdCarouselView *adView = [self.adViews objectAtIndex:i];
-                adView.frame = CGRectMake(i*320, 0, 320, 325);
-                adView.index = i;
-                [self.scrollView addSubview:adView];
+            for (int i = 0; i < self.adViewsP.count; i ++) {
+                NativeAdCarouselView *viewP = [self.adViewsP objectAtIndex:i];
+                viewP.frame = CGRectMake(i * adPortraitWidth, 0, adPortraitWidth, adPortraitHeight);
+                
+                double delayInSeconds = 0.0;
+                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                    NADNative *ad = [self.ads objectAtIndex:i];
+                    [ad intoView:(UIView<NADNativeViewRendering> *)viewP];
+                    if ([self.direction integerValue] == 1) {
+                        [self.scrollView addSubview:viewP];
+                    }
+                });
             }
             
-            // 画面レイアウト
-            [self layoutSubviews];
+            for (int i = 0; i < self.adViewsL.count; i ++) {
+                NativeAdCarouselView *viewL = [self.adViewsL objectAtIndex:i];
+                viewL.frame = CGRectMake(i * self.adLandscapeWidth, 0, self.adLandscapeWidth, adLandscapeHeight);
+                
+                double delayInSeconds = 0.0;
+                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                    NADNative *ad = [self.ads objectAtIndex:i];
+                    [ad intoView:(UIView<NADNativeViewRendering> *)viewL];
+                    if ([self.direction integerValue] == 2) {
+                        [self.scrollView addSubview:viewL];
+                    }
+                });
+            }
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"layoutUpdate" object:self.direction];
         });
     }
-}
-
--(void) layoutSubviews {
-    [super layoutSubviews];
-    
-    float height = adPortraitHeight;
-    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-    switch (orientation) {
-        case UIInterfaceOrientationPortrait:
-        case UIDeviceOrientationPortraitUpsideDown:
-            self.adWidth = adPortraitWidth;
-            break;
-        case UIDeviceOrientationLandscapeRight:
-        case UIDeviceOrientationLandscapeLeft:
-            self.adWidth = adLandscapeWidth;
-            height = adLandscapeHeight;
-            break;
-        case UIDeviceOrientationUnknown:
-            break;
-    }
-    
-    self.scrollView.frame = CGRectMake(0.f, 0.f, cellWidth, height);
-    self.scrollView.contentSize =  CGSizeMake(self.adWidth * adCount, 0);
 }
 
 #pragma mark UIScrollView
@@ -135,20 +141,59 @@ static const float adLandscapeWidth = 580.f; // 横向き　広告横幅
 
 - (void) animation {
     int distance = self.scrollView.contentOffset.x;
-    
-    if (distance + cellWidth/2 < self.adWidth) {
-        distance = 0;
-    } else if (distance + cellWidth/2 < self.adWidth * 2) {
-        distance = self.adWidth * 1.5 - cellWidth / 2;
-    } else if (distance + cellWidth/2 < self.adWidth * 3) {
-        distance = self.adWidth * 2.5 - cellWidth / 2;
-    } else if (distance + cellWidth / 2 < self.adWidth * 4) {
-        distance = self.adWidth * 3.5 - cellWidth / 2;
+    float adWidth;
+    if ([self.direction integerValue] == 1) {
+        adWidth = adPortraitWidth;
     } else {
-        distance = self.adWidth * 5 - cellWidth;
+        adWidth = self.adLandscapeWidth;
+    }
+    
+    if (distance + cellWidth/2 < adWidth) {
+        distance = 0;
+    } else if (distance + cellWidth/2 < adWidth * 2) {
+        distance = adWidth * 1.5 - cellWidth / 2;
+    } else if (distance + cellWidth/2 < adWidth * 3) {
+        distance = adWidth * 2.5 - cellWidth / 2;
+    } else if (distance + cellWidth / 2 < adWidth * 4) {
+        distance = adWidth * 3.5 - cellWidth / 2;
+    } else {
+        distance = adWidth * 5 - cellWidth;
     }
     
     [self.scrollView setContentOffset:CGPointMake(distance, 0) animated:YES];
+}
+
+- (void) layoutUpdate:(NSNotification*) notification {
+    self.direction = [notification object];
+    self.adLandscapeWidth = cellWidth - 100.f;
+    
+    float width;
+    float height;
+    
+    for (UIView *subview in self.scrollView.subviews) {
+        [subview removeFromSuperview];
+    }
+    
+    if ([self.direction integerValue] == 1) {
+        width = adPortraitWidth;
+        height = adPortraitHeight;
+        
+        for (UIView *adViewP in self.adViewsP) {
+            [self.scrollView addSubview:adViewP];
+        }
+    } else {
+        width = self.adLandscapeWidth;
+        height = adLandscapeHeight;
+        
+        for (int i = 0; i < self.adViewsL.count; i ++) {
+            UIView *adViewL = [self.adViewsL objectAtIndex:i];
+            adViewL.frame = CGRectMake(i * self.adLandscapeWidth, 0, self.adLandscapeWidth, adLandscapeHeight);
+            [self.scrollView addSubview:adViewL];
+        }
+    }
+    
+    self.scrollView.frame = CGRectMake(0.f, 0.f, cellWidth, height);
+    self.scrollView.contentSize =  CGSizeMake(width * adCount, 0);
 }
 
 @end

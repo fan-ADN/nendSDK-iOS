@@ -11,6 +11,4 @@
 
 @interface NativeAdCarouselView : UIView
 
-@property (nonatomic) int index;
-
 @end

@@ -15,6 +15,7 @@ static const float cellLandscape = 200.f;
 @interface NativeAdCarouselViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic) NSMutableArray<NSString *> *items;
+@property (nonatomic) NSNumber *direction; // 端末向き
 
 @end
 
@@ -27,7 +28,22 @@ static const float cellLandscape = 200.f;
     for (int i = 0; i < 100; i++) {
         [self.items addObject:[NSString stringWithFormat:@"item%d", i + 1]];
     }
-
+    
+    // 画面向きの判定
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    switch (orientation) {
+        case UIInterfaceOrientationPortrait:
+        case UIDeviceOrientationPortraitUpsideDown:
+            self.direction = [NSNumber numberWithInt:1];
+            break;
+        case UIDeviceOrientationLandscapeRight:
+        case UIDeviceOrientationLandscapeLeft:
+            self.direction = [NSNumber numberWithInt:2];
+            break;
+        case UIDeviceOrientationUnknown:
+            self.direction = [NSNumber numberWithInt:0];
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,6 +51,20 @@ static const float cellLandscape = 200.f;
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+        
+        if (size.width <= size.height) {
+            self.direction = [NSNumber numberWithInt:1];
+        } else {
+            self.direction = [NSNumber numberWithInt:2];
+        }
+        
+        [self.tableView reloadData];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"layoutUpdate" object:self.direction];
+    } completion:nil];
+}
 
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -52,23 +82,11 @@ static const float cellLandscape = 200.f;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == adRow) {
-        float height = cellPortrait;
-        
-        // 画面向きの判定
-        UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-        switch (orientation) {
-            case UIInterfaceOrientationPortrait:
-            case UIDeviceOrientationPortraitUpsideDown:
-                break;
-            case UIDeviceOrientationLandscapeRight:
-            case UIDeviceOrientationLandscapeLeft:
-                height = cellLandscape;
-                break;
-            case UIDeviceOrientationUnknown:
-                break;
+        if ([self.direction integerValue] == 1) {
+            return cellPortrait;
+        } else {
+            return cellLandscape;
         }
-        
-        return height;
     } else {
         return 44.f;
     }
@@ -76,11 +94,12 @@ static const float cellLandscape = 200.f;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == adRow) {
+    if (indexPath.row == adRow) {NSLog(@"");
         static NSString *AdCellIdentifier = @"adcell";
         NativeAdCarouselCell *cell= [tableView dequeueReusableCellWithIdentifier:AdCellIdentifier];
         if (cell == nil) {
             cell = [[NativeAdCarouselCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:AdCellIdentifier];
+            cell.direction = self.direction;
             cell.selectionStyle = UITableViewCellAccessoryDisclosureIndicator;
             [cell initAd];
         }

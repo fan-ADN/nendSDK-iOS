@@ -48,7 +48,7 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
     // Configure the view for the selected state
 }
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
@@ -98,7 +98,7 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
 - (void) animation {
     int distance = self.scrollView.contentOffset.x;
     float adWidth;
-    if ([self.direction integerValue] == 1) {
+    if ((self.direction).integerValue == 1) {
         adWidth = adPortraitWidth;
         
         if (distance + cellWidth/2 < adWidth) {
@@ -146,7 +146,7 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
 }
 
 - (void) layoutUpdate:(NSNotification*) notification {
-    self.direction = [notification object];
+    self.direction = notification.object;
     
     for (UIView *subview in self.scrollView.subviews) {
         [subview removeFromSuperview];
@@ -166,9 +166,9 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
         [self.client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {
             if (ad) {
                 UINib *nibP = [UINib nibWithNibName:@"NativeAdCarouselPortraitView" bundle:nil];
-                UIView<NADNativeViewRendering> *viewP = [[nibP instantiateWithOwner:nil options:nil] objectAtIndex:0];
+                UIView<NADNativeViewRendering> *viewP = [nibP instantiateWithOwner:nil options:nil][0];
                 UINib *nibL = [UINib nibWithNibName:@"NativeAdCarouselLandscapeView" bundle:nil];
-                UIView<NADNativeViewRendering> *viewL = [[nibL instantiateWithOwner:nil options:nil] objectAtIndex:0];
+                UIView<NADNativeViewRendering> *viewL = [nibL instantiateWithOwner:nil options:nil][0];
                 
                 [weakSelf.ads addObject:ad];
                 [weakSelf.adViewsP addObject:viewP];
@@ -183,27 +183,27 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         
-        if ([self.direction intValue] == 1) {
+        if ((self.direction).intValue == 1) {
             for (int i = 0; i < self.adViewsP.count; i ++) {
-                NativeAdCarouselView *viewP = [self.adViewsP objectAtIndex:i];
+                NativeAdCarouselView *viewP = (self.adViewsP)[i];
                 viewP.frame = CGRectMake(i * adPortraitWidth, 0, adPortraitWidth, adPortraitHeight);
                 
                 double delayInSeconds = 0.0;
                 dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
                 dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                    NADNative *ad = [self.ads objectAtIndex:i];
+                    NADNative *ad = (self.ads)[i];
                     [ad intoView:(UIView<NADNativeViewRendering> *)viewP];
                 });
             }
-        } else if ([self.direction intValue] == 2) {
+        } else if ((self.direction).intValue == 2) {
             for (int i = 0; i < self.adViewsL.count; i ++) {
-                NativeAdCarouselView *viewL = [self.adViewsL objectAtIndex:i];
+                NativeAdCarouselView *viewL = (self.adViewsL)[i];
                 viewL.frame = CGRectMake(i * adLandscapeWidth, 0, adLandscapeWidth, adLandscapeHeight);
                 
                 double delayInSeconds = 0.0;
                 dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
                 dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                    NADNative *ad = [self.ads objectAtIndex:i];
+                    NADNative *ad = (self.ads)[i];
                     [ad intoView:(UIView<NADNativeViewRendering> *)viewL];
                 });
             }
@@ -218,13 +218,13 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
     float width;
     float height;
     
-    if ([self.direction integerValue] == 1) {
+    if ((self.direction).integerValue == 1) {
         self.adLandscapeWidth = adPortraitWidth;
         width = self.adLandscapeWidth;
         height = adPortraitHeight;
         
         for (int i = 0; i < self.adViewsP.count; i ++) {
-            NativeAdCarouselView *adViewP = [self.adViewsP objectAtIndex:i];
+            NativeAdCarouselView *adViewP = (self.adViewsP)[i];
             adViewP.index = i;
             [adViewP frameUpdate:self.direction];
             [self.scrollView addSubview:adViewP];
@@ -240,7 +240,7 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
         height = adLandscapeHeight;
         
         for (int i = 0; i < self.adViewsL.count; i ++) {
-            NativeAdCarouselView *adViewL = [self.adViewsL objectAtIndex:i];
+            NativeAdCarouselView *adViewL = (self.adViewsL)[i];
             adViewL.index = i;
             [adViewL frameUpdate:self.direction];
             [self.scrollView addSubview:adViewL];
@@ -251,18 +251,19 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
     self.scrollView.frame = CGRectMake(0.f, 0.f, cellWidth, height);
     self.scrollView.contentSize = CGSizeMake(width * adCount, 0);
     
+    // 自動スクロールタイマー設置
     [self setTimer];
 }
 
 -(void) setTimer {
-    if ([self.direction intValue] == 1) {
+    if ((self.direction).intValue == 1) {
         self.timerP = [NSTimer scheduledTimerWithTimeInterval:timerInterval
                                                        target:self
                                                      selector:@selector(move:)
                                                      userInfo:nil
                                                       repeats:YES];
         [self.timerL invalidate];
-    } else if ([self.direction intValue] == 2) {
+    } else if ((self.direction).intValue == 2) {
         self.timerL = [NSTimer scheduledTimerWithTimeInterval:timerInterval
                                                        target:self
                                                      selector:@selector(move:)
@@ -274,7 +275,7 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
 
 - (void)move:(NSTimer*)timer
 {
-    if ([self.direction intValue] == 1) {
+    if ((self.direction).intValue == 1) {
         if (self.pageP == 1) {
             self.pointP += adPortraitWidth * 1.5 - cellWidth / 2;
             self.pageP ++;
@@ -293,7 +294,7 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
             [self.scrollView setContentOffset:CGPointMake(self.pointP, 0) animated:YES];
         }
         
-    } else if ([self.direction intValue] == 2) {
+    } else if ((self.direction).intValue == 2) {
         if (self.pageL == 1) {
             self.pointL += self.adLandscapeWidth * 1.5 - cellWidth / 2;
             self.pageL ++;

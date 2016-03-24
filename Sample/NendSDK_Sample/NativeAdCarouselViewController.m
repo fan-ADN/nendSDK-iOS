@@ -30,18 +30,18 @@ static const float cellLandscape = 200.f;
     }
     
     // 画面向きの判定
-    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     switch (orientation) {
         case UIInterfaceOrientationPortrait:
         case UIDeviceOrientationPortraitUpsideDown:
-            self.direction = [NSNumber numberWithInt:1];
+            self.direction = @1;
             break;
         case UIDeviceOrientationLandscapeRight:
         case UIDeviceOrientationLandscapeLeft:
-            self.direction = [NSNumber numberWithInt:2];
+            self.direction = @2;
             break;
         case UIDeviceOrientationUnknown:
-            self.direction = [NSNumber numberWithInt:0];
+            self.direction = @0;
             break;
     }
 }
@@ -57,9 +57,9 @@ static const float cellLandscape = 200.f;
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
         
         if (size.width <= size.height) {
-            self.direction = [NSNumber numberWithInt:1];
+            self.direction = @1;
         } else {
-            self.direction = [NSNumber numberWithInt:2];
+            self.direction = @2;
         }
         
         [self.tableView reloadData];
@@ -83,7 +83,7 @@ static const float cellLandscape = 200.f;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == adRow) {
-        if ([self.direction integerValue] == 1) {
+        if ((self.direction).integerValue == 1) {
             return cellPortrait;
         } else {
             return cellLandscape;

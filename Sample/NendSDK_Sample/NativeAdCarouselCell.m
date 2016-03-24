@@ -80,62 +80,8 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
         self.adViewsP = [NSMutableArray array];
         self.adViewsL = [NSMutableArray array];
         
-        // 5ページ分の広告を先にまとめて取得　縦画面
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-        __weak typeof(self) weakSelf = self;
-        dispatch_group_t group = dispatch_group_create();
-        dispatch_apply(adCount, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(size_t i) {
-            dispatch_group_enter(group);
-            [self.client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {
-                if (ad) {
-                    UINib *nibP = [UINib nibWithNibName:@"NativeAdCarouselPortraitView" bundle:nil];
-                    UIView<NADNativeViewRendering> *viewP = [[nibP instantiateWithOwner:nil options:nil] objectAtIndex:0];
-                    UINib *nibL = [UINib nibWithNibName:@"NativeAdCarouselLandscapeView" bundle:nil];
-                    UIView<NADNativeViewRendering> *viewL = [[nibL instantiateWithOwner:nil options:nil] objectAtIndex:0];
-                    
-                    [weakSelf.ads addObject:ad];
-                    [weakSelf.adViewsP addObject:viewP];
-                    [weakSelf.adViewsL addObject:viewL];
-                } else {
-                    NSLog(@"%@", error);
-                }
-                dispatch_group_leave(group);
-            }];
-        });
-        
-        dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-            
-            for (int i = 0; i < self.adViewsP.count; i ++) {
-                NativeAdCarouselView *viewP = [self.adViewsP objectAtIndex:i];
-                viewP.frame = CGRectMake(i * adPortraitWidth, 0, adPortraitWidth, adPortraitHeight);
-                
-                double delayInSeconds = 0.0;
-                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                    NADNative *ad = [self.ads objectAtIndex:i];
-                    [ad intoView:(UIView<NADNativeViewRendering> *)viewP];
-                });
-            }
-        });
-        
-        dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-            
-            for (int i = 0; i < self.adViewsL.count; i ++) {
-                NativeAdCarouselView *viewL = [self.adViewsL objectAtIndex:i];
-                viewL.frame = CGRectMake(i * adLandscapeWidth, 0, adLandscapeWidth, adLandscapeHeight);
-                
-                double delayInSeconds = 0.0;
-                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                    NADNative *ad = [self.ads objectAtIndex:i];
-                    [ad intoView:(UIView<NADNativeViewRendering> *)viewL];
-                });
-            }
-            
-            [self layoutUpdate];
-        });
+        // 広告ビューを描画
+        [self setAd];
     }
 }
 
@@ -201,16 +147,76 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
 
 - (void) layoutUpdate:(NSNotification*) notification {
     self.direction = [notification object];
-    [self layoutUpdate];
+    
+    for (UIView *subview in self.scrollView.subviews) {
+        [subview removeFromSuperview];
+    }
+    
+    // 広告ビューを描画
+    [self setAd];
+}
+
+-(void) setAd {
+    // 5ページ分の広告を先にまとめて取得　縦画面
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    __weak typeof(self) weakSelf = self;
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_apply(adCount, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(size_t i) {
+        dispatch_group_enter(group);
+        [self.client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {
+            if (ad) {
+                UINib *nibP = [UINib nibWithNibName:@"NativeAdCarouselPortraitView" bundle:nil];
+                UIView<NADNativeViewRendering> *viewP = [[nibP instantiateWithOwner:nil options:nil] objectAtIndex:0];
+                UINib *nibL = [UINib nibWithNibName:@"NativeAdCarouselLandscapeView" bundle:nil];
+                UIView<NADNativeViewRendering> *viewL = [[nibL instantiateWithOwner:nil options:nil] objectAtIndex:0];
+                
+                [weakSelf.ads addObject:ad];
+                [weakSelf.adViewsP addObject:viewP];
+                [weakSelf.adViewsL addObject:viewL];
+            } else {
+                NSLog(@"%@", error);
+            }
+            dispatch_group_leave(group);
+        }];
+    });
+    
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        
+        if ([self.direction intValue] == 1) {
+            for (int i = 0; i < self.adViewsP.count; i ++) {
+                NativeAdCarouselView *viewP = [self.adViewsP objectAtIndex:i];
+                viewP.frame = CGRectMake(i * adPortraitWidth, 0, adPortraitWidth, adPortraitHeight);
+                
+                double delayInSeconds = 0.0;
+                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                    NADNative *ad = [self.ads objectAtIndex:i];
+                    [ad intoView:(UIView<NADNativeViewRendering> *)viewP];
+                });
+            }
+        } else if ([self.direction intValue] == 2) {
+            for (int i = 0; i < self.adViewsL.count; i ++) {
+                NativeAdCarouselView *viewL = [self.adViewsL objectAtIndex:i];
+                viewL.frame = CGRectMake(i * adLandscapeWidth, 0, adLandscapeWidth, adLandscapeHeight);
+                
+                double delayInSeconds = 0.0;
+                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                    NADNative *ad = [self.ads objectAtIndex:i];
+                    [ad intoView:(UIView<NADNativeViewRendering> *)viewL];
+                });
+            }
+        }
+        
+        // スクロールビューに広告ビューを格納
+        [self layoutUpdate];
+    });
 }
 
 - (void) layoutUpdate {
     float width;
     float height;
-    
-    for (UIView *subview in self.scrollView.subviews) {
-        [subview removeFromSuperview];
-    }
     
     if ([self.direction integerValue] == 1) {
         self.adLandscapeWidth = adPortraitWidth;

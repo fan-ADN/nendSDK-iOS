@@ -63,8 +63,9 @@ static const float cellLandscape = 200.f;
         }
         
         [self.tableView reloadData];
+    } completion:^(id<UIViewControllerTransitionCoordinatorContext> context){
         [[NSNotificationCenter defaultCenter] postNotificationName:@"layoutUpdate" object:self.direction];
-    } completion:nil];
+    }];
 }
 
 #pragma mark - Table view data source

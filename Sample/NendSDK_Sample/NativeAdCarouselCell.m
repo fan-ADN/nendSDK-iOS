@@ -80,8 +80,34 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
         self.adViewsP = [NSMutableArray array];
         self.adViewsL = [NSMutableArray array];
         
-        // 広告ビューを描画
-        [self setAd];
+        // 5ページ分の広告を先にまとめて取得　縦画面
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+        __weak typeof(self) weakSelf = self;
+        dispatch_group_t group = dispatch_group_create();
+        dispatch_apply(adCount, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(size_t i) {
+            dispatch_group_enter(group);
+            [self.client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {
+                if (ad) {
+                    UINib *nibP = [UINib nibWithNibName:@"NativeAdCarouselPortraitView" bundle:nil];
+                    UIView<NADNativeViewRendering> *viewP = [nibP instantiateWithOwner:nil options:nil][0];
+                    UINib *nibL = [UINib nibWithNibName:@"NativeAdCarouselLandscapeView" bundle:nil];
+                    UIView<NADNativeViewRendering> *viewL = [nibL instantiateWithOwner:nil options:nil][0];
+                    
+                    [weakSelf.ads addObject:ad];
+                    [weakSelf.adViewsP addObject:viewP];
+                    [weakSelf.adViewsL addObject:viewL];
+                } else {
+                    NSLog(@"%@", error);
+                }
+                dispatch_group_leave(group);
+            }];
+        });
+        
+        dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            // 広告ビューを描画
+            [self setAd];
+        });
     }
 }
 
@@ -152,66 +178,36 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
         [subview removeFromSuperview];
     }
     
-    // 広告ビューを描画
-    [self setAd];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self setAd];
+    });
 }
 
 -(void) setAd {
-    // 5ページ分の広告を先にまとめて取得　縦画面
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    __weak typeof(self) weakSelf = self;
-    dispatch_group_t group = dispatch_group_create();
-    dispatch_apply(adCount, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(size_t i) {
-        dispatch_group_enter(group);
-        [self.client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {
-            if (ad) {
-                UINib *nibP = [UINib nibWithNibName:@"NativeAdCarouselPortraitView" bundle:nil];
-                UIView<NADNativeViewRendering> *viewP = [nibP instantiateWithOwner:nil options:nil][0];
-                UINib *nibL = [UINib nibWithNibName:@"NativeAdCarouselLandscapeView" bundle:nil];
-                UIView<NADNativeViewRendering> *viewL = [nibL instantiateWithOwner:nil options:nil][0];
-                
-                [weakSelf.ads addObject:ad];
-                [weakSelf.adViewsP addObject:viewP];
-                [weakSelf.adViewsL addObject:viewL];
-            } else {
-                NSLog(@"%@", error);
-            }
-            dispatch_group_leave(group);
-        }];
-    });
-    
-    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        
-        if ((self.direction).intValue == 1) {
-            for (int i = 0; i < self.adViewsP.count; i ++) {
-                NativeAdCarouselView *viewP = (self.adViewsP)[i];
-                viewP.frame = CGRectMake(i * adPortraitWidth, 0, adPortraitWidth, adPortraitHeight);
-                
-                double delayInSeconds = 0.0;
-                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                    NADNative *ad = (self.ads)[i];
-                    [ad intoView:(UIView<NADNativeViewRendering> *)viewP];
-                });
-            }
-        } else if ((self.direction).intValue == 2) {
-            for (int i = 0; i < self.adViewsL.count; i ++) {
-                NativeAdCarouselView *viewL = (self.adViewsL)[i];
-                viewL.frame = CGRectMake(i * adLandscapeWidth, 0, adLandscapeWidth, adLandscapeHeight);
-                
-                double delayInSeconds = 0.0;
-                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                    NADNative *ad = (self.ads)[i];
-                    [ad intoView:(UIView<NADNativeViewRendering> *)viewL];
-                });
-            }
+    if ((self.direction).intValue == 1) {
+        for (int i = 0; i < self.adViewsP.count; i ++) {
+            NativeAdCarouselView *viewP = (self.adViewsP)[i];
+            viewP.frame = CGRectMake(i * adPortraitWidth, 0, adPortraitWidth, adPortraitHeight);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NADNative *ad = (self.ads)[i];
+                [ad intoView:(UIView<NADNativeViewRendering> *)viewP];
+            });
         }
-        
-        // スクロールビューに広告ビューを格納
-        [self layoutUpdate];
-    });
+    } else if ((self.direction).intValue == 2) {
+        for (int i = 0; i < self.adViewsL.count; i ++) {
+            NativeAdCarouselView *viewL = (self.adViewsL)[i];
+            viewL.frame = CGRectMake(i * adLandscapeWidth, 0, adLandscapeWidth, adLandscapeHeight);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NADNative *ad = (self.ads)[i];
+                [ad intoView:(UIView<NADNativeViewRendering> *)viewL];
+            });
+        }
+    }
+    
+    // スクロールビューに広告ビューを格納
+    [self layoutUpdate];
 }
 
 - (void) layoutUpdate {
@@ -251,25 +247,30 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
     self.scrollView.frame = CGRectMake(0.f, 0.f, cellWidth, height);
     self.scrollView.contentSize = CGSizeMake(width * adCount, 0);
     
+    self.pageP = 1;
+    self.pageL = 1;
+    self.pointP = 0;
+    self.pointL = 0;
+    [self.scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
     // 自動スクロールタイマー設置
     [self setTimer];
 }
 
 -(void) setTimer {
+    [self.timerP invalidate];
+    [self.timerL invalidate];
     if ((self.direction).intValue == 1) {
         self.timerP = [NSTimer scheduledTimerWithTimeInterval:timerInterval
                                                        target:self
                                                      selector:@selector(move:)
                                                      userInfo:nil
                                                       repeats:YES];
-        [self.timerL invalidate];
     } else if ((self.direction).intValue == 2) {
         self.timerL = [NSTimer scheduledTimerWithTimeInterval:timerInterval
                                                        target:self
                                                      selector:@selector(move:)
                                                      userInfo:nil
                                                       repeats:YES];
-        [self.timerP invalidate];
     }
 }
 

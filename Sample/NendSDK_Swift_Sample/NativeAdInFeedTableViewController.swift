@@ -129,6 +129,6 @@ class NativeAdInFeedTableViewController: UITableViewController, NADNativeTableVi
     }
     
     func nadNativeDidDisplayAd(ad: NADNative!, success: Bool) {
-        print(__FUNCTION__)
+        print(#function)
     }
 }

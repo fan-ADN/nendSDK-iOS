@@ -7,7 +7,7 @@ iOS版nendSDKのサンプルプロジェクトになります。
 Objective-CとSwiftでの基本的な実装方法と動作確認が行えます。
 
 ## Requirement
-* **Xcode7.0**以上
+* **Xcode7.3**以上
 * iOS7以上
 
 ## Usage

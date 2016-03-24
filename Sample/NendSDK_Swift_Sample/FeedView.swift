@@ -16,7 +16,7 @@ class FeedView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let recognizer = UITapGestureRecognizer(target: self, action: "tapped:")
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(FeedView.tapped(_:)))
         self.addGestureRecognizer(recognizer)
     }
     

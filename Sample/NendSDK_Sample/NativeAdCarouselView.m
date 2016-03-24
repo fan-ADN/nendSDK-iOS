@@ -65,6 +65,7 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
         self.frame = CGRectMake(self.index * adPortraitWidth, 0, adPortraitWidth, adPortraitHeight);
     } else if ([self.direction intValue] == 2) {
         if (cellWidth < adLandscapeWidth) {
+            // iphone4の場合、横幅設定
             self.frame = CGRectMake(self.index * (cellWidth - 20.f), 0, (cellWidth - 20.f), adLandscapeHeight);
         } else {
             self.frame = CGRectMake(self.index * adLandscapeWidth, 0, adLandscapeWidth, adLandscapeHeight);

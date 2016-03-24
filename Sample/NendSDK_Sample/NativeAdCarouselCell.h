@@ -9,6 +9,7 @@
 
 @interface NativeAdCarouselCell : UITableViewCell
 
+// 端末向き
 @property (nonatomic) NSNumber *direction;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;

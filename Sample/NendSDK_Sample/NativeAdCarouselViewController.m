@@ -51,6 +51,7 @@ static const float cellLandscape = 200.f;
     // Dispose of any resources that can be recreated.
 }
 
+// 画面向きの判定
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {

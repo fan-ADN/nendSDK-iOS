@@ -65,10 +65,10 @@ class NativeAdViewController: UIViewController, NADNativeDelegate {
 
     // MARK: - NADNativeDelegate
     func nadNativeDidClickAd(ad: NADNative!) {
-        print(__FUNCTION__)
+        print(#function)
     }
     
     func nadNativeDidDisplayAd(ad: NADNative!, success: Bool) {
-        print(__FUNCTION__)
+        print(#function)
     }
 }

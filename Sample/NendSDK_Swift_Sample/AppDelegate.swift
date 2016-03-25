@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidEnterBackground(application: UIApplication) {
         
-        print("AppDelegate", __FUNCTION__)
+        print("AppDelegate", #function)
         
         // アプリがバックグラウンドに回った場合に広告のリフレッシュを中断するには
         // AppDelegate側やそれに準じるクラスでインスタンスを保持し、このメソッドを利用してNADViewをpauseするなどしてください
@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillEnterForeground(application: UIApplication) {
         
-        print("AppDelegate", __FUNCTION__)
+        print("AppDelegate", #function)
         
         // アプリがバックグラウンドから復帰した場合に広告のリフレッシュを再開するには
         // AppDelegate側やそれに準じるクラスでインスタンスを保持し、このメソッドを利用してNADViewをresumeするなどしてください

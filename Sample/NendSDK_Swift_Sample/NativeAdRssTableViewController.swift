@@ -270,22 +270,23 @@ class NativeAdRssTableViewController: UITableViewController, NADNativeTableViewH
 
     // MARK: - Private
     
-    private func createDateSource(var feeds: [Feed]) -> [[Feed]]! {
+    private func createDateSource( feeds: [Feed]) -> [[Feed]]! {
         let fix = [4, 3, 1, 2]
         let loop = [3, 1, 1, 3, 2]
         var result = [[Feed]]()
         var index = 0
         var work = fix
+        var workFeeds = feeds
         
-        for ; ; {
+        while true {
             if index >= work.count {
                 index = 0
             }
             let size = work[index]
-            if feeds.count >= size {
+            if workFeeds.count >= size {
                 var array = [Feed]()
                 for _ in 0..<size {
-                    array.append(feeds.removeFirst())
+                    array.append(workFeeds.removeFirst())
                 }
                 result.append(array)
             } else {
@@ -294,13 +295,13 @@ class NativeAdRssTableViewController: UITableViewController, NADNativeTableViewH
             if feeds.isEmpty {
                 break
             }
-            index++
+            index += 1
             if work == fix && index == fix.count {
                 work = loop
                 index = 0
             }
         }
-        
+                
         return result
     }
     

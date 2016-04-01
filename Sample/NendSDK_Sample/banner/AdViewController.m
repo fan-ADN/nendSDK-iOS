@@ -132,6 +132,13 @@
     NSLog(@"NADViewDelegate nadViewDidClickAd");
 }
 
+// 以下はインフォメーションボタンがクリックされるごとに通知される任意メソッドです。
+- (void)nadViewDidClickInformation:(NADView *)adView
+{
+    // Information clicked.
+    NSLog(@"NADViewDelegate nadViewDidClickInformation");
+}
+
 // ------------------------------------------------------------------------------------------------
 // リリース
 // ------------------------------------------------------------------------------------------------

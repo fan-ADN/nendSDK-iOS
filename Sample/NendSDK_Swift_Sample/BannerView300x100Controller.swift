@@ -160,4 +160,14 @@ class BannerView300x100Controller: UIViewController, NADViewDelegate {
         }
     }
 
+    // 以下はインフォメーションボタンがクリックされるごとに通知される任意メソッドです。
+    func nadViewDidClickInformation(adView: NADView!){
+        if (adView == bannerViewFromNib){
+            print("nadViewDidClickInformation,bannerViewFromNib:\(adView)")
+        }else if (adView == nadViewManually){
+            print("nadViewDidClickInformation,nadViewManually:\(adView)")
+        }else{
+            
+        }
+    }
 }

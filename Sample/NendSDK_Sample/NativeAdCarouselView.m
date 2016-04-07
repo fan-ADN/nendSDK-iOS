@@ -9,8 +9,8 @@
 
 #define cellWidth   [UIScreen mainScreen].bounds.size.width
 
-static const float adPortraitWidth = 320.f; // 立て向き　広告横幅
-static const float adPortraitHeight = 325.f; // 立て向き 広告高さ
+static const float adPortraitWidth = 320.f; // 縦向き　広告横幅
+static const float adPortraitHeight = 325.f; // 縦向き 広告高さ
 static const float adLandscapeWidth = 580.f; // 横向き　広告横幅
 static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
 

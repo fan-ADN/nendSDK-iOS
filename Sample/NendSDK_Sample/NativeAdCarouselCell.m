@@ -13,8 +13,8 @@
 #define timerInterval     3.0f
 
 static const int adCount = 5; // 最大5枚
-static const float adPortraitWidth = 320.f; // 立て向き　広告横幅
-static const float adPortraitHeight = 325.f; // 立て向き 広告高さ
+static const float adPortraitWidth = 320.f; // 縦向き　広告横幅
+static const float adPortraitHeight = 325.f; // 縦向き 広告高さ
 static const float adLandscapeWidth = 580.f; // 横向き　広告横幅
 static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
 
@@ -127,42 +127,36 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
     if ((self.direction).integerValue == 1) {
         adWidth = adPortraitWidth;
         
-        if (distance + cellWidth/2 < adWidth) {
-            distance = 0;
-            self.pageP = 1;
-        } else if (distance + cellWidth/2 < adWidth * 2) {
-            distance = adWidth * 1.5 - cellWidth / 2;
-            self.pageP = 2;
-        } else if (distance + cellWidth/2 < adWidth * 3) {
-            distance = adWidth * 2.5 - cellWidth / 2;
-            self.pageP = 3;
-        } else if (distance + cellWidth / 2 < adWidth * 4) {
-            distance = adWidth * 3.5 - cellWidth / 2;
-            self.pageP = 4;
-        } else {
-            distance = adWidth * 5 - cellWidth;
-            self.pageP = 5;
+        for (int i = 1; i <= adCount; i ++) {
+            if (distance + cellWidth / 2 < adWidth * i) {
+                if (i == 1) {
+                    distance = 0;
+                } else if (i == adCount) {
+                    distance = adWidth * i - cellWidth;
+                } else {
+                    distance = adWidth * i - adWidth / 2 - cellWidth / 2;
+                }
+                self.pageP = i;
+                break;
+            }
         }
         
         self.pointP = distance;
     } else {
         adWidth = self.adLandscapeWidth;
         
-        if (distance + cellWidth/2 < adWidth) {
-            distance = 0;
-            self.pageL = 1;
-        } else if (distance + cellWidth/2 < adWidth * 2) {
-            distance = adWidth * 1.5 - cellWidth / 2;
-            self.pageL = 2;
-        } else if (distance + cellWidth/2 < adWidth * 3) {
-            distance = adWidth * 2.5 - cellWidth / 2;
-            self.pageL = 3;
-        } else if (distance + cellWidth / 2 < adWidth * 4) {
-            distance = adWidth * 3.5 - cellWidth / 2;
-            self.pageL = 4;
-        } else {
-            distance = adWidth * 5 - cellWidth;
-            self.pageL = 5;
+        for (int i = 1; i <= adCount; i ++) {
+            if (distance + cellWidth / 2 < adWidth * i) {
+                if (i == 1) {
+                    distance = 0;
+                } else if (i == adCount) {
+                    distance = adWidth * i - cellWidth;
+                } else {
+                    distance = adWidth * i - adWidth / 2 - cellWidth / 2;
+                }
+                self.pageL = i;
+                break;
+            }
         }
         
         self.pointL = distance;
@@ -253,7 +247,9 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
     self.pointL = 0;
     [self.scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
     // 自動スクロールタイマー設置
-    [self setTimer];
+    if (adCount > 1) {
+        [self setTimer];
+    }
 }
 
 -(void) setTimer {
@@ -277,15 +273,15 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
 - (void)move:(NSTimer*)timer
 {
     if ((self.direction).intValue == 1) {
-        if (self.pageP == 1) {
+        if (self.pageP == adCount - 1){
+            self.pointP = adPortraitWidth * adCount - cellWidth;
+            self.pageP ++;
+            [self.scrollView setContentOffset:CGPointMake(self.pointP, 0) animated:YES];
+        } else if (self.pageP == 1) {
             self.pointP += adPortraitWidth * 1.5 - cellWidth / 2;
             self.pageP ++;
             [self.scrollView setContentOffset:CGPointMake(self.pointP, 0) animated:YES];
-        } else if (self.pageP == 4){
-            self.pointP = adPortraitWidth * 5 - cellWidth;
-            self.pageP ++;
-            [self.scrollView setContentOffset:CGPointMake(self.pointP, 0) animated:YES];
-        } else if (self.pageP == 5){
+        } else if (self.pageP == adCount){
             self.pointP = 0;
             self.pageP = 1;
             [self.scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
@@ -296,15 +292,15 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
         }
         
     } else if ((self.direction).intValue == 2) {
-        if (self.pageL == 1) {
+        if (self.pageL == adCount - 1){
+            self.pointL = self.adLandscapeWidth * adCount - cellWidth;
+            self.pageL ++;
+            [self.scrollView setContentOffset:CGPointMake(self.pointL, 0) animated:YES];
+        } else if (self.pageL == 1) {
             self.pointL += self.adLandscapeWidth * 1.5 - cellWidth / 2;
             self.pageL ++;
             [self.scrollView setContentOffset:CGPointMake(self.pointL, 0) animated:YES];
-        } else if (self.pageL == 4){
-            self.pointL = self.adLandscapeWidth * 5 - cellWidth;
-            self.pageL ++;
-            [self.scrollView setContentOffset:CGPointMake(self.pointL, 0) animated:YES];
-        } else if (self.pageL == 5){
+        } else if (self.pageL == adCount){
             self.pointL = 0;
             self.pageL = 1;
             [self.scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
@@ -315,6 +311,18 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
         }
     }
     
+}
+
+#pragma mark - NADNativeDelegate
+
+- (void)nadNativeDidClickAd:(NADNative *)ad
+{
+    NSLog(@"nadNativeDidClickAd: %@", ad);
+}
+
+- (void)nadNativeDidDisplayAd:(NADNative *)ad success:(BOOL)success
+{
+    NSLog(@"nadNativeDidDisplayAd: %@", ad);
 }
 
 @end

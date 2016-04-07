@@ -96,7 +96,7 @@ static const float cellLandscape = 200.f;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == adRow) {NSLog(@"");
+    if (indexPath.row == adRow) {
         static NSString *AdCellIdentifier = @"adcell";
         NativeAdCarouselCell *cell= [tableView dequeueReusableCellWithIdentifier:AdCellIdentifier];
         if (cell == nil) {

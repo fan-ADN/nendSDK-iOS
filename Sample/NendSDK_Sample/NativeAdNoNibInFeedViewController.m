@@ -74,6 +74,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     // Important
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     [self.tableView registerClass:[NativeAdTableViewCell class] forCellReuseIdentifier:@"AdCell"];
     
     self.items = [NSMutableArray array];

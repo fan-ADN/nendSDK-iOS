@@ -92,5 +92,11 @@
 		<key>title</key>
 		<string>Carousel</string>
 	</dict>
+    <dict>
+        <key>segue</key>
+        <string>PushTelopNativeAd</string>
+        <key>title</key>
+        <string>Telop</string>
+    </dict>
 </array>
 </plist>

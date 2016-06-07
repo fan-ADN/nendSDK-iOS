@@ -7,107 +7,17 @@
 
 import UIKit
 
-private let urls = ["http://headlines.yahoo.co.jp/rss/zdn_m-c_sci.xml", "http://headlines.yahoo.co.jp/rss/zdn_ait-c_sci.xml"]
-
 class NativeAdRssTableViewController: UITableViewController, NADNativeTableViewHelperDelegate {
     
     private struct Feed {
-        var isAd = false
-        var title = ""
-        var category = ""
-        var link = ""
+        let isAd: Bool
+        let title: String
+        let category: String
+        let link: String
     }
     
     private var items = [[Feed]]()
     private var helper: NADNativeTableViewHelper!
-
-    private class FeedParser: NSObject, NSXMLParserDelegate {
-        
-        typealias CompletionBlock = [Feed]? -> Void
-
-        private var feeds = [Feed]()
-        private var foundLink = false
-        private var foundTitle = false
-        private var foundCategory = false
-        private var parser: NSXMLParser!
-        private var feed: Feed?
-        private var block: CompletionBlock?
-        
-        func parseData(data: NSData!, completionBlock: CompletionBlock) {
-            self.block = completionBlock
-            self.parser = NSXMLParser(data: data)
-            self.parser.delegate = self
-            self.parser.parse()
-        }
-        
-        // MARK: - NSXMLParserDelegate
-        
-        @objc func parserDidStartDocument(parser: NSXMLParser) {
-            self.foundLink = false
-            self.foundTitle = false
-            self.foundCategory = false
-        }
-        
-        @objc func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
-            switch elementName {
-            case "item":
-                self.feed = Feed()
-            case "title":
-                self.foundTitle = true
-            case "category":
-                self.foundCategory = true
-            case "link":
-                self.foundLink = true
-            default:
-                break
-            }
-        }
-        
-        @objc func parser(parser: NSXMLParser, foundCharacters string: String) {
-            if nil != self.feed {
-                if self.foundTitle {
-                    self.feed!.title += string
-                } else if self.foundCategory {
-                    self.feed!.category += string
-                } else if self.foundLink {
-                    self.feed!.link += string
-                }
-            }
-        }
-
-        @objc func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-            switch elementName {
-            case "item":
-                self.feeds.append(self.feed!)
-            case "title":
-                self.foundTitle = false
-            case "category":
-                self.foundCategory = false
-            case "link":
-                self.foundLink = false
-            default:
-                break
-            }
-        }
-
-        @objc func parserDidEndDocument(parser: NSXMLParser) {
-            if let block = self.block {
-                block(self.feeds)
-            }
-        }
-        
-        @objc func parser(parser: NSXMLParser, parseErrorOccurred parseError: NSError) {
-            if let block = self.block {
-                block(nil)
-            }
-        }
-        
-        @objc func parser(parser: NSXMLParser, validationErrorOccurred validationError: NSError) {
-            if let block = self.block {
-                block(nil)
-            }
-        }
-    }
     
     deinit {
         print("NativeAdRssTableViewController: deinit")
@@ -134,40 +44,26 @@ class NativeAdRssTableViewController: UITableViewController, NADNativeTableViewH
         self.tableView.registerNib(UINib(nibName: "FeedWithAdCell2", bundle: nil), forCellReuseIdentifier: "FeedWithAdCell2")
         self.tableView.registerNib(UINib(nibName: "FeedWithAdCell3", bundle: nil), forCellReuseIdentifier: "FeedWithAdCell3")
         
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         var items = [Feed]()
-        let group = dispatch_group_create()
-        dispatch_apply(urls.count, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { (i) -> Void in
-            dispatch_group_enter(group)
-            let session = NSURLSession.sharedSession()
-            let url = NSURL(string: urls[i])
-            let task = session.dataTaskWithURL(url!, completionHandler: { (data, _, _) -> Void in
-                if let response = data {
-                    let parser = FeedParser()
-                    parser.parseData(response, completionBlock: { (result) -> Void in
-                        if let feeds = result {
-                            objc_sync_enter(self)
-                            items += feeds
-                            objc_sync_exit(self)
-                        }
-                        dispatch_group_leave(group)
-                    })
-                } else {
-                    dispatch_group_leave(group)
-                }
-            })
-            task.resume()
+        
+        for _ in 1...50 {
+            let random = arc4random_uniform(2)
+            if 0 == random {
+                items.append(Feed(isAd: false, title: "アプリ×nendネイティブアドnendネイティブアドを使いこなして「収益２倍！」キャンペーン",
+                    category: "ニュースリリース", link: "https://www.nend.net/event_doubleup_nativead"))
+            } else {
+                items.append(Feed(isAd: false, title: "スマホでプレイ中のゲームの攻略情報を自動配信と検索で一つに集約できるアプリ「ゲーマグ」提供開始",
+                    category: "ニュースリリース", link: "http://gamag.jp/"))
+            }
         }
-        dispatch_group_notify(group, dispatch_get_main_queue()) { () -> Void in
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-            // 広告表示位置にダミーのFeedを追加
-            let adSpace = Feed(isAd: true, title: "", category: "", link: "")
-            items.insert(adSpace, atIndex: 4)
-            items.insert(adSpace, atIndex: 6)
-            items.insert(adSpace, atIndex: 9)
-            self.items += self.createDateSource(items)
-            self.tableView.reloadData()
-        }
+        
+        // 広告表示位置にダミーのFeedを追加
+        let adSpace = Feed(isAd: true, title: "", category: "", link: "")
+        items.insert(adSpace, atIndex: 4)
+        items.insert(adSpace, atIndex: 6)
+        items.insert(adSpace, atIndex: 9)
+        self.items += self.createDateSource(items)
+        self.tableView.reloadData()
         
         let placer = NADNativeTableViewPlacement()
         // 1行目は2つの広告を取得したFeedと一緒に表示

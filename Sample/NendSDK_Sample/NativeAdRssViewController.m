@@ -21,22 +21,6 @@
 
 @end
 
-typedef void (^CompletionBlock)(NSArray<Feed *> *_Nullable);
-
-@interface FeedParser : NSObject <NSXMLParserDelegate>
-
-@property (nonatomic, copy) CompletionBlock block;
-@property (nonatomic) NSXMLParser *parser;
-@property (nonatomic) NSMutableArray<Feed *> *feeds;
-@property (nonatomic) Feed *feed;
-@property (nonatomic) BOOL foundLink;
-@property (nonatomic) BOOL foundTitle;
-@property (nonatomic) BOOL foundCategory;
-
-- (void)parseData:(NSData *_Nonnull)data completionBlock:(CompletionBlock _Nonnull)block;
-
-@end
-
 @interface NativeAdRssViewController () <NADNativeTableViewHelperDelegate>
 
 @property (nonatomic) NSArray<NSArray<Feed *> *> *items;
@@ -69,41 +53,27 @@ typedef void (^CompletionBlock)(NSArray<Feed *> *_Nullable);
 
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 
-    NSArray<NSString *> *urls = @[ @"http://headlines.yahoo.co.jp/rss/zdn_m-c_sci.xml", @"http://headlines.yahoo.co.jp/rss/zdn_ait-c_sci.xml" ];
     NSMutableArray<Feed *> *items = [NSMutableArray array];
+    for (NSInteger i = 0; i < 50; i++) {
+        Feed *feed = [Feed new];
+        u_int32_t random = arc4random_uniform(2);
+        if (0 == random) {
+            feed.title = @"アプリ×nendネイティブアドnendネイティブアドを使いこなして「収益２倍！」キャンペーン";
+            feed.link = @"https://www.nend.net/event_doubleup_nativead";
+        } else {
+            feed.title = @"スマホでプレイ中のゲームの攻略情報を自動配信と検索で一つに集約できるアプリ「ゲーマグ」提供開始";
+            feed.link = @"http://gamag.jp/";
+        }
+        feed.category = @"ニュースリリース";
+        [items addObject:feed];
+    }
 
-    __weak typeof(self) weakSelf = self;
-    dispatch_group_t group = dispatch_group_create();
-    dispatch_apply(urls.count, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(size_t i) {
-        dispatch_group_enter(group);
-        NSURLSession *session = [NSURLSession sharedSession];
-        NSURL *url = [NSURL URLWithString:urls[i]];
-        NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData *_Nullable data, NSURLResponse *_Nullable response, NSError *_Nullable error) {
-            if (data) {
-                FeedParser *parser = [FeedParser new];
-                [parser parseData:data completionBlock:^(NSArray<Feed *> *_Nullable feeds) {
-                    if (feeds) {
-                        @synchronized(weakSelf) {
-                            [items addObjectsFromArray:feeds];
-                        }
-                    }
-                    dispatch_group_leave(group);
-                }];
-            } else {
-                dispatch_group_leave(group);
-            }
-        }];
-        [task resume];
-    });
-    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        // 広告表示位置にダミーのFeedを追加
-        Feed *adSpace = [Feed adSpace];
-        [items insertObject:adSpace atIndex:5];
-        [items insertObject:adSpace atIndex:9];
-        self.items = [self dataSourceFromFeedArray:items];
-        [self.tableView reloadData];
-    });
+    // 広告表示位置にダミーのFeedを追加
+    Feed *adSpace = [Feed adSpace];
+    [items insertObject:adSpace atIndex:5];
+    [items insertObject:adSpace atIndex:9];
+    self.items = [self dataSourceFromFeedArray:items];
+    [self.tableView reloadData];
     
     [NADNativeLogger setLogLevel:NADNativeLogLevelDebug];
 
@@ -311,96 +281,6 @@ typedef void (^CompletionBlock)(NSArray<Feed *> *_Nullable);
         return @"AD";
     } else {
         return self.title;
-    }
-}
-
-@end
-
-#pragma mark -
-
-@implementation FeedParser
-
-- (void)parseData:(NSData *)data completionBlock:(CompletionBlock)block
-{
-    self.block = block;
-    self.parser = [[NSXMLParser alloc] initWithData:data];
-    self.parser.delegate = self;
-    [self.parser parse];
-}
-
-#pragma mark - NSXMLParserDelegate
-
-- (void)parserDidStartDocument:(NSXMLParser *)parser
-{
-    self.feeds = [NSMutableArray array];
-    self.foundLink = NO;
-    self.foundTitle = NO;
-    self.foundCategory = NO;
-}
-
-- (void)parser:(NSXMLParser *)parser
-    didStartElement:(NSString *)elementName
-       namespaceURI:(nullable NSString *)namespaceURI
-      qualifiedName:(nullable NSString *)qName
-         attributes:(NSDictionary<NSString *, NSString *> *)attributeDict;
-{
-    if ([@"item" isEqualToString:elementName]) {
-        self.feed = [Feed new];
-    } else if ([@"title" isEqualToString:elementName]) {
-        self.foundTitle = YES;
-    } else if ([@"category" isEqualToString:elementName]) {
-        self.foundCategory = YES;
-    } else if ([@"link" isEqualToString:elementName]) {
-        self.foundLink = YES;
-    }
-}
-
-- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
-{
-    if (self.foundTitle) {
-        self.feed.title = self.feed.title ? [self.feed.title stringByAppendingString:string] : string;
-    } else if (self.foundCategory) {
-        self.feed.category = self.feed.category ? [self.feed.category stringByAppendingString:string] : string;
-    } else if (self.foundLink) {
-        self.feed.link = self.feed.link ? [self.feed.link stringByAppendingString:string] : string;
-    }
-}
-
-- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
-{
-    if ([@"item" isEqualToString:elementName]) {
-        [self.feeds addObject:self.feed];
-        self.feed = nil;
-    } else if ([@"title" isEqualToString:elementName]) {
-        self.foundTitle = NO;
-    } else if ([@"category" isEqualToString:elementName]) {
-        self.foundCategory = NO;
-    } else if ([@"link" isEqualToString:elementName]) {
-        self.foundLink = NO;
-    }
-}
-
-- (void)parserDidEndDocument:(NSXMLParser *)parser
-{
-    if (self.block) {
-        self.block(self.feeds);
-        self.block = nil;
-    }
-}
-
-- (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError
-{
-    if (self.block) {
-        self.block(nil);
-        self.block = nil;
-    }
-}
-
-- (void)parser:(NSXMLParser *)parser validationErrorOccurred:(NSError *)validationError
-{
-    if (self.block) {
-        self.block(nil);
-        self.block = nil;
     }
 }
 

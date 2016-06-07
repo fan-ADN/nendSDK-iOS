@@ -451,6 +451,7 @@
                         <segue destination="D5T-rG-9GD" kind="show" identifier="PushNoNibNativeAd" id="4Eh-on-dSE"/>
                         <segue destination="H5C-3J-8AW" kind="show" identifier="PushCarouselNativeAd" id="Aju-6r-uNS"/>
                         <segue destination="9tI-kx-fOl" kind="show" identifier="PushNoNibInFeedNativeAd" id="RkT-f0-aKZ"/>
+                        <segue destination="ur1-DH-FdI" kind="show" identifier="PushNoHelperInFeedNativeAd" id="CV5-ez-WCK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hU-LB-z6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -722,6 +723,114 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ou5-Tm-WbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2479" y="-825"/>
+        </scene>
+        <!--Native Ad No Helper In Feed View Controller-->
+        <scene sceneID="AJy-Wi-Ylv">
+            <objects>
+                <tableViewController id="ur1-DH-FdI" customClass="NativeAdNoHelperInFeedViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hHt-rK-X28">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="buT-hH-Hf6" detailTextLabel="R74-F1-qru" rowHeight="96" style="IBUITableViewCellStyleSubtitle" id="aQI-fB-aVv">
+                                <rect key="frame" x="0.0" y="92" width="600" height="96"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aQI-fB-aVv" id="ch5-Ig-x9Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="95"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="buT-hH-Hf6">
+                                            <rect key="frame" x="15" y="31" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R74-F1-qru">
+                                            <rect key="frame" x="15" y="51" width="31" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdCell" rowHeight="96" id="W51-Mp-sCG" customClass="NativeAdCellView">
+                                <rect key="frame" x="0.0" y="188" width="600" height="96"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W51-Mp-sCG" id="YT0-00-XiJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="95"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U9a-ni-6Dk" customClass="NADNativeImageView">
+                                            <rect key="frame" x="512" y="8" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="6ZA-Qs-15W"/>
+                                                <constraint firstAttribute="width" constant="80" id="IUU-JY-3jC"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LongText" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="496" translatesAutoresizingMaskIntoConstraints="NO" id="q6z-W1-J5C" customClass="NADNativeLabel">
+                                            <rect key="frame" x="8" y="8" width="496" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q1-FZ-Swa" customClass="NADNativeLabel">
+                                            <rect key="frame" x="464" y="70" width="40" height="17"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="6aa-Lv-oIC"/>
+                                                <constraint firstAttribute="width" constant="40" id="M0P-O8-oiY"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ActionButton" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="AFR-ef-iiu" customClass="NADNativeLabel">
+                                            <rect key="frame" x="8" y="71" width="98" height="17"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="98" id="2eF-78-jL9"/>
+                                                <constraint firstAttribute="height" constant="17" id="f7e-NE-d81"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="topMargin" secondItem="q6z-W1-J5C" secondAttribute="top" id="5Kb-Uu-NxQ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="2Q1-FZ-Swa" secondAttribute="bottom" id="7ZD-NO-zCr"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="q6z-W1-J5C" secondAttribute="leading" id="9lD-kR-NkL"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="U9a-ni-6Dk" secondAttribute="trailing" id="JYS-RJ-0nD"/>
+                                        <constraint firstItem="U9a-ni-6Dk" firstAttribute="leading" secondItem="2Q1-FZ-Swa" secondAttribute="trailing" constant="8" id="Nv9-uQ-ozo"/>
+                                        <constraint firstItem="U9a-ni-6Dk" firstAttribute="leading" secondItem="q6z-W1-J5C" secondAttribute="trailing" constant="8" id="PeR-ct-bt0"/>
+                                        <constraint firstItem="U9a-ni-6Dk" firstAttribute="centerY" secondItem="YT0-00-XiJ" secondAttribute="centerY" id="crc-x9-Uak"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="q6z-W1-J5C" secondAttribute="bottom" constant="29" id="gr8-M9-eeB"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="AFR-ef-iiu" secondAttribute="bottom" constant="-1" id="mme-5x-Wx4"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="AFR-ef-iiu" secondAttribute="leading" id="nCk-Ef-Wze"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="actionButtonTextLabel" destination="AFR-ef-iiu" id="Ta9-Qe-xh2"/>
+                                    <outlet property="adImageView" destination="U9a-ni-6Dk" id="Qk9-e2-R4R"/>
+                                    <outlet property="longTextLabel" destination="q6z-W1-J5C" id="0Pj-UH-Kw8"/>
+                                    <outlet property="prTextLabel" destination="2Q1-FZ-Swa" id="U3Y-7P-bGA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ur1-DH-FdI" id="Gkq-I6-n9a"/>
+                            <outlet property="delegate" destination="ur1-DH-FdI" id="ciH-Lt-cCd"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbg-KF-8uS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479" y="-6364"/>
         </scene>
         <!--Native Ad No Nib In Feed View Controller-->
         <scene sceneID="oeS-4a-Pbe">

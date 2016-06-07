@@ -39,6 +39,7 @@
 		6933FCB91BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6933FCB71BD62F5500C26FB4 /* NativeAdRssViewController.m */; };
 		693A21711B79BDDB004B6680 /* NativeAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A21701B79BDDB004B6680 /* NativeAdViewController.swift */; };
 		693A21781B79EEC9004B6680 /* NativeAdMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A21771B79EEC9004B6680 /* NativeAdMenuViewController.swift */; };
+		696551621D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696551611D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.m */; };
 		696F3E351BDA0ADD00798F4F /* NativeAdRssTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696F3E341BDA0ADD00798F4F /* NativeAdRssTableViewController.swift */; };
 		69829E101BE1C2EA00EBFE0A /* FeedWithAdCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69829E0F1BE1C2EA00EBFE0A /* FeedWithAdCell3.xib */; };
 		698C8B061BE1F76C00BF8811 /* NativeAdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C8B051BE1F76C00BF8811 /* NativeAdPageViewController.swift */; };
@@ -158,6 +159,8 @@
 		6933FCB71BD62F5500C26FB4 /* NativeAdRssViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdRssViewController.m; sourceTree = "<group>"; };
 		693A21701B79BDDB004B6680 /* NativeAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdViewController.swift; sourceTree = "<group>"; };
 		693A21771B79EEC9004B6680 /* NativeAdMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdMenuViewController.swift; sourceTree = "<group>"; };
+		696551601D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdNoHelperInFeedViewController.h; sourceTree = "<group>"; };
+		696551611D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdNoHelperInFeedViewController.m; sourceTree = "<group>"; };
 		696F3E341BDA0ADD00798F4F /* NativeAdRssTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdRssTableViewController.swift; sourceTree = "<group>"; };
 		69829E0F1BE1C2EA00EBFE0A /* FeedWithAdCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedWithAdCell3.xib; sourceTree = "<group>"; };
 		698C8B051BE1F76C00BF8811 /* NativeAdPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdPageViewController.swift; sourceTree = "<group>"; };
@@ -351,6 +354,8 @@
 				690C28FB1B799F9E00C92232 /* NativeAdCollectionViewController.m */,
 				690C28FC1B799F9E00C92232 /* NativeAdInFeedViewController.h */,
 				690C28FD1B799F9E00C92232 /* NativeAdInFeedViewController.m */,
+				696551601D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.h */,
+				696551611D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.m */,
 				69EEA0841CF41D1C006EB97B /* NativeAdNoNibInFeedViewController.h */,
 				69EEA0851CF41D1C006EB97B /* NativeAdNoNibInFeedViewController.m */,
 				690C28FE1B799F9E00C92232 /* NativeAdPageContentViewController.h */,
@@ -389,8 +394,8 @@
 				690C29141B799FC400C92232 /* NativeAdCollectionView.m */,
 				690C29151B799FC400C92232 /* NativeAdView.h */,
 				690C29161B799FC400C92232 /* NativeAdView.m */,
-				8BD078E81C9A3B4A003ABB82 /* NativeAdCarouselView.h */,
 				8BD078E91C9A3B4A003ABB82 /* NativeAdCarouselView.m */,
+				8BD078E81C9A3B4A003ABB82 /* NativeAdCarouselView.h */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -748,6 +753,7 @@
 				690C28ED1B7989E000C92232 /* AdIBViewController.m in Sources */,
 				8BCB34331C9655970025E24D /* NativeAdCarouselCell.m in Sources */,
 				69D9C3D21C151874007754FE /* NativeAdNoNibViewController.m in Sources */,
+				696551621D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.m in Sources */,
 				690C28A11B7981F000C92232 /* AdInterstitialViewController.m in Sources */,
 				6933FCB91BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */,
 				690C28A71B7985CA00C92232 /* SelectSizeTableViewController.m in Sources */,

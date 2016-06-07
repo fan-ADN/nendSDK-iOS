@@ -57,6 +57,12 @@
 		<string>InFeed</string>
 	</dict>
 	<dict>
+		<key>title</key>
+		<string>InFeedNoHelper</string>
+		<key>segue</key>
+		<string>PushNoHelperInFeedNativeAd</string>
+	</dict>
+	<dict>
 		<key>segue</key>
 		<string>PushCollectionNativeAd</string>
 		<key>title</key>

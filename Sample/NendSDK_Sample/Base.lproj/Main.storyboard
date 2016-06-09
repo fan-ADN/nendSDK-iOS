@@ -452,6 +452,7 @@
                         <segue destination="H5C-3J-8AW" kind="show" identifier="PushCarouselNativeAd" id="Aju-6r-uNS"/>
                         <segue destination="9tI-kx-fOl" kind="show" identifier="PushNoNibInFeedNativeAd" id="RkT-f0-aKZ"/>
                         <segue destination="ur1-DH-FdI" kind="show" identifier="PushNoHelperInFeedNativeAd" id="CV5-ez-WCK"/>
+                        <segue destination="GeS-co-7jC" kind="show" identifier="PushTelopNativeAd" id="7Qs-Me-Qn1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hU-LB-z6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -831,6 +832,96 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbg-KF-8uS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2479" y="-6364"/>
+        </scene>
+        <!--Native Ad Telop View Controller-->
+        <scene sceneID="AwB-iH-Ecw">
+            <objects>
+                <viewController id="GeS-co-7jC" customClass="NativeAdTelopViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eJN-IQ-rOT"/>
+                        <viewControllerLayoutGuide type="bottom" id="S9g-YO-wHH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qd7-Nl-Xhs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oi5-Wb-d4T" customClass="NativeAdTelopTextView">
+                                <rect key="frame" x="225" y="285" width="150" height="30"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OAT-Vu-Kcw" customClass="NADNativeImageView">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="BLk-VV-XC4"/>
+                                            <constraint firstAttribute="width" constant="30" id="uFc-zF-A9X"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uE5-Xb-R2Z" customClass="NADNativeLabel">
+                                        <rect key="frame" x="30" y="0.0" width="20" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="WmU-iw-43W"/>
+                                            <constraint firstAttribute="height" constant="30" id="mgr-Wk-wZV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNd-eR-NjR">
+                                        <rect key="frame" x="50" y="0.0" width="100" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKO-fa-4em" customClass="NADNativeLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="5" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="lKO-fa-4em" firstAttribute="leading" secondItem="dNd-eR-NjR" secondAttribute="leading" id="3Ld-8k-XXl"/>
+                                            <constraint firstAttribute="height" constant="30" id="V7E-IJ-wzy"/>
+                                            <constraint firstItem="lKO-fa-4em" firstAttribute="top" secondItem="dNd-eR-NjR" secondAttribute="top" id="Vks-H8-hyy"/>
+                                            <constraint firstItem="lKO-fa-4em" firstAttribute="centerY" secondItem="dNd-eR-NjR" secondAttribute="centerY" id="WID-Nz-3rh"/>
+                                            <constraint firstAttribute="trailing" secondItem="lKO-fa-4em" secondAttribute="trailing" id="Y62-yW-uiJ"/>
+                                            <constraint firstItem="lKO-fa-4em" firstAttribute="height" secondItem="dNd-eR-NjR" secondAttribute="height" id="oIo-iy-EeJ"/>
+                                            <constraint firstAttribute="width" constant="100" id="pQj-3H-GpL"/>
+                                            <constraint firstAttribute="bottom" secondItem="lKO-fa-4em" secondAttribute="bottom" id="ynk-FK-i20"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="uE5-Xb-R2Z" firstAttribute="top" secondItem="oi5-Wb-d4T" secondAttribute="top" id="1Rx-IK-SPm"/>
+                                    <constraint firstItem="OAT-Vu-Kcw" firstAttribute="top" secondItem="oi5-Wb-d4T" secondAttribute="top" id="3AB-2Y-C2X"/>
+                                    <constraint firstItem="OAT-Vu-Kcw" firstAttribute="leading" secondItem="oi5-Wb-d4T" secondAttribute="leading" id="AJS-Ja-0OG"/>
+                                    <constraint firstItem="dNd-eR-NjR" firstAttribute="top" secondItem="oi5-Wb-d4T" secondAttribute="top" id="Gs7-rO-Rcz"/>
+                                    <constraint firstAttribute="width" constant="150" id="I7d-qB-Yum"/>
+                                    <constraint firstItem="uE5-Xb-R2Z" firstAttribute="leading" secondItem="OAT-Vu-Kcw" secondAttribute="trailing" id="Ljy-uR-Y4J"/>
+                                    <constraint firstItem="dNd-eR-NjR" firstAttribute="leading" secondItem="uE5-Xb-R2Z" secondAttribute="trailing" id="fuU-eD-6d3"/>
+                                    <constraint firstAttribute="height" constant="30" id="gjb-UQ-M0c"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="nativeAdImageView" destination="OAT-Vu-Kcw" id="X6Z-Ih-i5h"/>
+                                    <outlet property="nativeAdPrTextLabel" destination="uE5-Xb-R2Z" id="c6I-dk-9DX"/>
+                                    <outlet property="nativeAdShortTextLabel" destination="lKO-fa-4em" id="TPD-KH-n6L"/>
+                                    <outlet property="scrollView" destination="dNd-eR-NjR" id="L8Q-BE-xs1"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oi5-Wb-d4T" firstAttribute="centerY" secondItem="qd7-Nl-Xhs" secondAttribute="centerY" id="n6b-wb-Fv2"/>
+                            <constraint firstItem="oi5-Wb-d4T" firstAttribute="centerX" secondItem="qd7-Nl-Xhs" secondAttribute="centerX" id="sh0-5R-byj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adView" destination="oi5-Wb-d4T" id="Rl3-4J-Hhi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4CD-ct-hEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479" y="-7056"/>
         </scene>
         <!--Native Ad No Nib In Feed View Controller-->
         <scene sceneID="oeS-4a-Pbe">

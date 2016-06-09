@@ -80,6 +80,8 @@
 		8B1C843E1CB51B4000EE385C /* NativeAdCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C843C1CB51B4000EE385C /* NativeAdCarouselCell.swift */; };
 		8B1C843F1CB51B4000EE385C /* NativeAdCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C843D1CB51B4000EE385C /* NativeAdCarouselViewController.swift */; };
 		8B1C84411CB51B5D00EE385C /* NativeAdCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C84401CB51B5D00EE385C /* NativeAdCarouselView.swift */; };
+		8B1D6E201D010F3600250F60 /* NativeAdTelopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D6E1F1D010F3600250F60 /* NativeAdTelopViewController.m */; };
+		8B1E20E91D056FCA0016610A /* NativeAdTelopTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E20E81D056FCA0016610A /* NativeAdTelopTextView.m */; };
 		8BCB34331C9655970025E24D /* NativeAdCarouselCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCB34321C9655970025E24D /* NativeAdCarouselCell.m */; };
 		8BCDCD5E1CA123A00048436D /* NativeAdCarouselLandscapeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BCDCD5D1CA123A00048436D /* NativeAdCarouselLandscapeView.xib */; };
 		8BCDDEB01C910BBE00EF379C /* NativeAdCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCDDEAF1C910BBE00EF379C /* NativeAdCarouselViewController.m */; };
@@ -208,6 +210,10 @@
 		8B1C843C1CB51B4000EE385C /* NativeAdCarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdCarouselCell.swift; sourceTree = "<group>"; };
 		8B1C843D1CB51B4000EE385C /* NativeAdCarouselViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdCarouselViewController.swift; sourceTree = "<group>"; };
 		8B1C84401CB51B5D00EE385C /* NativeAdCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdCarouselView.swift; sourceTree = "<group>"; };
+		8B1D6E1E1D010F3600250F60 /* NativeAdTelopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdTelopViewController.h; sourceTree = "<group>"; };
+		8B1D6E1F1D010F3600250F60 /* NativeAdTelopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdTelopViewController.m; sourceTree = "<group>"; };
+		8B1E20E71D056FCA0016610A /* NativeAdTelopTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdTelopTextView.h; sourceTree = "<group>"; };
+		8B1E20E81D056FCA0016610A /* NativeAdTelopTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdTelopTextView.m; sourceTree = "<group>"; };
 		8BCB34311C9655970025E24D /* NativeAdCarouselCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdCarouselCell.h; sourceTree = "<group>"; };
 		8BCB34321C9655970025E24D /* NativeAdCarouselCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdCarouselCell.m; sourceTree = "<group>"; };
 		8BCDCD5D1CA123A00048436D /* NativeAdCarouselLandscapeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdCarouselLandscapeView.xib; sourceTree = "<group>"; };
@@ -374,6 +380,8 @@
 				8BCDDEAF1C910BBE00EF379C /* NativeAdCarouselViewController.m */,
 				8BCB34311C9655970025E24D /* NativeAdCarouselCell.h */,
 				8BCB34321C9655970025E24D /* NativeAdCarouselCell.m */,
+				8B1D6E1E1D010F3600250F60 /* NativeAdTelopViewController.h */,
+				8B1D6E1F1D010F3600250F60 /* NativeAdTelopViewController.m */,
 			);
 			name = native;
 			sourceTree = "<group>";
@@ -394,8 +402,10 @@
 				690C29141B799FC400C92232 /* NativeAdCollectionView.m */,
 				690C29151B799FC400C92232 /* NativeAdView.h */,
 				690C29161B799FC400C92232 /* NativeAdView.m */,
-				8BD078E91C9A3B4A003ABB82 /* NativeAdCarouselView.m */,
 				8BD078E81C9A3B4A003ABB82 /* NativeAdCarouselView.h */,
+				8BD078E91C9A3B4A003ABB82 /* NativeAdCarouselView.m */,
+				8B1E20E71D056FCA0016610A /* NativeAdTelopTextView.h */,
+				8B1E20E81D056FCA0016610A /* NativeAdTelopTextView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -762,8 +772,10 @@
 				690C290D1B799F9E00C92232 /* NativeAdTableViewController.m in Sources */,
 				69EEA0861CF41D1C006EB97B /* NativeAdNoNibInFeedViewController.m in Sources */,
 				690C28EA1B7989CB00C92232 /* AdViewController.m in Sources */,
+				8B1E20E91D056FCA0016610A /* NativeAdTelopTextView.m in Sources */,
 				69CEC6491BD7581200F352DE /* FeedAdView.m in Sources */,
 				690C29091B799F9E00C92232 /* NativeAdCollectionViewController.m in Sources */,
+				8B1D6E201D010F3600250F60 /* NativeAdTelopViewController.m in Sources */,
 				690C28E71B7989B800C92232 /* AdAdjustViewController.m in Sources */,
 				69CEC64E1BD76CCC00F352DE /* FeedAdCell.m in Sources */,
 				690C28A41B7984FB00C92232 /* SelectBannerTableViewController.m in Sources */,

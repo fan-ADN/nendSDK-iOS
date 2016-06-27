@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1871B75CBB679C438522EF04 /* libPods-NendSDK_Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF67E05B4082EEAFD7D32E3C /* libPods-NendSDK_Sample.a */; };
+		4F28261B1D1CF659001484EE /* NativeAdNoNibTelopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */; };
+		4F28261E1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261D1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m */; };
 		690C28791B797DF100C92232 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C28781B797DF100C92232 /* main.m */; };
 		690C287C1B797DF100C92232 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C287B1B797DF100C92232 /* AppDelegate.m */; };
 		690C28821B797DF100C92232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 690C28801B797DF100C92232 /* Main.storyboard */; };
@@ -111,6 +113,10 @@
 		3B33426517991B79001D0A08 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3B33426717991B7E001D0A08 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		43FEA96744808C6AD92A703B /* Pods-NendSDK_Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendSDK_Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-NendSDK_Sample/Pods-NendSDK_Sample.release.xcconfig"; sourceTree = "<group>"; };
+		4F2826191D1CF659001484EE /* NativeAdNoNibTelopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdNoNibTelopViewController.h; sourceTree = "<group>"; };
+		4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdNoNibTelopViewController.m; sourceTree = "<group>"; };
+		4F28261C1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdNoNibTelopTextView.h; sourceTree = "<group>"; };
+		4F28261D1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdNoNibTelopTextView.m; sourceTree = "<group>"; };
 		690C28741B797DF100C92232 /* NendSDK_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NendSDK_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		690C28771B797DF100C92232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		690C28781B797DF100C92232 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -382,6 +388,8 @@
 				8BCB34321C9655970025E24D /* NativeAdCarouselCell.m */,
 				8B1D6E1E1D010F3600250F60 /* NativeAdTelopViewController.h */,
 				8B1D6E1F1D010F3600250F60 /* NativeAdTelopViewController.m */,
+				4F2826191D1CF659001484EE /* NativeAdNoNibTelopViewController.h */,
+				4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */,
 			);
 			name = native;
 			sourceTree = "<group>";
@@ -406,6 +414,8 @@
 				8BD078E91C9A3B4A003ABB82 /* NativeAdCarouselView.m */,
 				8B1E20E71D056FCA0016610A /* NativeAdTelopTextView.h */,
 				8B1E20E81D056FCA0016610A /* NativeAdTelopTextView.m */,
+				4F28261C1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.h */,
+				4F28261D1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -761,6 +771,7 @@
 				690C291B1B799FC400C92232 /* NativeAdCellView.m in Sources */,
 				8BCDDEB01C910BBE00EF379C /* NativeAdCarouselViewController.m in Sources */,
 				690C28ED1B7989E000C92232 /* AdIBViewController.m in Sources */,
+				4F28261B1D1CF659001484EE /* NativeAdNoNibTelopViewController.m in Sources */,
 				8BCB34331C9655970025E24D /* NativeAdCarouselCell.m in Sources */,
 				69D9C3D21C151874007754FE /* NativeAdNoNibViewController.m in Sources */,
 				696551621D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.m in Sources */,
@@ -778,6 +789,7 @@
 				8B1D6E201D010F3600250F60 /* NativeAdTelopViewController.m in Sources */,
 				690C28E71B7989B800C92232 /* AdAdjustViewController.m in Sources */,
 				69CEC64E1BD76CCC00F352DE /* FeedAdCell.m in Sources */,
+				4F28261E1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m in Sources */,
 				690C28A41B7984FB00C92232 /* SelectBannerTableViewController.m in Sources */,
 				690C290C1B799F9E00C92232 /* NativeAdPageViewController.m in Sources */,
 				690C287C1B797DF100C92232 /* AppDelegate.m in Sources */,

@@ -98,11 +98,17 @@
 		<key>title</key>
 		<string>Carousel</string>
 	</dict>
-    <dict>
-        <key>segue</key>
-        <string>PushTelopNativeAd</string>
-        <key>title</key>
-        <string>Telop</string>
-    </dict>
+	<dict>
+		<key>segue</key>
+		<string>PushTelopNativeAd</string>
+		<key>title</key>
+		<string>Telop</string>
+	</dict>
+	<dict>
+		<key>segue</key>
+		<string>PushNoNibTelopNativeAd</string>
+		<key>title</key>
+		<string>Telop NoNib</string>
+	</dict>
 </array>
 </plist>

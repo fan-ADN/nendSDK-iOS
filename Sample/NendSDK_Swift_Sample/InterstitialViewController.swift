@@ -72,7 +72,7 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
             break
         case .INVALID_RESPONSE_TYPE:
             print("INVALID_RESPONSE_TYPE")
-            b.reak
+            break
         case .FAILED_AD_REQUEST:
             print("FAILED_AD_REQUEST")
             break

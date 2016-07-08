@@ -18,12 +18,6 @@
 
 @implementation NativeAdViewController
 
-- (void)dealloc
-{
-    // デリゲートに設定したオブジェクトの解放時にnilをセット
-    self.client.delegate = nil;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -70,14 +64,14 @@
 
     [NADNativeLogger setLogLevel:NADNativeLogLevelWarn];
     
-    self.client = [[NADNativeClient alloc] initWithSpotId:self.spotId apiKey:self.apiKey advertisingExplicitly:NADNativeAdvertisingExplicitlyPR];
-    self.client.delegate = self;
+    self.client = [[NADNativeClient alloc] initWithSpotId:self.spotId apiKey:self.apiKey];
     
     __weak typeof(self) weakSelf = self;
     [self.client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {
         if (ad) {
+            ad.delegate = weakSelf;
             // 広告をViewに描画
-            [ad intoView:adView];
+            [ad intoView:adView advertisingExplicitly:NADNativeAdvertisingExplicitlyPR];
         } else {
             NSLog(@"load error: %@", error);
         }

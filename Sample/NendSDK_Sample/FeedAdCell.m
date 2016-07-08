@@ -9,9 +9,9 @@
 
 @interface FeedAdCell ()
 
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdPrLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdLongTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdActionButtonTextLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nativeAdPrLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nativeAdLongTextLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nativeAdActionButtonTextLabel;
 
 @end
 
@@ -29,17 +29,17 @@
 
 #pragma mark - NADNativeViewRendering
 
-- (NADNativeLabel *)prTextLabel
+- (UILabel *)prTextLabel
 {
     return self.nativeAdPrLabel;
 }
 
-- (NADNativeLabel *)longTextLabel
+- (UILabel *)longTextLabel
 {
     return self.nativeAdLongTextLabel;
 }
 
-- (NADNativeLabel *)actionButtonTextLabel
+- (UILabel *)actionButtonTextLabel
 {
     return self.nativeAdActionButtonTextLabel;
 }

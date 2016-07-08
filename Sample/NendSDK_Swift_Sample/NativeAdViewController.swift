@@ -15,14 +15,6 @@ class NativeAdViewController: UIViewController, NADNativeDelegate {
     var apiKey: String!
     var nib: String!
 
-    deinit {
-        print("NativeAdViewController: deinit")
-        if let client = self.client {
-            // デリゲートに設定したオブジェクトの解放時にnilをセット
-            client.delegate = nil
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,12 +37,12 @@ class NativeAdViewController: UIViewController, NADNativeDelegate {
             
             NADNativeLogger.setLogLevel(.Warn)
             
-            self.client = NADNativeClient(spotId: self.spotId, apiKey: self.apiKey, advertisingExplicitly:.PR)
-            self.client!.delegate = self
+            self.client = NADNativeClient(spotId: self.spotId, apiKey: self.apiKey)
             self.client!.loadWithCompletionBlock() { (ad, error) in
                 if let nativeAd = ad {
+                    nativeAd.delegate = self
                     // 広告をViewに描画
-                    nativeAd.intoView(adView)
+                    nativeAd.intoView(adView, advertisingExplicitly:.PR)
                 } else {
                     print("error:\(error)")
                 }
@@ -65,10 +57,6 @@ class NativeAdViewController: UIViewController, NADNativeDelegate {
 
     // MARK: - NADNativeDelegate
     func nadNativeDidClickAd(ad: NADNative!) {
-        print(#function)
-    }
-    
-    func nadNativeDidDisplayAd(ad: NADNative!, success: Bool) {
         print(#function)
     }
 }

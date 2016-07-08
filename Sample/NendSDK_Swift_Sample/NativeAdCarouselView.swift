@@ -9,14 +9,14 @@ import UIKit
 
 class NativeAdCarouselView: UIView, NADNativeViewRendering {
     
-    @IBOutlet private weak var nativeAdPrTextLabel: NADNativeLabel!
-    @IBOutlet private weak var nativeAdShortTextLabel: NADNativeLabel!
-    @IBOutlet private weak var nativeAdLongTextLabel: NADNativeLabel!
-    @IBOutlet private weak var nativeAdPromotionNameLabel: NADNativeLabel!
-    @IBOutlet private weak var nativeAdPromotionUrlLabel: NADNativeLabel!
-    @IBOutlet private weak var nativeAdActionButtonTextLabel: NADNativeLabel!
-    @IBOutlet private weak var nativeAdImageView: NADNativeImageView!
-    @IBOutlet private weak var nativeAdLogoImageView: NADNativeImageView!
+    @IBOutlet private weak var nativeAdPrTextLabel: UILabel!
+    @IBOutlet private weak var nativeAdShortTextLabel: UILabel!
+    @IBOutlet private weak var nativeAdLongTextLabel: UILabel!
+    @IBOutlet private weak var nativeAdPromotionNameLabel: UILabel!
+    @IBOutlet private weak var nativeAdPromotionUrlLabel: UILabel!
+    @IBOutlet private weak var nativeAdActionButtonTextLabel: UILabel!
+    @IBOutlet private weak var nativeAdImageView: UIImageView!
+    @IBOutlet private weak var nativeAdLogoImageView: UIImageView!
     
     internal var index: Int = 0
     private var direction: Int = 0
@@ -65,35 +65,35 @@ class NativeAdCarouselView: UIView, NADNativeViewRendering {
     
     // MARK: - NADNativeViewRendering
     
-    func prTextLabel() -> NADNativeLabel! {
+    func prTextLabel() -> UILabel! {
         return self.nativeAdPrTextLabel
     }
     
-    func shortTextLabel() -> NADNativeLabel! {
+    func shortTextLabel() -> UILabel! {
         return self.nativeAdShortTextLabel
     }
     
-    func longTextLabel() -> NADNativeLabel! {
+    func longTextLabel() -> UILabel! {
         return self.nativeAdLongTextLabel
     }
     
-    func promotionNameLabel() -> NADNativeLabel! {
+    func promotionNameLabel() -> UILabel! {
         return self.nativeAdPromotionNameLabel
     }
     
-    func promotionUrlLabel() -> NADNativeLabel! {
+    func promotionUrlLabel() -> UILabel! {
         return self.nativeAdPromotionUrlLabel
     }
     
-    func actionButtonTextLabel() -> NADNativeLabel! {
+    func actionButtonTextLabel() -> UILabel! {
         return self.nativeAdActionButtonTextLabel
     }
     
-    func adImageView() -> NADNativeImageView! {
+    func adImageView() -> UIImageView! {
         return self.nativeAdImageView
     }
     
-    func logoImageView() -> NADNativeImageView! {
+    func logoImageView() -> UIImageView! {
         return self.nativeAdLogoImageView
     }
 }

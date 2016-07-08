@@ -9,9 +9,9 @@ import UIKit
 
 class FeedAdView: UIView, NADNativeViewRendering {
 
-    @IBOutlet private weak var nativeAdPrTextLabel: NADNativeLabel!
-    @IBOutlet private weak var nativeAdLongTextLabel: NADNativeLabel!
-    @IBOutlet private weak var nativeAdActionButtonTextLabel: NADNativeLabel!
+    @IBOutlet private weak var nativeAdPrTextLabel: UILabel!
+    @IBOutlet private weak var nativeAdLongTextLabel: UILabel!
+    @IBOutlet private weak var nativeAdActionButtonTextLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,15 +24,15 @@ class FeedAdView: UIView, NADNativeViewRendering {
 
     // MARK: - NADNativeViewRendering
     
-    func prTextLabel() -> NADNativeLabel! {
+    func prTextLabel() -> UILabel! {
         return self.nativeAdPrTextLabel
     }
     
-    func longTextLabel() -> NADNativeLabel! {
+    func longTextLabel() -> UILabel! {
         return self.nativeAdLongTextLabel
     }
     
-    func actionButtonTextLabel() -> NADNativeLabel! {
+    func actionButtonTextLabel() -> UILabel! {
         return self.nativeAdActionButtonTextLabel
     }
 }

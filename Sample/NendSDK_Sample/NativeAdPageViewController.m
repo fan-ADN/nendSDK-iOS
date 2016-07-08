@@ -22,11 +22,6 @@ static const NSInteger kNativeAdCount = 5;
 
 @implementation NativeAdPageViewController
 
-- (void)dealloc
-{
-    self.client.delegate = nil;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -40,8 +35,7 @@ static const NSInteger kNativeAdCount = 5;
     self.pageViewController.view.frame = self.view.frame;
     [self.view addSubview:self.pageViewController.view];
 
-    self.client = [[NADNativeClient alloc] initWithSpotId:@"485500" apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071" advertisingExplicitly:NADNativeAdvertisingExplicitlyPromotion];
-    self.client.delegate = self;
+    self.client = [[NADNativeClient alloc] initWithSpotId:@"485500" apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
     self.contentViewControllers = [NSMutableArray array];
 
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -53,6 +47,7 @@ static const NSInteger kNativeAdCount = 5;
         dispatch_group_enter(group);
         [self.client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {
             if (ad) {
+                ad.delegate = weakSelf;
                 NativeAdPageContentViewController *vc = [weakSelf.storyboard instantiateViewControllerWithIdentifier:@"NativeAdPageContentViewController"];
                 vc.view.frame = weakSelf.view.frame;
                 vc.ad = ad;

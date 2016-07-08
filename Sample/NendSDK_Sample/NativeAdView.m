@@ -11,14 +11,14 @@
 
 @interface NativeAdView () <NADNativeViewRendering>
 
-@property (nonatomic, weak) IBOutlet NADNativeLabel *prLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *shortTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *longTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *promotionNameLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *promotionUrlLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *actionButtonTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeImageView *adImageView;
-@property (nonatomic, weak) IBOutlet NADNativeImageView *logoImageView;
+@property (nonatomic, weak) IBOutlet UILabel *prLabel;
+@property (nonatomic, weak) IBOutlet UILabel *shortTextLabel;
+@property (nonatomic, weak) IBOutlet UILabel *longTextLabel;
+@property (nonatomic, weak) IBOutlet UILabel *promotionNameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *promotionUrlLabel;
+@property (nonatomic, weak) IBOutlet UILabel *actionButtonTextLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *adImageView;
+@property (nonatomic, weak) IBOutlet UIImageView *logoImageView;
 
 @end
 
@@ -39,42 +39,42 @@
 
 #pragma mark - NADNativeViewRendering.h
 
-- (NADNativeLabel *)prTextLabel
+- (UILabel *)prTextLabel
 {
     return _prLabel;
 }
 
-- (NADNativeLabel *)shortTextLabel
+- (UILabel *)shortTextLabel
 {
     return _shortTextLabel;
 }
 
-- (NADNativeLabel *)longTextLabel
+- (UILabel *)longTextLabel
 {
     return _longTextLabel;
 }
 
-- (NADNativeLabel *)promotionNameLabel
+- (UILabel *)promotionNameLabel
 {
     return _promotionNameLabel;
 }
 
-- (NADNativeLabel *)promotionUrlLabel
+- (UILabel *)promotionUrlLabel
 {
     return _promotionUrlLabel;
 }
 
-- (NADNativeLabel *)actionButtonTextLabel
+- (UILabel *)actionButtonTextLabel
 {
     return _actionButtonTextLabel;
 }
 
-- (NADNativeImageView *)adImageView
+- (UIImageView *)adImageView
 {
     return _adImageView;
 }
 
-- (NADNativeImageView *)logoImageView
+- (UIImageView *)logoImageView
 {
     return _logoImageView;
 }

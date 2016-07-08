@@ -39,7 +39,7 @@ static BOOL isAdRow(NSInteger row)
     // self.clearsSelectionOnViewWillAppear = NO;
 
     // Do any additional setup after loading the view.
-    self.client = [[NADNativeClient alloc] initWithSpotId:@"485502" apiKey:@"a3972604a76864dd110d0b02204f4b72adb092ae" advertisingExplicitly:NADNativeAdvertisingExplicitlyAD];
+    self.client = [[NADNativeClient alloc] initWithSpotId:@"485502" apiKey:@"a3972604a76864dd110d0b02204f4b72adb092ae"];
     self.colors = @[ [UIColor redColor], [UIColor blueColor], [UIColor yellowColor], [UIColor greenColor], [UIColor purpleColor], [UIColor orangeColor] ];
     self.ads = [NSMutableArray array];
     self.stopAdLoad = NO;
@@ -85,11 +85,23 @@ static BOOL isAdRow(NSInteger row)
                     }
                     ad = [weakSelf adFromCacheAtIndexPath:indexPath];
                 }
-                [ad intoView:cell];
+                [ad intoView:cell advertisingExplicitly:NADNativeAdvertisingExplicitlyAD];
+                
+                NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+                paragrahStyle.minimumLineHeight = 15.0;
+                paragrahStyle.maximumLineHeight = 15.0;
+                
+                NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:ad.shortText];
+                [attributedText addAttribute:NSParagraphStyleAttributeName
+                                       value:paragrahStyle
+                                       range:NSMakeRange(0, attributedText.length)];
+                
+                cell.shortTextLabel.numberOfLines = 0;
+                cell.shortTextLabel.attributedText = attributedText;
             }];
         } else {
             // 広告の取得限界に達している場合は取得済みの広告を表示させる
-            [[self adFromCacheAtIndexPath:indexPath] intoView:cell];
+            [[self adFromCacheAtIndexPath:indexPath] intoView:cell advertisingExplicitly:NADNativeAdvertisingExplicitlyAD];
         }
         return cell;
     } else {

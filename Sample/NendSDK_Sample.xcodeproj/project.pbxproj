@@ -84,11 +84,13 @@
 		8B1C84411CB51B5D00EE385C /* NativeAdCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C84401CB51B5D00EE385C /* NativeAdCarouselView.swift */; };
 		8B1D6E201D010F3600250F60 /* NativeAdTelopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D6E1F1D010F3600250F60 /* NativeAdTelopViewController.m */; };
 		8B1E20E91D056FCA0016610A /* NativeAdTelopTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E20E81D056FCA0016610A /* NativeAdTelopTextView.m */; };
+		8B22CFE71D35C5EF00DE86CC /* NativeAdCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B22CFE61D35C5EF00DE86CC /* NativeAdCustomViewController.swift */; };
 		8BCB34331C9655970025E24D /* NativeAdCarouselCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCB34321C9655970025E24D /* NativeAdCarouselCell.m */; };
 		8BCDCD5E1CA123A00048436D /* NativeAdCarouselLandscapeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BCDCD5D1CA123A00048436D /* NativeAdCarouselLandscapeView.xib */; };
 		8BCDDEB01C910BBE00EF379C /* NativeAdCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCDDEAF1C910BBE00EF379C /* NativeAdCarouselViewController.m */; };
 		8BD078EA1C9A3B4A003ABB82 /* NativeAdCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD078E91C9A3B4A003ABB82 /* NativeAdCarouselView.m */; };
 		8BD078EC1C9A42B0003ABB82 /* NativeAdCarouselPortraitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BD078EB1C9A42B0003ABB82 /* NativeAdCarouselPortraitView.xib */; };
+		8BD849831D2F784E002F84DF /* NativeAdCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD849821D2F784E002F84DF /* NativeAdCustomViewController.m */; };
 		9EBA96B5026C73754EF3C438 /* libPods-NendSDK_Swift_Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D7904DF65B12AA2958812E7 /* libPods-NendSDK_Swift_Sample.a */; };
 		B54CAE7E19DE5BA9003C6616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAE7D19DE5BA9003C6616 /* AppDelegate.swift */; };
 		B54CAE8019DE5BA9003C6616 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAE7F19DE5BA9003C6616 /* ViewController.swift */; };
@@ -220,6 +222,7 @@
 		8B1D6E1F1D010F3600250F60 /* NativeAdTelopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdTelopViewController.m; sourceTree = "<group>"; };
 		8B1E20E71D056FCA0016610A /* NativeAdTelopTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdTelopTextView.h; sourceTree = "<group>"; };
 		8B1E20E81D056FCA0016610A /* NativeAdTelopTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdTelopTextView.m; sourceTree = "<group>"; };
+		8B22CFE61D35C5EF00DE86CC /* NativeAdCustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdCustomViewController.swift; sourceTree = "<group>"; };
 		8BCB34311C9655970025E24D /* NativeAdCarouselCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdCarouselCell.h; sourceTree = "<group>"; };
 		8BCB34321C9655970025E24D /* NativeAdCarouselCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdCarouselCell.m; sourceTree = "<group>"; };
 		8BCDCD5D1CA123A00048436D /* NativeAdCarouselLandscapeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdCarouselLandscapeView.xib; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 		8BD078E81C9A3B4A003ABB82 /* NativeAdCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdCarouselView.h; sourceTree = "<group>"; };
 		8BD078E91C9A3B4A003ABB82 /* NativeAdCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdCarouselView.m; sourceTree = "<group>"; };
 		8BD078EB1C9A42B0003ABB82 /* NativeAdCarouselPortraitView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdCarouselPortraitView.xib; sourceTree = "<group>"; };
+		8BD849811D2F784E002F84DF /* NativeAdCustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdCustomViewController.h; sourceTree = "<group>"; };
+		8BD849821D2F784E002F84DF /* NativeAdCustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdCustomViewController.m; sourceTree = "<group>"; };
 		B54CAE7919DE5BA9003C6616 /* NendSDK_Swift_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NendSDK_Swift_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54CAE7C19DE5BA9003C6616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B54CAE7D19DE5BA9003C6616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -390,6 +395,8 @@
 				8B1D6E1F1D010F3600250F60 /* NativeAdTelopViewController.m */,
 				4F2826191D1CF659001484EE /* NativeAdNoNibTelopViewController.h */,
 				4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */,
+				8BD849811D2F784E002F84DF /* NativeAdCustomViewController.h */,
+				8BD849821D2F784E002F84DF /* NativeAdCustomViewController.m */,
 			);
 			name = native;
 			sourceTree = "<group>";
@@ -453,6 +460,7 @@
 				698C8B071BE1F78B00BF8811 /* NativeAdPageContentViewController.swift */,
 				8B1C843D1CB51B4000EE385C /* NativeAdCarouselViewController.swift */,
 				8B1C843C1CB51B4000EE385C /* NativeAdCarouselCell.swift */,
+				8B22CFE61D35C5EF00DE86CC /* NativeAdCustomViewController.swift */,
 			);
 			name = native;
 			sourceTree = "<group>";
@@ -780,6 +788,7 @@
 				690C28A71B7985CA00C92232 /* SelectSizeTableViewController.m in Sources */,
 				8BD078EA1C9A3B4A003ABB82 /* NativeAdCarouselView.m in Sources */,
 				690C291C1B799FC400C92232 /* NativeAdCollectionView.m in Sources */,
+				8BD849831D2F784E002F84DF /* NativeAdCustomViewController.m in Sources */,
 				690C290D1B799F9E00C92232 /* NativeAdTableViewController.m in Sources */,
 				69EEA0861CF41D1C006EB97B /* NativeAdNoNibInFeedViewController.m in Sources */,
 				690C28EA1B7989CB00C92232 /* AdViewController.m in Sources */,
@@ -802,6 +811,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69D156761BD9DB9600ECD772 /* NativeAdInFeedTableViewController.swift in Sources */,
+				8B22CFE71D35C5EF00DE86CC /* NativeAdCustomViewController.swift in Sources */,
 				8B1C84411CB51B5D00EE385C /* NativeAdCarouselView.swift in Sources */,
 				B54CAE8019DE5BA9003C6616 /* ViewController.swift in Sources */,
 				6933FCB81BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */,

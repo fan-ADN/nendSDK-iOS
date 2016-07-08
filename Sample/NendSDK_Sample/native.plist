@@ -110,5 +110,11 @@
 		<key>title</key>
 		<string>Telop NoNib</string>
 	</dict>
+    <dict>
+        <key>segue</key>
+        <string>PushCustomNativeAd</string>
+        <key>title</key>
+        <string>Custom</string>
+    </dict>
 </array>
 </plist>

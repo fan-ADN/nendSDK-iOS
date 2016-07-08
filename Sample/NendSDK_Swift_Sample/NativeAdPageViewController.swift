@@ -9,7 +9,7 @@ import UIKit
 
 class NativeAdPageViewController: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource, NADNativeDelegate {
 
-    private let client: NADNativeClient = NADNativeClient(spotId: "485500", apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071", advertisingExplicitly: .Promotion)
+    private let client: NADNativeClient = NADNativeClient(spotId: "485500", apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071")
     private var contentViewControllers = [NativeAdPageContentViewController]()
     private var pageViewController: UIPageViewController!
     
@@ -32,8 +32,6 @@ class NativeAdPageViewController: UIViewController, UIPageViewControllerDelegate
         
         NADNativeLogger.setLogLevel(.Warn)
         
-        self.client.delegate = self
-        
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         
         // 4ページ分の広告を先にまとめて取得
@@ -42,6 +40,7 @@ class NativeAdPageViewController: UIViewController, UIPageViewControllerDelegate
             dispatch_group_enter(group)
             self.client.loadWithCompletionBlock({ (ad, _) -> Void in
                 if let vc = self.storyboard!.instantiateViewControllerWithIdentifier("NativeAdPageContentViewController") as? NativeAdPageContentViewController {
+                    ad.delegate = self;
                     vc.view.frame = self.view.frame
                     vc.ad = ad
                     vc.position = self.contentViewControllers.count + 1

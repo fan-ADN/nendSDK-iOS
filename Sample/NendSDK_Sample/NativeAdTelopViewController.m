@@ -23,13 +23,14 @@
     
     [NADNativeLogger setLogLevel:NADNativeLogLevelDebug];
     
-    _client = [[NADNativeClient alloc] initWithSpotId:@"485500" apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071" advertisingExplicitly:NADNativeAdvertisingExplicitlyAD];
-    _client.delegate = self;
+    _client = [[NADNativeClient alloc] initWithSpotId:@"485500" apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
+    __weak typeof(self) weakSelf = self;
     [_client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {
         if (ad) {
+            ad.delegate = weakSelf;
             // 広告をViewに描画
-            [ad intoView:(UIView<NADNativeViewRendering> *)_adView];
-            [_adView startTelop];
+            [ad intoView:(UIView<NADNativeViewRendering> *)weakSelf.adView advertisingExplicitly:NADNativeAdvertisingExplicitlyAD];
+            [weakSelf.adView startTelop];
         } else {
             NSLog(@"load error: %@", error);
         }
@@ -55,11 +56,6 @@
 - (void)nadNativeDidClickAd:(NADNative *)ad
 {
     NSLog(@"nadNativeDidClickAd: %@", ad);
-}
-
-- (void)nadNativeDidDisplayAd:(NADNative *)ad success:(BOOL)success
-{
-    NSLog(@"nadNativeDidDisplayAd: %@", ad);
 }
 
 @end

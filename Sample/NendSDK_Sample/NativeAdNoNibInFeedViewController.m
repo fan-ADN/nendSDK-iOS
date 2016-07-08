@@ -11,9 +11,9 @@
 
 @interface NativeAdTableViewCell : UITableViewCell <NADNativeViewRendering>
 
-@property (nonatomic, strong) NADNativeImageView *nativeAdImageView;
-@property (nonatomic, strong) NADNativeLabel *nativeAdPrTextLabel;
-@property (nonatomic, strong) NADNativeLabel *nativeAdShortTextLabel;
+@property (nonatomic, strong) UIImageView *nativeAdImageView;
+@property (nonatomic, strong) UILabel *nativeAdPrTextLabel;
+@property (nonatomic, strong) UILabel *nativeAdShortTextLabel;
 
 @end
 
@@ -23,11 +23,11 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        _nativeAdImageView = [[NADNativeImageView alloc] initWithFrame:CGRectMake(8.f, 8.f, 80.f, 80.f)];
-        _nativeAdShortTextLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(96.f, 8.f, 218.f, 40.f)];
+        _nativeAdImageView = [[UIImageView alloc] initWithFrame:CGRectMake(8.f, 8.f, 80.f, 80.f)];
+        _nativeAdShortTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(96.f, 8.f, 218.f, 40.f)];
         _nativeAdShortTextLabel.adjustsFontSizeToFitWidth = YES;
         _nativeAdShortTextLabel.minimumScaleFactor = 0.5f;
-        _nativeAdPrTextLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(96.f, 48.f, 218.f, 40.f)];
+        _nativeAdPrTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(96.f, 48.f, 218.f, 40.f)];
         [self.contentView addSubview:_nativeAdImageView];
         [self.contentView addSubview:_nativeAdShortTextLabel];
         [self.contentView addSubview:_nativeAdPrTextLabel];
@@ -37,17 +37,17 @@
 
 #pragma mark - NADNativeViewRendering
 
-- (NADNativeLabel *)prTextLabel
+- (UILabel *)prTextLabel
 {
     return self.nativeAdPrTextLabel;
 }
 
-- (NADNativeLabel *)shortTextLabel
+- (UILabel *)shortTextLabel
 {
     return self.nativeAdShortTextLabel;
 }
 
-- (NADNativeImageView *)adImageView
+- (UIImageView *)adImageView
 {
     return self.nativeAdImageView;
 }

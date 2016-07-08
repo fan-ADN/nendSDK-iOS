@@ -18,7 +18,7 @@
 
 - (void)setAd:(NADNative *)ad
 {
-    [ad intoView:self.adView];
+    [ad intoView:self.adView advertisingExplicitly:NADNativeAdvertisingExplicitlyPromotion];
 }
 
 - (void)setPosition:(NSUInteger)position

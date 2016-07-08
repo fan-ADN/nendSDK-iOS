@@ -9,21 +9,21 @@ import UIKit
 
 class NativeAdCollectionView: UICollectionViewCell, NADNativeViewRendering {
  
-    @IBOutlet private weak var nativeAdPrTextLabel: NADNativeLabel!
-    @IBOutlet private weak var nativeAdShortTextLabel: NADNativeLabel!
-    @IBOutlet private weak var nativeAdImageView: NADNativeImageView!
+    @IBOutlet private weak var nativeAdPrTextLabel: UILabel!
+    @IBOutlet private weak var nativeAdShortTextLabel: UILabel!
+    @IBOutlet private weak var nativeAdImageView: UIImageView!
     
     // MARK: - NADNativeViewRendering
     
-    func prTextLabel() -> NADNativeLabel! {
+    func prTextLabel() -> UILabel! {
         return self.nativeAdPrTextLabel
     }
     
-    func shortTextLabel() -> NADNativeLabel! {
+    func shortTextLabel() -> UILabel! {
         return self.nativeAdShortTextLabel
     }
     
-    func adImageView() -> NADNativeImageView! {
+    func adImageView() -> UIImageView! {
         return self.nativeAdImageView
     }    
 }

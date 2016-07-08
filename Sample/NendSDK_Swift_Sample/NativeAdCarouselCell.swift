@@ -60,8 +60,7 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
     }
     
     func initAd() {
-        self.client = NADNativeClient(spotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5", advertisingExplicitly: .Promotion)
-        self.client.delegate = self
+        self.client = NADNativeClient(spotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         let group = dispatch_group_create()
@@ -95,7 +94,8 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
                 
                 dispatch_async(dispatch_get_main_queue(), {
                     let ad: NADNative = self.ads[i]
-                    ad.intoView(viewP)
+                    ad.delegate = self;
+                    ad.intoView(viewP, advertisingExplicitly: .Promotion)
                 })
             }
         } else if self.direction == 2 {
@@ -105,7 +105,8 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
                 
                 dispatch_async(dispatch_get_main_queue(), {
                     let ad: NADNative = self.ads[i]
-                    ad.intoView(viewL)
+                    ad.delegate = self;
+                    ad.intoView(viewL, advertisingExplicitly: .Promotion)
                 })
             }
         }
@@ -287,10 +288,6 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
     
     // MARK: - NADNativeDelegate
     func nadNativeDidClickAd(ad: NADNative!) {
-        print(#function)
-    }
-    
-    func nadNativeDidDisplayAd(ad: NADNative!, success: Bool) {
         print(#function)
     }
 }

@@ -14,7 +14,7 @@ class NativeAdPageContentViewController: UIViewController {
     
     var ad: NADNative! {
         didSet {
-            self.ad.intoView(self.adView)
+            self.ad.intoView(self.adView, advertisingExplicitly: .Promotion)
         }
     }
     

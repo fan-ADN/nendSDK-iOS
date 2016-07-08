@@ -19,6 +19,7 @@ class NativeAdMenuViewController: UITableViewController {
         (name: "Page", segue: "PushPageNativeAd"),
         (name: "RSS", segue: "PushRssNativeAd"),
         (name: "Carousel", segue: "PushCarouselNativeAd"),
+        (name: "Custom", segue: "PushCustomNativeAd")
     ]
     
     private let details = [

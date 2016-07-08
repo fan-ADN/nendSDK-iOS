@@ -11,9 +11,9 @@
 
 @interface NativeAdViewInternal : UIView <NADNativeViewRendering>
 
-@property (nonatomic, strong) NADNativeImageView *nativeAdImageView;
-@property (nonatomic, strong) NADNativeLabel *nativeAdPrTextLabel;
-@property (nonatomic, strong) NADNativeLabel *nativeAdShortTextLabel;
+@property (nonatomic, strong) UIImageView *nativeAdImageView;
+@property (nonatomic, strong) UILabel *nativeAdPrTextLabel;
+@property (nonatomic, strong) UILabel *nativeAdShortTextLabel;
 
 @end
 
@@ -30,15 +30,14 @@
     // Do any additional setup after loading the view.
     
     self.client = [[NADNativeClient alloc] initWithSpotId:@"485500"
-                                                   apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"
-                                    advertisingExplicitly:NADNativeAdvertisingExplicitlyPR];
+                                                   apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
     
     UIView<NADNativeViewRendering> *adView = [[NativeAdViewInternal alloc] initWithFrame:CGRectMake(0.f, 0.f, 320.f, 96.f)];
     adView.center = CGPointMake(CGRectGetMidX(self.view.frame), CGRectGetMidY(self.view.frame));
     [self.view addSubview:adView];
     [self.client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {
         if (ad) {
-            [ad intoView:adView];
+            [ad intoView:adView advertisingExplicitly:NADNativeAdvertisingExplicitlyPR];
         }
     }];
 }
@@ -56,11 +55,11 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        _nativeAdImageView = [[NADNativeImageView alloc] initWithFrame:CGRectMake(8.f, 8.f, 80.f, 80.f)];
-        _nativeAdShortTextLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(96.f, 8.f, 218.f, 40.f)];
+        _nativeAdImageView = [[UIImageView alloc] initWithFrame:CGRectMake(8.f, 8.f, 80.f, 80.f)];
+        _nativeAdShortTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(96.f, 8.f, 218.f, 40.f)];
         _nativeAdShortTextLabel.adjustsFontSizeToFitWidth = YES;
         _nativeAdShortTextLabel.minimumScaleFactor = 0.5f;
-        _nativeAdPrTextLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(96.f, 48.f, 218.f, 40.f)];
+        _nativeAdPrTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(96.f, 48.f, 218.f, 40.f)];
         [self addSubview:_nativeAdImageView];
         [self addSubview:_nativeAdShortTextLabel];
         [self addSubview:_nativeAdPrTextLabel];
@@ -73,17 +72,17 @@
 
 #pragma mark - NADNativeViewRendering
 
-- (NADNativeLabel *)prTextLabel
+- (UILabel *)prTextLabel
 {
     return self.nativeAdPrTextLabel;
 }
 
-- (NADNativeLabel *)shortTextLabel
+- (UILabel *)shortTextLabel
 {
     return self.nativeAdShortTextLabel;
 }
 
-- (NADNativeImageView *)adImageView
+- (UIImageView *)adImageView
 {
     return self.nativeAdImageView;
 }

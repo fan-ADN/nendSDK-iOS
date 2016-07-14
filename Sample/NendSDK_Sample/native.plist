@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
+    <dict>
+        <key>segue</key>
+        <string>PushCustomNativeAd</string>
+        <key>title</key>
+        <string>Custom</string>
+    </dict>
 	<dict>
 		<key>segue</key>
 		<string>PushSimpleNativeAd</string>
@@ -110,11 +116,5 @@
 		<key>title</key>
 		<string>Telop NoNib</string>
 	</dict>
-    <dict>
-        <key>segue</key>
-        <string>PushCustomNativeAd</string>
-        <key>title</key>
-        <string>Custom</string>
-    </dict>
 </array>
 </plist>

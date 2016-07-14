@@ -25,7 +25,6 @@ static BOOL isAdRow(NSInteger row)
 @property (nonatomic) NADNativeClient *client;
 @property (nonatomic) NSArray<UIColor *> *colors;
 @property (nonatomic) NSMutableArray<NADNative *> *ads;
-@property (nonatomic) BOOL stopAdLoad;
 
 @end
 
@@ -42,7 +41,6 @@ static BOOL isAdRow(NSInteger row)
     self.client = [[NADNativeClient alloc] initWithSpotId:@"485502" apiKey:@"a3972604a76864dd110d0b02204f4b72adb092ae"];
     self.colors = @[ [UIColor redColor], [UIColor blueColor], [UIColor yellowColor], [UIColor greenColor], [UIColor purpleColor], [UIColor orangeColor] ];
     self.ads = [NSMutableArray array];
-    self.stopAdLoad = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,36 +71,33 @@ static BOOL isAdRow(NSInteger row)
 {
     if (isAdRow(indexPath.row)) {
         NativeAdCollectionView *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseAdIdentifier forIndexPath:indexPath];
-        if (!self.stopAdLoad) {
-            __weak typeof(self) weakSelf = self;
-            [self.client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {
-                if (ad) {
-                    [weakSelf.ads addObject:ad];
-                } else {
-                    if (kNADNativeErrorCodeExcessiveAdCalls == error.code) {
-                        // 広告の取得限界に達した場合は追加でロードを行わない
-                        weakSelf.stopAdLoad = YES;
-                    }
-                    ad = [weakSelf adFromCacheAtIndexPath:indexPath];
+        
+        __weak typeof(self) weakSelf = self;
+        [self.client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {
+            if (ad) {
+                [weakSelf.ads addObject:ad];
+            } else {
+                if (self.ads.count == 0) {
+                    return;
                 }
-                [ad intoView:cell advertisingExplicitly:NADNativeAdvertisingExplicitlyAD];
-                
-                NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
-                paragrahStyle.minimumLineHeight = 15.0;
-                paragrahStyle.maximumLineHeight = 15.0;
-                
-                NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:ad.shortText];
-                [attributedText addAttribute:NSParagraphStyleAttributeName
-                                       value:paragrahStyle
-                                       range:NSMakeRange(0, attributedText.length)];
-                
-                cell.shortTextLabel.numberOfLines = 0;
-                cell.shortTextLabel.attributedText = attributedText;
-            }];
-        } else {
-            // 広告の取得限界に達している場合は取得済みの広告を表示させる
-            [[self adFromCacheAtIndexPath:indexPath] intoView:cell advertisingExplicitly:NADNativeAdvertisingExplicitlyAD];
-        }
+                ad = [weakSelf adFromCacheAtIndexPath:indexPath];
+            }
+            
+            [ad intoView:cell advertisingExplicitly:NADNativeAdvertisingExplicitlyAD];
+            
+            NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+            paragrahStyle.minimumLineHeight = 15.0;
+            paragrahStyle.maximumLineHeight = 15.0;
+            
+            NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:ad.shortText];
+            [attributedText addAttribute:NSParagraphStyleAttributeName
+                                   value:paragrahStyle
+                                   range:NSMakeRange(0, attributedText.length)];
+            
+            cell.shortTextLabel.numberOfLines = 0;
+            cell.shortTextLabel.attributedText = attributedText;
+        }];
+        
         return cell;
     } else {
         UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];

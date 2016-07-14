@@ -367,6 +367,8 @@
 			isa = PBXGroup;
 			children = (
 				690C29101B799FA500C92232 /* view */,
+				8BD849811D2F784E002F84DF /* NativeAdCustomViewController.h */,
+				8BD849821D2F784E002F84DF /* NativeAdCustomViewController.m */,
 				690C28FA1B799F9E00C92232 /* NativeAdCollectionViewController.h */,
 				690C28FB1B799F9E00C92232 /* NativeAdCollectionViewController.m */,
 				690C28FC1B799F9E00C92232 /* NativeAdInFeedViewController.h */,
@@ -395,8 +397,6 @@
 				8B1D6E1F1D010F3600250F60 /* NativeAdTelopViewController.m */,
 				4F2826191D1CF659001484EE /* NativeAdNoNibTelopViewController.h */,
 				4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */,
-				8BD849811D2F784E002F84DF /* NativeAdCustomViewController.h */,
-				8BD849821D2F784E002F84DF /* NativeAdCustomViewController.m */,
 			);
 			name = native;
 			sourceTree = "<group>";
@@ -451,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				69ED18701BD8BCDA00CBEDD0 /* view */,
+				8B22CFE61D35C5EF00DE86CC /* NativeAdCustomViewController.swift */,
 				693A21771B79EEC9004B6680 /* NativeAdMenuViewController.swift */,
 				693A21701B79BDDB004B6680 /* NativeAdViewController.swift */,
 				69D156751BD9DB9600ECD772 /* NativeAdInFeedTableViewController.swift */,
@@ -460,7 +461,6 @@
 				698C8B071BE1F78B00BF8811 /* NativeAdPageContentViewController.swift */,
 				8B1C843D1CB51B4000EE385C /* NativeAdCarouselViewController.swift */,
 				8B1C843C1CB51B4000EE385C /* NativeAdCarouselCell.swift */,
-				8B22CFE61D35C5EF00DE86CC /* NativeAdCustomViewController.swift */,
 			);
 			name = native;
 			sourceTree = "<group>";
@@ -590,7 +590,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "F@N Communications";
 				TargetAttributes = {
 					690C28731B797DF100C92232 = {
@@ -891,6 +891,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -965,6 +966,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.nend.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -995,6 +997,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.nend.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1025,6 +1028,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.nend.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/NendSDK_Swift_Sample/NendAd-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1054,6 +1058,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.nend.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/NendSDK_Swift_Sample/NendAd-Bridging-Header.h";
 			};

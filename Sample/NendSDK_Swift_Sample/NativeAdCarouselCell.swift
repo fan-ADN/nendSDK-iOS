@@ -7,6 +7,16 @@
 
 import UIKit
 
+func CreateTimer(interval: Double, queue: dispatch_queue_t, block: dispatch_block_t) -> dispatch_source_t
+{
+    let timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue)
+    dispatch_source_set_timer(timer, dispatch_time(DISPATCH_TIME_NOW, Int64(timerInterval * Double(NSEC_PER_SEC))), UInt64(timerInterval * Double(NSEC_PER_SEC)), (1 * NSEC_PER_SEC) / 10)
+    dispatch_source_set_event_handler(timer, block);
+    dispatch_resume(timer)
+    
+    return timer;
+}
+
 let adCount: Int = 5
 let timerInterval: NSTimeInterval = 3.0
 
@@ -24,8 +34,8 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
     private var pointL: CGFloat!
     private var pageL: CGFloat!
     
-    private var timerP: NSTimer = NSTimer()
-    private var timerL: NSTimer = NSTimer()
+    private var timerP: dispatch_source_t!
+    private var timerL: dispatch_source_t!
     
     private var landscapeWidth: CGFloat!
     private var cellWidth: CGFloat!
@@ -61,6 +71,7 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
     
     func initAd() {
         self.client = NADNativeClient(spotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
+        NADNativeLogger.setLogLevel(.Debug)
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         let group = dispatch_group_create()
@@ -232,16 +243,29 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
     
     // 自動スクロール
     func setTimer() {
-        if self.timerP.valid == true {
-            self.timerP.invalidate()
-        }
-        if self.timerL.valid == true {
-            self.timerL.invalidate()
-        }
+        self.cancelTimer()
+        
+        weak var weakSelf = self
+        let queue = dispatch_get_main_queue()
         if self.direction == 1 {
-            self.timerP = NSTimer.scheduledTimerWithTimeInterval(timerInterval, target: self, selector:#selector(NativeAdCarouselCell.move), userInfo: nil, repeats: true)
+            self.timerP = CreateTimer(timerInterval, queue: queue, block: {
+                weakSelf!.move()
+            })
         } else if self.direction == 2 {
-            self.timerL = NSTimer.scheduledTimerWithTimeInterval(timerInterval, target: self, selector:#selector(NativeAdCarouselCell.move), userInfo: nil, repeats: true)
+            self.timerL = CreateTimer(timerInterval, queue: queue, block: {
+                weakSelf!.move()
+            })
+        }
+    }
+    
+    func cancelTimer() {
+        if(self.timerP != nil) {
+            dispatch_source_cancel(self.timerP)
+            self.timerP = nil
+        }
+        if(self.timerL != nil) {
+            dispatch_source_cancel(self.timerL)
+            self.timerL = nil
         }
     }
     

@@ -11,14 +11,14 @@
 
 @interface NativeAdCustomViewController () <NADNativeDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *adImage;
-@property (weak, nonatomic) IBOutlet UIImageView *logoImage;
-@property (weak, nonatomic) IBOutlet UILabel *shortText;
-@property (weak, nonatomic) IBOutlet UILabel *longText;
-@property (weak, nonatomic) IBOutlet UILabel *prText;
-@property (weak, nonatomic) IBOutlet UILabel *promotionName;
-@property (weak, nonatomic) IBOutlet UILabel *promotionUrl;
-@property (weak, nonatomic) IBOutlet UILabel *buttonText;
+@property (weak, nonatomic) IBOutlet UIImageView *adImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
+@property (weak, nonatomic) IBOutlet UILabel *shortTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *longTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *prTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *promotionNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *promotionUrlLabel;
+@property (weak, nonatomic) IBOutlet UILabel *actionButtonTextLabel;
 @property (weak, nonatomic) IBOutlet UIView *adView;
 
 - (IBAction)enableAutoReload:(id)sender;
@@ -51,19 +51,24 @@
 
 - (void) setUpWithAd:(NADNative *)ad {
     ad.delegate = self;
-    self.shortText.text = ad.shortText;
-    self.longText.text = ad.longText;
-    self.prText.text = [ad prTextForAdvertisingExplicitly:NADNativeAdvertisingExplicitlyPromotion];
-    self.promotionName.text = ad.promotionName;
-    self.promotionUrl.text = ad.promotionUrl;
-    self.buttonText.text = ad.actionButtonText;
-    [ad loadAdImageWithCompletionBlock:^(UIImage *i) {
-        self.adImage.image = i;
+    self.shortTextLabel.text = ad.shortText;
+    self.shortTextLabel.adjustsFontSizeToFitWidth = YES;
+    self.longTextLabel.text = ad.longText;
+    self.longTextLabel.adjustsFontSizeToFitWidth = YES;
+    self.prTextLabel.text = [ad prTextForAdvertisingExplicitly:NADNativeAdvertisingExplicitlyPromotion];
+    self.prTextLabel.adjustsFontSizeToFitWidth = YES;
+    self.promotionNameLabel.text = ad.promotionName;
+    self.promotionUrlLabel.text = ad.promotionUrl;
+    self.actionButtonTextLabel.text = ad.actionButtonText;
+    [ad loadAdImageWithCompletionBlock:^(UIImage *loadAdImage) {
+        self.adImageView.image = loadAdImage;
     }];
-    [ad loadLogoImageWithCompletionBlock:^(UIImage *i) {
-        self.logoImage.image = i;
+    [ad loadLogoImageWithCompletionBlock:^(UIImage *loadLogoImage) {
+        self.logoImageView.image = loadLogoImage;
     }];
-    [ad activateAdView:self.adView withPrLabel:self.prText];
+    [ad activateAdView:self.adView withPrLabel:self.prTextLabel];
+    self.adView.layer.borderWidth = 1.0;
+    self.adView.layer.borderColor = [UIColor darkGrayColor].CGColor;
 }
 
 - (IBAction)enableAutoReload:(id)sender {

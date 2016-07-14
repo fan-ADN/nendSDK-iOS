@@ -10,14 +10,14 @@ let interval: NSTimeInterval = 30.0
 
 class NativeAdCustomViewController: UIViewController, NADNativeDelegate {
 
-    @IBOutlet weak var adImage: UIImageView!
-    @IBOutlet weak var logoImage: UIImageView!
-    @IBOutlet weak var shortText: UILabel!
-    @IBOutlet weak var longText: UILabel!
-    @IBOutlet weak var prText: UILabel!
-    @IBOutlet weak var promotionName: UILabel!
-    @IBOutlet weak var promotionUrl: UILabel!
-    @IBOutlet weak var buttonText: UILabel!
+    @IBOutlet weak var adImageView: UIImageView!
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var shortTextLabel: UILabel!
+    @IBOutlet weak var longTextLabel: UILabel!
+    @IBOutlet weak var prTextLabel: UILabel!
+    @IBOutlet weak var promotionNameLabel: UILabel!
+    @IBOutlet weak var promotionUrlLabel: UILabel!
+    @IBOutlet weak var actionButtonTextLabel: UILabel!
     @IBOutlet weak var adView: UIView!
     
     private var client: NADNativeClient!
@@ -42,19 +42,24 @@ class NativeAdCustomViewController: UIViewController, NADNativeDelegate {
     
     private func setUpWithAd(ad: NADNative) {
         ad.delegate = self
-        self.shortText.text = ad.shortText
-        self.longText.text = ad.longText
-        self.prText.text = ad.prTextForAdvertisingExplicitly(.Promotion)
-        self.promotionName.text = ad.promotionName
-        self.promotionUrl.text = ad.promotionUrl
-        self.buttonText.text = ad.actionButtonText
-        ad.loadAdImageWithCompletionBlock({(i) in
-            self.adImage.image = i
+        self.shortTextLabel.text = ad.shortText
+        self.shortTextLabel.adjustsFontSizeToFitWidth = true;
+        self.longTextLabel.text = ad.longText
+        self.longTextLabel.adjustsFontSizeToFitWidth = true;
+        self.prTextLabel.text = ad.prTextForAdvertisingExplicitly(.Promotion)
+        self.prTextLabel.adjustsFontSizeToFitWidth = true;
+        self.promotionNameLabel.text = ad.promotionName
+        self.promotionUrlLabel.text = ad.promotionUrl
+        self.actionButtonTextLabel.text = ad.actionButtonText
+        ad.loadAdImageWithCompletionBlock({(loadAdImage) in
+            self.adImageView.image = loadAdImage
         })
-        ad.loadLogoImageWithCompletionBlock({(i) in
-            self.logoImage.image = i
+        ad.loadLogoImageWithCompletionBlock({(loadLogoImage) in
+            self.logoImageView.image = loadLogoImage
         })
-        ad.activateAdView(adView, withPrLabel: self.prText)
+        ad.activateAdView(adView, withPrLabel: self.prTextLabel)
+        self.adView.layer.borderWidth = 1.0;
+        self.adView.layer.borderColor = UIColor.darkGrayColor().CGColor;
     }
 
     @IBAction func enableAutoReload(sender: AnyObject) {

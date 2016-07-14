@@ -10,6 +10,7 @@ import UIKit
 class NativeAdMenuViewController: UITableViewController {
     
     private let items = [
+        (name: "Custom", segue: "PushCustomNativeAd"),
         (name: "SmallSquare", segue: "PushSimpleNativeAd"),
         (name: "SmallWide", segue: "PushSimpleNativeAd"),
         (name: "LargeWide", segue: "PushSimpleNativeAd"),
@@ -18,8 +19,7 @@ class NativeAdMenuViewController: UITableViewController {
         (name: "Collection", segue: "PushCollectionNativeAd"),
         (name: "Page", segue: "PushPageNativeAd"),
         (name: "RSS", segue: "PushRssNativeAd"),
-        (name: "Carousel", segue: "PushCarouselNativeAd"),
-        (name: "Custom", segue: "PushCustomNativeAd")
+        (name: "Carousel", segue: "PushCarouselNativeAd")
     ]
     
     private let details = [

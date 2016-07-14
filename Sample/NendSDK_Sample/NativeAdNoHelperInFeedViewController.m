@@ -83,6 +83,18 @@ static NSString *const reuseAdIdentifier = @"AdCell";
                 if (ad) {
                     weakSelf.adCache[@(indexPath.row)] = ad;
                     [ad intoView:cell advertisingExplicitly:NADNativeAdvertisingExplicitlyAD];
+                    
+                    NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+                    paragrahStyle.minimumLineHeight = 25.0;
+                    paragrahStyle.maximumLineHeight = 25.0;
+                    
+                    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:ad.longText];
+                    [attributedText addAttribute:NSParagraphStyleAttributeName
+                                           value:paragrahStyle
+                                           range:NSMakeRange(0, attributedText.length)];
+                    
+                    cell.longTextLabel.numberOfLines = 0;
+                    cell.longTextLabel.attributedText = attributedText;
                 } else {
                     // ここでは広告を取得できなかった場合は広告行を削除しています
                     [weakSelf.adRows removeObject:@(indexPath.row)];

@@ -38,7 +38,6 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
     _nativeAdPromotionNameLabel.adjustsFontSizeToFitWidth = YES;
     _nativeAdPromotionNameLabel.minimumScaleFactor = 0.5f;
     _nativeAdPrTextLabel.adjustsFontSizeToFitWidth = YES;
-    _nativeAdPrTextLabel.minimumScaleFactor = 0.5f;
     _nativeAdLongTextLabel.adjustsFontSizeToFitWidth = YES;
     _nativeAdLongTextLabel.minimumScaleFactor = 0.5f;
     _nativeAdShortTextLabel.adjustsFontSizeToFitWidth = YES;

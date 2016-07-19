@@ -27,7 +27,6 @@ class NativeAdCarouselView: UIView, NADNativeViewRendering {
         self.nativeAdPromotionNameLabel.adjustsFontSizeToFitWidth = true
         self.nativeAdPromotionNameLabel.minimumScaleFactor = 0.5
         self.nativeAdPrTextLabel.adjustsFontSizeToFitWidth = true
-        self.nativeAdPrTextLabel.minimumScaleFactor = 0.5
         self.nativeAdLongTextLabel.adjustsFontSizeToFitWidth = true
         self.nativeAdLongTextLabel.minimumScaleFactor = 0.5
         self.nativeAdShortTextLabel.adjustsFontSizeToFitWidth = true

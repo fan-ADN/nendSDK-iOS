@@ -29,6 +29,9 @@ class NativeAdCustomViewController: UIViewController, NADNativeDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.adView.layer.borderWidth = 1.0;
+        self.adView.layer.borderColor = UIColor.darkGrayColor().CGColor;
+        
         NADNativeLogger.setLogLevel(.Debug)
         self.client = NADNativeClient(spotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
         
@@ -43,11 +46,8 @@ class NativeAdCustomViewController: UIViewController, NADNativeDelegate {
     private func setUpWithAd(ad: NADNative) {
         ad.delegate = self
         self.shortTextLabel.text = ad.shortText
-        self.shortTextLabel.adjustsFontSizeToFitWidth = true;
         self.longTextLabel.text = ad.longText
-        self.longTextLabel.adjustsFontSizeToFitWidth = true;
         self.prTextLabel.text = ad.prTextForAdvertisingExplicitly(.Promotion)
-        self.prTextLabel.adjustsFontSizeToFitWidth = true;
         self.promotionNameLabel.text = ad.promotionName
         self.promotionUrlLabel.text = ad.promotionUrl
         self.actionButtonTextLabel.text = ad.actionButtonText
@@ -58,8 +58,6 @@ class NativeAdCustomViewController: UIViewController, NADNativeDelegate {
             self.logoImageView.image = loadLogoImage
         })
         ad.activateAdView(adView, withPrLabel: self.prTextLabel)
-        self.adView.layer.borderWidth = 1.0;
-        self.adView.layer.borderColor = UIColor.darkGrayColor().CGColor;
     }
 
     @IBAction func enableAutoReload(sender: AnyObject) {

@@ -33,6 +33,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.adView.layer.borderWidth = 1.0;
+    self.adView.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    
     [NADNativeLogger setLogLevel:NADNativeLogLevelDebug];
     self.client = [[NADNativeClient alloc] initWithSpotId:@"485504" apiKey:@"30fda4b3386e793a14b27bedb4dcd29f03d638e5"];
     
@@ -52,11 +56,8 @@
 - (void) setUpWithAd:(NADNative *)ad {
     ad.delegate = self;
     self.shortTextLabel.text = ad.shortText;
-    self.shortTextLabel.adjustsFontSizeToFitWidth = YES;
     self.longTextLabel.text = ad.longText;
-    self.longTextLabel.adjustsFontSizeToFitWidth = YES;
     self.prTextLabel.text = [ad prTextForAdvertisingExplicitly:NADNativeAdvertisingExplicitlyPromotion];
-    self.prTextLabel.adjustsFontSizeToFitWidth = YES;
     self.promotionNameLabel.text = ad.promotionName;
     self.promotionUrlLabel.text = ad.promotionUrl;
     self.actionButtonTextLabel.text = ad.actionButtonText;
@@ -67,8 +68,6 @@
         self.logoImageView.image = loadLogoImage;
     }];
     [ad activateAdView:self.adView withPrLabel:self.prTextLabel];
-    self.adView.layer.borderWidth = 1.0;
-    self.adView.layer.borderColor = [UIColor darkGrayColor].CGColor;
 }
 
 - (IBAction)enableAutoReload:(id)sender {

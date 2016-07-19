@@ -633,13 +633,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nEY-Or-xcf" firstAttribute="top" secondItem="ZCo-hL-6YL" secondAttribute="bottom" constant="50" id="KNY-lQ-pUa"/>
+                            <constraint firstItem="nEY-Or-xcf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ZCo-hL-6YL" secondAttribute="bottom" constant="20" id="KNY-lQ-pUa"/>
                             <constraint firstAttribute="trailing" secondItem="ZCo-hL-6YL" secondAttribute="trailing" constant="45" id="Lzs-tw-hTg"/>
                             <constraint firstItem="uf5-kn-YZU" firstAttribute="leading" secondItem="Zb6-oR-hst" secondAttribute="leading" constant="80" id="OVV-FY-SBD"/>
                             <constraint firstAttribute="trailing" secondItem="ZCo-hL-6YL" secondAttribute="trailing" constant="80" id="RAT-gJ-EgW"/>
+                            <constraint firstItem="uf5-kn-YZU" firstAttribute="top" secondItem="1Ps-hz-8eD" secondAttribute="bottom" priority="999" constant="112" id="W6j-e8-ldt"/>
                             <constraint firstItem="1Ps-hz-8eD" firstAttribute="centerX" secondItem="Zb6-oR-hst" secondAttribute="centerX" id="d80-ot-BIA"/>
+                            <constraint firstItem="ZCo-hL-6YL" firstAttribute="top" secondItem="1Ps-hz-8eD" secondAttribute="bottom" priority="999" constant="112" id="ddr-qF-Jfb"/>
                             <constraint firstItem="1Ps-hz-8eD" firstAttribute="centerY" secondItem="Zb6-oR-hst" secondAttribute="centerY" id="uxT-jl-Kyy"/>
-                            <constraint firstItem="nEY-Or-xcf" firstAttribute="top" secondItem="uf5-kn-YZU" secondAttribute="bottom" constant="50" id="v10-it-1B8"/>
+                            <constraint firstItem="nEY-Or-xcf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uf5-kn-YZU" secondAttribute="bottom" constant="20" id="v10-it-1B8"/>
                             <constraint firstItem="uf5-kn-YZU" firstAttribute="leading" secondItem="Zb6-oR-hst" secondAttribute="leading" constant="45" id="vSY-xR-nFU"/>
                         </constraints>
                         <variation key="default">

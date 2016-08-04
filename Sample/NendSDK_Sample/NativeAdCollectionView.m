@@ -9,9 +9,9 @@
 
 @interface NativeAdCollectionView ()
 
-@property (nonatomic, weak) IBOutlet NADNativeLabel *prTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *shortTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeImageView *adImageView;
+@property (nonatomic, weak) IBOutlet UILabel *prTextLabel;
+@property (nonatomic, weak) IBOutlet UILabel *shortTextLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *adImageView;
 
 @end
 
@@ -19,17 +19,17 @@
 
 #pragma mark - NADNativeViewRendering.h
 
-- (NADNativeLabel *)prTextLabel
+- (UILabel *)prTextLabel
 {
     return _prTextLabel;
 }
 
-- (NADNativeLabel *)shortTextLabel
+- (UILabel *)shortTextLabel
 {
     return _shortTextLabel;
 }
 
-- (NADNativeImageView *)adImageView
+- (UIImageView *)adImageView
 {
     return _adImageView;
 }

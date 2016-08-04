@@ -9,9 +9,9 @@
 
 @interface FeedAdView ()
 
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdPrTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdLongTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdActionButtonTextLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nativeAdPrTextLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nativeAdLongTextLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nativeAdActionButtonTextLabel;
 
 @end
 
@@ -29,17 +29,17 @@
     self.nativeAdActionButtonTextLabel.layer.cornerRadius = 0.f;
 }
 
-- (NADNativeLabel *)prTextLabel
+- (UILabel *)prTextLabel
 {
     return self.nativeAdPrTextLabel;
 }
 
-- (NADNativeLabel *)longTextLabel
+- (UILabel *)longTextLabel
 {
     return self.nativeAdLongTextLabel;
 }
 
-- (NADNativeLabel *)actionButtonTextLabel
+- (UILabel *)actionButtonTextLabel
 {
     return self.nativeAdActionButtonTextLabel;
 }

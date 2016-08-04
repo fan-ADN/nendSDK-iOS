@@ -10,10 +10,9 @@ import UIKit
 class NativeAdCollectionViewController: UICollectionViewController {
     
     private var ads = [NADNative]()
-    private var stopAdLoad = false
     private let adInterval = 10
     private let itemCount = 100
-    private let client = NADNativeClient(spotId: "485502", apiKey: "a3972604a76864dd110d0b02204f4b72adb092ae", advertisingExplicitly: .AD)
+    private let client = NADNativeClient(spotId: "485502", apiKey: "a3972604a76864dd110d0b02204f4b72adb092ae")
     private let colors = [UIColor.redColor(), UIColor.blueColor(), UIColor.yellowColor(), UIColor.greenColor(), UIColor.purpleColor(), UIColor.orangeColor()]
 
     deinit {
@@ -52,23 +51,29 @@ class NativeAdCollectionViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         if self.isAdRow(indexPath.row) {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("AdCell", forIndexPath: indexPath) as! NativeAdCollectionView
-            if !self.stopAdLoad {
-                self.client.loadWithCompletionBlock({ (ad, error) -> Void in
-                    if let nativeAd = ad {
-                        self.ads.append(nativeAd)
-                        nativeAd.intoView(cell)
-                    } else {
-                        if kNADNativeErrorCodeExcessiveAdCalls == error.code {
-                            // 広告の取得限界に達した場合は追加でロードを行わない
-                            self.stopAdLoad = true
-                        }
-                        self.adFromCache(indexPath).intoView(cell)
+            
+            self.client.loadWithCompletionBlock({ (ad, error) -> Void in
+                if let nativeAd = ad {
+                    self.ads.append(nativeAd)
+                    nativeAd.intoView(cell, advertisingExplicitly: .AD)
+                } else {
+                    if self.ads.count == 0 {
+                        return;
                     }
-                })
-            } else {
-                // 広告の取得限界に達している場合は取得済みの広告を表示させる
-                self.adFromCache(indexPath).intoView(cell)
-            }
+                    self.adFromCache(indexPath).intoView(cell, advertisingExplicitly: .AD)
+                }
+                
+                let paragrahStyle = NSMutableParagraphStyle()
+                paragrahStyle.minimumLineHeight = 15.0
+                paragrahStyle.maximumLineHeight = 15.0
+                
+                let attributedText = NSMutableAttributedString(string: ad.shortText)
+                attributedText.addAttributes([NSParagraphStyleAttributeName: paragrahStyle], range: NSMakeRange(0, attributedText.length))
+                
+                cell.shortTextLabel().numberOfLines = 0
+                cell.shortTextLabel().attributedText = attributedText
+            })
+            
             return cell
         } else {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath)

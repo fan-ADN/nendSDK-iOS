@@ -9,10 +9,10 @@
 
 @interface NativeAdCellView ()
 
-@property (nonatomic, weak) IBOutlet NADNativeLabel *prTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *longTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *actionButtonTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeImageView *adImageView;
+@property (nonatomic, weak) IBOutlet UILabel *prTextLabel;
+@property (nonatomic, weak) IBOutlet UILabel *longTextLabel;
+@property (nonatomic, weak) IBOutlet UILabel *actionButtonTextLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *adImageView;
 
 @end
 
@@ -20,22 +20,22 @@
 
 #pragma mark - NADNativeViewRendering.h
 
-- (NADNativeLabel *)prTextLabel
+- (UILabel *)prTextLabel
 {
     return _prTextLabel;
 }
 
-- (NADNativeLabel *)longTextLabel
+- (UILabel *)longTextLabel
 {
     return _longTextLabel;
 }
 
-- (NADNativeLabel *)actionButtonTextLabel
+- (UILabel *)actionButtonTextLabel
 {
     return _actionButtonTextLabel;
 }
 
-- (NADNativeImageView *)adImageView
+- (UIImageView *)adImageView
 {
     return _adImageView;
 }

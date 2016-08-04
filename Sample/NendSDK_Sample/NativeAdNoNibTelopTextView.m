@@ -15,9 +15,9 @@ static float NATIVE_TELOP_PR_LABEL_WIDTH = 20;
 
 @interface NativeAdNoNibTelopTextView () <NADNativeViewRendering>
 
-@property (nonatomic) NADNativeImageView *nativeAdImageView;
-@property (nonatomic) NADNativeLabel *nativeAdPrTextLabel;
-@property (nonatomic) NADNativeLabel *nativeAdShortTextLabel;
+@property (nonatomic) UIImageView *nativeAdImageView;
+@property (nonatomic) UILabel *nativeAdPrTextLabel;
+@property (nonatomic) UILabel *nativeAdShortTextLabel;
 @property (nonatomic) UIScrollView *scrollView;
 
 @property (nonatomic) float width;
@@ -36,12 +36,12 @@ static float NATIVE_TELOP_PR_LABEL_WIDTH = 20;
         self.clipsToBounds = YES;
 
         // adImageView
-        _nativeAdImageView = [[NADNativeImageView alloc] initWithFrame:CGRectMake(0,
+        _nativeAdImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0,
                                                                                   0,
                                                                                   frame.size.height,
                                                                                   frame.size.height)];
         // prTextLabel
-        _nativeAdPrTextLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(frame.size.height,
+        _nativeAdPrTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.height,
                                                                                 0,
                                                                                 NATIVE_TELOP_PR_LABEL_WIDTH,
                                                                                 frame.size.height)];
@@ -60,7 +60,7 @@ static float NATIVE_TELOP_PR_LABEL_WIDTH = 20;
         _scrollView.backgroundColor = [UIColor blackColor];
 
         // shortTextLabel
-        _nativeAdShortTextLabel = [[NADNativeLabel alloc] initWithFrame:CGRectMake(0,
+        _nativeAdShortTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,
                                                                                    0,
                                                                                    1,
                                                                                    _scrollView.frame.size.height)];
@@ -73,40 +73,6 @@ static float NATIVE_TELOP_PR_LABEL_WIDTH = 20;
         [self addSubview:_nativeAdImageView];
         [self addSubview:_scrollView];
         [self addSubview:_nativeAdPrTextLabel];
-
-        // Add Auto Layout Constraints
-        _nativeAdShortTextLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        NSArray *constraintArray = @[
-            [NSLayoutConstraint constraintWithItem:_nativeAdShortTextLabel
-                                         attribute:NSLayoutAttributeTop
-                                         relatedBy:NSLayoutRelationEqual
-                                            toItem:_scrollView
-                                         attribute:NSLayoutAttributeTop
-                                        multiplier:1
-                                          constant:0],
-            [NSLayoutConstraint constraintWithItem:_nativeAdShortTextLabel
-                                         attribute:NSLayoutAttributeLeading
-                                         relatedBy:NSLayoutRelationEqual
-                                            toItem:_scrollView
-                                         attribute:NSLayoutAttributeLeading
-                                        multiplier:1
-                                          constant:0],
-            [NSLayoutConstraint constraintWithItem:_nativeAdShortTextLabel
-                                         attribute:NSLayoutAttributeWidth
-                                         relatedBy:NSLayoutRelationGreaterThanOrEqual
-                                            toItem:nil
-                                         attribute:NSLayoutAttributeWidth
-                                        multiplier:1
-                                          constant:1],
-            [NSLayoutConstraint constraintWithItem:_nativeAdShortTextLabel
-                                         attribute:NSLayoutAttributeHeight
-                                         relatedBy:NSLayoutRelationEqual
-                                            toItem:_scrollView
-                                         attribute:NSLayoutAttributeHeight
-                                        multiplier:1
-                                          constant:0],
-        ];
-        [_scrollView addConstraints:constraintArray];
     }
 
     return self;
@@ -114,17 +80,17 @@ static float NATIVE_TELOP_PR_LABEL_WIDTH = 20;
 
 #pragma mark - NADNativeViewRendering
 
-- (NADNativeImageView *)adImageView
+- (UIImageView *)adImageView
 {
     return self.nativeAdImageView;
 }
 
-- (NADNativeLabel *)prTextLabel
+- (UILabel *)prTextLabel
 {
     return self.nativeAdPrTextLabel;
 }
 
-- (NADNativeLabel *)shortTextLabel
+- (UILabel *)shortTextLabel
 {
     return self.nativeAdShortTextLabel;
 }
@@ -132,6 +98,7 @@ static float NATIVE_TELOP_PR_LABEL_WIDTH = 20;
 - (void)startTelop
 {
     _width = [_nativeAdShortTextLabel.text sizeWithAttributes:@{NSFontAttributeName : _nativeAdShortTextLabel.font}].width;
+    _nativeAdShortTextLabel.frame = CGRectMake(_nativeAdShortTextLabel.frame.origin.x, _nativeAdShortTextLabel.frame.origin.y, _width, _nativeAdShortTextLabel.frame.size.height);
 
     _point = -_scrollView.frame.size.width;
     [self changeFrame];

@@ -12,10 +12,10 @@
 
 @interface NativeAdTelopTextView ()<NADNativeViewRendering>
 
-@property (nonatomic, weak) IBOutlet NADNativeImageView *nativeAdImageView;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdPrTextLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *nativeAdImageView;
+@property (nonatomic, weak) IBOutlet UILabel *nativeAdPrTextLabel;
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdShortTextLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nativeAdShortTextLabel;
 
 @property (nonatomic) float width;
 @property (nonatomic) float point;
@@ -45,17 +45,17 @@
 
 #pragma mark - NADNativeViewRendering
 
-- (NADNativeImageView *)adImageView
+- (UIImageView *)adImageView
 {
     return self.nativeAdImageView;
 }
 
-- (NADNativeLabel *)prTextLabel
+- (UILabel *)prTextLabel
 {
     return self.nativeAdPrTextLabel;
 }
 
-- (NADNativeLabel *)shortTextLabel
+- (UILabel *)shortTextLabel
 {
     return self.nativeAdShortTextLabel;
 }

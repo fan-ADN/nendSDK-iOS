@@ -33,8 +33,7 @@ static NSString *const reuseAdIdentifier = @"AdCell";
     // Do any additional setup after loading the view.
 
     self.client = [[NADNativeClient alloc] initWithSpotId:@"485500"
-                                                   apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"
-                                    advertisingExplicitly:NADNativeAdvertisingExplicitlyAD];
+                                                   apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
 
     // Max 5
     self.adRows = [NSMutableArray arrayWithArray:@[@4, @8, @16, @32, @64]];
@@ -77,13 +76,25 @@ static NSString *const reuseAdIdentifier = @"AdCell";
         NativeAdCellView *cell = [tableView dequeueReusableCellWithIdentifier:reuseAdIdentifier forIndexPath:indexPath];
         NADNative *ad = self.adCache[@(indexPath.row)];
         if (ad) {
-            [ad intoView:cell];
+            [ad intoView:cell advertisingExplicitly:NADNativeAdvertisingExplicitlyAD];
         } else {
             __weak typeof(self) weakSelf = self;
             [self.client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {
                 if (ad) {
                     weakSelf.adCache[@(indexPath.row)] = ad;
-                    [ad intoView:cell];
+                    [ad intoView:cell advertisingExplicitly:NADNativeAdvertisingExplicitlyAD];
+                    
+                    NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+                    paragrahStyle.minimumLineHeight = 25.0;
+                    paragrahStyle.maximumLineHeight = 25.0;
+                    
+                    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:ad.longText];
+                    [attributedText addAttribute:NSParagraphStyleAttributeName
+                                           value:paragrahStyle
+                                           range:NSMakeRange(0, attributedText.length)];
+                    
+                    cell.longTextLabel.numberOfLines = 0;
+                    cell.longTextLabel.attributedText = attributedText;
                 } else {
                     // ここでは広告を取得できなかった場合は広告行を削除しています
                     [weakSelf.adRows removeObject:@(indexPath.row)];

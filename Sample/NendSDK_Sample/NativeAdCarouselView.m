@@ -16,14 +16,14 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
 
 @interface NativeAdCarouselView ()<NADNativeViewRendering>
 
-@property (nonatomic, weak) IBOutlet NADNativeImageView *nativeAdLogoImageView;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdPromotionNameLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdPrTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdLongTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeImageView *nativeAdImageView;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdShortTextLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdPromotionUrlLabel;
-@property (nonatomic, weak) IBOutlet NADNativeLabel *nativeAdActionButtonTextLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *nativeAdLogoImageView;
+@property (nonatomic, weak) IBOutlet UILabel *nativeAdPromotionNameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nativeAdPrTextLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nativeAdLongTextLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *nativeAdImageView;
+@property (nonatomic, weak) IBOutlet UILabel *nativeAdShortTextLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nativeAdPromotionUrlLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nativeAdActionButtonTextLabel;
 
 @property (nonatomic) NSNumber *direction;
 
@@ -38,7 +38,6 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
     _nativeAdPromotionNameLabel.adjustsFontSizeToFitWidth = YES;
     _nativeAdPromotionNameLabel.minimumScaleFactor = 0.5f;
     _nativeAdPrTextLabel.adjustsFontSizeToFitWidth = YES;
-    _nativeAdPrTextLabel.minimumScaleFactor = 0.5f;
     _nativeAdLongTextLabel.adjustsFontSizeToFitWidth = YES;
     _nativeAdLongTextLabel.minimumScaleFactor = 0.5f;
     _nativeAdShortTextLabel.adjustsFontSizeToFitWidth = YES;
@@ -76,42 +75,42 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
 
 #pragma mark - NADNativeViewRendering
 
-- (NADNativeLabel *)prTextLabel
+- (UILabel *)prTextLabel
 {
     return self.nativeAdPrTextLabel;
 }
 
-- (NADNativeLabel *)shortTextLabel
+- (UILabel *)shortTextLabel
 {
     return self.nativeAdShortTextLabel;
 }
 
-- (NADNativeLabel *)longTextLabel
+- (UILabel *)longTextLabel
 {
     return self.nativeAdLongTextLabel;
 }
 
-- (NADNativeLabel *)promotionNameLabel
+- (UILabel *)promotionNameLabel
 {
     return self.nativeAdPromotionNameLabel;
 }
 
-- (NADNativeLabel *)promotionUrlLabel
+- (UILabel *)promotionUrlLabel
 {
     return self.nativeAdPromotionUrlLabel;
 }
 
-- (NADNativeLabel *)actionButtonTextLabel
+- (UILabel *)actionButtonTextLabel
 {
     return self.nativeAdActionButtonTextLabel;
 }
 
-- (NADNativeImageView *)adImageView
+- (UIImageView *)adImageView
 {
     return self.nativeAdImageView;
 }
 
-- (NADNativeImageView *)logoImageView
+- (UIImageView *)logoImageView
 {
     return self.nativeAdLogoImageView;
 }

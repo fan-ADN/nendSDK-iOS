@@ -58,8 +58,8 @@
         Feed *feed = [Feed new];
         u_int32_t random = arc4random_uniform(2);
         if (0 == random) {
-            feed.title = @"アプリ×nendネイティブアドnendネイティブアドを使いこなして「収益２倍！」キャンペーン";
-            feed.link = @"https://www.nend.net/event_doubleup_nativead";
+            feed.title = @"nendバナーカスタマイズ事例";
+            feed.link = @"http://adn-mobasia.net/archives/1318";
         } else {
             feed.title = @"スマホでプレイ中のゲームの攻略情報を自動配信と検索で一つに集約できるアプリ「ゲーマグ」提供開始";
             feed.link = @"http://gamag.jp/";

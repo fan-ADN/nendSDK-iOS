@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NADInterstitial.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+
+    // インタースティシャル広告の読み込みを行います
+    [[NADInterstitial sharedInstance] loadAdWithApiKey:@"308c2499c75c4a192f03c02b2fcebd16dcb45cc9" spotId:@"213208"];
+    
     return YES;
 }
 

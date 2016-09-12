@@ -10,6 +10,9 @@
 		1871B75CBB679C438522EF04 /* libPods-NendSDK_Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF67E05B4082EEAFD7D32E3C /* libPods-NendSDK_Sample.a */; };
 		4F28261B1D1CF659001484EE /* NativeAdNoNibTelopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */; };
 		4F28261E1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261D1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m */; };
+		4FE8F4151D828A2700F577B1 /* AdInterstitialInTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8F4141D828A2700F577B1 /* AdInterstitialInTransitionViewController.m */; };
+		4FE8F4181D828DCD00F577B1 /* SelectInterstitialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8F4171D828DCD00F577B1 /* SelectInterstitialTableViewController.m */; };
+		4FE8F41A1D82B44800F577B1 /* InterstitialInTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8F4191D82B44800F577B1 /* InterstitialInTransitionViewController.swift */; };
 		690C28791B797DF100C92232 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C28781B797DF100C92232 /* main.m */; };
 		690C287C1B797DF100C92232 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 690C287B1B797DF100C92232 /* AppDelegate.m */; };
 		690C28821B797DF100C92232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 690C28801B797DF100C92232 /* Main.storyboard */; };
@@ -119,6 +122,11 @@
 		4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdNoNibTelopViewController.m; sourceTree = "<group>"; };
 		4F28261C1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdNoNibTelopTextView.h; sourceTree = "<group>"; };
 		4F28261D1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdNoNibTelopTextView.m; sourceTree = "<group>"; };
+		4FE8F4131D828A2700F577B1 /* AdInterstitialInTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdInterstitialInTransitionViewController.h; sourceTree = "<group>"; };
+		4FE8F4141D828A2700F577B1 /* AdInterstitialInTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdInterstitialInTransitionViewController.m; sourceTree = "<group>"; };
+		4FE8F4161D828DCD00F577B1 /* SelectInterstitialTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectInterstitialTableViewController.h; sourceTree = "<group>"; };
+		4FE8F4171D828DCD00F577B1 /* SelectInterstitialTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectInterstitialTableViewController.m; sourceTree = "<group>"; };
+		4FE8F4191D82B44800F577B1 /* InterstitialInTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialInTransitionViewController.swift; sourceTree = "<group>"; };
 		690C28741B797DF100C92232 /* NendSDK_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NendSDK_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		690C28771B797DF100C92232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		690C28781B797DF100C92232 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -357,8 +365,12 @@
 		690C28F61B7994C700C92232 /* interstitial */ = {
 			isa = PBXGroup;
 			children = (
+				4FE8F4161D828DCD00F577B1 /* SelectInterstitialTableViewController.h */,
+				4FE8F4171D828DCD00F577B1 /* SelectInterstitialTableViewController.m */,
 				690C289F1B7981F000C92232 /* AdInterstitialViewController.h */,
 				690C28A01B7981F000C92232 /* AdInterstitialViewController.m */,
+				4FE8F4131D828A2700F577B1 /* AdInterstitialInTransitionViewController.h */,
+				4FE8F4141D828A2700F577B1 /* AdInterstitialInTransitionViewController.m */,
 			);
 			name = interstitial;
 			sourceTree = "<group>";
@@ -523,6 +535,7 @@
 				B54CAEA019DE5DF9003C6616 /* BannerView300x250Controller.swift */,
 				B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */,
 				B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */,
+				4FE8F4191D82B44800F577B1 /* InterstitialInTransitionViewController.swift */,
 				B54CAEAD19DE5E31003C6616 /* NendAd-Bridging-Header.h */,
 				B54CAE8119DE5BA9003C6616 /* Main.storyboard */,
 				B54CAE8419DE5BA9003C6616 /* Images.xcassets */,
@@ -774,6 +787,7 @@
 				690C290E1B799F9E00C92232 /* NativeAdViewController.m in Sources */,
 				690C290B1B799F9E00C92232 /* NativeAdPageContentViewController.m in Sources */,
 				690C289E1B79805B00C92232 /* SelectTableViewController.m in Sources */,
+				4FE8F4181D828DCD00F577B1 /* SelectInterstitialTableViewController.m in Sources */,
 				690C290A1B799F9E00C92232 /* NativeAdInFeedViewController.m in Sources */,
 				69D46BC61B7C96F60094294A /* UINavigationController+Rotation.m in Sources */,
 				690C291B1B799FC400C92232 /* NativeAdCellView.m in Sources */,
@@ -803,6 +817,7 @@
 				690C290C1B799F9E00C92232 /* NativeAdPageViewController.m in Sources */,
 				690C287C1B797DF100C92232 /* AppDelegate.m in Sources */,
 				690C28791B797DF100C92232 /* main.m in Sources */,
+				4FE8F4151D828A2700F577B1 /* AdInterstitialInTransitionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,6 +841,7 @@
 				69ED18831BD8C8F700CBEDD0 /* FeedAdView.swift in Sources */,
 				69ED18811BD8C8DC00CBEDD0 /* FeedView.swift in Sources */,
 				693A21711B79BDDB004B6680 /* NativeAdViewController.swift in Sources */,
+				4FE8F41A1D82B44800F577B1 /* InterstitialInTransitionViewController.swift in Sources */,
 				8B1C843E1CB51B4000EE385C /* NativeAdCarouselCell.swift in Sources */,
 				B54CAEA519DE5DF9003C6616 /* BannerView300x250Controller.swift in Sources */,
 				8B1C843F1CB51B4000EE385C /* NativeAdCarouselViewController.swift in Sources */,
@@ -1013,10 +1029,12 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1032,6 +1050,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/NendSDK_Swift_Sample/NendAd-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -1047,6 +1066,8 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1061,6 +1082,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.nend.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/NendSDK_Swift_Sample/NendAd-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3TE-Pa-UzM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3TE-Pa-UzM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1al-1n-ijp" id="PUl-gD-kOW">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -31,9 +31,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="F2R-mz-TRl"/>
                     <connections>
-                        <segue destination="eZb-wj-DAi" kind="show" identifier="PushInterstitial" id="T4H-yD-Xe8"/>
                         <segue destination="kYl-4q-con" kind="show" identifier="PushBanner" id="ugp-5k-My5"/>
                         <segue destination="loV-jZ-Xna" kind="show" identifier="PushNative" id="usF-9c-KeC"/>
+                        <segue destination="lpB-Ym-e3X" kind="show" identifier="PushInterstitial" id="WkV-hd-NYA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJI-Nj-uqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -53,7 +53,7 @@
                                 <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xfs-aj-7J8" id="oQy-ov-o71">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -69,7 +69,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48u-08-U07" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1639" y="382"/>
+            <point key="canvasLocation" x="1690" y="1396"/>
         </scene>
         <!--AdIB View Controller-->
         <scene sceneID="OaP-CV-X7f">
@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7he-lr-IhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1126" y="1284"/>
+            <point key="canvasLocation" x="1177" y="2298"/>
         </scene>
         <!--AdIB View Controller-->
         <scene sceneID="rPg-EU-sGJ">
@@ -179,7 +179,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3cw-3E-xZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1779" y="1284"/>
+            <point key="canvasLocation" x="1830" y="2298"/>
+        </scene>
+        <!--Ad Interstitial In Transition View Controller-->
+        <scene sceneID="W88-Cu-wQo">
+            <objects>
+                <viewController id="qku-xW-KTM" customClass="AdInterstitialInTransitionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Loq-9g-26C"/>
+                        <viewControllerLayoutGuide type="bottom" id="RoB-IE-Fb8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ve1-fo-z1n">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJj-IL-rdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479" y="575"/>
         </scene>
         <!--Select Size Table View Controller-->
         <scene sceneID="vk7-FH-sBq">
@@ -194,7 +212,7 @@
                                 <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yx3-jc-0rQ" id="uhv-tB-55J">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -216,7 +234,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEp-ba-1AI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2428" y="382"/>
+            <point key="canvasLocation" x="2479" y="1396"/>
         </scene>
         <!--AdIB View Controller-->
         <scene sceneID="9gF-c6-EHW">
@@ -271,7 +289,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vlb-un-XfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2428" y="1284"/>
+            <point key="canvasLocation" x="2479" y="2298"/>
         </scene>
         <!--AdIB View Controller-->
         <scene sceneID="C7q-bu-rao">
@@ -326,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzi-6A-4w7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3092" y="1284"/>
+            <point key="canvasLocation" x="3143" y="2298"/>
         </scene>
         <!--AdIB View Controller-->
         <scene sceneID="jAP-3w-ftB">
@@ -381,7 +399,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgo-BC-WeS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3730" y="1284"/>
+            <point key="canvasLocation" x="3781" y="2298"/>
         </scene>
         <!--Ad View Controller-->
         <scene sceneID="yl6-TB-bQi">
@@ -399,7 +417,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q62-y1-GTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3216" y="382"/>
+            <point key="canvasLocation" x="3267" y="1396"/>
         </scene>
         <!--Ad Adjust View Controller-->
         <scene sceneID="CZO-Db-PqQ">
@@ -417,7 +435,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1PC-Fv-vMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3216" y="-313"/>
+            <point key="canvasLocation" x="3267" y="701"/>
         </scene>
         <!--Native Ad Table View Controller-->
         <scene sceneID="Wl6-Vx-GDd">
@@ -432,7 +450,7 @@
                                 <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="61I-Om-oqR" id="bO7-mZ-AsR">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -460,6 +478,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hU-LB-z6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1639" y="-1008"/>
+        </scene>
+        <!--Select Interstitial Table View Controller-->
+        <scene sceneID="SJy-xi-dFP">
+            <objects>
+                <tableViewController id="lpB-Ym-e3X" customClass="SelectInterstitialTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zdP-Ow-f97">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="xE7-4j-POW">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xE7-4j-POW" id="5PD-rI-zIY">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lpB-Ym-e3X" id="uGH-8d-0fJ"/>
+                            <outlet property="delegate" destination="lpB-Ym-e3X" id="2ia-Ab-6sE"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="eZb-wj-DAi" kind="show" identifier="PushInterstitial" id="Bae-tH-sgO"/>
+                        <segue destination="qku-xW-KTM" kind="show" identifier="PushInTransition" id="Z6B-jS-qUR"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ux1-Ws-aHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1639" y="231"/>
         </scene>
         <!--Native Ad Page View Controller-->
         <scene sceneID="hv0-wI-WQR">
@@ -692,7 +742,7 @@
                                 </view>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AdCell" id="54a-Ci-XLh" customClass="NativeAdCollectionView">
-                                <rect key="frame" x="123.5" y="64" width="106" height="160"/>
+                                <rect key="frame" x="124" y="64" width="106" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="106" height="160"/>
@@ -770,7 +820,7 @@
                                 <rect key="frame" x="0.0" y="130" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WFf-zJ-gkY" id="OxD-g1-gX1">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -778,7 +828,7 @@
                                 <rect key="frame" x="0.0" y="174" width="600" height="96"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="74g-r1-FDO" id="mdW-64-bSw">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="95.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="96"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ukP-qX-DkT">
@@ -887,7 +937,7 @@
                                 <rect key="frame" x="0.0" y="188" width="600" height="96"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W51-Mp-sCG" id="YT0-00-XiJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="95.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="96"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U9a-ni-6Dk">
@@ -1097,7 +1147,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eNR-Me-SNE" id="Kh8-3a-OpH">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1213,7 +1263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wj0-gM-xeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1639" y="-313"/>
+            <point key="canvasLocation" x="2479" y="-93"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="khT-kY-cv2">

@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         (name: "300x250", segue: "PushMediumRectangle"),
         (name: "728x90", segue: "PushBigBanner"),
         (name: "Interstitial", segue: "PushInterstitialAd"),
+        (name: "Interstitial in Transition", segue: "PushInterstitialAdInTransition"),
         (name: "Native", segue: "PushNativeAdMenu")
     ]
     

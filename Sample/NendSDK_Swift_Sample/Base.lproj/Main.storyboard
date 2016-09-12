@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Eb9-db-xk8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Eb9-db-xk8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -45,6 +45,7 @@
                         <segue destination="P7I-yc-QjD" kind="show" identifier="PushBigBanner" id="ijO-sM-Cpj"/>
                         <segue destination="XRd-2o-ta8" kind="show" identifier="PushThreeOneRectangle" id="MdS-Ly-m2X"/>
                         <segue destination="aix-Tt-vRa" kind="show" identifier="PushMediumRectangle" id="xpE-4j-NbI"/>
+                        <segue destination="1dE-LJ-h1w" kind="show" identifier="PushInterstitialAdInTransition" id="9ur-XM-S0B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -202,7 +203,7 @@
                                 <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4u8-xe-uqd" id="kYg-xa-JP7">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -224,7 +225,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rk6-qf-yQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2003" y="-362"/>
+            <point key="canvasLocation" x="2003" y="-1090"/>
         </scene>
         <!--Native Ad Carousel View Controller-->
         <scene sceneID="sZw-1L-suU">
@@ -239,7 +240,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d15-Bg-Jbg" id="iqa-Z8-Nkk">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -253,7 +254,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0V-yu-MgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2867" y="-3432"/>
+            <point key="canvasLocation" x="2867" y="-4160"/>
         </scene>
         <!--Native Ad Page View Controller-->
         <scene sceneID="kyw-Jb-uwA">
@@ -271,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97d-aS-PPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2867" y="-2759"/>
+            <point key="canvasLocation" x="2867" y="-3487"/>
         </scene>
         <!--Native Ad Page Content View Controller-->
         <scene sceneID="dq6-Lo-ddN">
@@ -367,7 +368,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Qk-yU-elM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2867" y="-2084"/>
+            <point key="canvasLocation" x="2867" y="-2812"/>
         </scene>
         <!--Native Ad In Feed Table View Controller-->
         <scene sceneID="sGz-sK-0ZO">
@@ -396,7 +397,7 @@
                                 <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GbG-Et-aFO" id="KQI-Wv-ycf">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -404,7 +405,7 @@
                                 <rect key="frame" x="0.0" y="130" width="600" height="96"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ks5-z0-8EG" id="Uxj-A6-NrM">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="95.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="96"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L2k-vK-CU6">
@@ -477,7 +478,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Qa-NV-3bw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2867" y="-1409"/>
+            <point key="canvasLocation" x="2867" y="-2137"/>
         </scene>
         <!--Native Ad View Controller-->
         <scene sceneID="bn3-dn-rrn">
@@ -496,7 +497,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahI-LQ-szY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2867" y="-718"/>
+            <point key="canvasLocation" x="2867" y="-1446"/>
         </scene>
         <!--Native Ad Collection View Controller-->
         <scene sceneID="UlZ-TV-IK7">
@@ -522,7 +523,7 @@
                                 </view>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AdCell" id="Wbm-jF-JEx" customClass="NativeAdCollectionView" customModule="NendSDK_Swift_Sample">
-                                <rect key="frame" x="123.5" y="64" width="106" height="160"/>
+                                <rect key="frame" x="124" y="64" width="106" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="106" height="160"/>
@@ -563,7 +564,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejp-z0-PtK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2867" y="72"/>
+            <point key="canvasLocation" x="2867" y="-656"/>
         </scene>
         <!--Native Ad Custom View Controller-->
         <scene sceneID="XIz-ue-tdN">
@@ -683,7 +684,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mn0-YK-j9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2867" y="-4086"/>
+            <point key="canvasLocation" x="2867" y="-4814"/>
         </scene>
         <!--Banner View30 0x250 Controller-->
         <scene sceneID="oyw-VO-RHr">
@@ -797,7 +798,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j27-wC-Zp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2003" y="413"/>
+            <point key="canvasLocation" x="2003" y="-269"/>
+        </scene>
+        <!--Interstitial In Transition View Controller-->
+        <scene sceneID="tqw-mG-C9k">
+            <objects>
+                <viewController id="1dE-LJ-h1w" customClass="InterstitialInTransitionViewController" customModule="NendSDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TO4-Qz-2ky"/>
+                        <viewControllerLayoutGuide type="bottom" id="bSz-Wk-s8W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nhM-jh-22u">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nbi-iF-9gc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2003" y="437"/>
         </scene>
     </scenes>
 </document>

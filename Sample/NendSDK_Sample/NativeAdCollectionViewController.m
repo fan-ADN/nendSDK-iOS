@@ -17,7 +17,7 @@ static NSString *const reuseAdIdentifier = @"AdCell";
 
 static BOOL isAdRow(NSInteger row)
 {
-    return 0 != row && 0 == row % kNativeAdInterval;
+    return kNativeAdInterval == row % (kNativeAdInterval + 1);
 }
 
 @interface NativeAdCollectionViewController ()

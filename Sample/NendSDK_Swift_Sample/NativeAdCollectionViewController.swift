@@ -93,7 +93,7 @@ class NativeAdCollectionViewController: UICollectionViewController {
     // MARK: Private
     
     private func isAdRow(row: Int) -> Bool {
-        return 0 != row && 0 == row % adInterval
+        return adInterval == row % (adInterval + 1)
     }
     
     private func adFromCache(indexPath: NSIndexPath) -> NADNative {

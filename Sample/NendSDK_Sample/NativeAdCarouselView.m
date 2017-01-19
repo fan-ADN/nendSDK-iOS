@@ -110,7 +110,7 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
     return self.nativeAdImageView;
 }
 
-- (UIImageView *)logoImageView
+- (UIImageView *)nadLogoImageView
 {
     return self.nativeAdLogoImageView;
 }

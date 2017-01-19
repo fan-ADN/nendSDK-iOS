@@ -5,7 +5,7 @@
 //  Copyright © 2016年 F@N Communications. All rights reserved.
 //
 
-#import "NADNativeClient.h"
+#import <NendAd/NADNativeClient.h>
 #import "NativeAdNoNibTelopTextView.h"
 #import "NativeAdNoNibTelopViewController.h"
 

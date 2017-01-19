@@ -7,7 +7,7 @@
 
 #import "NativeAdPageViewController.h"
 
-#import "NADNativeClient.h"
+#import <NendAd/NADNativeClient.h>
 #import "NativeAdPageContentViewController.h"
 
 static const NSInteger kNativeAdCount = 5;

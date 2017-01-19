@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "NADNative.h"
+#import <NendAd/NADNative.h>
 
 @interface NativeAdPageContentViewController : UIViewController
 

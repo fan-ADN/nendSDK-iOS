@@ -5,7 +5,7 @@
 //  Copyright © 2016年 F@N Communications. All rights reserved.
 //
 
-#import "NADNativeViewRendering.h"
+#import <NendAd/NADNativeViewRendering.h>
 #import "NativeAdNoNibTelopTextView.h"
 
 #define timerInterval 0.02f

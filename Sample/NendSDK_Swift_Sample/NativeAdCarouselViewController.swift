@@ -13,9 +13,9 @@ let adLandscapeWidth: CGFloat = 580 // 横向き　広告横幅
 let adLandscapeHeight: CGFloat = 200 // 横向き　広告高さ
 
 class NativeAdCarouselViewController: UITableViewController {
-    private let adRow : Int = 3
-    private var items = [String]()
-    private var direction : Int = 0
+    fileprivate let adRow : Int = 3
+    fileprivate var items = [String]()
+    fileprivate var direction : Int = 0
     
     deinit {
         print("NativeAdCarouselViewController: deinit")
@@ -30,12 +30,12 @@ class NativeAdCarouselViewController: UITableViewController {
             self.items.append("Item\(i)")
         }
         
-        let orientation = UIApplication.sharedApplication().statusBarOrientation
+        let orientation = UIApplication.shared.statusBarOrientation
         switch (orientation) {
-            case UIInterfaceOrientation.Portrait, UIInterfaceOrientation.PortraitUpsideDown:
+            case UIInterfaceOrientation.portrait, UIInterfaceOrientation.portraitUpsideDown:
                 self.direction = 1
                 break
-            case UIInterfaceOrientation.LandscapeLeft, UIInterfaceOrientation.LandscapeRight:
+            case UIInterfaceOrientation.landscapeLeft, UIInterfaceOrientation.landscapeRight:
                 self.direction = 2
                 break
             default:
@@ -44,8 +44,8 @@ class NativeAdCarouselViewController: UITableViewController {
         }
     }
     
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        coordinator.animateAlongsideTransition({(UIViewControllerTransitionCoordinatorContext) in
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        coordinator.animate(alongsideTransition: {(UIViewControllerTransitionCoordinatorContext) in
                 if size.width <= size.height {
                     self.direction = 1
                 } else {
@@ -54,7 +54,7 @@ class NativeAdCarouselViewController: UITableViewController {
                 self.tableView.reloadData()
             },
             completion: {(UIViewControllerTransitionCoordinatorContext) in
-                NSNotificationCenter.defaultCenter().postNotificationName("layoutUpdate", object: self.direction)
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "layoutUpdate"), object: self.direction)
             }
         )
     }
@@ -65,15 +65,15 @@ class NativeAdCarouselViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == self.adRow {
             if self.direction == 1 {
                 return adPortraitHeight
@@ -85,13 +85,13 @@ class NativeAdCarouselViewController: UITableViewController {
         return 44.0
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == self.adRow {
             let rowId = "adcell"
-            var cell = tableView.dequeueReusableCellWithIdentifier(rowId) as! NativeAdCarouselCell?
+            var cell = tableView.dequeueReusableCell(withIdentifier: rowId) as! NativeAdCarouselCell?
             if cell == nil {
-                cell = NativeAdCarouselCell(style: UITableViewCellStyle.Default, reuseIdentifier: rowId)
+                cell = NativeAdCarouselCell(style: UITableViewCellStyle.default, reuseIdentifier: rowId)
                 cell!.direction = self.direction
                 cell!.initAd()
             }
@@ -99,9 +99,9 @@ class NativeAdCarouselViewController: UITableViewController {
             return cell!
         } else {
             let rowId = "cell"
-            var cell = tableView.dequeueReusableCellWithIdentifier(rowId) as UITableViewCell?
+            var cell = tableView.dequeueReusableCell(withIdentifier: rowId) as UITableViewCell?
             if cell == nil {
-                cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: rowId)
+                cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: rowId)
             }
             
             cell!.textLabel!.text = self.items[indexPath.row]
@@ -110,7 +110,7 @@ class NativeAdCarouselViewController: UITableViewController {
     }
     
     // MARK: - Table view delegate
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //
     }
 

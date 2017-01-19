@@ -7,7 +7,7 @@
 
 #import "AdIBViewController.h"
 
-#import "NADView.h"
+#import <NendAd/NADView.h>
 
 @interface AdIBViewController () <NADViewDelegate>
 

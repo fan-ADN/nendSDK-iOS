@@ -6,7 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NADNativeViewRendering.h"
+
+#import <NendAd/NADNativeViewRendering.h>
 
 @interface NativeAdCarouselView : UIView
 

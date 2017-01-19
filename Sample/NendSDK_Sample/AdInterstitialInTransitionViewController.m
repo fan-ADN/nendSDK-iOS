@@ -7,7 +7,7 @@
 
 #import "AdInterstitialInTransitionViewController.h"
 
-#import "NADInterstitial.h"
+#import <NendAd/NADInterstitial.h>
 
 @interface AdInterstitialInTransitionViewController () <NADInterstitialDelegate>
 

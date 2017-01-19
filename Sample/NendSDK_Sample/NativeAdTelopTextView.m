@@ -6,7 +6,9 @@
 //
 
 #import "NativeAdTelopTextView.h"
-#import "NADNativeViewRendering.h"
+
+#import <NendAd/NADNativeViewRendering.h>
+
 #define timerInterval     0.02f
 #define distance          1.f
 

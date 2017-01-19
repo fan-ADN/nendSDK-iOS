@@ -6,19 +6,20 @@
 //
 
 import UIKit
+import NendAd
 
 class FeedAdCell: UITableViewCell, NADNativeViewRendering {
 
-    @IBOutlet private weak var nativeAdPrTextLabel: UILabel!
-    @IBOutlet private weak var nativeAdLongTextLabel: UILabel!
-    @IBOutlet private weak var nativeAdActionButtonTextLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdPrTextLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdLongTextLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdActionButtonTextLabel: UILabel!
     
     // MARK: - NADNativeViewRendering
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.nativeAdActionButtonTextLabel.layer.borderColor = self.nativeAdActionButtonTextLabel.textColor.CGColor;
+        self.nativeAdActionButtonTextLabel.layer.borderColor = self.nativeAdActionButtonTextLabel.textColor.cgColor;
         self.nativeAdActionButtonTextLabel.layer.borderWidth = 1;
         self.nativeAdActionButtonTextLabel.layer.masksToBounds = true;
         self.nativeAdActionButtonTextLabel.layer.cornerRadius = 0;

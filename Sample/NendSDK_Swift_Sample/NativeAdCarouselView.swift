@@ -6,20 +6,21 @@
 //
 
 import UIKit
+import NendAd
 
 class NativeAdCarouselView: UIView, NADNativeViewRendering {
     
-    @IBOutlet private weak var nativeAdPrTextLabel: UILabel!
-    @IBOutlet private weak var nativeAdShortTextLabel: UILabel!
-    @IBOutlet private weak var nativeAdLongTextLabel: UILabel!
-    @IBOutlet private weak var nativeAdPromotionNameLabel: UILabel!
-    @IBOutlet private weak var nativeAdPromotionUrlLabel: UILabel!
-    @IBOutlet private weak var nativeAdActionButtonTextLabel: UILabel!
-    @IBOutlet private weak var nativeAdImageView: UIImageView!
-    @IBOutlet private weak var nativeAdLogoImageView: UIImageView!
+    @IBOutlet fileprivate weak var nativeAdPrTextLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdShortTextLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdLongTextLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdPromotionNameLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdPromotionUrlLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdActionButtonTextLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdImageView: UIImageView!
+    @IBOutlet fileprivate weak var nativeAdLogoImageView: UIImageView!
     
     internal var index: Int = 0
-    private var direction: Int = 0
+    fileprivate var direction: Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,13 +36,13 @@ class NativeAdCarouselView: UIView, NADNativeViewRendering {
         self.nativeAdPromotionUrlLabel.minimumScaleFactor = 0.5
         self.nativeAdActionButtonTextLabel.adjustsFontSizeToFitWidth = true
         self.nativeAdActionButtonTextLabel.minimumScaleFactor = 0.5
-        self.nativeAdActionButtonTextLabel.layer.borderColor = UIColor.blueColor().CGColor
+        self.nativeAdActionButtonTextLabel.layer.borderColor = UIColor.blue.cgColor
         self.nativeAdActionButtonTextLabel.layer.borderWidth = 1.0
         
         self.layer.borderWidth = 0
     }
     
-    func frameUpdate(direction: Int) {
+    func frameUpdate(_ direction: Int) {
         self.direction = direction
         self.layoutSubviews()
     }
@@ -50,14 +51,14 @@ class NativeAdCarouselView: UIView, NADNativeViewRendering {
         super.layoutSubviews()
         
         if self.direction == 1 {
-            self.frame = CGRectMake(CGFloat(self.index) * adPortraitWidth, 0, adPortraitWidth, adPortraitHeight)
+            self.frame = CGRect(x: CGFloat(self.index) * adPortraitWidth, y: 0, width: adPortraitWidth, height: adPortraitHeight)
         } else if self.direction == 2 {
-            let cellWidth: CGFloat = UIScreen.mainScreen().bounds.size.width
+            let cellWidth: CGFloat = UIScreen.main.bounds.size.width
             if cellWidth < adLandscapeWidth {
                 // iphone4の場合、横幅設定
-                self.frame = CGRectMake(CGFloat(self.index) * (cellWidth - 20.0), 0, (cellWidth - 20.0), adLandscapeHeight)
+                self.frame = CGRect(x: CGFloat(self.index) * (cellWidth - 20.0), y: 0, width: (cellWidth - 20.0), height: adLandscapeHeight)
             } else {
-                self.frame = CGRectMake(CGFloat(self.index) * adLandscapeWidth, 0, adLandscapeWidth, adLandscapeHeight)
+                self.frame = CGRect(x: CGFloat(self.index) * adLandscapeWidth, y: 0, width: adLandscapeWidth, height: adLandscapeHeight)
             }
         }
     }
@@ -92,7 +93,7 @@ class NativeAdCarouselView: UIView, NADNativeViewRendering {
         return self.nativeAdImageView
     }
     
-    func logoImageView() -> UIImageView! {
+    func nadLogoImageView() -> UIImageView! {
         return self.nativeAdLogoImageView
     }
 }

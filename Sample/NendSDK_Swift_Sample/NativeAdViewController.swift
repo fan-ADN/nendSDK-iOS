@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import NendAd
 
 class NativeAdViewController: UIViewController, NADNativeDelegate {
     
-    private var client: NADNativeClient?
+    fileprivate var client: NADNativeClient?
 
     var spotId: String!
     var apiKey: String!
@@ -23,22 +24,22 @@ class NativeAdViewController: UIViewController, NADNativeDelegate {
         
         // Xibから広告Viewを生成
         let nib = UINib(nibName: self.nib, bundle: nil)
-        if let adView = nib.instantiateWithOwner(nil, options: nil).first as? UIView {
-            adView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds))
+        if let adView = nib.instantiate(withOwner: nil, options: nil).first as? UIView {
+            adView.center = CGPoint(x: self.view.bounds.midX, y: self.view.bounds.midY)
             adView.translatesAutoresizingMaskIntoConstraints = false
             self.view.addSubview(adView)
             let constraints = [
-                NSLayoutConstraint(item: adView, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0.0),
-                NSLayoutConstraint(item: adView, attribute: .CenterY, relatedBy: .Equal, toItem: self.view, attribute: .CenterY, multiplier: 1.0, constant: 0.0),
-                NSLayoutConstraint(item: adView, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1.0, constant: CGRectGetWidth(adView.bounds)),
-                NSLayoutConstraint(item: adView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: CGRectGetHeight(adView.bounds))
+                NSLayoutConstraint(item: adView, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1.0, constant: 0.0),
+                NSLayoutConstraint(item: adView, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1.0, constant: 0.0),
+                NSLayoutConstraint(item: adView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1.0, constant: adView.bounds.width),
+                NSLayoutConstraint(item: adView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: adView.bounds.height)
             ]
             self.view.addConstraints(constraints)
             
-            NADNativeLogger.setLogLevel(.Warn)
+            NADNativeLogger.setLogLevel(.warn)
             
             self.client = NADNativeClient(spotId: self.spotId, apiKey: self.apiKey)
-            self.client!.loadWithCompletionBlock() { (ad, error) in
+            self.client!.load() { (ad, error) in
                 if let nativeAd = ad {
                     nativeAd.delegate = self
                     // 広告をViewに描画
@@ -56,7 +57,7 @@ class NativeAdViewController: UIViewController, NADNativeDelegate {
     }
 
     // MARK: - NADNativeDelegate
-    func nadNativeDidClickAd(ad: NADNative!) {
+    func nadNativeDidClickAd(_ ad: NADNative!) {
         print(#function)
     }
 }

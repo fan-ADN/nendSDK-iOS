@@ -6,39 +6,41 @@
 //
 
 import UIKit
+import NendAd
 
-func CreateTimer(interval: Double, queue: dispatch_queue_t, block: dispatch_block_t) -> dispatch_source_t
+func CreateTimer(_ interval: Double, queue: DispatchQueue, block: @escaping ()->()) -> DispatchSource
 {
-    let timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue)
-    dispatch_source_set_timer(timer, dispatch_time(DISPATCH_TIME_NOW, Int64(timerInterval * Double(NSEC_PER_SEC))), UInt64(timerInterval * Double(NSEC_PER_SEC)), (1 * NSEC_PER_SEC) / 10)
-    dispatch_source_set_event_handler(timer, block);
-    dispatch_resume(timer)
-    
-    return timer;
+    let timer = DispatchSource.makeTimerSource(queue: .main)
+    timer.scheduleRepeating(deadline: .now() + timerInterval, interval: timerInterval)
+
+    (timer as! DispatchSource).setEventHandler(handler: block);
+    timer.resume()
+
+    return timer as! DispatchSource;
 }
 
 let adCount: Int = 5
-let timerInterval: NSTimeInterval = 3.0
+let timerInterval: TimeInterval = 3.0
 
 class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDelegate {
     
     internal var direction: Int = 0
     
-    private var client: NADNativeClient!
-    private var adViewsP = [NativeAdCarouselView]()
-    private var adViewsL = [NativeAdCarouselView]()
-    private var ads = [NADNative]()
-    private var scrollView: UIScrollView!
-    private var pointP: CGFloat!
-    private var pageP: CGFloat!
-    private var pointL: CGFloat!
-    private var pageL: CGFloat!
+    fileprivate var client: NADNativeClient!
+    fileprivate var adViewsP = [NativeAdCarouselView]()
+    fileprivate var adViewsL = [NativeAdCarouselView]()
+    fileprivate var ads = [NADNative]()
+    fileprivate var scrollView: UIScrollView!
+    fileprivate var pointP: CGFloat!
+    fileprivate var pageP: CGFloat!
+    fileprivate var pointL: CGFloat!
+    fileprivate var pageL: CGFloat!
     
-    private var timerP: dispatch_source_t!
-    private var timerL: dispatch_source_t!
+    fileprivate var timerP: DispatchSource!
+    fileprivate var timerL: DispatchSource!
     
-    private var landscapeWidth: CGFloat!
-    private var cellWidth: CGFloat!
+    fileprivate var landscapeWidth: CGFloat!
+    fileprivate var cellWidth: CGFloat!
     
     deinit {
         print("NativeAdCarouselCell: deinit")
@@ -53,14 +55,14 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
         
         self.scrollView = UIScrollView()
         self.scrollView.delegate = self
-        self.scrollView.backgroundColor = UIColor.clearColor()
+        self.scrollView.backgroundColor = UIColor.clear
         self.scrollView.showsHorizontalScrollIndicator = false
-        self.scrollView.directionalLockEnabled = true
-        self.scrollView.pagingEnabled = false
+        self.scrollView.isDirectionalLockEnabled = true
+        self.scrollView.isPagingEnabled = false
         self.scrollView.bounces = false
         self.scrollView.decelerationRate = 0.3
         self.addSubview(self.scrollView)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(NativeAdCarouselCell.layoutUpdate(_:)), name: "layoutUpdate", object: nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(NativeAdCarouselCell.layoutUpdate(_:)), name: NSNotification.Name(rawValue: "layoutUpdate"), object: nil)
         
         // 自動スクロール
         self.pointP = 0
@@ -71,28 +73,28 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
     
     func initAd() {
         self.client = NADNativeClient(spotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
-        NADNativeLogger.setLogLevel(.Debug)
+        NADNativeLogger.setLogLevel(.debug)
         
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        let group = dispatch_group_create()
-        dispatch_apply(adCount, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { (i) -> Void in
-            dispatch_group_enter(group)
-            self.client.loadWithCompletionBlock({ (ad, _) -> Void in
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        let group = DispatchGroup()
+        DispatchQueue.concurrentPerform(iterations: adCount) { (i) -> Void in
+            group.enter()
+            self.client.load(completionBlock: { (ad, _) -> Void in
                 if ad != nil {
                     let nibP = UINib(nibName: "NativeAdCarouselPortraitView", bundle: nil)
                     let nibL = UINib(nibName: "NativeAdCarouselLandscapeView", bundle: nil)
-                    let viewP: NativeAdCarouselView = nibP.instantiateWithOwner(self, options: nil)[0] as! NativeAdCarouselView
-                    let viewL: NativeAdCarouselView = nibL.instantiateWithOwner(self, options: nil)[0] as! NativeAdCarouselView
+                    let viewP: NativeAdCarouselView = nibP.instantiate(withOwner: self, options: nil)[0] as! NativeAdCarouselView
+                    let viewL: NativeAdCarouselView = nibL.instantiate(withOwner: self, options: nil)[0] as! NativeAdCarouselView
                     
-                    self.ads.append(ad)
+                    self.ads.append(ad!)
                     self.adViewsP.append(viewP)
                     self.adViewsL.append(viewL)
                 }
-                dispatch_group_leave(group)
+                group.leave()
             })
         }
-        dispatch_group_notify(group, dispatch_get_main_queue()) { () -> Void in
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        group.notify(queue: DispatchQueue.main) { () -> Void in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             self.setAd()
         }
     }
@@ -101,23 +103,23 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
         if self.direction == 1 {
             for i in 0 ..< self.adViewsP.count {
                 let viewP: NativeAdCarouselView = (self.adViewsP)[i]
-                viewP.frame = CGRectMake(CGFloat(i) * adPortraitWidth, 0, adPortraitWidth, adPortraitHeight)
+                viewP.frame = CGRect(x: CGFloat(i) * adPortraitWidth, y: 0, width: adPortraitWidth, height: adPortraitHeight)
                 
-                dispatch_async(dispatch_get_main_queue(), {
+                DispatchQueue.main.async(execute: {
                     let ad: NADNative = self.ads[i]
                     ad.delegate = self;
-                    ad.intoView(viewP, advertisingExplicitly: .Promotion)
+                    ad.intoView(viewP, advertisingExplicitly: .promotion)
                 })
             }
         } else if self.direction == 2 {
             for i in 0 ..< self.adViewsL.count {
                 let viewL: NativeAdCarouselView = (self.adViewsL)[i]
-                viewL.frame = CGRectMake(CGFloat(i) * adPortraitWidth, 0, adPortraitWidth, adPortraitHeight)
+                viewL.frame = CGRect(x: CGFloat(i) * adPortraitWidth, y: 0, width: adPortraitWidth, height: adPortraitHeight)
                 
-                dispatch_async(dispatch_get_main_queue(), {
+                DispatchQueue.main.async(execute: {
                     let ad: NADNative = self.ads[i]
                     ad.delegate = self;
-                    ad.intoView(viewL, advertisingExplicitly: .Promotion)
+                    ad.intoView(viewL, advertisingExplicitly: .promotion)
                 })
             }
         }
@@ -126,21 +128,20 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
         self.layoutUpdate()
     }
     
-    func layoutUpdate(notification: NSNotification) {
+    func layoutUpdate(_ notification: Notification) {
         self.direction = notification.object as! Int
-        UIScreen.mainScreen().bounds.size.width
         
         for subview in self.scrollView.subviews {
             subview.removeFromSuperview()
         }
         
-        dispatch_async(dispatch_get_main_queue(), {
+        DispatchQueue.main.async(execute: {
             self.setAd()
         })
     }
     
     func layoutUpdate() {
-        self.cellWidth = UIScreen.mainScreen().bounds.size.width
+        self.cellWidth = UIScreen.main.bounds.size.width
         var width: CGFloat
         var height: CGFloat
         
@@ -155,7 +156,7 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
                 adViewP.frameUpdate(self.direction)
                 self.scrollView.addSubview(adViewP)
             }
-            self.scrollView.setContentOffset(CGPointMake(self.pointP, 0), animated:true)
+            self.scrollView.setContentOffset(CGPoint(x: self.pointP, y: 0), animated:true)
         } else {
             if (self.cellWidth < adLandscapeWidth) {
                 self.landscapeWidth = self.cellWidth - 20
@@ -171,17 +172,17 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
                 adViewL.frameUpdate(self.direction)
                 self.scrollView.addSubview(adViewL)
             }
-            self.scrollView.setContentOffset(CGPointMake(self.pointL, 0), animated:true)
+            self.scrollView.setContentOffset(CGPoint(x: self.pointL, y: 0), animated:true)
         }
         
-        self.scrollView.frame = CGRectMake(0, 0, self.cellWidth, height)
-        self.scrollView.contentSize = CGSizeMake(width * CGFloat(adCount), 0)
+        self.scrollView.frame = CGRect(x: 0, y: 0, width: self.cellWidth, height: height)
+        self.scrollView.contentSize = CGSize(width: width * CGFloat(adCount), height: 0)
         
         self.pageP = 1
         self.pageL = 1
         self.pointP = 0
         self.pointL = 0
-        self.scrollView.setContentOffset(CGPointMake(0, 0), animated:false)
+        self.scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated:false)
         // 自動スクロールタイマー設置
         if adCount > 1 {
             self.setTimer()
@@ -189,11 +190,19 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
     }
     
     // MARK: - UIScrollViewDelegate
-    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        self.cancelTimer()
         self.animation()
+        
+        if (self.pageP == CGFloat(adCount)){
+            self.pointP = adPortraitWidth
+            self.pageP = 2
+            self.scrollView.setContentOffset(CGPoint(x: self.pointP, y: 0), animated:false)
+        }
     }
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        self.setTimer()
         self.animation()
     }
     
@@ -238,7 +247,7 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
             self.pointL = distance
         }
         
-        self.scrollView.setContentOffset(CGPointMake(distance, 0), animated:true)
+        self.scrollView.setContentOffset(CGPoint(x: distance, y: 0), animated:true)
     }
     
     // 自動スクロール
@@ -246,7 +255,7 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
         self.cancelTimer()
         
         weak var weakSelf = self
-        let queue = dispatch_get_main_queue()
+        let queue = DispatchQueue.main
         if self.direction == 1 {
             self.timerP = CreateTimer(timerInterval, queue: queue, block: {
                 weakSelf!.move()
@@ -260,11 +269,11 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
     
     func cancelTimer() {
         if(self.timerP != nil) {
-            dispatch_source_cancel(self.timerP)
+            self.timerP.cancel()
             self.timerP = nil
         }
         if(self.timerL != nil) {
-            dispatch_source_cancel(self.timerL)
+            self.timerL.cancel()
             self.timerL = nil
         }
     }
@@ -274,44 +283,44 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
             if (self.pageP == CGFloat(adCount - 1)){
                 self.pointP = adPortraitWidth * CGFloat(adCount) - cellWidth
                 self.pageP = self.pageP + 1
-                self.scrollView.setContentOffset(CGPointMake(self.pointP, 0), animated:true)
+                self.scrollView.setContentOffset(CGPoint(x: self.pointP, y: 0), animated:true)
             } else if (self.pageP == 1) {
                 self.pointP = self.pointP + adPortraitWidth * 1.5 - cellWidth / 2
                 self.pageP = self.pageP + 1
-                self.scrollView.setContentOffset(CGPointMake(self.pointP, 0), animated:true)
+                self.scrollView.setContentOffset(CGPoint(x: self.pointP, y: 0), animated:true)
             } else if (self.pageP == CGFloat(adCount)){
-                self.pointP = 0
-                self.pageP = 1
-                self.scrollView.setContentOffset(CGPointMake(0, 0), animated:false)
+                self.pointP = adPortraitWidth
+                self.pageP = 2
+                self.scrollView.setContentOffset(CGPoint(x: self.pointP, y: 0), animated:false)
             } else {
                 self.pointP = self.pointP + adPortraitWidth
                 self.pageP = self.pageP + 1
-                self.scrollView.setContentOffset(CGPointMake(self.pointP, 0), animated:true)
+                self.scrollView.setContentOffset(CGPoint(x: self.pointP, y: 0), animated:true)
             }
             
         } else if self.direction == 2 {
             if (self.pageL == CGFloat(adCount - 1)){
                 self.pointL = self.landscapeWidth * CGFloat(adCount) - cellWidth
                 self.pageL = self.pageL + 1
-                self.scrollView.setContentOffset(CGPointMake(self.pointL, 0), animated:true)
+                self.scrollView.setContentOffset(CGPoint(x: self.pointL, y: 0), animated:true)
             } else if (self.pageL == 1) {
                 self.pointL = self.pointL + self.landscapeWidth * 1.5 - cellWidth / 2
                 self.pageL = self.pageL + 1
-                self.scrollView.setContentOffset(CGPointMake(self.pointL, 0), animated:true)
+                self.scrollView.setContentOffset(CGPoint(x: self.pointL, y: 0), animated:true)
             } else if (self.pageL == CGFloat(adCount)){
                 self.pointL = 0
                 self.pageL = 1
-                self.scrollView.setContentOffset(CGPointMake(0, 0), animated:false)
+                self.scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated:false)
             } else {
                 self.pointL = self.pointL + self.landscapeWidth
                 self.pageL = self.pageL + 1
-                self.scrollView.setContentOffset(CGPointMake(self.pointL, 0), animated:true)
+                self.scrollView.setContentOffset(CGPoint(x: self.pointL, y: 0), animated:true)
             }
         }
     }
     
     // MARK: - NADNativeDelegate
-    func nadNativeDidClickAd(ad: NADNative!) {
+    func nadNativeDidClickAd(_ ad: NADNative!) {
         print(#function)
     }
 }

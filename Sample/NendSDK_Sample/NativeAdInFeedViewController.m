@@ -7,7 +7,7 @@
 
 #import "NativeAdInFeedViewController.h"
 
-#import "NADNativeTableViewHelper.h"
+#import <NendAd/NADNativeTableViewHelper.h>
 
 @interface NativeAdInFeedViewController () <NADNativeTableViewHelperDelegate>
 

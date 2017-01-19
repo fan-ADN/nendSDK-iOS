@@ -6,18 +6,19 @@
 //
 
 import UIKit
+import NendAd
 
 class NativeAdRssTableViewController: UITableViewController, NADNativeTableViewHelperDelegate {
     
-    private struct Feed {
+    fileprivate struct Feed {
         let isAd: Bool
         let title: String
         let category: String
         let link: String
     }
     
-    private var items = [[Feed]]()
-    private var helper: NADNativeTableViewHelper!
+    fileprivate var items = [[Feed]]()
+    fileprivate var helper: NADNativeTableViewHelper!
     
     deinit {
         print("NativeAdRssTableViewController: deinit")
@@ -35,14 +36,14 @@ class NativeAdRssTableViewController: UITableViewController, NADNativeTableViewH
         self.title = "RSS"
         self.tableView.allowsSelection = false
         
-        self.tableView.registerNib(UINib(nibName: "FeedCell1", bundle: nil), forCellReuseIdentifier: "FeedCell1")
-        self.tableView.registerNib(UINib(nibName: "FeedCell2", bundle: nil), forCellReuseIdentifier: "FeedCell2")
-        self.tableView.registerNib(UINib(nibName: "FeedCell3", bundle: nil), forCellReuseIdentifier: "FeedCell3")
-        self.tableView.registerNib(UINib(nibName: "FeedCell4", bundle: nil), forCellReuseIdentifier: "FeedCell4")
+        self.tableView.register(UINib(nibName: "FeedCell1", bundle: nil), forCellReuseIdentifier: "FeedCell1")
+        self.tableView.register(UINib(nibName: "FeedCell2", bundle: nil), forCellReuseIdentifier: "FeedCell2")
+        self.tableView.register(UINib(nibName: "FeedCell3", bundle: nil), forCellReuseIdentifier: "FeedCell3")
+        self.tableView.register(UINib(nibName: "FeedCell4", bundle: nil), forCellReuseIdentifier: "FeedCell4")
 
-        self.tableView.registerNib(UINib(nibName: "FeedAdCell", bundle: nil), forCellReuseIdentifier: "FeedAdCell")
-        self.tableView.registerNib(UINib(nibName: "FeedWithAdCell2", bundle: nil), forCellReuseIdentifier: "FeedWithAdCell2")
-        self.tableView.registerNib(UINib(nibName: "FeedWithAdCell3", bundle: nil), forCellReuseIdentifier: "FeedWithAdCell3")
+        self.tableView.register(UINib(nibName: "FeedAdCell", bundle: nil), forCellReuseIdentifier: "FeedAdCell")
+        self.tableView.register(UINib(nibName: "FeedWithAdCell2", bundle: nil), forCellReuseIdentifier: "FeedWithAdCell2")
+        self.tableView.register(UINib(nibName: "FeedWithAdCell3", bundle: nil), forCellReuseIdentifier: "FeedWithAdCell3")
         
         var items = [Feed]()
         
@@ -59,19 +60,19 @@ class NativeAdRssTableViewController: UITableViewController, NADNativeTableViewH
         
         // 広告表示位置にダミーのFeedを追加
         let adSpace = Feed(isAd: true, title: "", category: "", link: "")
-        items.insert(adSpace, atIndex: 4)
-        items.insert(adSpace, atIndex: 6)
-        items.insert(adSpace, atIndex: 9)
+        items.insert(adSpace, at: 4)
+        items.insert(adSpace, at: 6)
+        items.insert(adSpace, at: 9)
         self.items += self.createDateSource(items)
         self.tableView.reloadData()
         
         let placer = NADNativeTableViewPlacement()
         // 1行目は2つの広告を取得したFeedと一緒に表示
-        placer.addFixedIndexPath(NSIndexPath(forRow: 1, inSection: 0), fillRow: false, adCount: 2)
+        placer.addFixedIndexPath(IndexPath(row: 1, section: 0), fillRow: false, adCount: 2)
         // 3行目は1つの広告を取得したFeedと一緒に表示
-        placer.addFixedIndexPath(NSIndexPath(forRow: 3, inSection: 0), fillRow: false)
+        placer.addFixedIndexPath(IndexPath(row: 3, section: 0), fillRow: false)
         // 6行目は広告行のみ
-        placer.addFixedIndexPath(NSIndexPath(forRow: 6, inSection: 0))
+        placer.addFixedIndexPath(IndexPath(row: 6, section: 0))
         
         self.helper = NADNativeTableViewHelper(tableView: self.tableView, spotId: "485507", apiKey: "31e861edb574cfa0fb676ebdf0a0b9a0621e19fc", advertisingExplicitly: .PR, adPlacement: placer, delegate: self)
 
@@ -84,21 +85,21 @@ class NativeAdRssTableViewController: UITableViewController, NADNativeTableViewH
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 引数のindexPathをそのまま使用
         let feeds = self.items[indexPath.row]
         let identifier = "FeedCell\(feeds.count)"
         // 広告行を含んだindexPathに変換しセルを取得
-        let reuseIndexPath = self.helper.actualIndexPathForOriginalIndexPath(indexPath)
-        let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: reuseIndexPath)
+        let reuseIndexPath = self.helper.actualIndexPath(forOriginalIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: reuseIndexPath!)
 
         // Configure the cell...
         self.bindFeeds(feeds, intoCell: cell)
@@ -106,7 +107,7 @@ class NativeAdRssTableViewController: UITableViewController, NADNativeTableViewH
         return cell
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch self.items[indexPath.row].count {
         case 1:
             return 80.0
@@ -121,32 +122,32 @@ class NativeAdRssTableViewController: UITableViewController, NADNativeTableViewH
         }
     }
     
-    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return self.tableView(tableView, heightForRowAtIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.tableView(tableView, heightForRowAt: indexPath)
     }
 
     // MARK: - NADNativeTableViewHelperDelegate
     
-    func tableView(tableView: UITableView!, adCellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    func tableView(_ tableView: UITableView!, adCellForRowAt indexPath: IndexPath!) -> UITableViewCell! {
         // 広告行を除いたindexPathに変換し、該当行に表示させるFeedを取得する
-        let originalIndexPath = self.helper.originalIndexPathForActualIndexPath(indexPath)
+        let originalIndexPath = self.helper.originalIndexPath(forActualIndexPath: indexPath)
         var cell: UITableViewCell?
         switch indexPath.row {
         case 1:
-            cell = tableView.dequeueReusableCellWithIdentifier("FeedWithAdCell3", forIndexPath: indexPath)
-            self.bindFeeds(self.items[originalIndexPath.row], intoCell: cell!)
+            cell = tableView.dequeueReusableCell(withIdentifier: "FeedWithAdCell3", for: indexPath)
+            self.bindFeeds(self.items[(originalIndexPath?.row)!], intoCell: cell!)
         case 3:
-            cell = tableView.dequeueReusableCellWithIdentifier("FeedWithAdCell2", forIndexPath: indexPath)
-            self.bindFeeds(self.items[originalIndexPath.row], intoCell: cell!)
+            cell = tableView.dequeueReusableCell(withIdentifier: "FeedWithAdCell2", for: indexPath)
+            self.bindFeeds(self.items[(originalIndexPath?.row)!], intoCell: cell!)
         case 6:
-            cell = tableView.dequeueReusableCellWithIdentifier("FeedAdCell", forIndexPath: indexPath)
+            cell = tableView.dequeueReusableCell(withIdentifier: "FeedAdCell", for: indexPath)
         default:
             break
         }
         return cell
     }
     
-    func tableView(tableView: UITableView!, heightForAdRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+    func tableView(_ tableView: UITableView!, heightForAdRowAt indexPath: IndexPath!) -> CGFloat {
         // 広告行の高さを返却
         switch indexPath.row {
         case 1:
@@ -160,13 +161,13 @@ class NativeAdRssTableViewController: UITableViewController, NADNativeTableViewH
         }
     }
     
-    func tableView(tableView: UITableView!, estimatedHeightForAdRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
-        return self.tableView(tableView, heightForAdRowAtIndexPath: indexPath)
+    func tableView(_ tableView: UITableView!, estimatedHeightForAdRowAt indexPath: IndexPath!) -> CGFloat {
+        return self.tableView(tableView, heightForAdRowAt: indexPath)
     }
 
     // MARK: - Private
     
-    private func createDateSource( feeds: [Feed]) -> [[Feed]]! {
+    fileprivate func createDateSource( _ feeds: [Feed]) -> [[Feed]]! {
         let fix = [4, 3, 1, 2]
         let loop = [3, 1, 1, 3, 2]
         var result = [[Feed]]()
@@ -201,7 +202,7 @@ class NativeAdRssTableViewController: UITableViewController, NADNativeTableViewH
         return result
     }
     
-    private func bindFeeds(feeds: [Feed]!, intoCell cell: UITableViewCell) {
+    fileprivate func bindFeeds(_ feeds: [Feed]!, intoCell cell: UITableViewCell) {
         for i in 0..<feeds.count {
             let feed = feeds[i]
             let feedView = cell.viewWithTag(i + 1) as? FeedView

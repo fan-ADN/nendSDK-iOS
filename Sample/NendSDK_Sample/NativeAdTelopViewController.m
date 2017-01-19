@@ -6,7 +6,8 @@
 //
 
 #import "NativeAdTelopViewController.h"
-#import "NADNativeClient.h"
+
+#import <NendAd/NADNativeClient.h>
 #import "NativeAdTelopTextView.h"
 
 @interface NativeAdTelopViewController ()<NADNativeDelegate>

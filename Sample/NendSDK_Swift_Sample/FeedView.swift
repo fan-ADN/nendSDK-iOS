@@ -9,9 +9,9 @@ import UIKit
 
 class FeedView: UIView {
     
-    @IBOutlet private weak var title: UILabel!
-    @IBOutlet private weak var category: UILabel!
-    @IBOutlet private weak var indicator: UIActivityIndicatorView?
+    @IBOutlet fileprivate weak var title: UILabel!
+    @IBOutlet fileprivate weak var category: UILabel!
+    @IBOutlet fileprivate weak var indicator: UIActivityIndicatorView?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,10 +39,10 @@ class FeedView: UIView {
                     self.title.text = "";
                     self.category.text = "";
                     indicator.startAnimating();
-                    indicator.hidden = false;
+                    indicator.isHidden = false;
                 } else {
                     indicator.stopAnimating()
-                    indicator.hidden = true
+                    indicator.isHidden = true
                 }
             }
         }
@@ -50,7 +50,7 @@ class FeedView: UIView {
     
     var link: String?
     
-    func tapped(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: self.link!)!)
+    func tapped(_ sender: AnyObject) {
+        UIApplication.shared.openURL(URL(string: self.link!)!)
     }
 }

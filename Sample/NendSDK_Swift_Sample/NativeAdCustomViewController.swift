@@ -6,7 +6,9 @@
 //
 
 import UIKit
-let interval: NSTimeInterval = 30.0
+import NendAd
+
+let interval: TimeInterval = 30.0
 
 class NativeAdCustomViewController: UIViewController, NADNativeDelegate {
 
@@ -20,7 +22,7 @@ class NativeAdCustomViewController: UIViewController, NADNativeDelegate {
     @IBOutlet weak var actionButtonTextLabel: UILabel!
     @IBOutlet weak var adView: UIView!
     
-    private var client: NADNativeClient!
+    fileprivate var client: NADNativeClient!
     
     deinit {
         print("NativeAdCustomViewController: deinit")
@@ -30,51 +32,51 @@ class NativeAdCustomViewController: UIViewController, NADNativeDelegate {
         super.viewDidLoad()
         
         self.adView.layer.borderWidth = 1.0;
-        self.adView.layer.borderColor = UIColor.darkGrayColor().CGColor;
+        self.adView.layer.borderColor = UIColor.darkGray.cgColor;
         
-        NADNativeLogger.setLogLevel(.Debug)
+        NADNativeLogger.setLogLevel(.debug)
         self.client = NADNativeClient(spotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
         
         weak var weakSelf = self
-        self.client.loadWithCompletionBlock() { (ad, error) in
+        self.client.load() { (ad, error) in
             if let nativeAd = ad {
                 weakSelf?.setUpWithAd(nativeAd)
             }
         }
     }
     
-    private func setUpWithAd(ad: NADNative) {
+    fileprivate func setUpWithAd(_ ad: NADNative) {
         ad.delegate = self
         self.shortTextLabel.text = ad.shortText
         self.longTextLabel.text = ad.longText
-        self.prTextLabel.text = ad.prTextForAdvertisingExplicitly(.Promotion)
+        self.prTextLabel.text = ad.prText(for: .promotion)
         self.promotionNameLabel.text = ad.promotionName
         self.promotionUrlLabel.text = ad.promotionUrl
         self.actionButtonTextLabel.text = ad.actionButtonText
-        ad.loadAdImageWithCompletionBlock({(loadAdImage) in
+        ad.loadAdImage(completionBlock: {(loadAdImage) in
             self.adImageView.image = loadAdImage
         })
-        ad.loadLogoImageWithCompletionBlock({(loadLogoImage) in
+        ad.loadLogoImage(completionBlock: {(loadLogoImage) in
             self.logoImageView.image = loadLogoImage
         })
         ad.activateAdView(adView, withPrLabel: self.prTextLabel)
     }
 
-    @IBAction func enableAutoReload(sender: AnyObject) {
+    @IBAction func enableAutoReload(_ sender: AnyObject) {
         weak var weakSelf = self
-        self.client.enableAutoReloadWithInterval(interval, completionBlock: { (ad, error) in
+        self.client.enableAutoReload(withInterval: interval, completionBlock: { (ad, error) in
             if let nativeAd = ad {
                 weakSelf?.setUpWithAd(nativeAd)
             }
         })
     }
     
-    @IBAction func disableAutoReload(sender: AnyObject) {
+    @IBAction func disableAutoReload(_ sender: AnyObject) {
         self.client.disableAutoReload()
     }
     
     // MARK: - NADNativeDelegate
-    func nadNativeDidClickAd(ad: NADNative!) {
+    func nadNativeDidClickAd(_ ad: NADNative!) {
         print(#function)
     }
 }

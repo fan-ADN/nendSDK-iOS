@@ -7,7 +7,7 @@
 
 #import "AdAdjustViewController.h"
 
-#import "NADView.h"
+#import <NendAd/NADView.h>
 
 @interface AdAdjustViewController () <NADViewDelegate>
 

@@ -1,34 +1,30 @@
 //
-//  SelectTableViewController.m
+//  FullBoardAdMenuViewController.m
 //  NendSDK_Sample
 //
-//  Created by ADN on 2013/07/19.
-//  Copyright (c) 2013年 F@N Communications. All rights reserved.
+//  Created by user on 2017/01/18.
+//  Copyright © 2017年 F@N Communications. All rights reserved.
 //
 
-#import "SelectTableViewController.h"
-
-#import "SelectBannerTableViewController.h"
-#import "AdInterstitialViewController.h"
-#import "NativeAdViewController.h"
+#import "FullBoardAdMenuViewController.h"
 
 static NSString *const CellIdentifier = @"Cell";
 
-@interface SelectTableViewController ()
+@interface FullBoardAdMenuViewController ()
 
-@property (nonatomic) NSArray<NSString *> *items;
+@property (nonatomic) NSArray<NSDictionary *> *items;
 
 @end
 
-@implementation SelectTableViewController
+@implementation FullBoardAdMenuViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.title = @"Nend";
-
-    self.items = @[ @"Banner", @"Interstitial", @"Native", @"FullBoard" ];
+    
+    self.title = @"FullBoard";
+    
+    self.items = @[ @"Default", @"Page" ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
 }
 
@@ -55,11 +51,11 @@ static NSString *const CellIdentifier = @"Cell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-
+    
     // Configure the cell...
-    cell.textLabel.text = self.items[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",self.items[indexPath.row]];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-
+    
     return cell;
 }
 

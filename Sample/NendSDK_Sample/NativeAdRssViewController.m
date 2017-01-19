@@ -7,8 +7,9 @@
 
 #import "NativeAdRssViewController.h"
 
+#import <NendAd/NendAd.h>
+
 #import "FeedView.h"
-#import "NADNativeTableViewHelper.h"
 
 @interface Feed : NSObject
 

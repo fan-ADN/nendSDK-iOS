@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import NendAd
 
 class NativeAdPageViewController: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource, NADNativeDelegate {
 
-    private let client: NADNativeClient = NADNativeClient(spotId: "485500", apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071")
-    private var contentViewControllers = [NativeAdPageContentViewController]()
-    private var pageViewController: UIPageViewController!
+    fileprivate let client: NADNativeClient = NADNativeClient(spotId: "485500", apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071")
+    fileprivate var contentViewControllers = [NativeAdPageContentViewController]()
+    fileprivate var pageViewController: UIPageViewController!
     
     deinit {
         print("NativeAdPageViewController: deinit")
@@ -24,35 +25,35 @@ class NativeAdPageViewController: UIViewController, UIPageViewControllerDelegate
         
         self.title = "Pageable"
         
-        self.pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
+        self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         self.pageViewController.dataSource = self
         self.pageViewController.delegate = self
         self.pageViewController.view.frame = self.view.frame
         self.view.addSubview(self.pageViewController.view)
         
-        NADNativeLogger.setLogLevel(.Warn)
+        NADNativeLogger.setLogLevel(.warn)
         
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         // 4ページ分の広告を先にまとめて取得
-        let group = dispatch_group_create()
-        dispatch_apply(4, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { (i) -> Void in
-            dispatch_group_enter(group)
-            self.client.loadWithCompletionBlock({ (ad, _) -> Void in
-                if let vc = self.storyboard!.instantiateViewControllerWithIdentifier("NativeAdPageContentViewController") as? NativeAdPageContentViewController {
-                    ad.delegate = self;
+        let group = DispatchGroup()
+        DispatchQueue.concurrentPerform(iterations: 4) { (i) -> Void in
+            group.enter()
+            self.client.load(completionBlock: { (ad, _) -> Void in
+                if let vc = self.storyboard!.instantiateViewController(withIdentifier: "NativeAdPageContentViewController") as? NativeAdPageContentViewController {
+                    ad?.delegate = self;
                     vc.view.frame = self.view.frame
                     vc.ad = ad
                     vc.position = self.contentViewControllers.count + 1
                     self.contentViewControllers.append(vc)
                 }
-                dispatch_group_leave(group);
+                group.leave();
             })
         }
-        dispatch_group_notify(group, dispatch_get_main_queue()) { () -> Void in
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        group.notify(queue: DispatchQueue.main) { () -> Void in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             if 0 < self.contentViewControllers.count {
-                self.pageViewController.setViewControllers([self.contentViewControllers.first!], direction: .Forward, animated: false, completion: nil)
+                self.pageViewController.setViewControllers([self.contentViewControllers.first!], direction: .forward, animated: false, completion: nil)
             }
         }
     }
@@ -64,8 +65,8 @@ class NativeAdPageViewController: UIViewController, UIPageViewControllerDelegate
     
     // MARK: - UIPageViewControllerDataSource
 
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        guard let index = self.contentViewControllers.indexOf(viewController as! NativeAdPageContentViewController) else {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let index = self.contentViewControllers.index(of: viewController as! NativeAdPageContentViewController) else {
             return nil
         }
         if 0 == index {
@@ -74,8 +75,8 @@ class NativeAdPageViewController: UIViewController, UIPageViewControllerDelegate
         return self.contentViewControllers[index - 1]
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        guard let index = self.contentViewControllers.indexOf(viewController as! NativeAdPageContentViewController) else {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let index = self.contentViewControllers.index(of: viewController as! NativeAdPageContentViewController) else {
             return nil
         }
         if self.contentViewControllers.count == index + 1 {
@@ -86,7 +87,7 @@ class NativeAdPageViewController: UIViewController, UIPageViewControllerDelegate
     
     // MARK: - NADNativeDelegate
     
-    func nadNativeDidClickAd(ad: NADNative!) {
+    func nadNativeDidClickAd(_ ad: NADNative!) {
         print("NativeAdPageViewController: nadNativeDidClickAd")
     }
 }

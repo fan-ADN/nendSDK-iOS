@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NendAd
 
 class ViewController: UIViewController {
 
@@ -18,7 +19,8 @@ class ViewController: UIViewController {
         (name: "728x90", segue: "PushBigBanner"),
         (name: "Interstitial", segue: "PushInterstitialAd"),
         (name: "Interstitial in Transition", segue: "PushInterstitialAdInTransition"),
-        (name: "Native", segue: "PushNativeAdMenu")
+        (name: "Native", segue: "PushNativeAdMenu"),
+        (name: "FullBoard", segue: "PushFullBoardAdMenu")
     ]
     
     @IBOutlet weak var tableView: UITableView!
@@ -34,30 +36,30 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
     
     // MARK: UITableViewDataSource
     
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         return self.items.count
     }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath:NSIndexPath!) -> UITableViewCell! {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+    func tableView(_ tableView: UITableView!, cellForRowAtIndexPath indexPath:IndexPath!) -> UITableViewCell! {
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
         cell.textLabel!.text = self.items[indexPath.row].name
         return cell
     }
     
     // MARK: UITableViewDelegate
     
-    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        self.performSegueWithIdentifier(self.items[indexPath.row].segue, sender: nil)
+    func tableView(_ tableView: UITableView!, didSelectRowAtIndexPath indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.performSegue(withIdentifier: self.items[indexPath.row].segue, sender: nil)
     }
 }

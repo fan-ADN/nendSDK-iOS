@@ -6,14 +6,15 @@
 //
 
 import UIKit
+import NendAd
 
 class NativeAdInFeedTableViewController: UITableViewController, NADNativeTableViewHelperDelegate {
     
-    @IBOutlet private weak var footer: UIView!
-    private let MAX = 200
-    private var helper: NADNativeTableViewHelper!
-    private var items = [String]()
-    private var loading = false
+    @IBOutlet fileprivate weak var footer: UIView!
+    fileprivate let MAX = 200
+    fileprivate var helper: NADNativeTableViewHelper!
+    fileprivate var items = [String]()
+    fileprivate var loading = false
 
     deinit {
         print("NativeAdInFeedTableViewController: deinit")
@@ -34,7 +35,7 @@ class NativeAdInFeedTableViewController: UITableViewController, NADNativeTableVi
             self.items.append("Item\(i)");
         }
         
-        NADNativeLogger.setLogLevel(.Info)
+        NADNativeLogger.setLogLevel(.info)
         
         let placer = NADNativeTableViewPlacement()
         // 15行毎に広告を表示する
@@ -50,26 +51,26 @@ class NativeAdInFeedTableViewController: UITableViewController, NADNativeTableVi
     
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44.0
     }
     
-    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44.0
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 広告行を含んだindexPathに変換しセルを取得
-        let reuseIndexPath = self.helper.actualIndexPathForOriginalIndexPath(indexPath)
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: reuseIndexPath)
+        let reuseIndexPath = self.helper.actualIndexPath(forOriginalIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: reuseIndexPath!)
         // 引数のindexPathをそのまま使用
         cell.textLabel!.text = self.items[indexPath.row]
         return cell
@@ -77,17 +78,17 @@ class NativeAdInFeedTableViewController: UITableViewController, NADNativeTableVi
 
     // MARK: - Table view delegate
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 広告行を含んだindexPathに変換し選択状態を解除
-        let actualIndexPath = self.helper.actualIndexPathForOriginalIndexPath(indexPath)
-        tableView.deselectRowAtIndexPath(actualIndexPath, animated: true)
+        let actualIndexPath = self.helper.actualIndexPath(forOriginalIndexPath: indexPath)
+        tableView.deselectRow(at: actualIndexPath!, animated: true)
     }
     
-    override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return nil
     }
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if self.items.count - 1 == indexPath.row {
             if MAX == items.count {
                 self.footer.removeFromSuperview()
@@ -98,8 +99,8 @@ class NativeAdInFeedTableViewController: UITableViewController, NADNativeTableVi
             }
             print("load more.")
             self.loading = true
-            let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(3 * Double(NSEC_PER_SEC)))
-            dispatch_after(delay, dispatch_get_main_queue(), { () -> Void in
+            let delay = DispatchTime.now() + Double(Int64(3 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+            DispatchQueue.main.asyncAfter(deadline: delay, execute: { () -> Void in
                 for i in 1...50 {
                     self.items.append("AddItem\(i)")
                 }
@@ -111,20 +112,20 @@ class NativeAdInFeedTableViewController: UITableViewController, NADNativeTableVi
     
     // MARK: - NADNativeTableViewHelperDelegate
     
-    func tableView(tableView: UITableView!, adCellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    func tableView(_ tableView: UITableView!, adCellForRowAt indexPath: IndexPath!) -> UITableViewCell! {
         // 広告行用のセルを取得
-        return tableView.dequeueReusableCellWithIdentifier("AdCell", forIndexPath: indexPath)
+        return tableView.dequeueReusableCell(withIdentifier: "AdCell", for: indexPath)
     }
     
-    func tableView(tableView: UITableView!, heightForAdRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+    func tableView(_ tableView: UITableView!, heightForAdRowAt indexPath: IndexPath!) -> CGFloat {
         return 96.0
     }
     
-    func tableView(tableView: UITableView!, estimatedHeightForAdRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+    func tableView(_ tableView: UITableView!, estimatedHeightForAdRowAt indexPath: IndexPath!) -> CGFloat {
         return 96.0
     }
     
-    func nadNativeDidClickAd(ad: NADNative!) {
+    func nadNativeDidClickAd(_ ad: NADNative!) {
         print("click ad.")
     }
 }

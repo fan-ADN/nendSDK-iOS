@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1871B75CBB679C438522EF04 /* libPods-NendSDK_Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF67E05B4082EEAFD7D32E3C /* libPods-NendSDK_Sample.a */; };
+		3898DD0FDFE3BEB97FE995B6 /* Pods_NendSDK_Swift_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4489AAC6F335CBD1687859B /* Pods_NendSDK_Swift_Sample.framework */; };
 		4F28261B1D1CF659001484EE /* NativeAdNoNibTelopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */; };
 		4F28261E1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261D1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m */; };
 		4FE8F4151D828A2700F577B1 /* AdInterstitialInTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8F4141D828A2700F577B1 /* AdInterstitialInTransitionViewController.m */; };
@@ -80,6 +80,7 @@
 		69ED18911BD8CDC500CBEDD0 /* FeedCell4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69ED188A1BD8CDC500CBEDD0 /* FeedCell4.xib */; };
 		69ED18921BD8CDC500CBEDD0 /* FeedWithAdCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69ED188B1BD8CDC500CBEDD0 /* FeedWithAdCell2.xib */; };
 		69EEA0861CF41D1C006EB97B /* NativeAdNoNibInFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EEA0851CF41D1C006EB97B /* NativeAdNoNibInFeedViewController.m */; };
+		829BE02C97B2A73B83C81EA5 /* Pods_NendSDK_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8931984D96F6DC74F26F3378 /* Pods_NendSDK_Sample.framework */; };
 		8B1C843A1CB51B1700EE385C /* NativeAdCarouselLandscapeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C84381CB51B1700EE385C /* NativeAdCarouselLandscapeView.xib */; };
 		8B1C843B1CB51B1700EE385C /* NativeAdCarouselPortraitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C84391CB51B1700EE385C /* NativeAdCarouselPortraitView.xib */; };
 		8B1C843E1CB51B4000EE385C /* NativeAdCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C843C1CB51B4000EE385C /* NativeAdCarouselCell.swift */; };
@@ -94,7 +95,6 @@
 		8BD078EA1C9A3B4A003ABB82 /* NativeAdCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD078E91C9A3B4A003ABB82 /* NativeAdCarouselView.m */; };
 		8BD078EC1C9A42B0003ABB82 /* NativeAdCarouselPortraitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BD078EB1C9A42B0003ABB82 /* NativeAdCarouselPortraitView.xib */; };
 		8BD849831D2F784E002F84DF /* NativeAdCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD849821D2F784E002F84DF /* NativeAdCustomViewController.m */; };
-		9EBA96B5026C73754EF3C438 /* libPods-NendSDK_Swift_Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D7904DF65B12AA2958812E7 /* libPods-NendSDK_Swift_Sample.a */; };
 		B54CAE7E19DE5BA9003C6616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAE7D19DE5BA9003C6616 /* AppDelegate.swift */; };
 		B54CAE8019DE5BA9003C6616 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAE7F19DE5BA9003C6616 /* ViewController.swift */; };
 		B54CAE8319DE5BA9003C6616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54CAE8119DE5BA9003C6616 /* Main.storyboard */; };
@@ -106,10 +106,32 @@
 		B54CAEA719DE5DF9003C6616 /* BannerView320x100Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA219DE5DF9003C6616 /* BannerView320x100Controller.swift */; };
 		B54CAEA819DE5DF9003C6616 /* BannerView728x90Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */; };
 		B54CAEAC19DE5E15003C6616 /* InterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */; };
+		CE691DD21E3084630071C583 /* NendAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE691DCF1E3084580071C583 /* NendAd.framework */; };
+		CEB2EA491E2E1AA800A826DE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6998B67B193EA651009D70F6 /* ImageIO.framework */; };
+		CEB2EA4A1E2E1AAC00A826DE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33426517991B79001D0A08 /* Security.framework */; };
+		CEB2EA4B1E2E1AB000A826DE /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33426717991B7E001D0A08 /* AdSupport.framework */; };
+		CEB2EA4C1E2E1AB600A826DE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6998B67B193EA651009D70F6 /* ImageIO.framework */; };
+		CEB2EA4D1E2E1AB900A826DE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33426517991B79001D0A08 /* Security.framework */; };
+		CEB2EA4E1E2E1ABF00A826DE /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33426717991B7E001D0A08 /* AdSupport.framework */; };
+		CEB2EA511E2F10F700A826DE /* FullBoardAdMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA501E2F10F700A826DE /* FullBoardAdMenuViewController.m */; };
+		CEB2EA521E2F10F700A826DE /* FullBoardAdMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA501E2F10F700A826DE /* FullBoardAdMenuViewController.m */; };
+		CEB2EA561E2F1A0B00A826DE /* FullBoardAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA551E2F1A0B00A826DE /* FullBoardAdViewController.m */; };
+		CEB2EA571E2F1A0B00A826DE /* FullBoardAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA551E2F1A0B00A826DE /* FullBoardAdViewController.m */; };
+		CEB2EA5D1E2F209600A826DE /* FullBoardAdPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA5C1E2F209600A826DE /* FullBoardAdPageViewController.m */; };
+		CEB2EA5E1E2F209600A826DE /* FullBoardAdPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA5C1E2F209600A826DE /* FullBoardAdPageViewController.m */; };
+		CEB2EA661E2F3B4400A826DE /* FullBoardAdContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA641E2F3B4400A826DE /* FullBoardAdContentViewController.m */; };
+		CEB2EA671E2F3B4400A826DE /* FullBoardAdContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA641E2F3B4400A826DE /* FullBoardAdContentViewController.m */; };
+		CEB2EA6C1E2F427900A826DE /* FullBoardAdMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA6B1E2F427900A826DE /* FullBoardAdMenuViewController.swift */; };
+		CEB2EA6D1E2F427900A826DE /* FullBoardAdMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA6B1E2F427900A826DE /* FullBoardAdMenuViewController.swift */; };
+		CEB2EA6F1E2F43F400A826DE /* FullBoardAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA6E1E2F43F400A826DE /* FullBoardAdViewController.swift */; };
+		CEB2EA701E2F43F400A826DE /* FullBoardAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA6E1E2F43F400A826DE /* FullBoardAdViewController.swift */; };
+		CEB2EA721E2F46C200A826DE /* FullBoardAdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA711E2F46C200A826DE /* FullBoardAdPageViewController.swift */; };
+		CEB2EA731E2F46C200A826DE /* FullBoardAdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA711E2F46C200A826DE /* FullBoardAdPageViewController.swift */; };
+		CEB2EA751E2F472800A826DE /* FullBoardAdContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA741E2F472800A826DE /* FullBoardAdContentViewController.swift */; };
+		CEB2EA761E2F472800A826DE /* FullBoardAdContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA741E2F472800A826DE /* FullBoardAdContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D7904DF65B12AA2958812E7 /* libPods-NendSDK_Swift_Sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NendSDK_Swift_Sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D57EBE1B2229B467319E4C8 /* Pods-NendSDK_Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendSDK_Sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NendSDK_Sample/Pods-NendSDK_Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		2E0069FFAE5D37AF743DC66D /* Pods-NendSDK_Swift_Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendSDK_Swift_Sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NendSDK_Swift_Sample/Pods-NendSDK_Swift_Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		3B33423017990B9E001D0A08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -221,6 +243,7 @@
 		69ED188B1BD8CDC500CBEDD0 /* FeedWithAdCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedWithAdCell2.xib; sourceTree = "<group>"; };
 		69EEA0841CF41D1C006EB97B /* NativeAdNoNibInFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdNoNibInFeedViewController.h; sourceTree = "<group>"; };
 		69EEA0851CF41D1C006EB97B /* NativeAdNoNibInFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdNoNibInFeedViewController.m; sourceTree = "<group>"; };
+		8931984D96F6DC74F26F3378 /* Pods_NendSDK_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NendSDK_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1C84381CB51B1700EE385C /* NativeAdCarouselLandscapeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdCarouselLandscapeView.xib; sourceTree = "<group>"; };
 		8B1C84391CB51B1700EE385C /* NativeAdCarouselPortraitView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdCarouselPortraitView.xib; sourceTree = "<group>"; };
 		8B1C843C1CB51B4000EE385C /* NativeAdCarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdCarouselCell.swift; sourceTree = "<group>"; };
@@ -254,9 +277,22 @@
 		B54CAEA219DE5DF9003C6616 /* BannerView320x100Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView320x100Controller.swift; sourceTree = "<group>"; };
 		B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView728x90Controller.swift; sourceTree = "<group>"; };
 		B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialViewController.swift; sourceTree = "<group>"; };
-		B54CAEAD19DE5E31003C6616 /* NendAd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NendAd-Bridging-Header.h"; sourceTree = "<group>"; };
-		BF67E05B4082EEAFD7D32E3C /* libPods-NendSDK_Sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NendSDK_Sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1BECE5B67F919DE29F9177 /* Pods-NendSDK_Swift_Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendSDK_Swift_Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-NendSDK_Swift_Sample/Pods-NendSDK_Swift_Sample.release.xcconfig"; sourceTree = "<group>"; };
+		CE691DCF1E3084580071C583 /* NendAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NendAd.framework; sourceTree = "<group>"; };
+		CE691DD11E3084580071C583 /* NendAdResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NendAdResource.bundle; sourceTree = "<group>"; };
+		CEB2EA4F1E2F10F700A826DE /* FullBoardAdMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullBoardAdMenuViewController.h; sourceTree = "<group>"; };
+		CEB2EA501E2F10F700A826DE /* FullBoardAdMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullBoardAdMenuViewController.m; sourceTree = "<group>"; };
+		CEB2EA541E2F1A0B00A826DE /* FullBoardAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullBoardAdViewController.h; sourceTree = "<group>"; };
+		CEB2EA551E2F1A0B00A826DE /* FullBoardAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullBoardAdViewController.m; sourceTree = "<group>"; };
+		CEB2EA5B1E2F209600A826DE /* FullBoardAdPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullBoardAdPageViewController.h; sourceTree = "<group>"; };
+		CEB2EA5C1E2F209600A826DE /* FullBoardAdPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullBoardAdPageViewController.m; sourceTree = "<group>"; };
+		CEB2EA631E2F3B4400A826DE /* FullBoardAdContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullBoardAdContentViewController.h; sourceTree = "<group>"; };
+		CEB2EA641E2F3B4400A826DE /* FullBoardAdContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullBoardAdContentViewController.m; sourceTree = "<group>"; };
+		CEB2EA6B1E2F427900A826DE /* FullBoardAdMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullBoardAdMenuViewController.swift; sourceTree = "<group>"; };
+		CEB2EA6E1E2F43F400A826DE /* FullBoardAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullBoardAdViewController.swift; sourceTree = "<group>"; };
+		CEB2EA711E2F46C200A826DE /* FullBoardAdPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullBoardAdPageViewController.swift; sourceTree = "<group>"; };
+		CEB2EA741E2F472800A826DE /* FullBoardAdContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullBoardAdContentViewController.swift; sourceTree = "<group>"; };
+		D4489AAC6F335CBD1687859B /* Pods_NendSDK_Swift_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NendSDK_Swift_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,7 +300,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1871B75CBB679C438522EF04 /* libPods-NendSDK_Sample.a in Frameworks */,
+				CE691DD21E3084630071C583 /* NendAd.framework in Frameworks */,
+				CEB2EA4E1E2E1ABF00A826DE /* AdSupport.framework in Frameworks */,
+				CEB2EA4D1E2E1AB900A826DE /* Security.framework in Frameworks */,
+				CEB2EA4C1E2E1AB600A826DE /* ImageIO.framework in Frameworks */,
+				829BE02C97B2A73B83C81EA5 /* Pods_NendSDK_Sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +312,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EBA96B5026C73754EF3C438 /* libPods-NendSDK_Swift_Sample.a in Frameworks */,
+				CEB2EA4B1E2E1AB000A826DE /* AdSupport.framework in Frameworks */,
+				CEB2EA4A1E2E1AAC00A826DE /* Security.framework in Frameworks */,
+				CEB2EA491E2E1AA800A826DE /* ImageIO.framework in Frameworks */,
+				3898DD0FDFE3BEB97FE995B6 /* Pods_NendSDK_Swift_Sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,14 +345,15 @@
 		3B33422F17990B9E001D0A08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE691DCE1E3084580071C583 /* NendAd.embeddedframework */,
 				6998B67B193EA651009D70F6 /* ImageIO.framework */,
 				3B33426717991B7E001D0A08 /* AdSupport.framework */,
 				3B33426517991B79001D0A08 /* Security.framework */,
 				3B33423017990B9E001D0A08 /* UIKit.framework */,
 				3B33423217990B9E001D0A08 /* Foundation.framework */,
 				3B33423417990B9E001D0A08 /* CoreGraphics.framework */,
-				BF67E05B4082EEAFD7D32E3C /* libPods-NendSDK_Sample.a */,
-				0D7904DF65B12AA2958812E7 /* libPods-NendSDK_Swift_Sample.a */,
+				8931984D96F6DC74F26F3378 /* Pods_NendSDK_Sample.framework */,
+				D4489AAC6F335CBD1687859B /* Pods_NendSDK_Swift_Sample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -317,6 +361,7 @@
 		690C28751B797DF100C92232 /* NendSDK_Sample */ = {
 			isa = PBXGroup;
 			children = (
+				CEB2EA531E2F10FE00A826DE /* fullboard */,
 				690C28F71B7994D900C92232 /* native */,
 				690C28F61B7994C700C92232 /* interstitial */,
 				690C28A81B7986C500C92232 /* banner */,
@@ -526,6 +571,7 @@
 		B54CAE7A19DE5BA9003C6616 /* NendSDK_Swift_Sample */ = {
 			isa = PBXGroup;
 			children = (
+				CEB2EA6A1E2F424000A826DE /* fullboard */,
 				69ED186F1BD8BCA800CBEDD0 /* native */,
 				B54CAE7D19DE5BA9003C6616 /* AppDelegate.swift */,
 				B54CAE7F19DE5BA9003C6616 /* ViewController.swift */,
@@ -536,7 +582,6 @@
 				B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */,
 				B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */,
 				4FE8F4191D82B44800F577B1 /* InterstitialInTransitionViewController.swift */,
-				B54CAEAD19DE5E31003C6616 /* NendAd-Bridging-Header.h */,
 				B54CAE8119DE5BA9003C6616 /* Main.storyboard */,
 				B54CAE8419DE5BA9003C6616 /* Images.xcassets */,
 				B54CAE8619DE5BA9003C6616 /* LaunchScreen.xib */,
@@ -553,6 +598,49 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CE691DCE1E3084580071C583 /* NendAd.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				CE691DCF1E3084580071C583 /* NendAd.framework */,
+				CE691DD01E3084580071C583 /* Resources */,
+			);
+			path = NendAd.embeddedframework;
+			sourceTree = "<group>";
+		};
+		CE691DD01E3084580071C583 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE691DD11E3084580071C583 /* NendAdResource.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CEB2EA531E2F10FE00A826DE /* fullboard */ = {
+			isa = PBXGroup;
+			children = (
+				CEB2EA4F1E2F10F700A826DE /* FullBoardAdMenuViewController.h */,
+				CEB2EA501E2F10F700A826DE /* FullBoardAdMenuViewController.m */,
+				CEB2EA541E2F1A0B00A826DE /* FullBoardAdViewController.h */,
+				CEB2EA551E2F1A0B00A826DE /* FullBoardAdViewController.m */,
+				CEB2EA5B1E2F209600A826DE /* FullBoardAdPageViewController.h */,
+				CEB2EA5C1E2F209600A826DE /* FullBoardAdPageViewController.m */,
+				CEB2EA631E2F3B4400A826DE /* FullBoardAdContentViewController.h */,
+				CEB2EA641E2F3B4400A826DE /* FullBoardAdContentViewController.m */,
+			);
+			name = fullboard;
+			sourceTree = "<group>";
+		};
+		CEB2EA6A1E2F424000A826DE /* fullboard */ = {
+			isa = PBXGroup;
+			children = (
+				CEB2EA6B1E2F427900A826DE /* FullBoardAdMenuViewController.swift */,
+				CEB2EA6E1E2F43F400A826DE /* FullBoardAdViewController.swift */,
+				CEB2EA711E2F46C200A826DE /* FullBoardAdPageViewController.swift */,
+				CEB2EA741E2F472800A826DE /* FullBoardAdContentViewController.swift */,
+			);
+			name = fullboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -560,12 +648,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 690C28981B797DF200C92232 /* Build configuration list for PBXNativeTarget "NendSDK_Sample" */;
 			buildPhases = (
-				99AF8CF794934647DD09F422 /* Check Pods Manifest.lock */,
+				99AF8CF794934647DD09F422 /* [CP] Check Pods Manifest.lock */,
 				690C28701B797DF100C92232 /* Sources */,
 				690C28711B797DF100C92232 /* Frameworks */,
 				690C28721B797DF100C92232 /* Resources */,
-				FF7AD2E33C513BD29B23D0CD /* Embed Pods Frameworks */,
-				D9D58A526E3E695F03F05D96 /* Copy Pods Resources */,
+				FF7AD2E33C513BD29B23D0CD /* [CP] Embed Pods Frameworks */,
+				D9D58A526E3E695F03F05D96 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -580,12 +668,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B54CAE9919DE5BA9003C6616 /* Build configuration list for PBXNativeTarget "NendSDK_Swift_Sample" */;
 			buildPhases = (
-				C70D6FAD436BF6E1E9812563 /* Check Pods Manifest.lock */,
+				C70D6FAD436BF6E1E9812563 /* [CP] Check Pods Manifest.lock */,
 				B54CAE7519DE5BA9003C6616 /* Sources */,
 				B54CAE7619DE5BA9003C6616 /* Frameworks */,
 				B54CAE7719DE5BA9003C6616 /* Resources */,
-				4E1278C89E0231E4096AACB8 /* Embed Pods Frameworks */,
-				8AB2353883CCA04799923282 /* Copy Pods Resources */,
+				4E1278C89E0231E4096AACB8 /* [CP] Embed Pods Frameworks */,
+				8AB2353883CCA04799923282 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -603,14 +691,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "F@N Communications";
 				TargetAttributes = {
 					690C28731B797DF100C92232 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0820;
 					};
 					B54CAE7819DE5BA9003C6616 = {
 						CreatedOnToolsVersion = 6.0.1;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -685,14 +775,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4E1278C89E0231E4096AACB8 /* Embed Pods Frameworks */ = {
+		4E1278C89E0231E4096AACB8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -700,14 +790,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NendSDK_Swift_Sample/Pods-NendSDK_Swift_Sample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8AB2353883CCA04799923282 /* Copy Pods Resources */ = {
+		8AB2353883CCA04799923282 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -715,44 +805,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NendSDK_Swift_Sample/Pods-NendSDK_Swift_Sample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		99AF8CF794934647DD09F422 /* Check Pods Manifest.lock */ = {
+		99AF8CF794934647DD09F422 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C70D6FAD436BF6E1E9812563 /* Check Pods Manifest.lock */ = {
+		C70D6FAD436BF6E1E9812563 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D9D58A526E3E695F03F05D96 /* Copy Pods Resources */ = {
+		D9D58A526E3E695F03F05D96 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,14 +850,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NendSDK_Sample/Pods-NendSDK_Sample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FF7AD2E33C513BD29B23D0CD /* Embed Pods Frameworks */ = {
+		FF7AD2E33C513BD29B23D0CD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -786,20 +876,25 @@
 				690C291D1B799FC400C92232 /* NativeAdView.m in Sources */,
 				690C290E1B799F9E00C92232 /* NativeAdViewController.m in Sources */,
 				690C290B1B799F9E00C92232 /* NativeAdPageContentViewController.m in Sources */,
+				CEB2EA5E1E2F209600A826DE /* FullBoardAdPageViewController.m in Sources */,
 				690C289E1B79805B00C92232 /* SelectTableViewController.m in Sources */,
 				4FE8F4181D828DCD00F577B1 /* SelectInterstitialTableViewController.m in Sources */,
 				690C290A1B799F9E00C92232 /* NativeAdInFeedViewController.m in Sources */,
 				69D46BC61B7C96F60094294A /* UINavigationController+Rotation.m in Sources */,
 				690C291B1B799FC400C92232 /* NativeAdCellView.m in Sources */,
 				8BCDDEB01C910BBE00EF379C /* NativeAdCarouselViewController.m in Sources */,
+				CEB2EA761E2F472800A826DE /* FullBoardAdContentViewController.swift in Sources */,
+				CEB2EA671E2F3B4400A826DE /* FullBoardAdContentViewController.m in Sources */,
 				690C28ED1B7989E000C92232 /* AdIBViewController.m in Sources */,
 				4F28261B1D1CF659001484EE /* NativeAdNoNibTelopViewController.m in Sources */,
 				8BCB34331C9655970025E24D /* NativeAdCarouselCell.m in Sources */,
+				CEB2EA6D1E2F427900A826DE /* FullBoardAdMenuViewController.swift in Sources */,
 				69D9C3D21C151874007754FE /* NativeAdNoNibViewController.m in Sources */,
 				696551621D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.m in Sources */,
 				690C28A11B7981F000C92232 /* AdInterstitialViewController.m in Sources */,
 				6933FCB91BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */,
 				690C28A71B7985CA00C92232 /* SelectSizeTableViewController.m in Sources */,
+				CEB2EA701E2F43F400A826DE /* FullBoardAdViewController.swift in Sources */,
 				8BD078EA1C9A3B4A003ABB82 /* NativeAdCarouselView.m in Sources */,
 				690C291C1B799FC400C92232 /* NativeAdCollectionView.m in Sources */,
 				8BD849831D2F784E002F84DF /* NativeAdCustomViewController.m in Sources */,
@@ -807,10 +902,13 @@
 				69EEA0861CF41D1C006EB97B /* NativeAdNoNibInFeedViewController.m in Sources */,
 				690C28EA1B7989CB00C92232 /* AdViewController.m in Sources */,
 				8B1E20E91D056FCA0016610A /* NativeAdTelopTextView.m in Sources */,
+				CEB2EA731E2F46C200A826DE /* FullBoardAdPageViewController.swift in Sources */,
 				69CEC6491BD7581200F352DE /* FeedAdView.m in Sources */,
 				690C29091B799F9E00C92232 /* NativeAdCollectionViewController.m in Sources */,
+				CEB2EA571E2F1A0B00A826DE /* FullBoardAdViewController.m in Sources */,
 				8B1D6E201D010F3600250F60 /* NativeAdTelopViewController.m in Sources */,
 				690C28E71B7989B800C92232 /* AdAdjustViewController.m in Sources */,
+				CEB2EA521E2F10F700A826DE /* FullBoardAdMenuViewController.m in Sources */,
 				69CEC64E1BD76CCC00F352DE /* FeedAdCell.m in Sources */,
 				4F28261E1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m in Sources */,
 				690C28A41B7984FB00C92232 /* SelectBannerTableViewController.m in Sources */,
@@ -826,27 +924,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				69D156761BD9DB9600ECD772 /* NativeAdInFeedTableViewController.swift in Sources */,
+				CEB2EA661E2F3B4400A826DE /* FullBoardAdContentViewController.m in Sources */,
+				CEB2EA6C1E2F427900A826DE /* FullBoardAdMenuViewController.swift in Sources */,
 				8B22CFE71D35C5EF00DE86CC /* NativeAdCustomViewController.swift in Sources */,
 				8B1C84411CB51B5D00EE385C /* NativeAdCarouselView.swift in Sources */,
 				B54CAE8019DE5BA9003C6616 /* ViewController.swift in Sources */,
+				CEB2EA5D1E2F209600A826DE /* FullBoardAdPageViewController.m in Sources */,
 				6933FCB81BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */,
 				B54CAEA719DE5DF9003C6616 /* BannerView320x100Controller.swift in Sources */,
 				693A21781B79EEC9004B6680 /* NativeAdMenuViewController.swift in Sources */,
 				698C8B061BE1F76C00BF8811 /* NativeAdPageViewController.swift in Sources */,
 				69ED18741BD8BE1B00CBEDD0 /* NativeAdCellView.swift in Sources */,
+				CEB2EA6F1E2F43F400A826DE /* FullBoardAdViewController.swift in Sources */,
 				69C55FCD1BD9FC5300D0E34A /* NativeAdCollectionViewController.swift in Sources */,
 				69ED18761BD8BE8C00CBEDD0 /* NativeAdCollectionView.swift in Sources */,
 				B54CAEAC19DE5E15003C6616 /* InterstitialViewController.swift in Sources */,
 				69ED18721BD8BCEF00CBEDD0 /* NativeAdView.swift in Sources */,
 				69ED18831BD8C8F700CBEDD0 /* FeedAdView.swift in Sources */,
 				69ED18811BD8C8DC00CBEDD0 /* FeedView.swift in Sources */,
+				CEB2EA561E2F1A0B00A826DE /* FullBoardAdViewController.m in Sources */,
 				693A21711B79BDDB004B6680 /* NativeAdViewController.swift in Sources */,
 				4FE8F41A1D82B44800F577B1 /* InterstitialInTransitionViewController.swift in Sources */,
 				8B1C843E1CB51B4000EE385C /* NativeAdCarouselCell.swift in Sources */,
+				CEB2EA751E2F472800A826DE /* FullBoardAdContentViewController.swift in Sources */,
+				CEB2EA511E2F10F700A826DE /* FullBoardAdMenuViewController.m in Sources */,
 				B54CAEA519DE5DF9003C6616 /* BannerView300x250Controller.swift in Sources */,
 				8B1C843F1CB51B4000EE385C /* NativeAdCarouselViewController.swift in Sources */,
 				B54CAEA619DE5DF9003C6616 /* BannerView320x50Controller.swift in Sources */,
 				B54CAEA819DE5DF9003C6616 /* BannerView728x90Controller.swift in Sources */,
+				CEB2EA721E2F46C200A826DE /* FullBoardAdPageViewController.swift in Sources */,
 				B54CAE7E19DE5BA9003C6616 /* AppDelegate.swift in Sources */,
 				69ED18851BD8C92700CBEDD0 /* FeedAdCell.swift in Sources */,
 				698C8B081BE1F78B00BF8811 /* NativeAdPageContentViewController.swift in Sources */,
@@ -900,29 +1006,39 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -934,21 +1050,32 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -965,7 +1092,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -977,13 +1106,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/NendSDK_Sample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.nend.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -999,8 +1130,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -1008,13 +1141,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/NendSDK_Sample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.nend.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1028,7 +1162,9 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1041,16 +1177,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = NendSDK_Swift_Sample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.nend.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/NendSDK_Swift_Sample/NendAd-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1064,8 +1200,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1074,15 +1212,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = NendSDK_Swift_Sample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.nend.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/NendSDK_Swift_Sample/NendAd-Bridging-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

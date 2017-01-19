@@ -7,7 +7,7 @@
 
 #import "NativeAdCollectionViewController.h"
 
-#import "NADNativeClient.h"
+#import <NendAd/NADNativeClient.h>
 #import "NativeAdCollectionView.h"
 
 static const NSUInteger kNativeAdInterval = 10;

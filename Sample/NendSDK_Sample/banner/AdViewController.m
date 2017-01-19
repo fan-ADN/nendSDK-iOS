@@ -7,7 +7,7 @@
 
 #import "AdViewController.h"
 
-#import "NADView.h"
+#import <NendAd/NADView.h>
 
 @interface AdViewController () <NADViewDelegate>
 

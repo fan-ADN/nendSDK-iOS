@@ -6,7 +6,8 @@
 //
 
 #import "AppDelegate.h"
-#import "NADInterstitial.h"
+
+#import <NendAd/NADInterstitial.h>
 
 @interface AppDelegate ()
 

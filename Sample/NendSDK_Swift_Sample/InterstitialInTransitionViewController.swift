@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NendAd
 
 class InterstitialInTransitionViewController: UIViewController, NADInterstitialDelegate {
 
@@ -22,11 +23,11 @@ class InterstitialInTransitionViewController: UIViewController, NADInterstitialD
         NADInterstitial.sharedInstance().isOutputLog = true
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         var showResult: NADInterstitialShowResult
-        showResult = NADInterstitial.sharedInstance().showAdFromViewController(self)
+        showResult = NADInterstitial.sharedInstance().showAd(from: self)
         
         switch(showResult){
         case .AD_SHOW_SUCCESS:
@@ -57,7 +58,7 @@ class InterstitialInTransitionViewController: UIViewController, NADInterstitialD
 
     // MARK: NADInterstitialDelegate
     
-    func didFinishLoadInterstitialAdWithStatus(status: NADInterstitialStatusCode) {
+    func didFinishLoadInterstitialAd(withStatus status: NADInterstitialStatusCode) {
         switch(status){
         case .SUCCESS:
             print("SUCCESS")
@@ -74,7 +75,7 @@ class InterstitialInTransitionViewController: UIViewController, NADInterstitialD
         }
     }
     
-    func didClickWithType(type: NADInterstitialClickType) {
+    func didClick(with type: NADInterstitialClickType) {
         switch(type){
         case .DOWNLOAD:
             print("DOWNLOAD")

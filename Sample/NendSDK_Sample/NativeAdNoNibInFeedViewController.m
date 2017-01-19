@@ -7,7 +7,7 @@
 
 #import "NativeAdNoNibInFeedViewController.h"
 
-#import "NADNativeTableViewHelper.h"
+#import <NendAd/NADNativeTableViewHelper.h>
 
 @interface NativeAdTableViewCell : UITableViewCell <NADNativeViewRendering>
 

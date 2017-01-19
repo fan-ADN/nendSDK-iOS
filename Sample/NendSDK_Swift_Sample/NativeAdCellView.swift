@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import NendAd
 
 class NativeAdCellView: UITableViewCell, NADNativeViewRendering {
 
-    @IBOutlet private weak var nativeAdPrTextLabel: UILabel!
-    @IBOutlet private weak var nativeAdLongTextLabel: UILabel!
-    @IBOutlet private weak var nativeAdActionButtonTextLabel: UILabel!
-    @IBOutlet private weak var nativeAdImageView: UIImageView!
+    @IBOutlet fileprivate weak var nativeAdPrTextLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdLongTextLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdActionButtonTextLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdImageView: UIImageView!
     
     // MARK: - NADNativeViewRendering
     

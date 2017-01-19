@@ -6,7 +6,7 @@
 //
 
 #import "NativeAdCarouselCell.h"
-#import "NADNativeClient.h"
+#import <NendAd/NADNativeClient.h>
 #import "NativeAdCarouselView.h"
 
 #define cellWidth       [UIScreen mainScreen].bounds.size.width
@@ -50,6 +50,7 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
 
 - (void)awakeFromNib {
     // Initialization code
+    [super awakeFromNib];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

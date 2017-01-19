@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NendAd
 
 class InterstitialViewController: UIViewController, NADInterstitialDelegate {
 
@@ -34,9 +35,9 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
     
     // MARK: Actions
     
-    @IBAction func buttonClicked(sender: UIButton) {
+    @IBAction func buttonClicked(_ sender: UIButton) {
         var showResult: NADInterstitialShowResult
-        showResult = NADInterstitial.sharedInstance().showAdFromViewController(self)
+        showResult = NADInterstitial.sharedInstance().showAd(from: self)
         
         switch(showResult){
         case .AD_SHOW_SUCCESS:
@@ -65,7 +66,7 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
 
     // MARK: NADInterstitialDelegate
     
-    func didFinishLoadInterstitialAdWithStatus(status: NADInterstitialStatusCode) {
+    func didFinishLoadInterstitialAd(withStatus status: NADInterstitialStatusCode) {
         switch(status){
         case .SUCCESS:
             print("SUCCESS")
@@ -82,7 +83,7 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
         }
     }
     
-    func didClickWithType(type: NADInterstitialClickType) {
+    func didClick(with type: NADInterstitialClickType) {
         switch(type){
         case .DOWNLOAD:
             print("DOWNLOAD")

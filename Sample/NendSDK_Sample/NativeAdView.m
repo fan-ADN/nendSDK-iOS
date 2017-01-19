@@ -7,7 +7,7 @@
 
 #import "NativeAdView.h"
 
-#import "NADNativeViewRendering.h"
+#import <NendAd/NADNativeViewRendering.h>
 
 @interface NativeAdView () <NADNativeViewRendering>
 
@@ -74,7 +74,7 @@
     return _adImageView;
 }
 
-- (UIImageView *)logoImageView
+- (UIImageView *)nadLogoImageView
 {
     return _logoImageView;
 }

@@ -7,7 +7,7 @@
 
 #import "NativeAdNoHelperInFeedViewController.h"
 
-#import "NADNativeClient.h"
+#import <NendAd/NADNativeClient.h>
 #import "NativeAdCellView.h"
 
 static NSString *const reuseIdentifier = @"Cell";

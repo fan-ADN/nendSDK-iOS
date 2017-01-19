@@ -6,25 +6,26 @@
 //
 
 import UIKit
+import NendAd
 
 class NativeAdView: UIView, NADNativeViewRendering {
 
-    @IBOutlet private weak var nativeAdPrTextLabel: UILabel!
-    @IBOutlet private weak var nativeAdShortTextLabel: UILabel!
-    @IBOutlet private weak var nativeAdLongTextLabel: UILabel!
-    @IBOutlet private weak var nativeAdPromotionNameLabel: UILabel!
-    @IBOutlet private weak var nativeAdPromotionUrlLabel: UILabel!
-    @IBOutlet private weak var nativeAdActionButtonTextLabel: UILabel!
-    @IBOutlet private weak var nativeAdImageView: UIImageView!
-    @IBOutlet private weak var nativeAdLogoImageView: UIImageView!
+    @IBOutlet fileprivate weak var nativeAdPrTextLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdShortTextLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdLongTextLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdPromotionNameLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdPromotionUrlLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdActionButtonTextLabel: UILabel!
+    @IBOutlet fileprivate weak var nativeAdImageView: UIImageView!
+    @IBOutlet fileprivate weak var nativeAdLogoImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.layer.borderColor = UIColor.darkGrayColor().CGColor;
+        self.layer.borderColor = UIColor.darkGray.cgColor;
         self.layer.borderWidth = 1;
         
-        self.nativeAdActionButtonTextLabel.layer.borderColor = self.nativeAdActionButtonTextLabel.textColor.CGColor;
+        self.nativeAdActionButtonTextLabel.layer.borderColor = self.nativeAdActionButtonTextLabel.textColor.cgColor;
         self.nativeAdActionButtonTextLabel.layer.borderWidth = 1;
         self.nativeAdActionButtonTextLabel.layer.masksToBounds = true;
         self.nativeAdActionButtonTextLabel.layer.cornerRadius = 0;
@@ -60,7 +61,7 @@ class NativeAdView: UIView, NADNativeViewRendering {
         return self.nativeAdImageView
     }
     
-    func logoImageView() -> UIImageView! {
+    func nadLogoImageView() -> UIImageView! {
         return self.nativeAdLogoImageView
     }
 }

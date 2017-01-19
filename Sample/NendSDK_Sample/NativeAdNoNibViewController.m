@@ -7,7 +7,7 @@
 
 #import "NativeAdNoNibViewController.h"
 
-#import "NADNativeClient.h"
+#import <NendAd/NADNativeClient.h>
 
 @interface NativeAdViewInternal : UIView <NADNativeViewRendering>
 

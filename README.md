@@ -4,7 +4,8 @@
 
 ## Overview
 iOS版nendSDKのサンプルプロジェクトになります。  
-Objective-CとSwiftでの基本的な実装方法と動作確認が行えます。
+Objective-CとSwiftでの基本的な実装方法と動作確認が行えます。  
+nendSDKの導入方法については [Wiki](https://github.com/fan-ADN/nendSDK-iOS/wiki) をご覧ください。
 
 ## Requirement
 * **Xcode8.0**以上
@@ -43,5 +44,3 @@ Sampleディレクトリにある下記のワークスペースプロジェク�
 ```
 NendSDK_Sample.xcworkspace
 ```
-
-nendSDKの導入方法については [Wiki](https://github.com/fan-ADN/nendSDK-iOS/wiki) をご覧ください

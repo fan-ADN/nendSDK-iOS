@@ -43,3 +43,5 @@ Sampleディレクトリにある下記のワークスペースプロジェク�
 ```
 NendSDK_Sample.xcworkspace
 ```
+
+nendSDKの導入方法については [Wiki](https://github.com/fan-ADN/nendSDK-iOS/wiki) をご覧ください

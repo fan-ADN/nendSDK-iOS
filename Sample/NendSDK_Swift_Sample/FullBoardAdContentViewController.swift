@@ -18,7 +18,6 @@ class FullBoardAdContentViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.pageLabel.text = number;
-
     }
     
     func setNumber(number: String) {
@@ -29,6 +28,4 @@ class FullBoardAdContentViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 }

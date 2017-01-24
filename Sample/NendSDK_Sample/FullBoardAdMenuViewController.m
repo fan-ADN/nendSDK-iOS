@@ -24,7 +24,7 @@ static NSString *const CellIdentifier = @"Cell";
     
     self.title = @"FullBoard";
     
-    self.items = @[ @"Default", @"Page" ];
+    self.items = @[ @"Default", @"Page", @"ScrollEnd" ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
 }
 

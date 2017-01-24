@@ -12,7 +12,8 @@ class FullBoardAdMenuViewController: UITableViewController {
     
     fileprivate let items = [
         (name: "Default", segue: "PushDefault"),
-        (name: "Page", segue: "PushPage")
+        (name: "Page", segue: "PushPage"),
+        (name: "ScrollEnd", segue: "PushWeb")
     ]
     
     override func viewDidLoad() {
@@ -61,5 +62,4 @@ class FullBoardAdMenuViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: self.items[indexPath.row].segue, sender: indexPath)
     }
-    
 }

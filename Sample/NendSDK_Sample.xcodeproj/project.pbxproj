@@ -46,6 +46,8 @@
 		693A21781B79EEC9004B6680 /* NativeAdMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A21771B79EEC9004B6680 /* NativeAdMenuViewController.swift */; };
 		696551621D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696551611D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.m */; };
 		696F3E351BDA0ADD00798F4F /* NativeAdRssTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696F3E341BDA0ADD00798F4F /* NativeAdRssTableViewController.swift */; };
+		697CD3041E3736B000C2BDBE /* FullBoardAdWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697CD3031E3736B000C2BDBE /* FullBoardAdWebViewController.swift */; };
+		697CD3071E3742E200C2BDBE /* FullBoardAdWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 697CD3061E3742E200C2BDBE /* FullBoardAdWebViewController.m */; };
 		69829E101BE1C2EA00EBFE0A /* FeedWithAdCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69829E0F1BE1C2EA00EBFE0A /* FeedWithAdCell3.xib */; };
 		698C8B061BE1F76C00BF8811 /* NativeAdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C8B051BE1F76C00BF8811 /* NativeAdPageViewController.swift */; };
 		698C8B081BE1F78B00BF8811 /* NativeAdPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C8B071BE1F78B00BF8811 /* NativeAdPageContentViewController.swift */; };
@@ -202,6 +204,9 @@
 		696551601D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdNoHelperInFeedViewController.h; sourceTree = "<group>"; };
 		696551611D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdNoHelperInFeedViewController.m; sourceTree = "<group>"; };
 		696F3E341BDA0ADD00798F4F /* NativeAdRssTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdRssTableViewController.swift; sourceTree = "<group>"; };
+		697CD3031E3736B000C2BDBE /* FullBoardAdWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullBoardAdWebViewController.swift; sourceTree = "<group>"; };
+		697CD3051E3742E200C2BDBE /* FullBoardAdWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullBoardAdWebViewController.h; sourceTree = "<group>"; };
+		697CD3061E3742E200C2BDBE /* FullBoardAdWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullBoardAdWebViewController.m; sourceTree = "<group>"; };
 		69829E0F1BE1C2EA00EBFE0A /* FeedWithAdCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedWithAdCell3.xib; sourceTree = "<group>"; };
 		698C8B051BE1F76C00BF8811 /* NativeAdPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdPageViewController.swift; sourceTree = "<group>"; };
 		698C8B071BE1F78B00BF8811 /* NativeAdPageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdPageContentViewController.swift; sourceTree = "<group>"; };
@@ -626,6 +631,8 @@
 				CEB2EA5C1E2F209600A826DE /* FullBoardAdPageViewController.m */,
 				CEB2EA631E2F3B4400A826DE /* FullBoardAdContentViewController.h */,
 				CEB2EA641E2F3B4400A826DE /* FullBoardAdContentViewController.m */,
+				697CD3051E3742E200C2BDBE /* FullBoardAdWebViewController.h */,
+				697CD3061E3742E200C2BDBE /* FullBoardAdWebViewController.m */,
 			);
 			name = fullboard;
 			sourceTree = "<group>";
@@ -637,6 +644,7 @@
 				CEB2EA6E1E2F43F400A826DE /* FullBoardAdViewController.swift */,
 				CEB2EA711E2F46C200A826DE /* FullBoardAdPageViewController.swift */,
 				CEB2EA741E2F472800A826DE /* FullBoardAdContentViewController.swift */,
+				697CD3031E3736B000C2BDBE /* FullBoardAdWebViewController.swift */,
 			);
 			name = fullboard;
 			sourceTree = "<group>";
@@ -700,6 +708,7 @@
 					};
 					B54CAE7819DE5BA9003C6616 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = EH6M2BH4ZR;
 						LastSwiftMigration = 0820;
 					};
 				};
@@ -881,6 +890,7 @@
 				4FE8F4181D828DCD00F577B1 /* SelectInterstitialTableViewController.m in Sources */,
 				690C290A1B799F9E00C92232 /* NativeAdInFeedViewController.m in Sources */,
 				69D46BC61B7C96F60094294A /* UINavigationController+Rotation.m in Sources */,
+				697CD3071E3742E200C2BDBE /* FullBoardAdWebViewController.m in Sources */,
 				690C291B1B799FC400C92232 /* NativeAdCellView.m in Sources */,
 				8BCDDEB01C910BBE00EF379C /* NativeAdCarouselViewController.m in Sources */,
 				CEB2EA761E2F472800A826DE /* FullBoardAdContentViewController.swift in Sources */,
@@ -945,6 +955,7 @@
 				CEB2EA561E2F1A0B00A826DE /* FullBoardAdViewController.m in Sources */,
 				693A21711B79BDDB004B6680 /* NativeAdViewController.swift in Sources */,
 				4FE8F41A1D82B44800F577B1 /* InterstitialInTransitionViewController.swift in Sources */,
+				697CD3041E3736B000C2BDBE /* FullBoardAdWebViewController.swift in Sources */,
 				8B1C843E1CB51B4000EE385C /* NativeAdCarouselCell.swift in Sources */,
 				CEB2EA751E2F472800A826DE /* FullBoardAdContentViewController.swift in Sources */,
 				CEB2EA511E2F10F700A826DE /* FullBoardAdMenuViewController.m in Sources */,
@@ -1162,7 +1173,7 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = EH6M2BH4ZR;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_NO_COMMON_BLOCKS = NO;
@@ -1200,7 +1211,7 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = EH6M2BH4ZR;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";

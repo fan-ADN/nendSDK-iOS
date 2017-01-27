@@ -13,7 +13,8 @@ class FullBoardAdMenuViewController: UITableViewController {
     fileprivate let items = [
         (name: "Default", segue: "PushDefault"),
         (name: "Page", segue: "PushPage"),
-        (name: "ScrollEnd", segue: "PushWeb")
+        (name: "ScrollEnd", segue: "PushWeb"),
+        (name: "Tab", segue: "PushTab")
     ]
     
     override func viewDidLoad() {

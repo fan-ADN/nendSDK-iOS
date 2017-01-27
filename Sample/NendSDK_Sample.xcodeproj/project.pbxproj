@@ -40,6 +40,7 @@
 		690C29201B799FC400C92232 /* NativeAdViewSmallSquare.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690C29191B799FC400C92232 /* NativeAdViewSmallSquare.xib */; };
 		690C29211B799FC400C92232 /* NativeAdViewTextOnly.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690C291A1B799FC400C92232 /* NativeAdViewTextOnly.xib */; };
 		690C29231B79A22500C92232 /* native.plist in Resources */ = {isa = PBXBuildFile; fileRef = 690C29221B79A22500C92232 /* native.plist */; };
+		692B2C821E38A4C500DD7689 /* FullBoardTabPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B2C811E38A4C500DD7689 /* FullBoardTabPageViewController.swift */; };
 		6933FCB81BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6933FCB71BD62F5500C26FB4 /* NativeAdRssViewController.m */; };
 		6933FCB91BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6933FCB71BD62F5500C26FB4 /* NativeAdRssViewController.m */; };
 		693A21711B79BDDB004B6680 /* NativeAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A21701B79BDDB004B6680 /* NativeAdViewController.swift */; };
@@ -51,6 +52,7 @@
 		69829E101BE1C2EA00EBFE0A /* FeedWithAdCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69829E0F1BE1C2EA00EBFE0A /* FeedWithAdCell3.xib */; };
 		698C8B061BE1F76C00BF8811 /* NativeAdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C8B051BE1F76C00BF8811 /* NativeAdPageViewController.swift */; };
 		698C8B081BE1F78B00BF8811 /* NativeAdPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C8B071BE1F78B00BF8811 /* NativeAdPageContentViewController.swift */; };
+		69B3C9B11E3B11C20018F238 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B3C9B01E3B11C20018F238 /* TableViewController.swift */; };
 		69C55FCD1BD9FC5300D0E34A /* NativeAdCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C55FCC1BD9FC5300D0E34A /* NativeAdCollectionViewController.swift */; };
 		69CEC63C1BD752D600F352DE /* FeedCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69CEC6311BD752D600F352DE /* FeedCell1.xib */; };
 		69CEC63D1BD752D600F352DE /* FeedCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69CEC6321BD752D600F352DE /* FeedCell2.xib */; };
@@ -197,6 +199,7 @@
 		690C29191B799FC400C92232 /* NativeAdViewSmallSquare.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdViewSmallSquare.xib; sourceTree = "<group>"; };
 		690C291A1B799FC400C92232 /* NativeAdViewTextOnly.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdViewTextOnly.xib; sourceTree = "<group>"; };
 		690C29221B79A22500C92232 /* native.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = native.plist; sourceTree = "<group>"; };
+		692B2C811E38A4C500DD7689 /* FullBoardTabPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullBoardTabPageViewController.swift; sourceTree = "<group>"; };
 		6933FCB61BD62F5500C26FB4 /* NativeAdRssViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdRssViewController.h; sourceTree = "<group>"; };
 		6933FCB71BD62F5500C26FB4 /* NativeAdRssViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdRssViewController.m; sourceTree = "<group>"; };
 		693A21701B79BDDB004B6680 /* NativeAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +214,7 @@
 		698C8B051BE1F76C00BF8811 /* NativeAdPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdPageViewController.swift; sourceTree = "<group>"; };
 		698C8B071BE1F78B00BF8811 /* NativeAdPageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdPageContentViewController.swift; sourceTree = "<group>"; };
 		6998B67B193EA651009D70F6 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		69B3C9B01E3B11C20018F238 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		69C55FCC1BD9FC5300D0E34A /* NativeAdCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdCollectionViewController.swift; sourceTree = "<group>"; };
 		69CEC6311BD752D600F352DE /* FeedCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell1.xib; sourceTree = "<group>"; };
 		69CEC6321BD752D600F352DE /* FeedCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell2.xib; sourceTree = "<group>"; };
@@ -645,6 +649,8 @@
 				CEB2EA711E2F46C200A826DE /* FullBoardAdPageViewController.swift */,
 				CEB2EA741E2F472800A826DE /* FullBoardAdContentViewController.swift */,
 				697CD3031E3736B000C2BDBE /* FullBoardAdWebViewController.swift */,
+				692B2C811E38A4C500DD7689 /* FullBoardTabPageViewController.swift */,
+				69B3C9B01E3B11C20018F238 /* TableViewController.swift */,
 			);
 			name = fullboard;
 			sourceTree = "<group>";
@@ -934,6 +940,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69D156761BD9DB9600ECD772 /* NativeAdInFeedTableViewController.swift in Sources */,
+				69B3C9B11E3B11C20018F238 /* TableViewController.swift in Sources */,
 				CEB2EA661E2F3B4400A826DE /* FullBoardAdContentViewController.m in Sources */,
 				CEB2EA6C1E2F427900A826DE /* FullBoardAdMenuViewController.swift in Sources */,
 				8B22CFE71D35C5EF00DE86CC /* NativeAdCustomViewController.swift in Sources */,
@@ -966,6 +973,7 @@
 				CEB2EA721E2F46C200A826DE /* FullBoardAdPageViewController.swift in Sources */,
 				B54CAE7E19DE5BA9003C6616 /* AppDelegate.swift in Sources */,
 				69ED18851BD8C92700CBEDD0 /* FeedAdCell.swift in Sources */,
+				692B2C821E38A4C500DD7689 /* FullBoardTabPageViewController.swift in Sources */,
 				698C8B081BE1F78B00BF8811 /* NativeAdPageContentViewController.swift in Sources */,
 				696F3E351BDA0ADD00798F4F /* NativeAdRssTableViewController.swift in Sources */,
 				B54CAEA419DE5DF9003C6616 /* BannerView300x100Controller.swift in Sources */,

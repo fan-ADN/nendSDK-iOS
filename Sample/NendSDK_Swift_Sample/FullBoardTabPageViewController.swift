@@ -75,6 +75,17 @@ class FullBoardTabPageViewController: UIViewController {
         }
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        guard let currentTab = self.currentTabItem else {
+            return
+        }
+        coordinator.animate(alongsideTransition: nil, completion: { (_) in
+            self.indicatorLeadingConstraint.constant = currentTab.frame.origin.x
+            self.view.layoutIfNeeded()
+        })
+    }
+    
     @IBAction fileprivate func onTapTabItem(_ button: UIButton) {
         guard let currentTab = self.currentTabItem, currentTab != button else {
             return

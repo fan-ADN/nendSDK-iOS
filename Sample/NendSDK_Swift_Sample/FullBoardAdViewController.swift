@@ -2,7 +2,6 @@
 //  FullBoardAdViewController.swift
 //  NendSDK_Sample
 //
-//  Created by user on 2017/01/18.
 //  Copyright © 2017年 F@N Communications. All rights reserved.
 //
 
@@ -29,7 +28,6 @@ class FullBoardAdViewController: UIViewController ,NADFullBoardDelegate {
             if let fullBoardAd = ad {
                 fullBoardAd.delegate = self
                 self.ad = fullBoardAd
-
             } else {
                 switch (error) {
                 case .failedAdRequest:
@@ -66,10 +64,5 @@ class FullBoardAdViewController: UIViewController ,NADFullBoardDelegate {
     
     func nadFullBoardDidDismissAd(_ ad: NADFullBoard!) {
         print(#function)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

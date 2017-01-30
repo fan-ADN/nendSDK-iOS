@@ -2,17 +2,16 @@
 //  FullBoardAdViewController.m
 //  NendSDK_Sample
 //
-//  Created by user on 2017/01/18.
 //  Copyright © 2017年 F@N Communications. All rights reserved.
 //
 
 #import "FullBoardAdViewController.h"
 #import <NendAd/NADFullBoardLoader.h>
 
-@interface FullBoardAdViewController () <NADFullBoardViewDelegate>
+@interface FullBoardAdViewController () <NADFullBoardDelegate>
 
 @property (nonatomic, strong) NADFullBoardLoader *loader;
-@property (nonatomic, strong) NADFullBoard *ad;
+@property (nonatomic, strong, nullable) NADFullBoard *ad;
 
 @end
 
@@ -23,16 +22,18 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.loader = [[NADFullBoardLoader alloc] initWithSpotId:@"485504" apiKey:@"30fda4b3386e793a14b27bedb4dcd29f03d638e5"];
-    
 }
 
 - (IBAction)loadFullBoardAd:(id)sender
 {
     __weak typeof(self) weakSelf = self;
     [self.loader loadAdWithCompletionHandler:^(NADFullBoard *ad, NADFullBoardLoaderError error) {
+        if (!weakSelf) {
+            return;
+        }
         if (ad) {
             weakSelf.ad = ad;
-            weakSelf.ad.delegate = (id)weakSelf;
+            weakSelf.ad.delegate = weakSelf;
         } else {
             switch (error) {
                 case NADFullBoardLoaderErrorFailedAdRequest:
@@ -54,7 +55,9 @@
 - (IBAction)showFullBoardAd:(id)sender
 {
     // 第一引数で渡す`UIViewController`は`UIWindow`の階層上に正しく配置されている必要があります
-    [self.ad showFromViewController:self];
+    if (self.ad) {
+        [self.ad showFromViewController:self];
+    }
 }
 
 #pragma mark - NADFullBoardDelegate
@@ -76,11 +79,5 @@
 {
     NSLog(@"%s", __FUNCTION__);
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

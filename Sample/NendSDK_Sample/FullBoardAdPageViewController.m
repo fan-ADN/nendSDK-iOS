@@ -13,7 +13,7 @@
 
 @interface FullBoardAdPageViewController () <UIPageViewControllerDataSource, NADFullBoardViewDelegate>
 
-@property (nonatomic, strong) NSMutableArray *contentViewControllers;
+@property (nonatomic, strong) NSMutableArray<UIViewController *> *contentViewControllers;
 @property (nonatomic, strong) UIPageViewController *pageViewController;
 @property (nonatomic, strong) NADFullBoardLoader *loader;
 
@@ -35,10 +35,10 @@
     self.contentViewControllers = [NSMutableArray array];
     for (int i = 0; i < 5; i++) {
         FullBoardAdContentViewController *content = [self.storyboard instantiateViewControllerWithIdentifier:@"FullBoardPageContent"];
-        [content setNumber:[NSString stringWithFormat:@"%d",i+1]];
+        content.number = [NSString stringWithFormat:@"%d",i + 1];
         [self.contentViewControllers addObject:content];
     }
-    [self.pageViewController setViewControllers:@[ self.contentViewControllers[0] ]
+    [self.pageViewController setViewControllers:@[self.contentViewControllers[0]]
                                       direction:UIPageViewControllerNavigationDirectionForward
                                        animated:NO
                                      completion:NULL];

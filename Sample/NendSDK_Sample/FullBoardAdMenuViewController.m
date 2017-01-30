@@ -2,7 +2,6 @@
 //  FullBoardAdMenuViewController.m
 //  NendSDK_Sample
 //
-//  Created by user on 2017/01/18.
 //  Copyright © 2017年 F@N Communications. All rights reserved.
 //
 
@@ -12,7 +11,9 @@ static NSString *const CellIdentifier = @"Cell";
 
 @interface FullBoardAdMenuViewController ()
 
-@property (nonatomic) NSArray<NSDictionary *> *items;
+@property (nonatomic) NSArray<NSString *> *items;
+@property (nonatomic) NSArray<NSString *> *segues;
+@property (nonatomic) NSArray<NSString *> *details;
 
 @end
 
@@ -24,14 +25,12 @@ static NSString *const CellIdentifier = @"Cell";
     
     self.title = @"FullBoard";
     
-    self.items = @[ @"Default", @"Page", @"ScrollEnd" ];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.items = @[@"インタースティシャル形式", @"スワイプ形式", @"スクロールエンド形式", @"タブ形式"];
+    self.segues = @[@"PushDefault", @"PushPage", @"PushScrollEnd", @"PushTab"];
+    self.details = @[@"ポップアップで表示された広告は右上の×ボタンにより閉じることができます。",
+                     @"マンガや小説などスワイプでページ送りをするアプリにてページとページの間に広告を差し込むことができます。※×ボタンは非表示にできます。",
+                     @"ニュースや記事まとめ、縦スクロール式のマンガアプリなどで最下部までスクロールした後に画面下部から広告を呼び出します。右上の×ボタンにて閉じることができます。",
+                     @"ニュースや記事まとめアプリでカテゴリタブの中に\"PR\"タブを作成し、PRタブがタップされた際に広告を表示します。"];
 }
 
 #pragma mark - Table view data source
@@ -53,7 +52,9 @@ static NSString *const CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = [NSString stringWithFormat:@"%@",self.items[indexPath.row]];
+    cell.textLabel.text = self.items[indexPath.row];
+    cell.detailTextLabel.numberOfLines = 0;
+    cell.detailTextLabel.text = self.details[indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
@@ -63,8 +64,7 @@ static NSString *const CellIdentifier = @"Cell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *identifier = [NSString stringWithFormat:@"Push%@", self.items[indexPath.row]];
-    [self performSegueWithIdentifier:identifier sender:nil];
+    [self performSegueWithIdentifier:self.segues[indexPath.row] sender:nil];
 }
 
 #pragma mark - Navigation

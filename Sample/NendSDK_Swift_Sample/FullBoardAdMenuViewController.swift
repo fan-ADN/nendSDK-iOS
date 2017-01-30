@@ -2,7 +2,6 @@
 //  FullBoardAdMenuViewController.swift
 //  NendSDK_Sample
 //
-//  Created by user on 2017/01/18.
 //  Copyright © 2017年 F@N Communications. All rights reserved.
 //
 
@@ -10,11 +9,11 @@ import UIKit
 
 class FullBoardAdMenuViewController: UITableViewController {
     
-    fileprivate let items = [
-        (name: "Default", segue: "PushDefault"),
-        (name: "Page", segue: "PushPage"),
-        (name: "ScrollEnd", segue: "PushWeb"),
-        (name: "Tab", segue: "PushTab")
+    private let items = [
+        (name: "インタースティシャル形式", segue: "PushDefault", detail: "ポップアップで表示された広告は右上の×ボタンにより閉じることができます。"),
+        (name: "スワイプ形式", segue: "PushPage", detail: "マンガや小説などスワイプでページ送りをするアプリにてページとページの間に広告を差し込むことができます。※×ボタンは非表示にできます。"),
+        (name: "スクロールエンド形式", segue: "PushWeb", detail: "ニュースや記事まとめ、縦スクロール式のマンガアプリなどで最下部までスクロールした後に画面下部から広告を呼び出します。右上の×ボタンにて閉じることができます。"),
+        (name: "タブ形式", segue: "PushTab", detail: "ニュースや記事まとめアプリでカテゴリタブの中に\"PR\"タブを作成し、PRタブがタップされた際に広告を表示します。")
     ]
     
     override func viewDidLoad() {
@@ -29,21 +28,14 @@ class FullBoardAdMenuViewController: UITableViewController {
         self.title = "FullBoard"
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return self.items.count
     }
@@ -53,6 +45,10 @@ class FullBoardAdMenuViewController: UITableViewController {
         
         // Configure the cell...
         cell.textLabel!.text = self.items[indexPath.row].name
+        if let detailTextLabel = cell.detailTextLabel {
+            detailTextLabel.numberOfLines = 0
+            detailTextLabel.text = self.items[indexPath.row].detail
+        }
         cell.accessoryType = .disclosureIndicator
         
         return cell
@@ -62,5 +58,5 @@ class FullBoardAdMenuViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: self.items[indexPath.row].segue, sender: indexPath)
-    }
+    }    
 }

@@ -539,7 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="043-ST-nlQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3645.5999999999999" y="-1446.0269865067467"/>
+            <point key="canvasLocation" x="5606" y="-656"/>
         </scene>
         <!--Native Ad Collection View Controller-->
         <scene sceneID="UlZ-TV-IK7">
@@ -615,7 +615,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="YAt-Rx-hsS" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VhO-Sc-9Fa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079" y="-2420"/>
+            <point key="canvasLocation" x="6593" y="911"/>
         </scene>
         <!--Full Board Tab Page View Controller-->
         <scene sceneID="t0y-ux-m34">
@@ -636,7 +636,7 @@
                                         <rect key="frame" x="0.0" y="5" width="125" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="AAA">
+                                        <state key="normal" title="First">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="selected">
@@ -650,7 +650,7 @@
                                         <rect key="frame" x="125" y="5" width="125" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="BBB">
+                                        <state key="normal" title="Second">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="selected">
@@ -708,8 +708,8 @@
                             <constraint firstItem="rvp-P3-mzR" firstAttribute="width" secondItem="JPo-kh-7kr" secondAttribute="width" id="4gm-gq-vVf"/>
                             <constraint firstItem="Ksn-H3-B8m" firstAttribute="leading" secondItem="ovd-p8-pIe" secondAttribute="leadingMargin" constant="-16" id="F6A-R0-4hY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5Hq-bl-N2i" secondAttribute="trailing" constant="-16" id="Jd3-9o-POD"/>
-                            <constraint firstItem="rvp-P3-mzR" firstAttribute="leading" secondItem="ovd-p8-pIe" secondAttribute="leading" id="NBp-r6-qOz"/>
                             <constraint firstItem="rvp-P3-mzR" firstAttribute="top" secondItem="5Hq-bl-N2i" secondAttribute="bottom" id="OaV-dJ-UAV"/>
+                            <constraint firstItem="rvp-P3-mzR" firstAttribute="leading" secondItem="ovd-p8-pIe" secondAttribute="leading" id="e4g-VG-FkT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ksn-H3-B8m" secondAttribute="trailing" constant="-16" id="eUt-Yh-J45"/>
                             <constraint firstItem="5Hq-bl-N2i" firstAttribute="top" secondItem="fxY-AJ-rUV" secondAttribute="bottom" id="k0B-Lm-QFJ"/>
                             <constraint firstItem="5Hq-bl-N2i" firstAttribute="leading" secondItem="ovd-p8-pIe" secondAttribute="leadingMargin" constant="-16" id="lNa-IX-qTr"/>
@@ -719,13 +719,13 @@
                     </view>
                     <connections>
                         <outlet property="indicator" destination="rvp-P3-mzR" id="TRq-AK-rGL"/>
-                        <outlet property="indicatorLeadingConstraint" destination="NBp-r6-qOz" id="EXC-Y8-kjA"/>
+                        <outlet property="indicatorLeadingConstraint" destination="e4g-VG-FkT" id="y7E-T1-oLo"/>
                         <outlet property="tabContainer" destination="5Hq-bl-N2i" id="cO3-O5-TOT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G9B-LG-EYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1941.5999999999999" y="-2571.3643178410798"/>
+            <point key="canvasLocation" x="5606" y="864"/>
         </scene>
         <!--Native Ad Custom View Controller-->
         <scene sceneID="XIz-ue-tdN">
@@ -991,17 +991,33 @@
         <scene sceneID="MLH-jH-2q2">
             <objects>
                 <tableViewController id="aZi-NE-lJ9" customClass="FullBoardAdMenuViewController" customModule="NendSDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5P5-fh-xSK">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" id="5P5-fh-xSK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="9uY-Cv-TlJ">
-                                <rect key="frame" x="0.0" y="22" width="375" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="PLz-s1-xyn" detailTextLabel="Nyd-lp-LYw" style="IBUITableViewCellStyleSubtitle" id="9uY-Cv-TlJ">
+                                <rect key="frame" x="0.0" y="22" width="375" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9uY-Cv-TlJ" id="VEa-Hb-N94">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PLz-s1-xyn">
+                                            <rect key="frame" x="15" y="27" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nyd-lp-LYw">
+                                            <rect key="frame" x="15" y="47.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -1019,7 +1035,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cse-ci-ZXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1943" y="-1842"/>
+            <point key="canvasLocation" x="4164" y="1169"/>
         </scene>
         <!--Full Board Ad View Controller-->
         <scene sceneID="Hr5-TZ-Mb4">
@@ -1066,7 +1082,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCy-13-hQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2867" y="-1446"/>
+            <point key="canvasLocation" x="5606" y="177"/>
         </scene>
         <!--Full Board Ad Page View Controller-->
         <scene sceneID="xhp-LL-mcM">
@@ -1085,7 +1101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilA-I7-8b5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2867" y="-1446"/>
+            <point key="canvasLocation" x="5606" y="1667"/>
         </scene>
         <!--Full Board Ad Content View Controller-->
         <scene sceneID="67h-qG-b5y">
@@ -1121,7 +1137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CUw-pO-SkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2866.4000000000001" y="-1446.0269865067467"/>
+            <point key="canvasLocation" x="6730" y="1666"/>
         </scene>
     </scenes>
 </document>

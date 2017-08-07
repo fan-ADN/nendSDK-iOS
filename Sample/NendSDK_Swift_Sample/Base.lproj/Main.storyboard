@@ -1,12 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Eb9-db-xk8">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Eb9-db-xk8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -51,6 +52,7 @@
                         <segue destination="aix-Tt-vRa" kind="show" identifier="PushMediumRectangle" id="xpE-4j-NbI"/>
                         <segue destination="1dE-LJ-h1w" kind="show" identifier="PushInterstitialAdInTransition" id="9ur-XM-S0B"/>
                         <segue destination="aZi-NE-lJ9" kind="show" identifier="PushFullBoardAdMenu" id="Q4c-si-ll7"/>
+                        <segue destination="Ouf-S0-qMI" kind="show" identifier="PushVideoAdMenu" id="rFO-Z7-fKW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -208,7 +210,7 @@
                                 <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4u8-xe-uqd" id="kYg-xa-JP7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -245,7 +247,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d15-Bg-Jbg" id="iqa-Z8-Nkk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -406,7 +408,7 @@
                                 <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GbG-Et-aFO" id="KQI-Wv-ycf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -414,7 +416,7 @@
                                 <rect key="frame" x="0.0" y="66" width="375" height="96"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ks5-z0-8EG" id="Uxj-A6-NrM">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L2k-vK-CU6">
@@ -1138,6 +1140,98 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CUw-pO-SkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6730" y="1666"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="CSa-CW-cCw">
+            <objects>
+                <viewController id="Ouf-S0-qMI" customClass="VideoViewController" customModule="NendSDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wYQ-M9-8k4"/>
+                        <viewControllerLayoutGuide type="bottom" id="eJE-lY-hat"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bAk-eC-qhe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqO-1h-6O9">
+                                <rect key="frame" x="0.0" y="64" width="187.5" height="200"/>
+                                <state key="normal" title="LoadReward"/>
+                                <connections>
+                                    <action selector="loadReward:" destination="Ouf-S0-qMI" eventType="touchUpInside" id="sXB-LZ-TVg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Laj-G9-jjO">
+                                <rect key="frame" x="187.5" y="64" width="187.5" height="200"/>
+                                <state key="normal" title="LoadInterstitial"/>
+                                <connections>
+                                    <action selector="loadInterstitial:" destination="Ouf-S0-qMI" eventType="touchUpInside" id="mgT-WC-z0h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQz-hf-EUK">
+                                <rect key="frame" x="0.0" y="264" width="187.5" height="200"/>
+                                <state key="normal" title="ShowReward"/>
+                                <connections>
+                                    <action selector="showReward:" destination="Ouf-S0-qMI" eventType="touchUpInside" id="Rp4-AQ-F3u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBf-4P-I3a">
+                                <rect key="frame" x="187.5" y="264" width="187.5" height="200"/>
+                                <state key="normal" title="ShowInterstitial"/>
+                                <connections>
+                                    <action selector="showInterstitial:" destination="Ouf-S0-qMI" eventType="touchUpInside" id="DP5-jW-B5l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfk-AA-m5k">
+                                <rect key="frame" x="0.0" y="464" width="187.5" height="200.5"/>
+                                <state key="normal" title="ReleaseReward"/>
+                                <connections>
+                                    <action selector="releaseReward:" destination="Ouf-S0-qMI" eventType="touchUpInside" id="a8v-2r-xrN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jY4-hn-bkB">
+                                <rect key="frame" x="187.5" y="464" width="187.5" height="200.5"/>
+                                <state key="normal" title="ReleaseInterstitial"/>
+                                <connections>
+                                    <action selector="releaseInterstitial:" destination="Ouf-S0-qMI" eventType="touchUpInside" id="nEU-xc-gTc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KBf-4P-I3a" firstAttribute="width" secondItem="IqO-1h-6O9" secondAttribute="width" id="4GQ-Xx-4lk"/>
+                            <constraint firstItem="jfk-AA-m5k" firstAttribute="height" secondItem="IqO-1h-6O9" secondAttribute="height" id="5gT-4G-MGH"/>
+                            <constraint firstItem="jY4-hn-bkB" firstAttribute="top" secondItem="jfk-AA-m5k" secondAttribute="top" id="6Oy-S2-f9H"/>
+                            <constraint firstItem="KBf-4P-I3a" firstAttribute="top" secondItem="nQz-hf-EUK" secondAttribute="top" id="74h-X5-kva"/>
+                            <constraint firstItem="jY4-hn-bkB" firstAttribute="width" secondItem="IqO-1h-6O9" secondAttribute="width" id="F6Z-1p-Pq4"/>
+                            <constraint firstItem="nQz-hf-EUK" firstAttribute="top" secondItem="IqO-1h-6O9" secondAttribute="bottom" id="Jb7-kI-FJV"/>
+                            <constraint firstItem="Laj-G9-jjO" firstAttribute="width" secondItem="IqO-1h-6O9" secondAttribute="width" id="MUH-oe-UhB"/>
+                            <constraint firstItem="Laj-G9-jjO" firstAttribute="leading" secondItem="IqO-1h-6O9" secondAttribute="trailing" id="TJX-PJ-Ov3"/>
+                            <constraint firstItem="Laj-G9-jjO" firstAttribute="height" secondItem="IqO-1h-6O9" secondAttribute="height" id="VUK-yM-z2H"/>
+                            <constraint firstItem="nQz-hf-EUK" firstAttribute="height" secondItem="IqO-1h-6O9" secondAttribute="height" id="Wv0-ep-Qg2"/>
+                            <constraint firstItem="IqO-1h-6O9" firstAttribute="leading" secondItem="bAk-eC-qhe" secondAttribute="leading" id="a11-qU-uB7"/>
+                            <constraint firstItem="KBf-4P-I3a" firstAttribute="height" secondItem="IqO-1h-6O9" secondAttribute="height" id="b4p-h5-cOa"/>
+                            <constraint firstItem="nQz-hf-EUK" firstAttribute="width" secondItem="IqO-1h-6O9" secondAttribute="width" id="bAp-v0-1iE"/>
+                            <constraint firstItem="jfk-AA-m5k" firstAttribute="top" secondItem="nQz-hf-EUK" secondAttribute="bottom" id="bPW-1h-mRJ"/>
+                            <constraint firstItem="jfk-AA-m5k" firstAttribute="width" secondItem="IqO-1h-6O9" secondAttribute="width" id="cHn-Ki-e2o"/>
+                            <constraint firstItem="jY4-hn-bkB" firstAttribute="leading" secondItem="Laj-G9-jjO" secondAttribute="leading" id="dC7-v2-pxg"/>
+                            <constraint firstItem="jY4-hn-bkB" firstAttribute="trailing" secondItem="Laj-G9-jjO" secondAttribute="trailing" id="ejH-3B-inq"/>
+                            <constraint firstItem="KBf-4P-I3a" firstAttribute="trailing" secondItem="Laj-G9-jjO" secondAttribute="trailing" id="fKg-B5-sEb"/>
+                            <constraint firstItem="IqO-1h-6O9" firstAttribute="width" secondItem="bAk-eC-qhe" secondAttribute="width" multiplier="0.5" id="gej-Dd-zOV"/>
+                            <constraint firstItem="nQz-hf-EUK" firstAttribute="leading" secondItem="IqO-1h-6O9" secondAttribute="leading" id="hRW-3a-Oz4"/>
+                            <constraint firstItem="nQz-hf-EUK" firstAttribute="trailing" secondItem="IqO-1h-6O9" secondAttribute="trailing" id="kOK-Ft-5qq"/>
+                            <constraint firstItem="jfk-AA-m5k" firstAttribute="trailing" secondItem="IqO-1h-6O9" secondAttribute="trailing" id="lhU-SS-It4"/>
+                            <constraint firstItem="KBf-4P-I3a" firstAttribute="leading" secondItem="Laj-G9-jjO" secondAttribute="leading" id="n9B-RY-cAW"/>
+                            <constraint firstItem="Laj-G9-jjO" firstAttribute="top" secondItem="IqO-1h-6O9" secondAttribute="top" id="see-2P-KJK"/>
+                            <constraint firstItem="jfk-AA-m5k" firstAttribute="leading" secondItem="IqO-1h-6O9" secondAttribute="leading" id="siE-FD-3RK"/>
+                            <constraint firstItem="IqO-1h-6O9" firstAttribute="height" secondItem="bAk-eC-qhe" secondAttribute="height" multiplier="0.3" id="tTD-MM-Kci"/>
+                            <constraint firstItem="IqO-1h-6O9" firstAttribute="top" secondItem="wYQ-M9-8k4" secondAttribute="bottom" id="v4R-c2-FPe"/>
+                            <constraint firstItem="jY4-hn-bkB" firstAttribute="height" secondItem="IqO-1h-6O9" secondAttribute="height" id="ybb-p7-nwz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ymv-Qh-AuB" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
     </scenes>
 </document>

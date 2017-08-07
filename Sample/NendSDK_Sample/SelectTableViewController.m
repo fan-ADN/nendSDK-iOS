@@ -28,7 +28,7 @@ static NSString *const CellIdentifier = @"Cell";
 
     self.title = @"Nend";
 
-    self.items = @[ @"Banner", @"Interstitial", @"Native", @"FullBoard" ];
+    self.items = @[ @"Banner", @"Interstitial", @"Native", @"FullBoard", @"Video" ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
 }
 

@@ -20,7 +20,8 @@ class ViewController: UIViewController {
         (name: "Interstitial", segue: "PushInterstitialAd"),
         (name: "Interstitial in Transition", segue: "PushInterstitialAdInTransition"),
         (name: "Native", segue: "PushNativeAdMenu"),
-        (name: "FullBoard", segue: "PushFullBoardAdMenu")
+        (name: "FullBoard", segue: "PushFullBoardAdMenu"),
+        (name: "Video", segue: "PushVideoAdMenu")
     ]
     
     @IBOutlet weak var tableView: UITableView!

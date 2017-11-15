@@ -21,7 +21,7 @@ class NativeAdPageContentViewController: UIViewController {
     
     var position: Int! {
         didSet {
-            self.label.text = "Page\(self.position)"
+            self.label.text = "Page\(self.position!)"
         }
     }
 }

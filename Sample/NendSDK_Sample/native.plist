@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-    <dict>
-        <key>segue</key>
-        <string>PushCustomNativeAd</string>
-        <key>title</key>
-        <string>Custom</string>
-    </dict>
+	<dict>
+		<key>segue</key>
+		<string>PushCustomNativeAd</string>
+		<key>title</key>
+		<string>Custom</string>
+	</dict>
 	<dict>
 		<key>segue</key>
 		<string>PushSimpleNativeAd</string>
@@ -19,18 +19,6 @@
 		<string>10d9088b5bd36cf43b295b0774e5dcf7d20a4071</string>
 		<key>nib</key>
 		<string>NativeAdViewSmallSquare</string>
-	</dict>
-	<dict>
-		<key>segue</key>
-		<string>PushSimpleNativeAd</string>
-		<key>title</key>
-		<string>SmallWide + Text</string>
-		<key>spot</key>
-		<string>485502</string>
-		<key>api</key>
-		<string>a3972604a76864dd110d0b02204f4b72adb092ae</string>
-		<key>nib</key>
-		<string>NativeAdViewSmallWide</string>
 	</dict>
 	<dict>
 		<key>segue</key>

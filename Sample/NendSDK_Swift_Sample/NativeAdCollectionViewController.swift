@@ -13,7 +13,7 @@ class NativeAdCollectionViewController: UICollectionViewController {
     fileprivate var ads = [NADNative]()
     fileprivate let adInterval = 10
     fileprivate let itemCount = 100
-    fileprivate let client = NADNativeClient(spotId: "485502", apiKey: "a3972604a76864dd110d0b02204f4b72adb092ae")
+    fileprivate let client = NADNativeClient(spotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
     fileprivate let colors = [UIColor.red, UIColor.blue, UIColor.yellow, UIColor.green, UIColor.purple, UIColor.orange]
 
     deinit {

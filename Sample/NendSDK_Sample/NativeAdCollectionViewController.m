@@ -38,7 +38,7 @@ static BOOL isAdRow(NSInteger row)
     // self.clearsSelectionOnViewWillAppear = NO;
 
     // Do any additional setup after loading the view.
-    self.client = [[NADNativeClient alloc] initWithSpotId:@"485502" apiKey:@"a3972604a76864dd110d0b02204f4b72adb092ae"];
+    self.client = [[NADNativeClient alloc] initWithSpotId:@"485504" apiKey:@"30fda4b3386e793a14b27bedb4dcd29f03d638e5"];
     self.colors = @[ [UIColor redColor], [UIColor blueColor], [UIColor yellowColor], [UIColor greenColor], [UIColor purpleColor], [UIColor orangeColor] ];
     self.ads = [NSMutableArray array];
 }

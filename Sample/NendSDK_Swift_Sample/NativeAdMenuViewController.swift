@@ -11,7 +11,6 @@ class NativeAdMenuViewController: UITableViewController {
     
     fileprivate let items = [
         (name: "SmallSquare", segue: "PushSimpleNativeAd"),
-        (name: "SmallWide", segue: "PushSimpleNativeAd"),
         (name: "LargeWide", segue: "PushSimpleNativeAd"),
         (name: "TextOnly", segue: "PushSimpleNativeAd"),
         (name: "InFeed", segue: "PushInFeedNativeAd"),
@@ -24,7 +23,6 @@ class NativeAdMenuViewController: UITableViewController {
     
     fileprivate let details = [
         (apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071", spotId: "485500", nibName: "NativeAdViewSmallSquare"),
-        (apiKey: "a3972604a76864dd110d0b02204f4b72adb092ae", spotId: "485502", nibName: "NativeAdViewSmallWide"),
         (apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5", spotId: "485504", nibName: "NativeAdViewLargeWide"),
         (apiKey: "31e861edb574cfa0fb676ebdf0a0b9a0621e19fc", spotId: "485507", nibName: "NativeAdViewTextOnly")
     ]

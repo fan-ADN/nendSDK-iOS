@@ -9,7 +9,7 @@
 import UIKit
 import NendAd
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let items = [
         (name: "320x50", segue: "PushMobileBigBanner"),
@@ -47,11 +47,11 @@ class ViewController: UIViewController {
     
     // MARK: UITableViewDataSource
     
-    func tableView(_ tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count
     }
     
-    func tableView(_ tableView: UITableView!, cellForRowAtIndexPath indexPath:IndexPath!) -> UITableViewCell! {
+    func tableView(_ table: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
         cell.textLabel!.text = self.items[indexPath.row].name
         return cell
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     
     // MARK: UITableViewDelegate
     
-    func tableView(_ tableView: UITableView!, didSelectRowAtIndexPath indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         self.performSegue(withIdentifier: self.items[indexPath.row].segue, sender: nil)
     }

@@ -43,7 +43,7 @@ class FullBoardAdPageViewController: UIViewController, UIPageViewControllerDataS
                 }
                 if let fullBoardAd = ad {
                     let adViewController = fullBoardAd.fullBoardAdViewController()
-                    (adViewController as! NADFullBoardView).delegate = self
+                    adViewController?.delegate = self
                     self.contentViewControllers.insert(adViewController!, at: insertIndex)
                 }
                 group.leave();

@@ -50,7 +50,7 @@ class FeedView: UIView {
     
     var link: String?
     
-    func tapped(_ sender: AnyObject) {
+    @objc func tapped(_ sender: AnyObject) {
         UIApplication.shared.openURL(URL(string: self.link!)!)
     }
 }

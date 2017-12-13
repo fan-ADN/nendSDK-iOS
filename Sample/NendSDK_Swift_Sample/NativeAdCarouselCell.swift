@@ -11,7 +11,7 @@ import NendAd
 func CreateTimer(_ interval: Double, queue: DispatchQueue, block: @escaping ()->()) -> DispatchSource
 {
     let timer = DispatchSource.makeTimerSource(queue: .main)
-    timer.scheduleRepeating(deadline: .now() + timerInterval, interval: timerInterval)
+    timer.schedule(deadline: .now() + timerInterval, repeating: timerInterval)
 
     (timer as! DispatchSource).setEventHandler(handler: block);
     timer.resume()
@@ -128,7 +128,7 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
         self.layoutUpdate()
     }
     
-    func layoutUpdate(_ notification: Notification) {
+    @objc func layoutUpdate(_ notification: Notification) {
         self.direction = notification.object as! Int
         
         for subview in self.scrollView.subviews {

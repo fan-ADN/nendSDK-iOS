@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F28261B1D1CF659001484EE /* NativeAdNoNibTelopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */; };
 		4F28261E1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261D1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m */; };
+		4FD68D462021766F00947A52 /* FullBoardAdMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA501E2F10F700A826DE /* FullBoardAdMenuViewController.m */; };
 		4FE8F4151D828A2700F577B1 /* AdInterstitialInTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8F4141D828A2700F577B1 /* AdInterstitialInTransitionViewController.m */; };
 		4FE8F4181D828DCD00F577B1 /* SelectInterstitialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8F4171D828DCD00F577B1 /* SelectInterstitialTableViewController.m */; };
 		4FE8F41A1D82B44800F577B1 /* InterstitialInTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8F4191D82B44800F577B1 /* InterstitialInTransitionViewController.swift */; };
@@ -129,22 +130,13 @@
 		CEB2EA4C1E2E1AB600A826DE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6998B67B193EA651009D70F6 /* ImageIO.framework */; };
 		CEB2EA4D1E2E1AB900A826DE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33426517991B79001D0A08 /* Security.framework */; };
 		CEB2EA4E1E2E1ABF00A826DE /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33426717991B7E001D0A08 /* AdSupport.framework */; };
-		CEB2EA511E2F10F700A826DE /* FullBoardAdMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA501E2F10F700A826DE /* FullBoardAdMenuViewController.m */; };
-		CEB2EA521E2F10F700A826DE /* FullBoardAdMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA501E2F10F700A826DE /* FullBoardAdMenuViewController.m */; };
-		CEB2EA561E2F1A0B00A826DE /* FullBoardAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA551E2F1A0B00A826DE /* FullBoardAdViewController.m */; };
 		CEB2EA571E2F1A0B00A826DE /* FullBoardAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA551E2F1A0B00A826DE /* FullBoardAdViewController.m */; };
-		CEB2EA5D1E2F209600A826DE /* FullBoardAdPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA5C1E2F209600A826DE /* FullBoardAdPageViewController.m */; };
 		CEB2EA5E1E2F209600A826DE /* FullBoardAdPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA5C1E2F209600A826DE /* FullBoardAdPageViewController.m */; };
-		CEB2EA661E2F3B4400A826DE /* FullBoardAdContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA641E2F3B4400A826DE /* FullBoardAdContentViewController.m */; };
 		CEB2EA671E2F3B4400A826DE /* FullBoardAdContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA641E2F3B4400A826DE /* FullBoardAdContentViewController.m */; };
 		CEB2EA6C1E2F427900A826DE /* FullBoardAdMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA6B1E2F427900A826DE /* FullBoardAdMenuViewController.swift */; };
-		CEB2EA6D1E2F427900A826DE /* FullBoardAdMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA6B1E2F427900A826DE /* FullBoardAdMenuViewController.swift */; };
 		CEB2EA6F1E2F43F400A826DE /* FullBoardAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA6E1E2F43F400A826DE /* FullBoardAdViewController.swift */; };
-		CEB2EA701E2F43F400A826DE /* FullBoardAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA6E1E2F43F400A826DE /* FullBoardAdViewController.swift */; };
 		CEB2EA721E2F46C200A826DE /* FullBoardAdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA711E2F46C200A826DE /* FullBoardAdPageViewController.swift */; };
-		CEB2EA731E2F46C200A826DE /* FullBoardAdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA711E2F46C200A826DE /* FullBoardAdPageViewController.swift */; };
 		CEB2EA751E2F472800A826DE /* FullBoardAdContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA741E2F472800A826DE /* FullBoardAdContentViewController.swift */; };
-		CEB2EA761E2F472800A826DE /* FullBoardAdContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA741E2F472800A826DE /* FullBoardAdContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -759,7 +751,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "F@N Communications";
 				TargetAttributes = {
 					690C28731B797DF100C92232 = {
@@ -862,19 +854,17 @@
 				697CD3071E3742E200C2BDBE /* FullBoardAdWebViewController.m in Sources */,
 				690C291B1B799FC400C92232 /* NativeAdCellView.m in Sources */,
 				8BCDDEB01C910BBE00EF379C /* NativeAdCarouselViewController.m in Sources */,
-				CEB2EA761E2F472800A826DE /* FullBoardAdContentViewController.swift in Sources */,
+				4FD68D462021766F00947A52 /* FullBoardAdMenuViewController.m in Sources */,
 				CEB2EA671E2F3B4400A826DE /* FullBoardAdContentViewController.m in Sources */,
 				690C28ED1B7989E000C92232 /* AdIBViewController.m in Sources */,
 				4F28261B1D1CF659001484EE /* NativeAdNoNibTelopViewController.m in Sources */,
 				69217BB91E3EE574004102BF /* TableViewController.m in Sources */,
 				8BCB34331C9655970025E24D /* NativeAdCarouselCell.m in Sources */,
-				CEB2EA6D1E2F427900A826DE /* FullBoardAdMenuViewController.swift in Sources */,
 				69D9C3D21C151874007754FE /* NativeAdNoNibViewController.m in Sources */,
 				696551621D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.m in Sources */,
 				690C28A11B7981F000C92232 /* AdInterstitialViewController.m in Sources */,
 				6933FCB91BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */,
 				690C28A71B7985CA00C92232 /* SelectSizeTableViewController.m in Sources */,
-				CEB2EA701E2F43F400A826DE /* FullBoardAdViewController.swift in Sources */,
 				8BD078EA1C9A3B4A003ABB82 /* NativeAdCarouselView.m in Sources */,
 				690C291C1B799FC400C92232 /* NativeAdCollectionView.m in Sources */,
 				8BD849831D2F784E002F84DF /* NativeAdCustomViewController.m in Sources */,
@@ -882,14 +872,12 @@
 				69EEA0861CF41D1C006EB97B /* NativeAdNoNibInFeedViewController.m in Sources */,
 				690C28EA1B7989CB00C92232 /* AdViewController.m in Sources */,
 				8B1E20E91D056FCA0016610A /* NativeAdTelopTextView.m in Sources */,
-				CEB2EA731E2F46C200A826DE /* FullBoardAdPageViewController.swift in Sources */,
 				69CEC6491BD7581200F352DE /* FeedAdView.m in Sources */,
 				690C29091B799F9E00C92232 /* NativeAdCollectionViewController.m in Sources */,
 				CEB2EA571E2F1A0B00A826DE /* FullBoardAdViewController.m in Sources */,
 				8B1D6E201D010F3600250F60 /* NativeAdTelopViewController.m in Sources */,
 				CE377C9C1F1DF28800F544FE /* VideoViewController.m in Sources */,
 				690C28E71B7989B800C92232 /* AdAdjustViewController.m in Sources */,
-				CEB2EA521E2F10F700A826DE /* FullBoardAdMenuViewController.m in Sources */,
 				69CEC64E1BD76CCC00F352DE /* FeedAdCell.m in Sources */,
 				4F28261E1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m in Sources */,
 				690C28A41B7984FB00C92232 /* SelectBannerTableViewController.m in Sources */,
@@ -906,13 +894,11 @@
 			files = (
 				69D156761BD9DB9600ECD772 /* NativeAdInFeedTableViewController.swift in Sources */,
 				69B3C9B11E3B11C20018F238 /* TableViewController.swift in Sources */,
-				CEB2EA661E2F3B4400A826DE /* FullBoardAdContentViewController.m in Sources */,
 				CEB2EA6C1E2F427900A826DE /* FullBoardAdMenuViewController.swift in Sources */,
 				8B22CFE71D35C5EF00DE86CC /* NativeAdCustomViewController.swift in Sources */,
 				CE377C971F1DEC5F00F544FE /* VideoViewController.swift in Sources */,
 				8B1C84411CB51B5D00EE385C /* NativeAdCarouselView.swift in Sources */,
 				B54CAE8019DE5BA9003C6616 /* ViewController.swift in Sources */,
-				CEB2EA5D1E2F209600A826DE /* FullBoardAdPageViewController.m in Sources */,
 				6933FCB81BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */,
 				B54CAEA719DE5DF9003C6616 /* BannerView320x100Controller.swift in Sources */,
 				693A21781B79EEC9004B6680 /* NativeAdMenuViewController.swift in Sources */,
@@ -925,13 +911,11 @@
 				69ED18721BD8BCEF00CBEDD0 /* NativeAdView.swift in Sources */,
 				69ED18831BD8C8F700CBEDD0 /* FeedAdView.swift in Sources */,
 				69ED18811BD8C8DC00CBEDD0 /* FeedView.swift in Sources */,
-				CEB2EA561E2F1A0B00A826DE /* FullBoardAdViewController.m in Sources */,
 				693A21711B79BDDB004B6680 /* NativeAdViewController.swift in Sources */,
 				4FE8F41A1D82B44800F577B1 /* InterstitialInTransitionViewController.swift in Sources */,
 				697CD3041E3736B000C2BDBE /* FullBoardAdWebViewController.swift in Sources */,
 				8B1C843E1CB51B4000EE385C /* NativeAdCarouselCell.swift in Sources */,
 				CEB2EA751E2F472800A826DE /* FullBoardAdContentViewController.swift in Sources */,
-				CEB2EA511E2F10F700A826DE /* FullBoardAdMenuViewController.m in Sources */,
 				B54CAEA519DE5DF9003C6616 /* BannerView300x250Controller.swift in Sources */,
 				8B1C843F1CB51B4000EE385C /* NativeAdCarouselViewController.swift in Sources */,
 				B54CAEA619DE5DF9003C6616 /* BannerView320x50Controller.swift in Sources */,
@@ -991,12 +975,18 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1023,7 +1013,7 @@
 				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1035,12 +1025,18 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1060,7 +1056,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1102,8 +1098,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.nend.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1141,7 +1135,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.nend.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

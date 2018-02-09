@@ -42,6 +42,7 @@ class FullBoardAdPageViewController: UIViewController, UIPageViewControllerDataS
                     return
                 }
                 if let fullBoardAd = ad {
+                    fullBoardAd.backgroundColor = UIColor.white
                     let adViewController = fullBoardAd.fullBoardAdViewController()
                     adViewController?.delegate = self
                     self.contentViewControllers.insert(adViewController!, at: insertIndex)

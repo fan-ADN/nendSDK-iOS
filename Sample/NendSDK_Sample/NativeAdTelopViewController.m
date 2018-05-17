@@ -21,9 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [NADNativeLogger setLogLevel:NADNativeLogLevelDebug];
-    
+        
     _client = [[NADNativeClient alloc] initWithSpotId:@"485500" apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
     __weak typeof(self) weakSelf = self;
     [_client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {

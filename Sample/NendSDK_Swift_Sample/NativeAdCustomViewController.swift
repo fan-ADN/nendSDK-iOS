@@ -34,7 +34,6 @@ class NativeAdCustomViewController: UIViewController, NADNativeDelegate {
         self.adView.layer.borderWidth = 1.0;
         self.adView.layer.borderColor = UIColor.darkGray.cgColor;
         
-        NADNativeLogger.setLogLevel(.debug)
         self.client = NADNativeClient(spotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
         
         weak var weakSelf = self

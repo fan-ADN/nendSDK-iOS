@@ -21,7 +21,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         (name: "Interstitial in Transition", segue: "PushInterstitialAdInTransition"),
         (name: "Native", segue: "PushNativeAdMenu"),
         (name: "FullBoard", segue: "PushFullBoardAdMenu"),
-        (name: "Video", segue: "PushVideoAdMenu")
+        (name: "Video", segue: "PushVideoAdMenu"),
+        (name: "VideoNative", segue: "PushVideoNative"),
+        (name: "InFeed", segue: "PushInFeedAdMenu")
     ]
     
     @IBOutlet weak var tableView: UITableView!

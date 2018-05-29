@@ -62,8 +62,6 @@
 
     [self.view bringSubviewToFront:self.indicator];
 
-    [NADNativeLogger setLogLevel:NADNativeLogLevelWarn];
-    
     self.client = [[NADNativeClient alloc] initWithSpotId:self.spotId apiKey:self.apiKey];
     
     __weak typeof(self) weakSelf = self;

@@ -31,8 +31,6 @@ class NativeAdPageViewController: UIViewController, UIPageViewControllerDelegate
         self.pageViewController.view.frame = self.view.frame
         self.view.addSubview(self.pageViewController.view)
         
-        NADNativeLogger.setLogLevel(.warn)
-        
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         // 4ページ分の広告を先にまとめて取得

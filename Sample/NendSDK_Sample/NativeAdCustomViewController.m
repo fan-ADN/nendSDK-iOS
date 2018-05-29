@@ -38,7 +38,6 @@
     self.adView.layer.borderWidth = 1.0;
     self.adView.layer.borderColor = [UIColor darkGrayColor].CGColor;
     
-    [NADNativeLogger setLogLevel:NADNativeLogLevelDebug];
     self.client = [[NADNativeClient alloc] initWithSpotId:@"485504" apiKey:@"30fda4b3386e793a14b27bedb4dcd29f03d638e5"];
     
     __weak typeof(self) weakSelf = self;

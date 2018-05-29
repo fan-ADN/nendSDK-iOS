@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        NADLogger.setLogLevel(.debug)
+        
         NADInterstitial.sharedInstance().loadAd(withApiKey: "308c2499c75c4a192f03c02b2fcebd16dcb45cc9", spotId: "213208")
 
         return true

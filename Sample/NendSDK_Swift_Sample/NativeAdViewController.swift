@@ -36,8 +36,6 @@ class NativeAdViewController: UIViewController, NADNativeDelegate {
             ]
             self.view.addConstraints(constraints)
             
-            NADNativeLogger.setLogLevel(.warn)
-            
             self.client = NADNativeClient(spotId: self.spotId, apiKey: self.apiKey)
             self.client!.load() { (ad, error) in
                 if let nativeAd = ad {

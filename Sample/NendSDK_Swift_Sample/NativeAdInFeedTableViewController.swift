@@ -35,8 +35,6 @@ class NativeAdInFeedTableViewController: UITableViewController, NADNativeTableVi
             self.items.append("Item\(i)");
         }
         
-        NADNativeLogger.setLogLevel(.info)
-        
         let placer = NADNativeTableViewPlacement()
         // 15行毎に広告を表示する
         placer.addRepeatInterval(15, inSection: 0)

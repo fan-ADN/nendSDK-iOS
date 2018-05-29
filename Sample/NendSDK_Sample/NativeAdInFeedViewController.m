@@ -33,8 +33,6 @@
         [self.items addObject:[NSString stringWithFormat:@"item%d", i + 1]];
     }
     
-    [NADNativeLogger setLogLevel:NADNativeLogLevelWarn];
-    
     NADNativeTableViewPlacement *placer = [NADNativeTableViewPlacement new];
     
     // 10行毎に広告を表示する場合

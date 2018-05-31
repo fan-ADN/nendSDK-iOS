@@ -32,7 +32,7 @@
     for (int i = 0; i < 100; i++) {
         [self.items addObject:[NSString stringWithFormat:@"item%d", i + 1]];
     }
-        
+    
     NADNativeTableViewPlacement *placer = [NADNativeTableViewPlacement new];
     
     // 10行毎に広告を表示する場合

@@ -35,7 +35,7 @@ class NativeAdViewController: UIViewController, NADNativeDelegate {
                 NSLayoutConstraint(item: adView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: adView.bounds.height)
             ]
             self.view.addConstraints(constraints)
-                        
+            
             self.client = NADNativeClient(spotId: self.spotId, apiKey: self.apiKey)
             self.client!.load() { (ad, error) in
                 if let nativeAd = ad {

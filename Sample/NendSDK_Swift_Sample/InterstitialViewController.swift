@@ -21,7 +21,6 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
         self.title = "InterstitialAd"
 
         NADInterstitial.sharedInstance().delegate = self
-        NADInterstitial.sharedInstance().isOutputLog = true
     }
 
     override func didReceiveMemoryWarning() {

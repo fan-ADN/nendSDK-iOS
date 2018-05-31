@@ -33,9 +33,6 @@
 
     self.title = @"Interstitial";
 
-    // エラーログの出力をONにします
-    [NADInterstitial sharedInstance].isOutputLog = YES;
-
     // デリゲートを設定します
     [NADInterstitial sharedInstance].delegate = self;
 

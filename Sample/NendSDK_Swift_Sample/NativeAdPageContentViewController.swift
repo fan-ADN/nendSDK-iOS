@@ -15,7 +15,7 @@ class NativeAdPageContentViewController: UIViewController {
     
     var ad: NADNative! {
         didSet {
-            self.ad.intoView(self.adView as! (UIView & NADNativeViewRendering)!, advertisingExplicitly: .promotion)
+            self.ad.intoView(self.adView as! (UIView & NADNativeViewRendering)?, advertisingExplicitly: .promotion)
         }
     }
     

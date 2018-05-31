@@ -32,9 +32,6 @@
     self.nadView = [[NADView alloc] init];
     (self.nadView).autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
 
-    // nendSDKログ出力の設定(任意)
-    [self.nadView setIsOutputLog:YES];
-
     // 広告枠のapikey/spotidを設定します(必須)
     [self.nadView setNendID:self.apiKey spotID:self.spotId];
 

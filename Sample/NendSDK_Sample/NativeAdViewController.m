@@ -61,7 +61,7 @@
     ]];
 
     [self.view bringSubviewToFront:self.indicator];
-    
+
     self.client = [[NADNativeClient alloc] initWithSpotId:self.spotId apiKey:self.apiKey];
     
     __weak typeof(self) weakSelf = self;

@@ -18,11 +18,9 @@ class VideoViewController: UIViewController {
         super.viewDidLoad()
         
         self.rewardedVideo.userId = "user id"
-        self.rewardedVideo.isOutputLog = true
         self.rewardedVideo.delegate = self
         
         self.interstitialVideo.userId = "user id"
-        self.interstitialVideo.isOutputLog = true
         self.interstitialVideo.delegate = self
         self.interstitialVideo.addFallbackFullboard(withSpotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
     }

@@ -38,9 +38,6 @@ class BannerView320x100Controller: UIViewController, NADViewDelegate {
         // 広告枠のapikey/spotidを設定(必須)
         nadViewManually.setNendID("eb5ca11fa8e46315c2df1b8e283149049e8d235e", spotID: "70996")
         
-        // nendSDKログ出力の設定(任意)
-        nadViewManually.isOutputLog = true
-        
         // delegateを受けるオブジェクトを指定(必須)
         nadViewManually.delegate = self
         

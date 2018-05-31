@@ -40,7 +40,7 @@ class FullBoardTabPageViewController: UIViewController {
     }
     
     private var currentTabItem: UIButton? {
-        return self.tabContainer.subviews.flatMap({ $0 as? UIButton }).filter({ $0.isSelected }).first
+        return self.tabContainer.subviews.compactMap({ $0 as? UIButton }).filter({ $0.isSelected }).first
     }
     
     override func viewDidLoad() {

@@ -76,8 +76,6 @@
     self.items = [self dataSourceFromFeedArray:items];
     [self.tableView reloadData];
     
-    [NADNativeLogger setLogLevel:NADNativeLogLevelDebug];
-
     NADNativeTableViewPlacement *placer = [NADNativeTableViewPlacement new];
     // 1行目は1つの広告を取得したFeedと一緒に表示
     [placer addFixedIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] fillRow:NO];

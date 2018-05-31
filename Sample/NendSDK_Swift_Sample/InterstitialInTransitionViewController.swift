@@ -20,7 +20,6 @@ class InterstitialInTransitionViewController: UIViewController, NADInterstitialD
         self.title = "InterstitialAd"
         
         NADInterstitial.sharedInstance().delegate = self
-        NADInterstitial.sharedInstance().isOutputLog = true
     }
     
     override func viewDidAppear(_ animated: Bool) {

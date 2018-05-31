@@ -73,7 +73,6 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
     
     func initAd() {
         self.client = NADNativeClient(spotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
-        NADNativeLogger.setLogLevel(.debug)
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let group = DispatchGroup()

@@ -81,7 +81,7 @@ class InFeedTableViewController: UITableViewController {
 
     private let controller = InFeedController()
     private var items = [String]()
-    private let videoAdLoader = NADNativeVideoLoader(spotId: "4", apiKey: "testing", clickAction: .LP)
+    private let videoAdLoader = NADNativeVideoLoader(spotId: AdSpaces.videoNativeAdSpotId, apiKey: AdSpaces.videoNativeAdApiKey, clickAction: .LP)
     private var pendingReloadIndexPaths = [IndexPath]()
     private var topVideoAdSource: InReadVideoAd?
     
@@ -109,7 +109,7 @@ class InFeedTableViewController: UITableViewController {
         refreshControl = refresh
         refreshControl!.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
         
-        let adLoader = NADNativeVideoLoader(spotId: "2", apiKey: "testing")
+        let adLoader = NADNativeVideoLoader(spotId: AdSpaces.videoNativeAdSpotId, apiKey: AdSpaces.videoNativeAdApiKey)
         let centerVideoAd = InReadVideoAd(adLoader: adLoader)
         centerVideoAd.reuseIdentifierHandler = { _ in "NormalVideoAdCell" }
         centerVideoAd.renderingHandler = { [weak self] (cell, indexPath, ads) in
@@ -117,7 +117,7 @@ class InFeedTableViewController: UITableViewController {
             videoAdCell.videoView.rootViewController = self
             videoAdCell.videoAd = ads[0]
         }
-        centerVideoAd.add(at: [IndexPath(row: 10, section: 0), IndexPath(row: 20, section: 0)])
+        centerVideoAd.add(at: [IndexPath(row: 20, section: 0), IndexPath(row: 30, section: 0)])
         
         let adClient = NADNativeClient(spotId: "485500", apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071")!
         let nativeAd = InFeedNativeAd(adClient: adClient)
@@ -127,7 +127,7 @@ class InFeedTableViewController: UITableViewController {
                 ads[0].intoView(nativeAdCell, advertisingExplicitly: .AD)
             }
         }
-        nativeAd.add(at: IndexPath(row: 5, section: 0))
+        nativeAd.add(at: IndexPath(row: 10, section: 0))
         nativeAd.repeat(interval: 10, in: 0)
         
         controller.isExcludeNotReadyAdRows = false
@@ -284,7 +284,7 @@ extension InFeedTableViewController : Delegate {
         return items.count
     }
     
-    func controller(controller: InFeedController, didLoadAdAtIndexPath indexPath: IndexPath) {
+    func controller(_ controller: InFeedController, didLoadAdAtIndexPath indexPath: IndexPath) {
         print("\(#function): \(indexPath)")
         if controller.isExcludeNotReadyAdRows {
             var animation: UITableViewRowAnimation
@@ -305,7 +305,7 @@ extension InFeedTableViewController : Delegate {
         }
     }
     
-    func controller(controller: InFeedController, didFailToLoadAdAtIndexPath indexPath: IndexPath) {
+    func controller(_ controller: InFeedController, didFailToLoadAdAtIndexPath indexPath: IndexPath) {
         print("\(#function): \(indexPath)")
         guard let adSource = controller[at: indexPath], !controller.isExcludeNotReadyAdRows else { return }
         var changed = false
@@ -314,7 +314,7 @@ extension InFeedTableViewController : Delegate {
             videoAd.remove(at: indexPath)
             changed = true
         case let nativeAd as InFeedNativeAd:
-            if indexPath.row == 5 {
+            if indexPath.row == 10 {
                 nativeAd.remove(at: indexPath)
                 changed = true
             }

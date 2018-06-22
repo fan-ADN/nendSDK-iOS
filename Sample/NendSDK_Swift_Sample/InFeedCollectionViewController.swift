@@ -86,7 +86,7 @@ class InFeedCollectionViewController: UICollectionViewController {
         
         items = Array(repeating: [UIColor.red, UIColor.green, UIColor.blue], count: 10).reduce(into: [UIColor]()) { $0.append(contentsOf: $1) }
         
-        let adLoader = NADNativeVideoLoader(spotId: "2", apiKey: "testing")
+        let adLoader = NADNativeVideoLoader(spotId: AdSpaces.videoNativeAdSpotId, apiKey: AdSpaces.videoNativeAdApiKey)
         let inRead = InReadVideoAd(adLoader: adLoader)
         inRead.reuseIdentifierHandler = { _ in "VideoAdCell" }
         inRead.renderingHandler = { [weak self] (cell, indexPath, ads) in
@@ -204,12 +204,12 @@ extension InFeedCollectionViewController: Delegate {
         return items.count
     }
     
-    func controller(controller: InFeedController, didLoadAdAtIndexPath indexPath: IndexPath) {
+    func controller(_ controller: InFeedController, didLoadAdAtIndexPath indexPath: IndexPath) {
         print("\(#function): \(indexPath)")
         collectionView?.reloadItems(at: [indexPath])
     }
     
-    func controller(controller: InFeedController, didFailToLoadAdAtIndexPath indexPath: IndexPath) {
+    func controller(_ controller: InFeedController, didFailToLoadAdAtIndexPath indexPath: IndexPath) {
         print("\(#function): \(indexPath)")
     }
     

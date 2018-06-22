@@ -20,7 +20,7 @@ class VideoNativeViewController: UIViewController {
     @IBOutlet private weak var logoImageView: UIImageView!
     @IBOutlet private weak var callToActionButton: UIButton!
 
-    private let loader = NADNativeVideoLoader(spotId: "2", apiKey: "testing", clickAction: .fullScreen)
+    private let loader = NADNativeVideoLoader(spotId: AdSpaces.videoNativeAdSpotId, apiKey: AdSpaces.videoNativeAdApiKey, clickAction: .fullScreen)
     
     override func viewDidLoad() {
         super.viewDidLoad()

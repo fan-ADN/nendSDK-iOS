@@ -48,6 +48,8 @@
 		6933FCB91BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6933FCB71BD62F5500C26FB4 /* NativeAdRssViewController.m */; };
 		693A21711B79BDDB004B6680 /* NativeAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A21701B79BDDB004B6680 /* NativeAdViewController.swift */; };
 		693A21781B79EEC9004B6680 /* NativeAdMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A21771B79EEC9004B6680 /* NativeAdMenuViewController.swift */; };
+		694C43C820DC87C000F7F5DE /* AdSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694C43C720DC87C000F7F5DE /* AdSpaces.swift */; };
+		69613D2020BFB0F500518EB7 /* VideoNativePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69613D1F20BFB0F500518EB7 /* VideoNativePageViewController.swift */; };
 		696551621D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696551611D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.m */; };
 		696F3E351BDA0ADD00798F4F /* NativeAdRssTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696F3E341BDA0ADD00798F4F /* NativeAdRssTableViewController.swift */; };
 		697CD3041E3736B000C2BDBE /* FullBoardAdWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697CD3031E3736B000C2BDBE /* FullBoardAdWebViewController.swift */; };
@@ -224,6 +226,8 @@
 		6933FCB71BD62F5500C26FB4 /* NativeAdRssViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdRssViewController.m; sourceTree = "<group>"; };
 		693A21701B79BDDB004B6680 /* NativeAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdViewController.swift; sourceTree = "<group>"; };
 		693A21771B79EEC9004B6680 /* NativeAdMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdMenuViewController.swift; sourceTree = "<group>"; };
+		694C43C720DC87C000F7F5DE /* AdSpaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdSpaces.swift; sourceTree = "<group>"; };
+		69613D1F20BFB0F500518EB7 /* VideoNativePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoNativePageViewController.swift; sourceTree = "<group>"; };
 		696551601D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdNoHelperInFeedViewController.h; sourceTree = "<group>"; };
 		696551611D0665AD00FB1103 /* NativeAdNoHelperInFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdNoHelperInFeedViewController.m; sourceTree = "<group>"; };
 		696F3E341BDA0ADD00798F4F /* NativeAdRssTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdRssTableViewController.swift; sourceTree = "<group>"; };
@@ -566,6 +570,7 @@
 			isa = PBXGroup;
 			children = (
 				69C131EF20AD65F400886D9F /* VideoNativeViewController.swift */,
+				69613D1F20BFB0F500518EB7 /* VideoNativePageViewController.swift */,
 			);
 			name = native;
 			sourceTree = "<group>";
@@ -674,6 +679,7 @@
 				CE377CB01F1E072600F544FE /* video */,
 				CEB2EA6A1E2F424000A826DE /* fullboard */,
 				69ED186F1BD8BCA800CBEDD0 /* native */,
+				694C43C720DC87C000F7F5DE /* AdSpaces.swift */,
 				B54CAE7D19DE5BA9003C6616 /* AppDelegate.swift */,
 				B54CAE7F19DE5BA9003C6616 /* ViewController.swift */,
 				B54CAEA119DE5DF9003C6616 /* BannerView320x50Controller.swift */,
@@ -1067,6 +1073,7 @@
 				6933FCB81BD62F5500C26FB4 /* NativeAdRssViewController.m in Sources */,
 				B54CAEA719DE5DF9003C6616 /* BannerView320x100Controller.swift in Sources */,
 				693A21781B79EEC9004B6680 /* NativeAdMenuViewController.swift in Sources */,
+				694C43C820DC87C000F7F5DE /* AdSpaces.swift in Sources */,
 				69C131F020AD65F400886D9F /* VideoNativeViewController.swift in Sources */,
 				69FE0E8A20A1430600FAEA05 /* InReadVideoAd.swift in Sources */,
 				698C8B061BE1F76C00BF8811 /* NativeAdPageViewController.swift in Sources */,
@@ -1075,6 +1082,7 @@
 				69D67F5820AA996700A9824B /* InFeedTableViewController.swift in Sources */,
 				69C55FCD1BD9FC5300D0E34A /* NativeAdCollectionViewController.swift in Sources */,
 				69ED18761BD8BE8C00CBEDD0 /* NativeAdCollectionView.swift in Sources */,
+				69613D2020BFB0F500518EB7 /* VideoNativePageViewController.swift in Sources */,
 				B54CAEAC19DE5E15003C6616 /* InterstitialViewController.swift in Sources */,
 				69ED18721BD8BCEF00CBEDD0 /* NativeAdView.swift in Sources */,
 				69ED18831BD8C8F700CBEDD0 /* FeedAdView.swift in Sources */,

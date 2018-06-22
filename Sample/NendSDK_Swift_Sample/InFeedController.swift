@@ -10,8 +10,8 @@ import Foundation
 protocol Delegate: class {
     func numberOfSections() -> Int
     func numberOfItems(inSection section: Int) -> Int
-    func controller(controller: InFeedController, didLoadAdAtIndexPath indexPath: IndexPath)
-    func controller(controller: InFeedController, didFailToLoadAdAtIndexPath indexPath: IndexPath)
+    func controller(_ controller: InFeedController, didLoadAdAtIndexPath indexPath: IndexPath)
+    func controller(_ controller: InFeedController, didFailToLoadAdAtIndexPath indexPath: IndexPath)
 }
 
 class InFeedController: NSObject {
@@ -72,7 +72,7 @@ class InFeedController: NSObject {
             !loadingIndexPaths.contains(indexPath) else { return }
         
         if adSource.isLoadCompleted(at: indexPath) {
-            delegate?.controller(controller: self, didLoadAdAtIndexPath: indexPath)
+            delegate?.controller(self, didLoadAdAtIndexPath: indexPath)
             return
         }
         loadingIndexPaths.append(indexPath)
@@ -81,9 +81,9 @@ class InFeedController: NSObject {
             if let index = self.loadingIndexPaths.index(of: indexPath) { self.loadingIndexPaths.remove(at: index) }
             if (completed) {
                 adPosition.notifyAdLoaded(at: [indexPath])
-                self.delegate?.controller(controller: self, didLoadAdAtIndexPath: indexPath)
+                self.delegate?.controller(self, didLoadAdAtIndexPath: indexPath)
             } else {
-                self.delegate?.controller(controller: self, didFailToLoadAdAtIndexPath: indexPath)
+                self.delegate?.controller(self, didFailToLoadAdAtIndexPath: indexPath)
             }
         }
     }

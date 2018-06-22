@@ -6,7 +6,6 @@
 //
 
 #import <NendAd/NADNativeClient.h>
-
 #import "NativeAdCustomViewController.h"
 #define timerInterval     30.0f
 

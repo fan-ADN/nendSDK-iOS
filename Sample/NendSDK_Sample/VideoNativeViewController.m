@@ -19,8 +19,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    self.adLoader = [[NADNativeVideoLoader alloc] initWithSpotId:@"input your spot id"
-                                                          apiKey:@"input your api key"];
+    self.adLoader = [[NADNativeVideoLoader alloc] initWithSpotId:@"887595"
+                                                          apiKey:@"e7c1e68e7c16e94270bf39719b60534596b1e70d"];
     
     // optional settings
     self.adLoader.userId = @"guestuser";

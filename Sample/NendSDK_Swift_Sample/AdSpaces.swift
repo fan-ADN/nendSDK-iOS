@@ -8,6 +8,6 @@
 import Foundation
 
 struct AdSpaces {
-    static let videoNativeAdSpotId = "54664"
-    static let videoNativeAdApiKey = "da252a534af628c0502ae7677bfc54a59e7d281e"
+    static let videoNativeAdSpotId = "887595"
+    static let videoNativeAdApiKey = "e7c1e68e7c16e94270bf39719b60534596b1e70d"
 }

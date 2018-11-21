@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		058500D79C0941798284D39B /* Pods_NendSDK_Swift_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218F8B5334FD29FDB34D8D23 /* Pods_NendSDK_Swift_Sample.framework */; };
 		4F28261B1D1CF659001484EE /* NativeAdNoNibTelopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */; };
 		4F28261E1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261D1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m */; };
 		4FD68D462021766F00947A52 /* FullBoardAdMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA501E2F10F700A826DE /* FullBoardAdMenuViewController.m */; };
@@ -124,7 +123,6 @@
 		B54CAEA719DE5DF9003C6616 /* BannerView320x100Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA219DE5DF9003C6616 /* BannerView320x100Controller.swift */; };
 		B54CAEA819DE5DF9003C6616 /* BannerView728x90Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */; };
 		B54CAEAC19DE5E15003C6616 /* InterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */; };
-		CD2FAE70DFC991B18E499A8A /* Pods_NendSDK_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDECD5009979D73BAC57AE53 /* Pods_NendSDK_Sample.framework */; };
 		CE377C7A1F1DE3ED00F544FE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE377C791F1DE3ED00F544FE /* AVFoundation.framework */; };
 		CE377C7C1F1DE3FC00F544FE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE377C7B1F1DE3FC00F544FE /* SystemConfiguration.framework */; };
 		CE377C7E1F1DE40000F544FE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE377C7D1F1DE40000F544FE /* WebKit.framework */; };
@@ -137,7 +135,6 @@
 		CE377C971F1DEC5F00F544FE /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE377C961F1DEC5F00F544FE /* VideoViewController.swift */; };
 		CE377C9C1F1DF28800F544FE /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE377C9B1F1DF28800F544FE /* VideoViewController.m */; };
 		CE377C9D1F1DF39700F544FE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE377C811F1DE40A00F544FE /* CoreMedia.framework */; };
-		CE691DD21E3084630071C583 /* NendAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE691DCF1E3084580071C583 /* NendAd.framework */; };
 		CEB2EA491E2E1AA800A826DE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6998B67B193EA651009D70F6 /* ImageIO.framework */; };
 		CEB2EA4A1E2E1AAC00A826DE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33426517991B79001D0A08 /* Security.framework */; };
 		CEB2EA4B1E2E1AB000A826DE /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33426717991B7E001D0A08 /* AdSupport.framework */; };
@@ -154,7 +151,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		218F8B5334FD29FDB34D8D23 /* Pods_NendSDK_Swift_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NendSDK_Swift_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B33423017990B9E001D0A08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B33423217990B9E001D0A08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3B33423417990B9E001D0A08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -169,8 +165,6 @@
 		4FE8F4161D828DCD00F577B1 /* SelectInterstitialTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectInterstitialTableViewController.h; sourceTree = "<group>"; };
 		4FE8F4171D828DCD00F577B1 /* SelectInterstitialTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectInterstitialTableViewController.m; sourceTree = "<group>"; };
 		4FE8F4191D82B44800F577B1 /* InterstitialInTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialInTransitionViewController.swift; sourceTree = "<group>"; };
-		554323849FC221FDD7D50C13 /* Pods-NendSDK_Swift_Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendSDK_Swift_Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-NendSDK_Swift_Sample/Pods-NendSDK_Swift_Sample.release.xcconfig"; sourceTree = "<group>"; };
-		5CB589A63546EE10FA7B0EC2 /* Pods-NendSDK_Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendSDK_Sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NendSDK_Sample/Pods-NendSDK_Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		690C28741B797DF100C92232 /* NendSDK_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NendSDK_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		690C28771B797DF100C92232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		690C28781B797DF100C92232 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -307,8 +301,6 @@
 		8BD078EB1C9A42B0003ABB82 /* NativeAdCarouselPortraitView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdCarouselPortraitView.xib; sourceTree = "<group>"; };
 		8BD849811D2F784E002F84DF /* NativeAdCustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdCustomViewController.h; sourceTree = "<group>"; };
 		8BD849821D2F784E002F84DF /* NativeAdCustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdCustomViewController.m; sourceTree = "<group>"; };
-		93FB85ED59F3C59DC7B84A63 /* Pods-NendSDK_Swift_Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendSDK_Swift_Sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NendSDK_Swift_Sample/Pods-NendSDK_Swift_Sample.debug.xcconfig"; sourceTree = "<group>"; };
-		AF0979FD82D87FA2287BF82A /* Pods-NendSDK_Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NendSDK_Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-NendSDK_Sample/Pods-NendSDK_Sample.release.xcconfig"; sourceTree = "<group>"; };
 		B54CAE7919DE5BA9003C6616 /* NendSDK_Swift_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NendSDK_Swift_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54CAE7C19DE5BA9003C6616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B54CAE7D19DE5BA9003C6616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -327,13 +319,9 @@
 		CE377C7D1F1DE40000F544FE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CE377C7F1F1DE40400F544FE /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		CE377C811F1DE40A00F544FE /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		CE377C881F1DE95F00F544FE /* NendAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NendAd.framework; sourceTree = "<group>"; };
-		CE377C8A1F1DE95F00F544FE /* NendAdResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NendAdResource.bundle; sourceTree = "<group>"; };
 		CE377C961F1DEC5F00F544FE /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		CE377C9A1F1DF28800F544FE /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		CE377C9B1F1DF28800F544FE /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
-		CE691DCF1E3084580071C583 /* NendAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NendAd.framework; sourceTree = "<group>"; };
-		CE691DD11E3084580071C583 /* NendAdResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NendAdResource.bundle; sourceTree = "<group>"; };
 		CEB2EA4F1E2F10F700A826DE /* FullBoardAdMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullBoardAdMenuViewController.h; sourceTree = "<group>"; };
 		CEB2EA501E2F10F700A826DE /* FullBoardAdMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullBoardAdMenuViewController.m; sourceTree = "<group>"; };
 		CEB2EA541E2F1A0B00A826DE /* FullBoardAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullBoardAdViewController.h; sourceTree = "<group>"; };
@@ -346,7 +334,6 @@
 		CEB2EA6E1E2F43F400A826DE /* FullBoardAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullBoardAdViewController.swift; sourceTree = "<group>"; };
 		CEB2EA711E2F46C200A826DE /* FullBoardAdPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullBoardAdPageViewController.swift; sourceTree = "<group>"; };
 		CEB2EA741E2F472800A826DE /* FullBoardAdContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullBoardAdContentViewController.swift; sourceTree = "<group>"; };
-		EDECD5009979D73BAC57AE53 /* Pods_NendSDK_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NendSDK_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,10 +347,8 @@
 				CE377C931F1DE9DB00F544FE /* WebKit.framework in Frameworks */,
 				CE377C921F1DE9D500F544FE /* SafariServices.framework in Frameworks */,
 				CE377C911F1DE9D200F544FE /* AVFoundation.framework in Frameworks */,
-				CE691DD21E3084630071C583 /* NendAd.framework in Frameworks */,
 				CEB2EA4E1E2E1ABF00A826DE /* AdSupport.framework in Frameworks */,
 				CEB2EA4D1E2E1AB900A826DE /* Security.framework in Frameworks */,
-				CD2FAE70DFC991B18E499A8A /* Pods_NendSDK_Sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,24 +364,12 @@
 				CEB2EA4A1E2E1AAC00A826DE /* Security.framework in Frameworks */,
 				CE377C7A1F1DE3ED00F544FE /* AVFoundation.framework in Frameworks */,
 				CEB2EA4B1E2E1AB000A826DE /* AdSupport.framework in Frameworks */,
-				058500D79C0941798284D39B /* Pods_NendSDK_Swift_Sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01B50E77CAC3DF79DD1593C0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5CB589A63546EE10FA7B0EC2 /* Pods-NendSDK_Sample.debug.xcconfig */,
-				AF0979FD82D87FA2287BF82A /* Pods-NendSDK_Sample.release.xcconfig */,
-				93FB85ED59F3C59DC7B84A63 /* Pods-NendSDK_Swift_Sample.debug.xcconfig */,
-				554323849FC221FDD7D50C13 /* Pods-NendSDK_Swift_Sample.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		3B33422417990B9E001D0A08 = {
 			isa = PBXGroup;
 			children = (
@@ -404,7 +377,6 @@
 				690C28751B797DF100C92232 /* NendSDK_Sample */,
 				3B33422F17990B9E001D0A08 /* Frameworks */,
 				3B33422E17990B9E001D0A08 /* Products */,
-				01B50E77CAC3DF79DD1593C0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -420,21 +392,17 @@
 		3B33422F17990B9E001D0A08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE377C871F1DE95F00F544FE /* NendAd.embeddedframework */,
 				CE377C811F1DE40A00F544FE /* CoreMedia.framework */,
 				CE377C7F1F1DE40400F544FE /* SafariServices.framework */,
 				CE377C7D1F1DE40000F544FE /* WebKit.framework */,
 				CE377C7B1F1DE3FC00F544FE /* SystemConfiguration.framework */,
 				CE377C791F1DE3ED00F544FE /* AVFoundation.framework */,
-				CE691DCE1E3084580071C583 /* NendAd.embeddedframework */,
 				6998B67B193EA651009D70F6 /* ImageIO.framework */,
 				3B33426717991B7E001D0A08 /* AdSupport.framework */,
 				3B33426517991B79001D0A08 /* Security.framework */,
 				3B33423017990B9E001D0A08 /* UIKit.framework */,
 				3B33423217990B9E001D0A08 /* Foundation.framework */,
 				3B33423417990B9E001D0A08 /* CoreGraphics.framework */,
-				EDECD5009979D73BAC57AE53 /* Pods_NendSDK_Sample.framework */,
-				218F8B5334FD29FDB34D8D23 /* Pods_NendSDK_Swift_Sample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -705,23 +673,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CE377C871F1DE95F00F544FE /* NendAd.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				CE377C881F1DE95F00F544FE /* NendAd.framework */,
-				CE377C891F1DE95F00F544FE /* Resources */,
-			);
-			path = NendAd.embeddedframework;
-			sourceTree = "<group>";
-		};
-		CE377C891F1DE95F00F544FE /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				CE377C8A1F1DE95F00F544FE /* NendAdResource.bundle */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		CE377C991F1DF25C00F544FE /* video */ = {
 			isa = PBXGroup;
 			children = (
@@ -739,23 +690,6 @@
 				CE377C961F1DEC5F00F544FE /* VideoViewController.swift */,
 			);
 			name = video;
-			sourceTree = "<group>";
-		};
-		CE691DCE1E3084580071C583 /* NendAd.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				CE691DCF1E3084580071C583 /* NendAd.framework */,
-				CE691DD01E3084580071C583 /* Resources */,
-			);
-			path = NendAd.embeddedframework;
-			sourceTree = "<group>";
-		};
-		CE691DD01E3084580071C583 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				CE691DD11E3084580071C583 /* NendAdResource.bundle */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		CEB2EA531E2F10FE00A826DE /* fullboard */ = {
@@ -800,11 +734,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 690C28981B797DF200C92232 /* Build configuration list for PBXNativeTarget "NendSDK_Sample" */;
 			buildPhases = (
-				DFE45931ACD667301C055F65 /* [CP] Check Pods Manifest.lock */,
 				690C28701B797DF100C92232 /* Sources */,
 				690C28711B797DF100C92232 /* Frameworks */,
 				690C28721B797DF100C92232 /* Resources */,
-				AD71112FE6849FE0A4AFA661 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -819,11 +751,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B54CAE9919DE5BA9003C6616 /* Build configuration list for PBXNativeTarget "NendSDK_Swift_Sample" */;
 			buildPhases = (
-				68E3773213402A12EE924B03 /* [CP] Check Pods Manifest.lock */,
 				B54CAE7519DE5BA9003C6616 /* Sources */,
 				B54CAE7619DE5BA9003C6616 /* Frameworks */,
 				B54CAE7719DE5BA9003C6616 /* Resources */,
-				AE0B8E61778CDD53532F795C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -847,12 +777,12 @@
 					690C28731B797DF100C92232 = {
 						CreatedOnToolsVersion = 6.4;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					B54CAE7819DE5BA9003C6616 = {
 						CreatedOnToolsVersion = 6.0.1;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -925,81 +855,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		68E3773213402A12EE924B03 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NendSDK_Swift_Sample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AD71112FE6849FE0A4AFA661 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NendSDK_Sample/Pods-NendSDK_Sample-resources.sh",
-				"${PODS_ROOT}/NendSDK_iOS/NendAd.embeddedframework/NendAd.framework/Resources/NendAdResource.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NendAdResource.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NendSDK_Sample/Pods-NendSDK_Sample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AE0B8E61778CDD53532F795C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NendSDK_Swift_Sample/Pods-NendSDK_Swift_Sample-resources.sh",
-				"${PODS_ROOT}/NendSDK_iOS/NendAd.embeddedframework/NendAd.framework/Resources/NendAdResource.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NendAdResource.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NendSDK_Swift_Sample/Pods-NendSDK_Swift_Sample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DFE45931ACD667301C055F65 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NendSDK_Sample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		690C28701B797DF100C92232 /* Sources */ = {
@@ -1167,7 +1022,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1187,7 +1041,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 4.0;
@@ -1217,7 +1070,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1229,7 +1081,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1241,7 +1092,6 @@
 		};
 		690C28941B797DF200C92232 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CB589A63546EE10FA7B0EC2 /* Pods-NendSDK_Sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1249,7 +1099,8 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1265,7 +1116,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/NendSDK_Sample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1281,7 +1131,6 @@
 		};
 		690C28951B797DF200C92232 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF0979FD82D87FA2287BF82A /* Pods-NendSDK_Sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1289,7 +1138,8 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
@@ -1303,7 +1153,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/NendSDK_Sample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1319,7 +1168,6 @@
 		};
 		B54CAE9519DE5BA9003C6616 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93FB85ED59F3C59DC7B84A63 /* Pods-NendSDK_Swift_Sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_Swift;
 				CLANG_ENABLE_MODULES = YES;
@@ -1327,6 +1175,8 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1342,7 +1192,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = NendSDK_Swift_Sample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1361,7 +1210,6 @@
 		};
 		B54CAE9619DE5BA9003C6616 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 554323849FC221FDD7D50C13 /* Pods-NendSDK_Swift_Sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_Swift;
 				CLANG_ENABLE_MODULES = YES;
@@ -1369,6 +1217,8 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1381,7 +1231,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = NendSDK_Swift_Sample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = NO;

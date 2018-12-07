@@ -41,7 +41,7 @@ class NativeAdViewController: UIViewController, NADNativeDelegate {
                 if let nativeAd = ad {
                     nativeAd.delegate = self
                     // 広告をViewに描画
-                    nativeAd.intoView(adView as! UIView & NADNativeViewRendering, advertisingExplicitly:.PR)
+                    nativeAd.intoView(adView as? UIView & NADNativeViewRendering, advertisingExplicitly:.PR)
                 } else {
                     print("error:\(error!)")
                 }

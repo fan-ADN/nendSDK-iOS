@@ -91,7 +91,7 @@ class NativeAdCarouselViewController: UITableViewController {
             let rowId = "adcell"
             var cell = tableView.dequeueReusableCell(withIdentifier: rowId) as! NativeAdCarouselCell?
             if cell == nil {
-                cell = NativeAdCarouselCell(style: UITableViewCellStyle.default, reuseIdentifier: rowId)
+                cell = NativeAdCarouselCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: rowId)
                 cell!.direction = self.direction
                 cell!.initAd()
             }
@@ -101,7 +101,7 @@ class NativeAdCarouselViewController: UITableViewController {
             let rowId = "cell"
             var cell = tableView.dequeueReusableCell(withIdentifier: rowId) as UITableViewCell?
             if cell == nil {
-                cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: rowId)
+                cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: rowId)
             }
             
             cell!.textLabel!.text = self.items[indexPath.row]

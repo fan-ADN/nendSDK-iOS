@@ -36,7 +36,7 @@ class FullBoardTabPageViewController: UIViewController {
     }
     
     private var pageViewController: UIPageViewController {
-        return self.childViewControllers.first as! UIPageViewController
+        return self.children.first as! UIPageViewController
     }
     
     private var currentTabItem: UIButton? {
@@ -91,7 +91,7 @@ class FullBoardTabPageViewController: UIViewController {
             return
         }
         self.currentTabIndex = button.tag
-        let direction: UIPageViewControllerNavigationDirection = button.tag > currentTab.tag ? .forward : .reverse
+        let direction: UIPageViewController.NavigationDirection = button.tag > currentTab.tag ? .forward : .reverse
         self.pageViewController.setViewControllers(
             [self.contentViewControllers[self.currentTabIndex]], direction: direction, animated: true, completion: nil)
     }

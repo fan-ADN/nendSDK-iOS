@@ -19,7 +19,7 @@ class FullBoardAdWebViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.webView.scrollView.delegate = self
-        self.webView.loadRequest(URLRequest(url: URL(string: "http://www.nend.net")!))
+        self.webView.loadRequest(URLRequest(url: URL(string: "https://www.nend.net")!))
         self.loadAd()
     }
 

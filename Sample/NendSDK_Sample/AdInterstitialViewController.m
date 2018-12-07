@@ -42,19 +42,6 @@
     self.showButton.enabled = NO;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-{
-#ifdef ONLY_PORTRAIT
-    // 端末回転を縦向きのみに限定します
-    return UIInterfaceOrientationIsPortrait(toInterfaceOrientation);
-#elif ONLY_LANDSCAPE
-    // 端末回転を横向きのみに限定します
-    return UIInterfaceOrientationIsLandscape(toInterfaceOrientation);
-#else
-    return YES;
-#endif
-}
-
 - (IBAction)show:(id)sender
 {
     NADInterstitialShowResult result = [[NADInterstitial sharedInstance] showAdFromViewController:self];

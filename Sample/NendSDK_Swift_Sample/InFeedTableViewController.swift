@@ -33,7 +33,7 @@ class NormalVideoAdCell: UITableViewCell {
             ctaButton.layer.cornerRadius = 4.0
             ctaButton.layer.borderWidth = 1.0
             ctaButton.layer.borderColor = UIColor.blue.cgColor
-            ctaButton.contentEdgeInsets = UIEdgeInsetsMake(5.0, 5.0, 5.0, 5.0)
+            ctaButton.contentEdgeInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
             ctaButton.setTitle(videoAd.callToAction, for: .normal)
             videoAd.registerInteractionViews([ctaButton])
         }
@@ -287,7 +287,7 @@ extension InFeedTableViewController : Delegate {
     func controller(_ controller: InFeedController, didLoadAdAtIndexPath indexPath: IndexPath) {
         print("\(#function): \(indexPath)")
         if controller.isExcludeNotReadyAdRows {
-            var animation: UITableViewRowAnimation
+            var animation: UITableView.RowAnimation
             if let visibleIndexPaths = tableView.indexPathsForVisibleRows, visibleIndexPaths.contains(indexPath) {
                 animation = .right
             } else {
@@ -324,7 +324,7 @@ extension InFeedTableViewController : Delegate {
         
         if changed {
             controller.reload()
-            var animation: UITableViewRowAnimation
+            var animation: UITableView.RowAnimation
             if let visibleIndexPaths = tableView.indexPathsForVisibleRows, visibleIndexPaths.contains(indexPath) {
                 animation = .left
             } else {

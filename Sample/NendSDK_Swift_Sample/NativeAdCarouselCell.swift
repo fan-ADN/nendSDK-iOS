@@ -50,7 +50,7 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
         fatalError("init(coder:) has not been implemented")
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         self.scrollView = UIScrollView()
@@ -60,7 +60,7 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
         self.scrollView.isDirectionalLockEnabled = true
         self.scrollView.isPagingEnabled = false
         self.scrollView.bounces = false
-        self.scrollView.decelerationRate = 0.3
+        self.scrollView.decelerationRate = UIScrollView.DecelerationRate(rawValue: 0.3)
         self.addSubview(self.scrollView)
         NotificationCenter.default.addObserver(self, selector:#selector(NativeAdCarouselCell.layoutUpdate(_:)), name: NSNotification.Name(rawValue: "layoutUpdate"), object: nil)
         

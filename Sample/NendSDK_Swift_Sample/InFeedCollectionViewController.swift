@@ -34,7 +34,7 @@ class VideoAdCollectionViewCell: UICollectionViewCell {
             ctaButton.layer.cornerRadius = 4.0
             ctaButton.layer.borderWidth = 1.0
             ctaButton.layer.borderColor = UIColor.blue.cgColor
-            ctaButton.contentEdgeInsets = UIEdgeInsetsMake(5.0, 5.0, 5.0, 5.0)
+            ctaButton.contentEdgeInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
             ctaButton.setTitle(videoAd.callToAction, for: .normal)
             videoAd.registerInteractionViews([ctaButton])
         }
@@ -164,7 +164,7 @@ extension InFeedCollectionViewController {
 extension InFeedCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(8.0, 8.0, 8.0, 8.0)
+        return UIEdgeInsets(top: 8.0, left: 8.0, bottom: 8.0, right: 8.0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

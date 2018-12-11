@@ -69,7 +69,7 @@ class NativeAdCollectionViewController: UICollectionViewController {
                 paragrahStyle.maximumLineHeight = 15.0
                 
                 let attributedText = NSMutableAttributedString(string: (ad?.shortText)!)
-                attributedText.addAttributes([NSAttributedStringKey.paragraphStyle: paragrahStyle], range: NSMakeRange(0, attributedText.length))
+                attributedText.addAttributes([NSAttributedString.Key.paragraphStyle: paragrahStyle], range: NSMakeRange(0, attributedText.length))
                 
                 cell.shortTextLabel().numberOfLines = 0
                 cell.shortTextLabel().attributedText = attributedText

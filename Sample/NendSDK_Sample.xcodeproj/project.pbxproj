@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F16A41121CA14F500E86F64 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F16A41021CA14F500E86F64 /* CoreLocation.framework */; };
+		4F16A41221CA14FB00E86F64 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F16A41021CA14F500E86F64 /* CoreLocation.framework */; };
 		4F28261B1D1CF659001484EE /* NativeAdNoNibTelopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */; };
 		4F28261E1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261D1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m */; };
 		4FD68D462021766F00947A52 /* FullBoardAdMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA501E2F10F700A826DE /* FullBoardAdMenuViewController.m */; };
@@ -156,6 +158,7 @@
 		3B33423417990B9E001D0A08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3B33426517991B79001D0A08 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3B33426717991B7E001D0A08 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		4F16A41021CA14F500E86F64 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4F2826191D1CF659001484EE /* NativeAdNoNibTelopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdNoNibTelopViewController.h; sourceTree = "<group>"; };
 		4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdNoNibTelopViewController.m; sourceTree = "<group>"; };
 		4F28261C1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdNoNibTelopTextView.h; sourceTree = "<group>"; };
@@ -341,6 +344,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F16A41121CA14F500E86F64 /* CoreLocation.framework in Frameworks */,
 				CE377C9D1F1DF39700F544FE /* CoreMedia.framework in Frameworks */,
 				CEB2EA4C1E2E1AB600A826DE /* ImageIO.framework in Frameworks */,
 				CE377C941F1DE9DF00F544FE /* SystemConfiguration.framework in Frameworks */,
@@ -356,6 +360,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F16A41221CA14FB00E86F64 /* CoreLocation.framework in Frameworks */,
 				CEB2EA491E2E1AA800A826DE /* ImageIO.framework in Frameworks */,
 				CE377C821F1DE40B00F544FE /* CoreMedia.framework in Frameworks */,
 				CE377C801F1DE40400F544FE /* SafariServices.framework in Frameworks */,
@@ -392,6 +397,7 @@
 		3B33422F17990B9E001D0A08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F16A41021CA14F500E86F64 /* CoreLocation.framework */,
 				CE377C811F1DE40A00F544FE /* CoreMedia.framework */,
 				CE377C7F1F1DE40400F544FE /* SafariServices.framework */,
 				CE377C7D1F1DE40000F544FE /* WebKit.framework */,

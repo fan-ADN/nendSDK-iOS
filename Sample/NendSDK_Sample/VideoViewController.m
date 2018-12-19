@@ -6,13 +6,18 @@
 //  Copyright © 2017年 F@N Communications. All rights reserved.
 //
 
+// このサンプルは広告配信に位置情報をオプションで利用しています。
+// This sample uses location data as an option for ad supply.
+
 #import "VideoViewController.h"
+#import <CoreLocation/CoreLocation.h>
 #import <NendAd/NendAd.h>
 
 @interface VideoViewController () <NADInterstitialVideoDelegate, NADRewardedVideoDelegate>
 
 @property (nonatomic) NADRewardedVideo *rewardedVideo;
 @property (nonatomic) NADInterstitialVideo *interstitialVideo;
+@property (nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -20,10 +25,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    _locationManager = [[CLLocationManager alloc] init];
+    [self.locationManager requestWhenInUseAuthorization];
+
     self.rewardedVideo = [[NADRewardedVideo alloc] initWithSpotId:@"802555" apiKey:@"ca80ed7018734d16787dbda24c9edd26c84c15b8"];
     self.rewardedVideo.userId = @"user id";
-    self.rewardedVideo.isLocationEnabled = NO;
     self.rewardedVideo.delegate = self;
     
     self.interstitialVideo = [[NADInterstitialVideo alloc] initWithSpotId:@"802557" apiKey:@"b6a97b05dd088b67f68fe6f155fb3091f302b48b"];

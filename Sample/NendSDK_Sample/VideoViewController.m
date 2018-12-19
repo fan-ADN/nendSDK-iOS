@@ -28,6 +28,7 @@
     self.interstitialVideo = [[NADInterstitialVideo alloc] initWithSpotId:@"802557" apiKey:@"b6a97b05dd088b67f68fe6f155fb3091f302b48b"];
     self.interstitialVideo.userId = @"user id";
     self.interstitialVideo.delegate = self;
+    self.interstitialVideo.isMuteStartPlaying = NO;
     [self.interstitialVideo addFallbackFullboardWithSpotId:@"485504" apiKey:@"30fda4b3386e793a14b27bedb4dcd29f03d638e5"];
 }
 

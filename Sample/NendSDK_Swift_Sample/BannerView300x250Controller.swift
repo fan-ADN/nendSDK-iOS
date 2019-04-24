@@ -2,7 +2,6 @@
 //  BannerView300x250Controller.swift
 //  NendSwiftSample
 //
-//  Created by ADN on 2014/09/10.
 //  Copyright (c) 2014年 F@N Communications. All rights reserved.
 //
 

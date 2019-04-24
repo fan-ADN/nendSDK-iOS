@@ -2,7 +2,6 @@
 //  AppDelegate.swift
 //  NendSDK_Swift_Sample
 //
-//  Created by ADN on 2014/10/03.
 //  Copyright (c) 2014年 F@N Communications. All rights reserved.
 //
 

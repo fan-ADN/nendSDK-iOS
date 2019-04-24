@@ -58,14 +58,14 @@ class FullBoardAdPageViewController: UIViewController, UIPageViewControllerDataS
     // MARK: - UIPageViewControllerDataSource
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let index = self.contentViewControllers.index(of: viewController), index > 0 else {
+        guard let index = self.contentViewControllers.firstIndex(of: viewController), index > 0 else {
             return nil
         }
         return self.contentViewControllers[index - 1]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let index = self.contentViewControllers.index(of: viewController), index < self.contentViewControllers.count - 1 else {
+        guard let index = self.contentViewControllers.firstIndex(of: viewController), index < self.contentViewControllers.count - 1 else {
             return nil
         }
         return self.contentViewControllers[index + 1]

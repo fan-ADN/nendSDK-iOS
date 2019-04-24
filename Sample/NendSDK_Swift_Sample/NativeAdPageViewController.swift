@@ -64,7 +64,7 @@ class NativeAdPageViewController: UIViewController, UIPageViewControllerDelegate
     // MARK: - UIPageViewControllerDataSource
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let index = self.contentViewControllers.index(of: viewController as! NativeAdPageContentViewController) else {
+        guard let index = self.contentViewControllers.firstIndex(of: viewController as! NativeAdPageContentViewController) else {
             return nil
         }
         if 0 == index {
@@ -74,7 +74,7 @@ class NativeAdPageViewController: UIViewController, UIPageViewControllerDelegate
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let index = self.contentViewControllers.index(of: viewController as! NativeAdPageContentViewController) else {
+        guard let index = self.contentViewControllers.firstIndex(of: viewController as! NativeAdPageContentViewController) else {
             return nil
         }
         if self.contentViewControllers.count == index + 1 {

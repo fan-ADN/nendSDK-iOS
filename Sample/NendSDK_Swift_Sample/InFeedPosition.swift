@@ -73,7 +73,7 @@ class InFeedPosition: NSObject {
     
     func remove(at indexPath: IndexPath) {
         if var fixedPositionDatas = fixedPositions.removeValue(forKey: indexPath.section) {
-            if let data = fixedPositionDatas.first(where: { $0.indexPath == indexPath }), let index = fixedPositionDatas.index(of: data) {
+            if let data = fixedPositionDatas.first(where: { $0.indexPath == indexPath }), let index = fixedPositionDatas.firstIndex(of: data) {
                 fixedPositionDatas.remove(at: index)
                 fixedPositions[indexPath.section] = fixedPositionDatas
             }

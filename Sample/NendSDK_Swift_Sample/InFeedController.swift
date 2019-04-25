@@ -49,7 +49,7 @@ class InFeedController: NSObject {
     
     @discardableResult
     func unregisterAdSource(_ source: InFeedAdSource) -> Bool {
-        if let index = adSources.index(where: { $0 === source }) {
+        if let index = adSources.firstIndex(where: { $0 === source }) {
             adSources.remove(at: index)
             return true
         } else {
@@ -78,7 +78,7 @@ class InFeedController: NSObject {
         loadingIndexPaths.append(indexPath)
         adSource.loadAd(at: indexPath, requestCount: requiredAdCount) { [weak self] (completed: Bool) in
             guard let `self` = self else { return }
-            if let index = self.loadingIndexPaths.index(of: indexPath) { self.loadingIndexPaths.remove(at: index) }
+            if let index = self.loadingIndexPaths.firstIndex(of: indexPath) { self.loadingIndexPaths.remove(at: index) }
             if (completed) {
                 adPosition.notifyAdLoaded(at: [indexPath])
                 self.delegate?.controller(self, didLoadAdAtIndexPath: indexPath)

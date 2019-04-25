@@ -34,13 +34,10 @@ class NativeAdCarouselViewController: UITableViewController {
         switch (orientation) {
             case UIInterfaceOrientation.portrait, UIInterfaceOrientation.portraitUpsideDown:
                 self.direction = 1
-                break
             case UIInterfaceOrientation.landscapeLeft, UIInterfaceOrientation.landscapeRight:
                 self.direction = 2
-                break
             default:
                 self.direction = 0
-                break
         }
     }
     

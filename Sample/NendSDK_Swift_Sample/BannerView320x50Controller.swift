@@ -142,19 +142,19 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
         let error: NSError = adView.error as NSError
         
         switch (error.code) {
-        case NADViewErrorCode.NADVIEW_AD_SIZE_TOO_LARGE.hashValue:
+        case NADViewErrorCode.NADVIEW_AD_SIZE_TOO_LARGE.rawValue:
             // 広告サイズがディスプレイサイズよりも大きい
             break
-        case NADViewErrorCode.NADVIEW_INVALID_RESPONSE_TYPE.hashValue:
+        case NADViewErrorCode.NADVIEW_INVALID_RESPONSE_TYPE.rawValue:
             // 不明な広告ビュータイプ
             break
-        case NADViewErrorCode.NADVIEW_FAILED_AD_REQUEST.hashValue:
+        case NADViewErrorCode.NADVIEW_FAILED_AD_REQUEST.rawValue:
             // 広告取得失敗
             break
-        case NADViewErrorCode.NADVIEW_FAILED_AD_DOWNLOAD.hashValue:
+        case NADViewErrorCode.NADVIEW_FAILED_AD_DOWNLOAD.rawValue:
             // 広告画像の取得失敗
             break
-        case NADViewErrorCode.NADVIEW_AD_SIZE_DIFFERENCES.hashValue:
+        case NADViewErrorCode.NADVIEW_AD_SIZE_DIFFERENCES.rawValue:
             // リクエストしたサイズと取得したサイズが異なる
             break
         default:

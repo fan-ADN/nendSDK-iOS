@@ -110,9 +110,9 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
     // 広告の受信に成功し表示できた場合に１度通知されます。必須メソッドです。
     func nadViewDidFinishLoad(_ adView: NADView!) {
         if (adView == bannerViewFromNib) {
-            print("nadViewDidFinishLoad,bannerViewFromNib:\(String(describing: adView!))")
+            print("nadViewDidFinishLoad,bannerViewFromNib:\(adView!)")
         } else if (adView == nadViewManually) {
-            print("nadViewDidFinishLoad,nadViewManually:\(String(describing: adView!))")
+            print("nadViewDidFinishLoad,nadViewManually:\(adView!)")
 
             // 画面下部に広告を表示させる場合
             nadViewManually.frame = CGRect(x: (self.view.frame.size.width - nadViewManually.frame.size.width)/2, y: self.view.frame.size.height - nadViewManually.frame.size.height, width: nadViewManually.frame.size.width, height: nadViewManually.frame.size.height)
@@ -127,9 +127,9 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
     // 以下は広告受信成功ごとに通知される任意メソッドです。
     func nadViewDidReceiveAd(_ adView: NADView!) {
         if (adView == bannerViewFromNib) {
-            print("nadViewDidReceiveAd,bannerViewFromNib:\(String(describing: adView!))")
+            print("nadViewDidReceiveAd,bannerViewFromNib:\(adView!)")
         } else if (adView == nadViewManually) {
-            print("nadViewDidReceiveAd,nadViewManually:\(String(describing: adView!))")
+            print("nadViewDidReceiveAd,nadViewManually:\(adView!)")
         } else {
             
         }
@@ -176,9 +176,9 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
     // 以下はバナー広告がクリックされるごとに通知される任意メソッドです。
     func nadViewDidClickAd(_ adView: NADView!) {
         if (adView == bannerViewFromNib) {
-            print("nadViewDidClickAd,bannerViewFromNib:\(String(describing: adView!))")
+            print("nadViewDidClickAd,bannerViewFromNib:\(adView!)")
         } else if (adView == nadViewManually) {
-            print("nadViewDidClickAd,nadViewManually:\(String(describing: adView!))")
+            print("nadViewDidClickAd,nadViewManually:\(adView!)")
         } else {
             
         }
@@ -187,9 +187,9 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
     // 以下はインフォメーションボタンがクリックされるごとに通知される任意メソッドです。
     func nadViewDidClickInformation(_ adView: NADView!) {
         if (adView == bannerViewFromNib) {
-            print("nadViewDidClickInformation,bannerViewFromNib:\(String(describing: adView!))")
+            print("nadViewDidClickInformation,bannerViewFromNib:\(adView!)")
         } else if (adView == nadViewManually) {
-            print("nadViewDidClickInformation,nadViewManually:\(String(describing: adView!))")
+            print("nadViewDidClickInformation,nadViewManually:\(adView!)")
         } else {
             
         }

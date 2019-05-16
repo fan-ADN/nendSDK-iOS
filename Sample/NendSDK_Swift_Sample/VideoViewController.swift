@@ -75,7 +75,7 @@ extension VideoViewController : NADRewardedVideoDelegate {
     
     func nadRewardVideoAd(_ nadRewardedVideoAd: NADRewardedVideo!, didFailToLoadWithError error: Error!)
     {
-        print(#function + " error: \(String(describing: error!))")
+        print(#function + " error: \(error!)")
     }
     
     func nadRewardVideoAdDidFailed(toPlay nadRewardedVideoAd: NADRewardedVideo!)
@@ -127,7 +127,7 @@ extension VideoViewController : NADInterstitialVideoDelegate {
     
     func nadInterstitialVideoAd(_ nadInterstitialVideoAd: NADInterstitialVideo!, didFailToLoadWithError error: Error!)
     {
-        print(#function + " error: \(String(describing: error!))")
+        print(#function + " error: \(error!)")
     }
     
     func nadInterstitialVideoAdDidFailed(toPlay nadInterstitialVideoAd: NADInterstitialVideo!)

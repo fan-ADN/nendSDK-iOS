@@ -32,8 +32,6 @@ class BannerView320x100Controller: UIViewController, NADViewDelegate {
         // コードでバナー広告を生成(広告サイズの自動調整を行う場合)
         nadViewManually = NADView(isAdjustAdSize: true)
 
-        nadViewManually.autoresizingMask = [.flexibleRightMargin, .flexibleLeftMargin, .flexibleTopMargin]
-        
         // 広告枠のapikey/spotidを設定(必須)
         nadViewManually.setNendID("eb5ca11fa8e46315c2df1b8e283149049e8d235e", spotID: "70996")
         
@@ -110,11 +108,41 @@ class BannerView320x100Controller: UIViewController, NADViewDelegate {
         } else if (adView == nadViewManually) {
             print("nadViewDidFinishLoad,nadViewManually:\(adView!)")
             
-            // 画面下部に広告を表示させる場合
-            nadViewManually.frame = CGRect(x: (self.view.frame.size.width - nadViewManually.frame.size.width)/2, y: self.view.frame.size.height - nadViewManually.frame.size.height, width: nadViewManually.frame.size.width, height: nadViewManually.frame.size.height)
-            
             // 広告のロードが終了してからViewを乗せる場合はnadViewDidFinishLoadを利用します。
+            adView.translatesAutoresizingMaskIntoConstraints = false
             self.view.addSubview(nadViewManually)
+            
+            // 画面下部に広告を表示させる場合
+            view.addConstraints([
+                NSLayoutConstraint.init(item: adView!,
+                                        attribute: .width,
+                                        relatedBy: .equal,
+                                        toItem: nil,
+                                        attribute: .width,
+                                        multiplier: 1,
+                                        constant: adView.frame.size.width),
+                NSLayoutConstraint.init(item: adView!,
+                                        attribute: .height,
+                                        relatedBy: .equal,
+                                        toItem: nil,
+                                        attribute: .height,
+                                        multiplier: 1,
+                                        constant: adView.frame.size.height),
+                NSLayoutConstraint.init(item: adView!,
+                                        attribute: .centerX,
+                                        relatedBy: .equal,
+                                        toItem: view,
+                                        attribute: .centerX,
+                                        multiplier: 1,
+                                        constant: 0),
+                NSLayoutConstraint.init(item: adView!,
+                                        attribute: .bottom,
+                                        relatedBy: .equal,
+                                        toItem: bottomLayoutGuide,
+                                        attribute: .top,
+                                        multiplier: 1,
+                                        constant: 0),
+                ])
         } else {
             
         }

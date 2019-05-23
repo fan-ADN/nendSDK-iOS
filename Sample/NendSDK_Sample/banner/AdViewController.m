@@ -30,7 +30,6 @@
 
     // NADViewを生成
     self.nadView = [[NADView alloc] init];
-    (self.nadView).autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
 
     // 広告枠のapikey/spotidを設定します(必須)
     [self.nadView setNendID:self.apiKey spotID:self.spotId];
@@ -90,13 +89,71 @@
     // 広告のロードが終了してからViewを乗せる場合はnadViewDidFinishLoadを利用します。
 
     // 広告位置設定例
-    // １．画面上部に広告を表示させる場合
-    // [self.nadView setFrame:CGRectMake((self.view.frame.size.width - self.nadView.frame.size) /2, 0, self.nadView.frame.size, self.nadView.frame.size)];
-    // ２．画面下部に広告を表示させる場合
-    (self.nadView).frame = CGRectMake((self.view.frame.size.width - self.nadView.frame.size.width) / 2, self.view.frame.size.height - self.nadView.frame.size.height, self.nadView.frame.size.width,
-                                      self.nadView.frame.size.height);
-
+    self.nadView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.nadView];
+    // １．画面上部に広告を表示させる場合
+//    [self.view addConstraints:@[
+//                                [NSLayoutConstraint constraintWithItem:self.nadView
+//                                                             attribute:NSLayoutAttributeWidth
+//                                                             relatedBy:NSLayoutRelationEqual
+//                                                                toItem:nil
+//                                                             attribute:NSLayoutAttributeWidth
+//                                                            multiplier:1
+//                                                              constant:self.nadView.frame.size.width],
+//                                [NSLayoutConstraint constraintWithItem:self.nadView
+//                                                             attribute:NSLayoutAttributeHeight
+//                                                             relatedBy:NSLayoutRelationEqual
+//                                                                toItem:nil
+//                                                             attribute:NSLayoutAttributeHeight
+//                                                            multiplier:1
+//                                                              constant:self.nadView.frame.size.height],
+//                                [NSLayoutConstraint constraintWithItem:self.nadView
+//                                                             attribute:NSLayoutAttributeTop
+//                                                             relatedBy:NSLayoutRelationEqual
+//                                                                toItem:self.topLayoutGuide
+//                                                             attribute:NSLayoutAttributeBottom
+//                                                            multiplier:1
+//                                                              constant:0],
+//                                [NSLayoutConstraint constraintWithItem:self.nadView
+//                                                             attribute:NSLayoutAttributeCenterX
+//                                                             relatedBy:NSLayoutRelationEqual
+//                                                                toItem:self.view
+//                                                             attribute:NSLayoutAttributeCenterX
+//                                                            multiplier:1
+//                                                              constant:0]
+//                                ]];
+
+    // ２．画面下部に広告を表示させる場合
+    [self.view addConstraints:@[
+                                [NSLayoutConstraint constraintWithItem:self.nadView
+                                                             attribute:NSLayoutAttributeWidth
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:nil
+                                                             attribute:NSLayoutAttributeWidth
+                                                            multiplier:1
+                                                              constant:self.nadView.frame.size.width],
+                                [NSLayoutConstraint constraintWithItem:self.nadView
+                                                             attribute:NSLayoutAttributeHeight
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:nil
+                                                             attribute:NSLayoutAttributeHeight
+                                                            multiplier:1
+                                                              constant:self.nadView.frame.size.height],
+                                [NSLayoutConstraint constraintWithItem:self.nadView
+                                                             attribute:NSLayoutAttributeBottom
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:self.bottomLayoutGuide
+                                                             attribute:NSLayoutAttributeTop
+                                                            multiplier:1
+                                                              constant:0],
+                                [NSLayoutConstraint constraintWithItem:self.nadView
+                                                             attribute:NSLayoutAttributeCenterX
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:self.view
+                                                             attribute:NSLayoutAttributeCenterX
+                                                            multiplier:1
+                                                              constant:0]
+                                ]];
 
     NSLog(@"NADViewDelegate nadViewDidFinishLoad");
 }

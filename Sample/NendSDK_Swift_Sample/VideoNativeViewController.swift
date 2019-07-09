@@ -130,4 +130,12 @@ extension VideoNativeViewController: NADNativeVideoViewDelegate {
         print("\(#function)")
     }
     
+    func nadNativeVideoViewDidStartFullScreenPlaying(_ videoView: NADNativeVideoView) {
+        print("\(#function)")
+    }
+    
+    func nadNativeVideoViewDidStopFullScreenPlaying(_ videoView: NADNativeVideoView) {
+        print("\(#function)")
+    }
+
 }

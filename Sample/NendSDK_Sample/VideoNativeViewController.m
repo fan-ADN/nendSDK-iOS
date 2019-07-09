@@ -138,4 +138,14 @@
     NSLog(@"%s", __FUNCTION__);
 }
 
+- (void)nadNativeVideoViewDidStartFullScreenPlaying:(NADNativeVideoView *)videoView
+{
+    NSLog(@"%s", __FUNCTION__);
+}
+
+- (void)nadNativeVideoViewDidStopFullScreenPlaying:(NADNativeVideoView *)videoView
+{
+    NSLog(@"%s", __FUNCTION__);
+}
+
 @end

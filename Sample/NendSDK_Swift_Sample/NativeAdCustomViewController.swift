@@ -31,8 +31,13 @@ class NativeAdCustomViewController: UIViewController, NADNativeDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.adView.layer.borderWidth = 1.0;
-        self.adView.layer.borderColor = UIColor.darkGray.cgColor;
+        self.adView.layer.borderWidth = 1.0
+        self.adView.layer.borderColor = UIColor.darkGray.cgColor
+        self.actionButtonTextLabel.layer.borderColor = self.actionButtonTextLabel.textColor.cgColor
+        self.actionButtonTextLabel.layer.borderWidth = 1
+        self.actionButtonTextLabel.layer.masksToBounds = true
+        self.actionButtonTextLabel.layer.cornerRadius = 0
+        self.prTextLabel.baselineAdjustment = .alignCenters
         
         self.client = NADNativeClient(spotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
         

@@ -36,6 +36,11 @@
     
     self.adView.layer.borderWidth = 1.0;
     self.adView.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    self.actionButtonTextLabel.layer.borderColor = self.actionButtonTextLabel.textColor.CGColor;
+    self.actionButtonTextLabel.layer.borderWidth = 1;
+    self.actionButtonTextLabel.layer.masksToBounds = YES;
+    self.actionButtonTextLabel.layer.cornerRadius = 0;
+    self.prTextLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
     
     self.client = [[NADNativeClient alloc] initWithSpotId:@"485504" apiKey:@"30fda4b3386e793a14b27bedb4dcd29f03d638e5"];
     

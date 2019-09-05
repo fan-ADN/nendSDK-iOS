@@ -28,6 +28,7 @@ class NativeAdCarouselView: UIView, NADNativeViewRendering {
         self.nativeAdPromotionNameLabel.adjustsFontSizeToFitWidth = true
         self.nativeAdPromotionNameLabel.minimumScaleFactor = 0.5
         self.nativeAdPrTextLabel.adjustsFontSizeToFitWidth = true
+        self.nativeAdPrTextLabel.baselineAdjustment = .alignCenters
         self.nativeAdLongTextLabel.adjustsFontSizeToFitWidth = true
         self.nativeAdLongTextLabel.minimumScaleFactor = 0.5
         self.nativeAdShortTextLabel.adjustsFontSizeToFitWidth = true
@@ -40,6 +41,15 @@ class NativeAdCarouselView: UIView, NADNativeViewRendering {
         self.nativeAdActionButtonTextLabel.layer.borderWidth = 1.0
         
         self.layer.borderWidth = 0
+        
+        if #available(iOS 13, *) {
+            self.backgroundColor = UIColor(named: "NativeAdBackgroundColor")
+            self.nativeAdPromotionNameLabel.textColor = UIColor(named: "TextColor")
+            self.nativeAdPrTextLabel.textColor = UIColor(named: "TextColor")
+            self.nativeAdLongTextLabel.textColor = UIColor(named: "TextColor")
+            self.nativeAdShortTextLabel.textColor = UIColor(named: "TextColor")
+            self.nativeAdPromotionUrlLabel.textColor = UIColor(named: "TextColor")
+        }
     }
     
     func frameUpdate(_ direction: Int) {

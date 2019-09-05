@@ -22,7 +22,13 @@
     [super awakeFromNib];
     
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
-    [self addGestureRecognizer:recognizer];    
+    [self addGestureRecognizer:recognizer];
+    
+    if (@available(iOS 13.0, *)) {
+        self.backgroundColor = [UIColor colorNamed:@"NativeAdBackgroundColor"];
+        self.title.textColor = [UIColor colorNamed:@"TextColor"];
+        self.category.textColor = [UIColor colorNamed:@"TextColor"];
+    }
 }
 
 - (void)setTitleText:(NSString *)titleText

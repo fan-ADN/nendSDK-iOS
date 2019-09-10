@@ -51,7 +51,6 @@
         __block NSInteger insertIndex = 0 == i ? 2 : 4;
         [self.loader loadAdWithCompletionHandler:^(NADFullBoard *ad, NADFullBoardLoaderError error) {
             if (ad) {
-                ad.backgroundColor = [UIColor whiteColor];
                 UIViewController<NADFullBoardView> *adViewController = [ad fullBoardAdViewController];
                 adViewController.delegate = weakSelf;
                 [weakSelf.contentViewControllers insertObject:adViewController atIndex:insertIndex];

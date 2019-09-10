@@ -75,7 +75,6 @@ static NSString *const CellIdentifier = @"Cell";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     UIViewController *viewController = segue.destinationViewController;
-    viewController.view.backgroundColor = [UIColor whiteColor];
     viewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 }
 

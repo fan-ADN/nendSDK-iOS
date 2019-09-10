@@ -89,7 +89,6 @@ static NSString *const CellIdentifier = @"Cell";
         ((AdAdjustViewController *)viewController).apiKey = item[@"api_key"];
         ((AdAdjustViewController *)viewController).spotId = item[@"spot_id"];
     }
-    viewController.view.backgroundColor = [UIColor whiteColor];
     viewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 }
 

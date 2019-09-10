@@ -84,7 +84,6 @@ static NSString *const CellIdentifier = @"Cell";
             break;
     }
     viewController.title = self.items[indexPath.row];
-    viewController.view.backgroundColor = [UIColor whiteColor];
     viewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 }
 

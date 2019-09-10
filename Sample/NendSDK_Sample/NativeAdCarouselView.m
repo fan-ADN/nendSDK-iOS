@@ -38,6 +38,7 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
     _nativeAdPromotionNameLabel.adjustsFontSizeToFitWidth = YES;
     _nativeAdPromotionNameLabel.minimumScaleFactor = 0.5f;
     _nativeAdPrTextLabel.adjustsFontSizeToFitWidth = YES;
+    _nativeAdPrTextLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
     _nativeAdLongTextLabel.adjustsFontSizeToFitWidth = YES;
     _nativeAdLongTextLabel.minimumScaleFactor = 0.5f;
     _nativeAdShortTextLabel.adjustsFontSizeToFitWidth = YES;
@@ -50,6 +51,15 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
     _nativeAdActionButtonTextLabel.layer.borderWidth = 1.f;
     
     self.layer.borderWidth = 0.f;
+    
+    if (@available(iOS 13.0, *)) {
+        self.backgroundColor = [UIColor colorNamed:@"NativeAdBackgroundColor"];
+        self.nativeAdPromotionNameLabel.textColor = [UIColor colorNamed:@"TextColor"];
+        self.nativeAdPrTextLabel.textColor = [UIColor colorNamed:@"TextColor"];
+        self.nativeAdLongTextLabel.textColor = [UIColor colorNamed:@"TextColor"];
+        self.nativeAdShortTextLabel.textColor = [UIColor colorNamed:@"TextColor"];
+        self.nativeAdPromotionUrlLabel.textColor = [UIColor colorNamed:@"TextColor"];
+    }
 }
 
 - (void) frameUpdate:direction {

@@ -35,6 +35,15 @@
     self.actionButtonTextLabel.layer.borderWidth = 1.f;
     self.actionButtonTextLabel.layer.masksToBounds = YES;
     self.actionButtonTextLabel.layer.cornerRadius = 0.f;
+    
+    if (@available(iOS 13.0, *)) {
+        self.backgroundColor = [UIColor colorNamed:@"NativeAdBackgroundColor"];
+        self.prLabel.textColor = [UIColor colorNamed:@"TextColor"];
+        self.longTextLabel.textColor = [UIColor colorNamed:@"TextColor"];
+        self.shortTextLabel.textColor = [UIColor colorNamed:@"TextColor"];
+        self.promotionNameLabel.textColor = [UIColor colorNamed:@"TextColor"];
+        self.promotionUrlLabel.textColor = [UIColor colorNamed:@"TextColor"];
+    }
 }
 
 #pragma mark - NADNativeViewRendering.h

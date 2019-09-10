@@ -18,6 +18,12 @@ class FeedView: UIView {
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(FeedView.tapped(_:)))
         self.addGestureRecognizer(recognizer)
+        
+        if #available(iOS 13, *) {
+            self.backgroundColor = UIColor(named: "NativeAdBackgroundColor")
+            self.title.textColor = UIColor(named: "TextColor")
+            self.category.textColor = UIColor(named: "TextColor")
+        }
     }
     
     var titleText: String? {

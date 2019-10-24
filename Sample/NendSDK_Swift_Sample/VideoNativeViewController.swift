@@ -39,7 +39,8 @@ class VideoNativeViewController: UIViewController {
         loader.setFillerStaticNativeAdId("485500", apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071")
         
         videoView.delegate = self
-        videoView.rootViewController = self
+        // Enable this line if your Interface Builder does not configure rootViewController property.
+//        videoView.rootViewController = self
                 
         // load ads
         loader.loadAd { [weak self] (ad, error) in

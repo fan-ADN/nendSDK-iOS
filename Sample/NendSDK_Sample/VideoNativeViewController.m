@@ -32,7 +32,8 @@
     [self.adLoader setFillerStaticNativeAdId:@"485500" apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
     
     self.videoView.delegate = self;
-    self.videoView.rootViewController = self;
+    // Enable this line if your Interface Builder does not configure rootViewController property.
+//    self.videoView.rootViewController = self;
     
     // load ads
     UIApplication.sharedApplication.networkActivityIndicatorVisible = YES;

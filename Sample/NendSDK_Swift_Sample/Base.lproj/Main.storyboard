@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Eb9-db-xk8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Eb9-db-xk8">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1307,7 +1307,7 @@
         <!--Video Native Page Content View Controller-->
         <scene sceneID="fXt-HC-7J2">
             <objects>
-                <viewController storyboardIdentifier="VideoNativePageContentViewController" id="y9a-AL-iCf" customClass="VideoNativePageContentViewController" customModule="NendSDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoNativePageContentViewController" id="y9a-AL-iCf" userLabel="Video Native Page Content View Controller" customClass="VideoNativePageContentViewController" customModule="NendSDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="92k-Sx-LVx"/>
                         <viewControllerLayoutGuide type="bottom" id="Rto-OT-b3z"/>
@@ -1358,6 +1358,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="c7m-LE-n36" secondAttribute="height" multiplier="16:9" id="VKv-xL-lJa"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="rootViewController" destination="y9a-AL-iCf" id="7i6-fm-nMr"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrQ-Cl-K5g" userLabel="Space4">
                                 <rect key="frame" x="0.0" y="390" width="0.0" height="29.333333333333314"/>
@@ -1578,7 +1581,7 @@
         <!--Video Native View Controller-->
         <scene sceneID="GQE-6e-gHM">
             <objects>
-                <viewController id="5hJ-Pa-ryC" customClass="VideoNativeViewController" customModule="NendSDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5hJ-Pa-ryC" userLabel="Video Native View Controller" customClass="VideoNativeViewController" customModule="NendSDK_Swift_Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t2E-PU-ib6"/>
                         <viewControllerLayoutGuide type="bottom" id="8oq-IW-HlB"/>
@@ -1594,6 +1597,9 @@
                                     <constraint firstAttribute="width" constant="240" id="rk7-G4-xHW"/>
                                     <constraint firstAttribute="width" secondItem="GfW-jf-Zo5" secondAttribute="height" multiplier="16:9" id="w9D-uZ-KZS"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="rootViewController" destination="5hJ-Pa-ryC" id="UcQ-Hs-KuS"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2I-sT-sgE">
                                 <rect key="frame" x="87" y="187" width="240" height="18"/>

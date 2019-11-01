@@ -21,3 +21,12 @@ DerivedData
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 !*.xcworkspace/contents.xcworkspacedata
+*.xcworkspace
+xcuserdata
+
+#CocoaPod
+**/Pods/*
+**/Podfile.lock
+
+out_archive_without_sign.*
+out_archive_without_sign/

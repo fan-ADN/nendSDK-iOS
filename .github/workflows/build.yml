@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Change Xcode version
+      run: sudo xcode-select -s '/Applications/Xcode_11.1.app/Contents/Developer'
+
+    - name: CocoaPods
+      run: |
+        cd Sample
+        pod install --repo-update
+
+    - name: Build sample projects
+      run: .github/workflows/build.sh "simulator"
+
+    - name: Archive without signing
+      run: .github/workflows/build.sh "archive"
+
+    - name: Uplolad archive to relases
+      run: .github/workflows/upload_releases.sh `echo ${GITHUB_SHA##*/}`
+      env:
+        TOKEN: ${{ secrets.UPLOAD_TOKEN }}

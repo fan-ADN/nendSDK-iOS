@@ -12,12 +12,10 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Change Xcode version
-      run: sudo xcode-select -s '/Applications/Xcode_11.1.app/Contents/Developer'
+      run: sudo xcode-select -s '/Applications/Xcode_11.3.app/Contents/Developer'
 
     - name: CocoaPods
-      run: |
-        cd Sample
-        pod install --repo-update
+      run: pod install --repo-update
 
     - name: Build sample projects
       run: .github/workflows/build.sh "simulator"

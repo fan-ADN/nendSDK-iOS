@@ -7,17 +7,13 @@ fi
 SCRIPT_JOB=$1
 
 function archive_without_sign() {
-    cd Sample
     xcodebuild -workspace NendSDK_Sample.xcworkspace -scheme $1 \
         -configuration Debug -sdk iphoneos clean archive -archivePath ../out_archive_without_sign/ \
         CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED="NO" CODE_SIGN_ENTITLEMENTS="" CODE_SIGNING_ALLOWED="NO"
-    cd -
 }
 
 function build_simulator() {
-    cd Sample
     xcodebuild -workspace NendSDK_Sample.xcworkspace -scheme $1 -configuration Debug -sdk iphonesimulator
-    cd -
 }
 
 if [ "archive" = "${SCRIPT_JOB}" ]; then

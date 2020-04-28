@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3TE-Pa-UzM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3TE-Pa-UzM">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -55,23 +55,8 @@
                     <view key="view" contentMode="scaleToFill" id="K6V-uL-pZN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0i8-dd-FlK">
-                                <rect key="frame" x="4" y="24" width="406" height="838"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="0i8-dd-FlK" secondAttribute="trailing" constant="-16" id="En7-13-1bt"/>
-                            <constraint firstItem="0i8-dd-FlK" firstAttribute="leading" secondItem="K6V-uL-pZN" secondAttribute="leadingMargin" constant="-16" id="SMv-Vi-I5c"/>
-                            <constraint firstItem="79e-Tc-vD4" firstAttribute="top" secondItem="0i8-dd-FlK" secondAttribute="bottom" id="U5H-Wy-klq"/>
-                            <constraint firstItem="0i8-dd-FlK" firstAttribute="top" secondItem="hEe-Go-dMG" secondAttribute="bottom" constant="-64" id="bVz-Ck-oC0"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="webView" destination="0i8-dd-FlK" id="DId-HC-yEb"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D74-ct-0MV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

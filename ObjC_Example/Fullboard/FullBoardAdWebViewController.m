@@ -6,13 +6,13 @@
 //
 
 #import "FullBoardAdWebViewController.h"
-
+#import <WebKit/WebKit.h>
 #import <NendAd/NADFullBoardLoader.h>
 
 
 @interface FullBoardAdWebViewController () <UIScrollViewDelegate, NADFullBoardDelegate>
 
-@property (nonatomic, weak) IBOutlet UIWebView *webView;
+@property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) NADFullBoardLoader *loader;
 @property (nonatomic, strong) NADFullBoard *ad;
 
@@ -23,8 +23,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:[WKWebViewConfiguration new]];
+    self.webView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.webView];
     self.webView.scrollView.delegate = self;
+    
+    [self.view addConstraints:@[
+        [NSLayoutConstraint constraintWithItem:self.webView
+                                     attribute:NSLayoutAttributeTop
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self.view
+                                     attribute:NSLayoutAttributeTop
+                                    multiplier:1
+                                      constant:0],
+        [NSLayoutConstraint constraintWithItem:self.webView
+                                     attribute:NSLayoutAttributeLeading
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self.view
+                                     attribute:NSLayoutAttributeLeading
+                                    multiplier:1
+                                      constant:0],
+        [NSLayoutConstraint constraintWithItem:self.webView
+                                     attribute:NSLayoutAttributeTrailing
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self.view
+                                     attribute:NSLayoutAttributeTrailing
+                                    multiplier:1
+                                      constant:0],
+        [NSLayoutConstraint constraintWithItem:self.webView
+                                     attribute:NSLayoutAttributeBottom
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self.view
+                                     attribute:NSLayoutAttributeBottom
+                                    multiplier:1
+                                      constant:0],
+    ]];
+    
+    
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.nend.net"]]];
     self.loader = [[NADFullBoardLoader alloc] initWithSpotId:@"485504" apiKey:@"30fda4b3386e793a14b27bedb4dcd29f03d638e5"];
     [self loadAd];

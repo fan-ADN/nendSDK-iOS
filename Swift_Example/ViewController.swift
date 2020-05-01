@@ -11,18 +11,13 @@ import NendAd
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let items = [
-        (name: "320x50", segue: "PushMobileBigBanner"),
-        (name: "320x100", segue: "PushMobileBanner"),
-        (name: "300x100", segue: "PushThreeOneRectangle"),
-        (name: "300x250", segue: "PushMediumRectangle"),
-        (name: "728x90", segue: "PushBigBanner"),
-        (name: "Interstitial", segue: "PushInterstitialAd"),
-        (name: "Interstitial in Transition", segue: "PushInterstitialAdInTransition"),
+        (name: "Banner", segue: "BannerExamples"),
+        (name: "Interstitial", segue: "InterstitialExamples"),
         (name: "Native", segue: "PushNativeAdMenu"),
         (name: "FullBoard", segue: "PushFullBoardAdMenu"),
         (name: "Video", segue: "PushVideoAdMenu"),
-        (name: "VideoNative", segue: "PushVideoNative"),
-        (name: "InFeed", segue: "PushInFeedAdMenu")
+        (name: "NativeVideo", segue: "PushVideoNative"),
+        (name: "InFeed(NativeVideo)", segue: "PushInFeedAdMenu")
     ]
     
     @IBOutlet weak var tableView: UITableView!
@@ -30,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.title = "NendSwiftSample"
+        self.title = "SwiftExample"
     }
     
     override func didReceiveMemoryWarning() {

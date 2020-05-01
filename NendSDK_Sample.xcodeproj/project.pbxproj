@@ -125,6 +125,21 @@
 		B54CAEA719DE5DF9003C6616 /* BannerView320x100Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA219DE5DF9003C6616 /* BannerView320x100Controller.swift */; };
 		B54CAEA819DE5DF9003C6616 /* BannerView728x90Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */; };
 		B54CAEAC19DE5E15003C6616 /* InterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */; };
+		CC7427B42457C62A004A7838 /* Interstitial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427B22457C62A004A7838 /* Interstitial.storyboard */; };
+		CC7427B72457C6A2004A7838 /* Fullboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427B52457C6A2004A7838 /* Fullboard.storyboard */; };
+		CC7427BA2457C7E6004A7838 /* Native.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427B82457C7E6004A7838 /* Native.storyboard */; };
+		CC7427BD2457C8EE004A7838 /* Banner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427BB2457C8EE004A7838 /* Banner.storyboard */; };
+		CC7427C02457C94E004A7838 /* NativeVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427BE2457C94E004A7838 /* NativeVideo.storyboard */; };
+		CC7427C62457CA1E004A7838 /* Video.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427C42457CA1E004A7838 /* Video.storyboard */; };
+		CC7427CA2457CD78004A7838 /* Fullboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427C82457CD78004A7838 /* Fullboard.storyboard */; };
+		CC7427CD2457CE68004A7838 /* Video.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427CB2457CE68004A7838 /* Video.storyboard */; };
+		CC7427D02457CF05004A7838 /* Native.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427CE2457CF05004A7838 /* Native.storyboard */; };
+		CC7427D22457CFBB004A7838 /* InterstitialExampleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7427D12457CFBB004A7838 /* InterstitialExampleMenuViewController.swift */; };
+		CC7427D52457D15E004A7838 /* Interstitial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427D32457D15E004A7838 /* Interstitial.storyboard */; };
+		CC7427D72457D1E3004A7838 /* BannerExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7427D62457D1E3004A7838 /* BannerExamplesViewController.swift */; };
+		CC7427DA2457D3A0004A7838 /* Banner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427D82457D3A0004A7838 /* Banner.storyboard */; };
+		CC7427DD2457D4A1004A7838 /* NativeVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427DB2457D4A1004A7838 /* NativeVideo.storyboard */; };
+		CC7427E02457D573004A7838 /* InFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427DE2457D573004A7838 /* InFeed.storyboard */; };
 		CE377C7A1F1DE3ED00F544FE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE377C791F1DE3ED00F544FE /* AVFoundation.framework */; };
 		CE377C7C1F1DE3FC00F544FE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE377C7B1F1DE3FC00F544FE /* SystemConfiguration.framework */; };
 		CE377C7E1F1DE40000F544FE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE377C7D1F1DE40000F544FE /* WebKit.framework */; };
@@ -317,6 +332,21 @@
 		B54CAEA219DE5DF9003C6616 /* BannerView320x100Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView320x100Controller.swift; sourceTree = "<group>"; };
 		B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView728x90Controller.swift; sourceTree = "<group>"; };
 		B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialViewController.swift; sourceTree = "<group>"; };
+		CC7427B32457C62A004A7838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interstitial.storyboard; sourceTree = "<group>"; };
+		CC7427B62457C6A2004A7838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Fullboard.storyboard; sourceTree = "<group>"; };
+		CC7427B92457C7E6004A7838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Native.storyboard; sourceTree = "<group>"; };
+		CC7427BC2457C8EE004A7838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Banner.storyboard; sourceTree = "<group>"; };
+		CC7427BF2457C94E004A7838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NativeVideo.storyboard; sourceTree = "<group>"; };
+		CC7427C52457CA1E004A7838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Video.storyboard; sourceTree = "<group>"; };
+		CC7427C92457CD78004A7838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Fullboard.storyboard; sourceTree = "<group>"; };
+		CC7427CC2457CE68004A7838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Video.storyboard; sourceTree = "<group>"; };
+		CC7427CF2457CF05004A7838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Native.storyboard; sourceTree = "<group>"; };
+		CC7427D12457CFBB004A7838 /* InterstitialExampleMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialExampleMenuViewController.swift; sourceTree = "<group>"; };
+		CC7427D42457D15E004A7838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interstitial.storyboard; sourceTree = "<group>"; };
+		CC7427D62457D1E3004A7838 /* BannerExamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerExamplesViewController.swift; sourceTree = "<group>"; };
+		CC7427D92457D3A0004A7838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Banner.storyboard; sourceTree = "<group>"; };
+		CC7427DC2457D4A1004A7838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NativeVideo.storyboard; sourceTree = "<group>"; };
+		CC7427DF2457D573004A7838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/InFeed.storyboard; sourceTree = "<group>"; };
 		CE377C791F1DE3ED00F544FE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CE377C7B1F1DE3FC00F544FE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CE377C7D1F1DE40000F544FE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -428,7 +458,7 @@
 				69D46BC51B7C96F60094294A /* UINavigationController+Rotation.m */,
 				690C287A1B797DF100C92232 /* AppDelegate.h */,
 				690C287B1B797DF100C92232 /* AppDelegate.m */,
-				690C28801B797DF100C92232 /* Main.storyboard */,
+				CC7427B12457C5FD004A7838 /* Storyboards */,
 				8BE621E52320E55000889688 /* LaunchScreen.storyboard */,
 				690C289A1B797FB200C92232 /* Images.xcassets */,
 				690C28761B797DF100C92232 /* Supporting Files */,
@@ -476,7 +506,7 @@
 				CCD29E5D242B5E7F0036B0C8 /* InFeed */,
 				B54CAE7D19DE5BA9003C6616 /* AppDelegate.swift */,
 				B54CAE7F19DE5BA9003C6616 /* ViewController.swift */,
-				B54CAE8119DE5BA9003C6616 /* Main.storyboard */,
+				CC7427C72457CCFB004A7838 /* Storyboards */,
 				8BE621E32320E53D00889688 /* LaunchScreen.storyboard */,
 				B54CAE8419DE5BA9003C6616 /* Images.xcassets */,
 				B54CAE7B19DE5BA9003C6616 /* Supporting Files */,
@@ -490,6 +520,35 @@
 				B54CAE7C19DE5BA9003C6616 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC7427B12457C5FD004A7838 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				690C28801B797DF100C92232 /* Main.storyboard */,
+				CC7427BB2457C8EE004A7838 /* Banner.storyboard */,
+				CC7427B22457C62A004A7838 /* Interstitial.storyboard */,
+				CC7427B82457C7E6004A7838 /* Native.storyboard */,
+				CC7427B52457C6A2004A7838 /* Fullboard.storyboard */,
+				CC7427C42457CA1E004A7838 /* Video.storyboard */,
+				CC7427BE2457C94E004A7838 /* NativeVideo.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		CC7427C72457CCFB004A7838 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B54CAE8119DE5BA9003C6616 /* Main.storyboard */,
+				CC7427D82457D3A0004A7838 /* Banner.storyboard */,
+				CC7427D32457D15E004A7838 /* Interstitial.storyboard */,
+				CC7427CE2457CF05004A7838 /* Native.storyboard */,
+				CC7427C82457CD78004A7838 /* Fullboard.storyboard */,
+				CC7427CB2457CE68004A7838 /* Video.storyboard */,
+				CC7427DB2457D4A1004A7838 /* NativeVideo.storyboard */,
+				CC7427DE2457D573004A7838 /* InFeed.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		CCD29E55242B5A1E0036B0C8 /* Video */ = {
@@ -580,6 +639,7 @@
 		CCD29E5B242B5B560036B0C8 /* Interstitial */ = {
 			isa = PBXGroup;
 			children = (
+				CC7427D12457CFBB004A7838 /* InterstitialExampleMenuViewController.swift */,
 				B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */,
 				4FE8F4191D82B44800F577B1 /* InterstitialInTransitionViewController.swift */,
 			);
@@ -589,6 +649,7 @@
 		CCD29E5C242B5B7D0036B0C8 /* Banner */ = {
 			isa = PBXGroup;
 			children = (
+				CC7427D62457D1E3004A7838 /* BannerExamplesViewController.swift */,
 				B54CAEA119DE5DF9003C6616 /* BannerView320x50Controller.swift */,
 				B54CAEA219DE5DF9003C6616 /* BannerView320x100Controller.swift */,
 				B54CAE9F19DE5DF9003C6616 /* BannerView300x100Controller.swift */,
@@ -835,6 +896,7 @@
 			files = (
 				690C29231B79A22500C92232 /* native.plist in Resources */,
 				69CEC63D1BD752D600F352DE /* FeedCell2.xib in Resources */,
+				CC7427BD2457C8EE004A7838 /* Banner.storyboard in Resources */,
 				690C289B1B797FB200C92232 /* Images.xcassets in Resources */,
 				690C28821B797DF100C92232 /* Main.storyboard in Resources */,
 				690C291E1B799FC400C92232 /* NativeAdViewLargeWide.xib in Resources */,
@@ -843,13 +905,18 @@
 				69CEC63C1BD752D600F352DE /* FeedCell1.xib in Resources */,
 				690C28E41B79888700C92232 /* banner.plist in Resources */,
 				69CEC6421BD752D600F352DE /* FeedWithAdCell3.xib in Resources */,
+				CC7427B42457C62A004A7838 /* Interstitial.storyboard in Resources */,
+				CC7427BA2457C7E6004A7838 /* Native.storyboard in Resources */,
 				69CEC63F1BD752D600F352DE /* FeedCell4.xib in Resources */,
+				CC7427C62457CA1E004A7838 /* Video.storyboard in Resources */,
 				69CEC6411BD752D600F352DE /* FeedWithAdCell2.xib in Resources */,
 				8BE621E62320E55000889688 /* LaunchScreen.storyboard in Resources */,
 				8BCDCD5E1CA123A00048436D /* NativeAdCarouselLandscapeView.xib in Resources */,
+				CC7427C02457C94E004A7838 /* NativeVideo.storyboard in Resources */,
 				69CEC63E1BD752D600F352DE /* FeedCell3.xib in Resources */,
 				690C291F1B799FC400C92232 /* NativeAdViewSmallWide.xib in Resources */,
 				8BD078EC1C9A42B0003ABB82 /* NativeAdCarouselPortraitView.xib in Resources */,
+				CC7427B72457C6A2004A7838 /* Fullboard.storyboard in Resources */,
 				690C29211B799FC400C92232 /* NativeAdViewTextOnly.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -859,13 +926,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B1C843A1CB51B1700EE385C /* NativeAdCarouselLandscapeView.xib in Resources */,
+				CC7427D02457CF05004A7838 /* Native.storyboard in Resources */,
+				CC7427E02457D573004A7838 /* InFeed.storyboard in Resources */,
 				B54CAE8319DE5BA9003C6616 /* Main.storyboard in Resources */,
 				8BE621E42320E53D00889688 /* LaunchScreen.storyboard in Resources */,
 				69ED18901BD8CDC500CBEDD0 /* FeedCell3.xib in Resources */,
 				69ED188E1BD8CDC500CBEDD0 /* FeedCell1.xib in Resources */,
 				69ED188F1BD8CDC500CBEDD0 /* FeedCell2.xib in Resources */,
+				CC7427DD2457D4A1004A7838 /* NativeVideo.storyboard in Resources */,
 				8B1C843B1CB51B1700EE385C /* NativeAdCarouselPortraitView.xib in Resources */,
 				69ED187C1BD8BEF300CBEDD0 /* NativeAdViewLargeWide.xib in Resources */,
+				CC7427CD2457CE68004A7838 /* Video.storyboard in Resources */,
+				CC7427D52457D15E004A7838 /* Interstitial.storyboard in Resources */,
+				CC7427DA2457D3A0004A7838 /* Banner.storyboard in Resources */,
 				69ED188D1BD8CDC500CBEDD0 /* FeedAdCell.xib in Resources */,
 				69ED18921BD8CDC500CBEDD0 /* FeedWithAdCell2.xib in Resources */,
 				69ED18911BD8CDC500CBEDD0 /* FeedCell4.xib in Resources */,
@@ -873,6 +946,7 @@
 				B54CAE8519DE5BA9003C6616 /* Images.xcassets in Resources */,
 				69ED187D1BD8BEF300CBEDD0 /* NativeAdViewSmallWide.xib in Resources */,
 				69ED187F1BD8BEF300CBEDD0 /* NativeAdViewTextOnly.xib in Resources */,
+				CC7427CA2457CD78004A7838 /* Fullboard.storyboard in Resources */,
 				69829E101BE1C2EA00EBFE0A /* FeedWithAdCell3.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -965,6 +1039,7 @@
 				69ED18721BD8BCEF00CBEDD0 /* NativeAdView.swift in Sources */,
 				69ED18831BD8C8F700CBEDD0 /* FeedAdView.swift in Sources */,
 				69ED18811BD8C8DC00CBEDD0 /* FeedView.swift in Sources */,
+				CC7427D22457CFBB004A7838 /* InterstitialExampleMenuViewController.swift in Sources */,
 				693A21711B79BDDB004B6680 /* NativeAdViewController.swift in Sources */,
 				4FE8F41A1D82B44800F577B1 /* InterstitialInTransitionViewController.swift in Sources */,
 				697CD3041E3736B000C2BDBE /* FullBoardAdWebViewController.swift in Sources */,
@@ -972,6 +1047,7 @@
 				CEB2EA751E2F472800A826DE /* FullBoardAdContentViewController.swift in Sources */,
 				B54CAEA519DE5DF9003C6616 /* BannerView300x250Controller.swift in Sources */,
 				8B1C843F1CB51B4000EE385C /* NativeAdCarouselViewController.swift in Sources */,
+				CC7427D72457D1E3004A7838 /* BannerExamplesViewController.swift in Sources */,
 				B54CAEA619DE5DF9003C6616 /* BannerView320x50Controller.swift in Sources */,
 				69FE0E8120A1425600FAEA05 /* InFeedController.swift in Sources */,
 				B54CAEA819DE5DF9003C6616 /* BannerView728x90Controller.swift in Sources */,
@@ -1002,6 +1078,110 @@
 				B54CAE8219DE5BA9003C6616 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7427B22457C62A004A7838 /* Interstitial.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7427B32457C62A004A7838 /* Base */,
+			);
+			name = Interstitial.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7427B52457C6A2004A7838 /* Fullboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7427B62457C6A2004A7838 /* Base */,
+			);
+			name = Fullboard.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7427B82457C7E6004A7838 /* Native.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7427B92457C7E6004A7838 /* Base */,
+			);
+			name = Native.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7427BB2457C8EE004A7838 /* Banner.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7427BC2457C8EE004A7838 /* Base */,
+			);
+			name = Banner.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7427BE2457C94E004A7838 /* NativeVideo.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7427BF2457C94E004A7838 /* Base */,
+			);
+			name = NativeVideo.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7427C42457CA1E004A7838 /* Video.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7427C52457CA1E004A7838 /* Base */,
+			);
+			name = Video.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7427C82457CD78004A7838 /* Fullboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7427C92457CD78004A7838 /* Base */,
+			);
+			name = Fullboard.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7427CB2457CE68004A7838 /* Video.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7427CC2457CE68004A7838 /* Base */,
+			);
+			name = Video.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7427CE2457CF05004A7838 /* Native.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7427CF2457CF05004A7838 /* Base */,
+			);
+			name = Native.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7427D32457D15E004A7838 /* Interstitial.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7427D42457D15E004A7838 /* Base */,
+			);
+			name = Interstitial.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7427D82457D3A0004A7838 /* Banner.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7427D92457D3A0004A7838 /* Base */,
+			);
+			name = Banner.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7427DB2457D4A1004A7838 /* NativeVideo.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7427DC2457D4A1004A7838 /* Base */,
+			);
+			name = NativeVideo.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7427DE2457D573004A7838 /* InFeed.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7427DF2457D573004A7838 /* Base */,
+			);
+			name = InFeed.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

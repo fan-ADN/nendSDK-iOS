@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lpB-Ym-e3X">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ad Interstitial In Transition View Controller-->
+        <scene sceneID="W88-Cu-wQo">
+            <objects>
+                <viewController id="qku-xW-KTM" customClass="AdInterstitialInTransitionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Loq-9g-26C"/>
+                        <viewControllerLayoutGuide type="bottom" id="RoB-IE-Fb8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ve1-fo-z1n">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJj-IL-rdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479" y="575"/>
+        </scene>
+        <!--Select Interstitial Table View Controller-->
+        <scene sceneID="SJy-xi-dFP">
+            <objects>
+                <tableViewController id="lpB-Ym-e3X" customClass="SelectInterstitialTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zdP-Ow-f97">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="xE7-4j-POW">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xE7-4j-POW" id="5PD-rI-zIY">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lpB-Ym-e3X" id="uGH-8d-0fJ"/>
+                            <outlet property="delegate" destination="lpB-Ym-e3X" id="2ia-Ab-6sE"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="eZb-wj-DAi" kind="show" identifier="PushInterstitial" id="Bae-tH-sgO"/>
+                        <segue destination="qku-xW-KTM" kind="show" identifier="PushInTransition" id="Z6B-jS-qUR"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ux1-Ws-aHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1639" y="231"/>
+        </scene>
+        <!--Ad Interstitial View Controller-->
+        <scene sceneID="Od3-Ox-rYU">
+            <objects>
+                <viewController id="eZb-wj-DAi" customClass="AdInterstitialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fuV-9c-LZQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="itC-TV-f1W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jqz-TP-NTn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaq-JD-OGB">
+                                <rect key="frame" x="188" y="433" width="38" height="30"/>
+                                <state key="normal" title="Show">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="show:" destination="eZb-wj-DAi" eventType="touchUpInside" id="2iQ-4X-POd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iaq-JD-OGB" firstAttribute="centerX" secondItem="jqz-TP-NTn" secondAttribute="centerX" id="Q67-m4-KpD"/>
+                            <constraint firstItem="iaq-JD-OGB" firstAttribute="centerY" secondItem="jqz-TP-NTn" secondAttribute="centerY" id="YYM-TW-Dvt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="showButton" destination="iaq-JD-OGB" id="hGL-Br-jeB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wj0-gM-xeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479" y="-93"/>
+        </scene>
+    </scenes>
+</document>

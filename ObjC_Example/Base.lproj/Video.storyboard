@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video View Controller-->
+        <scene sceneID="p6T-ly-4wb">
+            <objects>
+                <viewController storyboardIdentifier="VideoViewController" id="9hE-0i-Flr" customClass="VideoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2lo-dy-nJz"/>
+                        <viewControllerLayoutGuide type="bottom" id="415-Tx-NE6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5su-6f-vnk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iR3-t4-u3S">
+                                <rect key="frame" x="0.0" y="44" width="207" height="269"/>
+                                <state key="normal" title="LoadReward"/>
+                                <connections>
+                                    <action selector="loadReward:" destination="9hE-0i-Flr" eventType="touchUpInside" id="pQa-F7-4kv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOU-D3-3ez">
+                                <rect key="frame" x="207" y="44" width="207" height="269"/>
+                                <state key="normal" title="LoadInterstitial"/>
+                                <connections>
+                                    <action selector="loadInterstitial:" destination="9hE-0i-Flr" eventType="touchUpInside" id="oM8-Gx-lXm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EF-Sg-yNa">
+                                <rect key="frame" x="0.0" y="313" width="207" height="268.5"/>
+                                <state key="normal" title="ShowReward"/>
+                                <connections>
+                                    <action selector="showReward:" destination="9hE-0i-Flr" eventType="touchUpInside" id="ZL1-4B-pjO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eR2-cT-qrq">
+                                <rect key="frame" x="207" y="313" width="207" height="268.5"/>
+                                <state key="normal" title="ShowInterstitial"/>
+                                <connections>
+                                    <action selector="showInterstitial:" destination="9hE-0i-Flr" eventType="touchUpInside" id="zJP-iv-diN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cxb-WZ-JRy">
+                                <rect key="frame" x="0.0" y="581.5" width="207" height="269"/>
+                                <state key="normal" title="ReleaseReward"/>
+                                <connections>
+                                    <action selector="releaseReward:" destination="9hE-0i-Flr" eventType="touchUpInside" id="9co-tm-aba"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDb-8c-X3u">
+                                <rect key="frame" x="207" y="581.5" width="207" height="269"/>
+                                <state key="normal" title="ReleaseInterstitial"/>
+                                <connections>
+                                    <action selector="releaseInterstitial:" destination="9hE-0i-Flr" eventType="touchUpInside" id="o5f-Qe-c8o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eR2-cT-qrq" firstAttribute="leading" secondItem="zOU-D3-3ez" secondAttribute="leading" id="1Ms-qI-Lb8"/>
+                            <constraint firstItem="zOU-D3-3ez" firstAttribute="bottom" secondItem="iR3-t4-u3S" secondAttribute="bottom" id="2A0-2X-yoq"/>
+                            <constraint firstItem="iR3-t4-u3S" firstAttribute="width" secondItem="5su-6f-vnk" secondAttribute="width" multiplier="0.5" id="3D7-h5-eQw"/>
+                            <constraint firstItem="zOU-D3-3ez" firstAttribute="leading" secondItem="iR3-t4-u3S" secondAttribute="trailing" id="3kB-rW-Scn"/>
+                            <constraint firstItem="0EF-Sg-yNa" firstAttribute="height" secondItem="iR3-t4-u3S" secondAttribute="height" id="8Y8-EZ-eyW"/>
+                            <constraint firstItem="0EF-Sg-yNa" firstAttribute="leading" secondItem="iR3-t4-u3S" secondAttribute="leading" id="AaE-yj-WLh"/>
+                            <constraint firstItem="iR3-t4-u3S" firstAttribute="height" secondItem="5su-6f-vnk" secondAttribute="height" multiplier="0.3" id="EeO-26-JJJ"/>
+                            <constraint firstItem="Cxb-WZ-JRy" firstAttribute="top" secondItem="0EF-Sg-yNa" secondAttribute="bottom" id="HeJ-5B-dDl"/>
+                            <constraint firstItem="eR2-cT-qrq" firstAttribute="bottom" secondItem="0EF-Sg-yNa" secondAttribute="bottom" id="L12-8i-bl8"/>
+                            <constraint firstItem="oDb-8c-X3u" firstAttribute="top" secondItem="Cxb-WZ-JRy" secondAttribute="top" id="Lgc-n9-9uI"/>
+                            <constraint firstItem="Cxb-WZ-JRy" firstAttribute="leading" secondItem="iR3-t4-u3S" secondAttribute="leading" id="O9O-bL-tRG"/>
+                            <constraint firstItem="0EF-Sg-yNa" firstAttribute="top" secondItem="iR3-t4-u3S" secondAttribute="bottom" id="Q9i-vs-TMD"/>
+                            <constraint firstItem="Cxb-WZ-JRy" firstAttribute="width" secondItem="iR3-t4-u3S" secondAttribute="width" id="QiE-lk-oKj"/>
+                            <constraint firstItem="zOU-D3-3ez" firstAttribute="top" secondItem="iR3-t4-u3S" secondAttribute="top" id="UFV-ct-MMV"/>
+                            <constraint firstItem="oDb-8c-X3u" firstAttribute="leading" secondItem="zOU-D3-3ez" secondAttribute="leading" id="Vp6-FF-Ejl"/>
+                            <constraint firstItem="Cxb-WZ-JRy" firstAttribute="trailing" secondItem="iR3-t4-u3S" secondAttribute="trailing" id="W7q-02-4Rl"/>
+                            <constraint firstItem="eR2-cT-qrq" firstAttribute="trailing" secondItem="zOU-D3-3ez" secondAttribute="trailing" id="a3S-Hp-ODh"/>
+                            <constraint firstItem="iR3-t4-u3S" firstAttribute="leading" secondItem="5su-6f-vnk" secondAttribute="leading" id="aTi-4J-n2K"/>
+                            <constraint firstItem="0EF-Sg-yNa" firstAttribute="width" secondItem="iR3-t4-u3S" secondAttribute="width" id="bPN-W9-Jd0"/>
+                            <constraint firstItem="oDb-8c-X3u" firstAttribute="trailing" secondItem="zOU-D3-3ez" secondAttribute="trailing" id="gxt-ug-8Ez"/>
+                            <constraint firstItem="eR2-cT-qrq" firstAttribute="top" secondItem="0EF-Sg-yNa" secondAttribute="top" id="hkP-Lw-3Ny"/>
+                            <constraint firstItem="oDb-8c-X3u" firstAttribute="width" secondItem="zOU-D3-3ez" secondAttribute="width" id="nDD-RV-0S2"/>
+                            <constraint firstItem="oDb-8c-X3u" firstAttribute="height" secondItem="zOU-D3-3ez" secondAttribute="height" id="qgf-hc-9xf"/>
+                            <constraint firstItem="oDb-8c-X3u" firstAttribute="bottom" secondItem="Cxb-WZ-JRy" secondAttribute="bottom" id="s3N-Rg-Nh0"/>
+                            <constraint firstItem="iR3-t4-u3S" firstAttribute="top" secondItem="2lo-dy-nJz" secondAttribute="bottom" id="sAp-jM-mqy"/>
+                            <constraint firstAttribute="trailing" secondItem="zOU-D3-3ez" secondAttribute="trailing" id="sPR-0B-RJm"/>
+                            <constraint firstItem="0EF-Sg-yNa" firstAttribute="trailing" secondItem="iR3-t4-u3S" secondAttribute="trailing" id="wcc-1Q-o0u"/>
+                            <constraint firstItem="Cxb-WZ-JRy" firstAttribute="height" secondItem="iR3-t4-u3S" secondAttribute="height" id="z2f-GU-P9L"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VVe-Qa-xqw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="-354"/>
+        </scene>
+    </scenes>
+</document>

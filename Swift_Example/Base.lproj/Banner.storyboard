@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Banner View32 0x50 Controller-->
+        <scene sceneID="ori-WB-sng">
+            <objects>
+                <viewController storyboardIdentifier="BannerView320x50Controller" id="iEI-q1-Nj2" customClass="BannerView320x50Controller" customModule="Swift_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kRi-LQ-OkA"/>
+                        <viewControllerLayoutGuide type="bottom" id="uHA-dm-Yg2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F2o-QI-JhL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XvV-XB-oXW" customClass="NADView">
+                                <rect key="frame" x="47" y="46" width="320" height="50"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8xN-Zg-Ihv"/>
+                                    <constraint firstAttribute="width" constant="320" id="Kgb-MY-R2e"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="a6eca9dd074372c898dd1df549301f277c53f2b9"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="3172"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="XvV-XB-oXW" secondAttribute="centerX" id="Lcr-Qh-mrB"/>
+                            <constraint firstItem="XvV-XB-oXW" firstAttribute="top" secondItem="kRi-LQ-OkA" secondAttribute="bottom" constant="2" id="svJ-bB-5bc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zsj-63-FXc"/>
+                    <connections>
+                        <outlet property="bannerViewFromNib" destination="XvV-XB-oXW" id="AP8-kk-10Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YEq-ql-tf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2679" y="1341"/>
+        </scene>
+        <!--Banner Examples View Controller-->
+        <scene sceneID="lFi-NO-P4C">
+            <objects>
+                <tableViewController storyboardIdentifier="BannerExamplesViewController" id="IFc-W5-lhh" customClass="BannerExamplesViewController" customModule="Swift_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gKg-LI-izW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BannerExamplesCell" id="YzB-mP-dOL">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YzB-mP-dOL" id="MkD-3l-8jg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="IFc-W5-lhh" id="K6q-By-jRM"/>
+                            <outlet property="delegate" destination="IFc-W5-lhh" id="U5A-Xj-u4B"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="422-tl-WrK"/>
+                    <connections>
+                        <segue destination="iEI-q1-Nj2" kind="show" identifier="PushMobileBigBanner" id="ivu-p7-p0A"/>
+                        <segue destination="aix-Tt-vRa" kind="show" identifier="PushMediumRectangle" id="FE5-42-57l"/>
+                        <segue destination="XRd-2o-ta8" kind="show" identifier="PushThreeOneRectangle" id="TEU-z6-zz3"/>
+                        <segue destination="P7I-yc-QjD" kind="show" identifier="PushBigBanner" id="jCy-hi-F26"/>
+                        <segue destination="NoC-a7-x3m" kind="show" identifier="PushMobileBanner" id="eDs-rT-fg3"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h2n-Mj-tmY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2678" y="2066"/>
+        </scene>
+        <!--Banner View32 0x100 Controller-->
+        <scene sceneID="sI4-df-QbD">
+            <objects>
+                <viewController storyboardIdentifier="BannerView320x100Controller" id="NoC-a7-x3m" customClass="BannerView320x100Controller" customModule="Swift_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1i1-50-GQ2"/>
+                        <viewControllerLayoutGuide type="bottom" id="TCz-Vd-jLy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vlH-EM-Ut1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNH-4Z-Aje" customClass="NADView">
+                                <rect key="frame" x="47" y="52" width="320" height="100"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9g0-Ea-5BC"/>
+                                    <constraint firstAttribute="width" constant="320" id="uK6-rG-W5C"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="eb5ca11fa8e46315c2df1b8e283149049e8d235e"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70996"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dNH-4Z-Aje" firstAttribute="top" secondItem="1i1-50-GQ2" secondAttribute="bottom" constant="8" id="R1F-Wg-I4H"/>
+                            <constraint firstAttribute="centerX" secondItem="dNH-4Z-Aje" secondAttribute="centerX" id="zL8-mn-HBL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uzp-q7-0MQ"/>
+                    <connections>
+                        <outlet property="bannerViewFromNib" destination="dNH-4Z-Aje" id="vnw-x1-mWq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FD6-dg-4Q0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="1219"/>
+        </scene>
+        <!--Banner View30 0x100 Controller-->
+        <scene sceneID="tZG-pf-Yft">
+            <objects>
+                <viewController storyboardIdentifier="BannerView300x100Controller" id="XRd-2o-ta8" customClass="BannerView300x100Controller" customModule="Swift_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cZh-Ud-ySM"/>
+                        <viewControllerLayoutGuide type="bottom" id="RRI-1u-3Q2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eIl-Ws-uPZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-V8-cZh" customClass="NADView">
+                                <rect key="frame" x="57" y="49" width="300" height="100"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="WNd-qc-LTG"/>
+                                    <constraint firstAttribute="width" constant="300" id="alh-6w-vHD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="25eb32adddc4f7311c3ec7b28eac3b72bbca5656"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70998"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zNg-V8-cZh" firstAttribute="top" secondItem="cZh-Ud-ySM" secondAttribute="bottom" constant="5" id="tp3-9c-W2U"/>
+                            <constraint firstAttribute="centerX" secondItem="zNg-V8-cZh" secondAttribute="centerX" id="zi4-zI-5Id"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qqy-NN-IEu"/>
+                    <connections>
+                        <outlet property="bannerViewFromNib" destination="zNg-V8-cZh" id="5tg-B7-LtJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1l-Ob-rYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164" y="1546"/>
+        </scene>
+        <!--Banner View30 0x250 Controller-->
+        <scene sceneID="oyw-VO-RHr">
+            <objects>
+                <viewController storyboardIdentifier="BannerView300x250Controller" id="aix-Tt-vRa" customClass="BannerView300x250Controller" customModule="Swift_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qTx-PM-LFi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zjd-kL-c3f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bvd-3K-jqr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4D-65-gRL" customClass="NADView">
+                                <rect key="frame" x="57" y="243" width="300" height="250"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="FMs-h3-bie"/>
+                                    <constraint firstAttribute="width" constant="300" id="LLU-eD-FQ4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="88d88a288fdea5c01d17ea8e494168e834860fd6"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70356"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="N4D-65-gRL" secondAttribute="centerX" id="Gf3-Bs-Bd2"/>
+                            <constraint firstAttribute="centerY" secondItem="N4D-65-gRL" secondAttribute="centerY" id="vPE-O8-Dkg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bMs-3T-ufR"/>
+                    <connections>
+                        <outlet property="bannerViewFromNib" destination="N4D-65-gRL" id="neG-IB-yI7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tKP-C2-fP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1968" y="1898"/>
+        </scene>
+        <!--Banner View72 8x90 Controller-->
+        <scene sceneID="PCV-ok-iTo">
+            <objects>
+                <viewController storyboardIdentifier="BannerView728x90Controller" id="P7I-yc-QjD" customClass="BannerView728x90Controller" customModule="Swift_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eFT-XL-UFl"/>
+                        <viewControllerLayoutGuide type="bottom" id="XGR-y2-J9P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Ji-Gq-kNO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZh-Sy-8RU" customClass="NADView">
+                                <rect key="frame" x="-157" y="51" width="728" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="728" id="3Yq-fS-tXH"/>
+                                    <constraint firstAttribute="height" constant="90" id="tio-0M-hU5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="2e0b9e0b3f40d952e6000f1a8c4d455fffc4ca3a"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70999"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="jZh-Sy-8RU" secondAttribute="centerX" id="eXS-cP-XnL"/>
+                            <constraint firstItem="jZh-Sy-8RU" firstAttribute="top" secondItem="eFT-XL-UFl" secondAttribute="bottom" constant="7" id="haA-ef-q7N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DrS-BA-P2K"/>
+                    <connections>
+                        <outlet property="bannerViewFromNib" destination="jZh-Sy-8RU" id="RPC-J8-yfe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvC-vP-k0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="1940"/>
+        </scene>
+    </scenes>
+</document>

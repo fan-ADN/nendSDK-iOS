@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Interstitial View Controller-->
+        <scene sceneID="o7J-mU-3OS">
+            <objects>
+                <viewController storyboardIdentifier="InterstitialViewController" id="wcr-nm-TrB" customClass="InterstitialViewController" customModule="Swift_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Idy-kK-TAV"/>
+                        <viewControllerLayoutGuide type="bottom" id="1KA-md-jNP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aYh-F2-wxS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9C-fl-6yf">
+                                <rect key="frame" x="152" y="353" width="110" height="30"/>
+                                <state key="normal" title="Show Interstitial">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="wcr-nm-TrB" eventType="touchUpInside" id="bHO-Dm-qv1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="x9C-fl-6yf" secondAttribute="centerY" id="bch-qG-sUm"/>
+                            <constraint firstAttribute="centerX" secondItem="x9C-fl-6yf" secondAttribute="centerX" id="e09-2i-24S"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qma-kn-5X5"/>
+                    <connections>
+                        <outlet property="showButton" destination="x9C-fl-6yf" id="nqc-76-eYM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j27-wC-Zp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4083" y="-359"/>
+        </scene>
+        <!--Interstitial Example Menu View Controller-->
+        <scene sceneID="KoJ-9Z-PEd">
+            <objects>
+                <tableViewController storyboardIdentifier="InterstitialExampleMenuViewController" id="V9W-YA-XAn" customClass="InterstitialExampleMenuViewController" customModule="Swift_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VlF-od-Cfw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InterstitialExampleCell" id="ZeA-Bh-eyS">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZeA-Bh-eyS" id="aX6-0y-6Qg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="V9W-YA-XAn" id="eJq-oC-inO"/>
+                            <outlet property="delegate" destination="V9W-YA-XAn" id="tub-E6-PO3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="6eg-TM-Tpo"/>
+                    <connections>
+                        <segue destination="wcr-nm-TrB" kind="show" identifier="PushInterstitialAd" id="NIm-C5-D6w"/>
+                        <segue destination="1dE-LJ-h1w" kind="show" identifier="PushInterstitialAdInTransition" id="MzH-8W-EGA"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X3n-OZ-a9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3156" y="-55"/>
+        </scene>
+        <!--Interstitial In Transition View Controller-->
+        <scene sceneID="tqw-mG-C9k">
+            <objects>
+                <viewController id="1dE-LJ-h1w" customClass="InterstitialInTransitionViewController" customModule="Swift_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TO4-Qz-2ky"/>
+                        <viewControllerLayoutGuide type="bottom" id="bSz-Wk-s8W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nhM-jh-22u">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yiM-lu-SXs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nbi-iF-9gc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4083" y="309"/>
+        </scene>
+    </scenes>
+</document>

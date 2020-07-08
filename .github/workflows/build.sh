@@ -19,9 +19,9 @@ function build_simulator() {
 if [ "archive" = "${SCRIPT_JOB}" ]; then
     mkdir -p out_archive_without_sign
     archive_without_sign "NendSDK_Sample"
-    archive_without_sign "NendSDK_Swift_Sample"
+    archive_without_sign "Swift_Example"
     zip -r out_archive_without_sign.zip out_archive_without_sign/
 else
     build_simulator "NendSDK_Sample"
-    build_simulator "NendSDK_Swift_Sample"
+    build_simulator "Swift_Example"
 fi

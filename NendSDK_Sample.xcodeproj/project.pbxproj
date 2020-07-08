@@ -11,6 +11,10 @@
 		4F16A41221CA14FB00E86F64 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F16A41021CA14F500E86F64 /* CoreLocation.framework */; };
 		4F28261B1D1CF659001484EE /* NativeAdNoNibTelopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */; };
 		4F28261E1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261D1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m */; };
+		4F9473E32488974E0066AB23 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9473E22488974E0066AB23 /* AVKit.framework */; };
+		4F9473E52488976E0066AB23 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9473E4248897570066AB23 /* libxml2.tbd */; };
+		4F9473E6248897770066AB23 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9473E22488974E0066AB23 /* AVKit.framework */; };
+		4F9473E72488977F0066AB23 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9473E4248897570066AB23 /* libxml2.tbd */; };
 		4FD68D462021766F00947A52 /* FullBoardAdMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA501E2F10F700A826DE /* FullBoardAdMenuViewController.m */; };
 		4FE8F4151D828A2700F577B1 /* AdInterstitialInTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8F4141D828A2700F577B1 /* AdInterstitialInTransitionViewController.m */; };
 		4FE8F4181D828DCD00F577B1 /* SelectInterstitialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8F4171D828DCD00F577B1 /* SelectInterstitialTableViewController.m */; };
@@ -178,6 +182,8 @@
 		4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdNoNibTelopViewController.m; sourceTree = "<group>"; };
 		4F28261C1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdNoNibTelopTextView.h; sourceTree = "<group>"; };
 		4F28261D1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdNoNibTelopTextView.m; sourceTree = "<group>"; };
+		4F9473E22488974E0066AB23 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		4F9473E4248897570066AB23 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		4FE8F4131D828A2700F577B1 /* AdInterstitialInTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdInterstitialInTransitionViewController.h; sourceTree = "<group>"; };
 		4FE8F4141D828A2700F577B1 /* AdInterstitialInTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdInterstitialInTransitionViewController.m; sourceTree = "<group>"; };
 		4FE8F4161D828DCD00F577B1 /* SelectInterstitialTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectInterstitialTableViewController.h; sourceTree = "<group>"; };
@@ -376,6 +382,7 @@
 			files = (
 				4F16A41121CA14F500E86F64 /* CoreLocation.framework in Frameworks */,
 				CE377C9D1F1DF39700F544FE /* CoreMedia.framework in Frameworks */,
+				4F9473E6248897770066AB23 /* AVKit.framework in Frameworks */,
 				CEB2EA4C1E2E1AB600A826DE /* ImageIO.framework in Frameworks */,
 				CE377C941F1DE9DF00F544FE /* SystemConfiguration.framework in Frameworks */,
 				CE377C931F1DE9DB00F544FE /* WebKit.framework in Frameworks */,
@@ -383,6 +390,7 @@
 				CE377C911F1DE9D200F544FE /* AVFoundation.framework in Frameworks */,
 				CEB2EA4E1E2E1ABF00A826DE /* AdSupport.framework in Frameworks */,
 				CEB2EA4D1E2E1AB900A826DE /* Security.framework in Frameworks */,
+				4F9473E72488977F0066AB23 /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +400,7 @@
 			files = (
 				4F16A41221CA14FB00E86F64 /* CoreLocation.framework in Frameworks */,
 				CEB2EA491E2E1AA800A826DE /* ImageIO.framework in Frameworks */,
+				4F9473E32488974E0066AB23 /* AVKit.framework in Frameworks */,
 				CE377C821F1DE40B00F544FE /* CoreMedia.framework in Frameworks */,
 				CE377C801F1DE40400F544FE /* SafariServices.framework in Frameworks */,
 				CE377C7E1F1DE40000F544FE /* WebKit.framework in Frameworks */,
@@ -399,6 +408,7 @@
 				CEB2EA4A1E2E1AAC00A826DE /* Security.framework in Frameworks */,
 				CE377C7A1F1DE3ED00F544FE /* AVFoundation.framework in Frameworks */,
 				CEB2EA4B1E2E1AB000A826DE /* AdSupport.framework in Frameworks */,
+				4F9473E52488976E0066AB23 /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +437,8 @@
 		3B33422F17990B9E001D0A08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F9473E4248897570066AB23 /* libxml2.tbd */,
+				4F9473E22488974E0066AB23 /* AVKit.framework */,
 				4F16A41021CA14F500E86F64 /* CoreLocation.framework */,
 				CE377C811F1DE40A00F544FE /* CoreMedia.framework */,
 				CE377C7F1F1DE40400F544FE /* SafariServices.framework */,
@@ -1227,7 +1239,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1266,7 +1278,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

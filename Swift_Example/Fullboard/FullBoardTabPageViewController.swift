@@ -58,7 +58,7 @@ class FullBoardTabPageViewController: UIViewController {
         self.pageViewController.dataSource = self
         self.pageViewController.delegate = self
         
-        self.loader = NADFullBoardLoader(spotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
+        self.loader = NADFullBoardLoader(spotID: 485504, apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
         self.loader.loadAd { [weak self] (fullBoardAd, error) in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
             guard let `self` = self, let ad = fullBoardAd else {

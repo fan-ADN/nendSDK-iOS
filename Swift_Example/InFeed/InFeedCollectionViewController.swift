@@ -86,7 +86,7 @@ class InFeedCollectionViewController: UICollectionViewController {
         
         items = Array(repeating: [UIColor.red, UIColor.green, UIColor.blue], count: 10).reduce(into: [UIColor]()) { $0.append(contentsOf: $1) }
         
-        let adLoader = NADNativeVideoLoader(spotId: AdSpaces.videoNativeAdSpotId, apiKey: AdSpaces.videoNativeAdApiKey)
+        let adLoader = NADNativeVideoLoader(spotID: AdSpaces.videoNativeAdSpotId, apiKey: AdSpaces.videoNativeAdApiKey)
         let inRead = InReadVideoAd(adLoader: adLoader)
         inRead.reuseIdentifierHandler = { _ in "VideoAdCell" }
         inRead.renderingHandler = { [weak self] (cell, indexPath, ads) in
@@ -96,7 +96,7 @@ class InFeedCollectionViewController: UICollectionViewController {
         }
         inRead.add(at: [IndexPath(row: 10, section: 0)])
         
-        let adClient = NADNativeClient(spotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")!
+        let adClient = NADNativeClient(spotID: 485504, apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")!
         let inFeed = InFeedNativeAd(adClient: adClient)
         inFeed.reuseIdentifierHandler = { _ in "NativeAdCell" }
         inFeed.renderingHandler = { (cell, indexPath, ads) in

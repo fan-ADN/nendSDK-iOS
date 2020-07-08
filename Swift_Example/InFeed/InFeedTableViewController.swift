@@ -81,7 +81,7 @@ class InFeedTableViewController: UITableViewController {
 
     private let controller = InFeedController()
     private var items = [String]()
-    private let videoAdLoader = NADNativeVideoLoader(spotId: AdSpaces.videoNativeAdSpotId, apiKey: AdSpaces.videoNativeAdApiKey, clickAction: .LP)
+    private let videoAdLoader = NADNativeVideoLoader(spotID: AdSpaces.videoNativeAdSpotId, apiKey: AdSpaces.videoNativeAdApiKey, clickAction: .LP)
     private var pendingReloadIndexPaths = [IndexPath]()
     private var topVideoAdSource: InReadVideoAd?
     
@@ -109,7 +109,7 @@ class InFeedTableViewController: UITableViewController {
         refreshControl = refresh
         refreshControl!.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
         
-        let adLoader = NADNativeVideoLoader(spotId: AdSpaces.videoNativeAdSpotId, apiKey: AdSpaces.videoNativeAdApiKey)
+        let adLoader = NADNativeVideoLoader(spotID: AdSpaces.videoNativeAdSpotId, apiKey: AdSpaces.videoNativeAdApiKey)
         let centerVideoAd = InReadVideoAd(adLoader: adLoader)
         centerVideoAd.reuseIdentifierHandler = { _ in "NormalVideoAdCell" }
         centerVideoAd.renderingHandler = { [weak self] (cell, indexPath, ads) in
@@ -119,7 +119,7 @@ class InFeedTableViewController: UITableViewController {
         }
         centerVideoAd.add(at: [IndexPath(row: 20, section: 0), IndexPath(row: 30, section: 0)])
         
-        let adClient = NADNativeClient(spotId: "485500", apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071")!
+        let adClient = NADNativeClient(spotID: 485500, apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071")!
         let nativeAd = InFeedNativeAd(adClient: adClient)
         nativeAd.reuseIdentifierHandler = { _ in "NativeAdCell" }
         nativeAd.renderingHandler = { (cell, indexPath, ads) in

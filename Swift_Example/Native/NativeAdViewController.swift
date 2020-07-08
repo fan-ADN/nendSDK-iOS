@@ -12,7 +12,7 @@ class NativeAdViewController: UIViewController, NADNativeDelegate {
     
     fileprivate var client: NADNativeClient?
 
-    var spotId: String!
+    var spotId: NSInteger!
     var apiKey: String!
     var nib: String!
 
@@ -36,7 +36,7 @@ class NativeAdViewController: UIViewController, NADNativeDelegate {
             ]
             self.view.addConstraints(constraints)
             
-            self.client = NADNativeClient(spotId: self.spotId, apiKey: self.apiKey)
+            self.client = NADNativeClient(spotID: self.spotId, apiKey: self.apiKey)
             self.client!.load() { (ad, error) in
                 if let nativeAd = ad {
                     nativeAd.delegate = self

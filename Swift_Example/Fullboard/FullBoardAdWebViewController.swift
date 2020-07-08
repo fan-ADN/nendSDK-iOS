@@ -12,7 +12,7 @@ import NendAd
 class FullBoardAdWebViewController: UIViewController {
 
     private var webView: WKWebView!
-    private let loader = NADFullBoardLoader(spotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
+    private let loader = NADFullBoardLoader(spotID: 485504, apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
     fileprivate var ad: NADFullBoard?
     
     override func viewDidLoad() {

@@ -10,7 +10,7 @@ import NendAd
 
 class NativeAdPageViewController: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource, NADNativeDelegate {
 
-    fileprivate let client: NADNativeClient = NADNativeClient(spotId: "485500", apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071")
+    fileprivate let client: NADNativeClient = NADNativeClient(spotID: 485500, apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071")
     fileprivate var contentViewControllers = [NativeAdPageContentViewController]()
     fileprivate var pageViewController: UIPageViewController!
     

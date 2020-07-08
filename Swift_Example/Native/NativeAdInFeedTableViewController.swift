@@ -39,7 +39,7 @@ class NativeAdInFeedTableViewController: UITableViewController, NADNativeTableVi
         // 15行毎に広告を表示する
         placer.addRepeatInterval(15, inSection: 0)
         
-        self.helper = NADNativeTableViewHelper(tableView: self.tableView, spotId: "485500", apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071", advertisingExplicitly: .PR, adPlacement: placer, delegate: self)
+        self.helper = NADNativeTableViewHelper(tableView: self.tableView, spotID: 485500, apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071", advertisingExplicitly: .PR, adPlacement: placer, delegate: self)
     }
 
     override func didReceiveMemoryWarning() {

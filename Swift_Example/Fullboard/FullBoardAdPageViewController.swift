@@ -12,7 +12,7 @@ class FullBoardAdPageViewController: UIViewController, UIPageViewControllerDataS
     
     private var contentViewControllers = [UIViewController]()
     private var pageViewController: UIPageViewController!
-    private var loader = NADFullBoardLoader(spotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
+    private var loader = NADFullBoardLoader(spotID: 485504, apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
     
     override func viewDidLoad() {
         super.viewDidLoad()

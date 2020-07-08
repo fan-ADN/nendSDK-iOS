@@ -17,7 +17,7 @@ class FullBoardAdViewController: UIViewController ,NADFullBoardDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.adLoader = NADFullBoardLoader(spotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
+        self.adLoader = NADFullBoardLoader(spotID: 485504, apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
     }
     
     @IBAction func loadFullBoardAd() {

@@ -14,8 +14,8 @@ import NendAd
 
 class VideoViewController: UIViewController {
     
-    private let rewardedVideo = NADRewardedVideo(spotId: "802555", apiKey: "ca80ed7018734d16787dbda24c9edd26c84c15b8")
-    private let interstitialVideo = NADInterstitialVideo(spotId: "802557", apiKey: "b6a97b05dd088b67f68fe6f155fb3091f302b48b")
+    private let rewardedVideo = NADRewardedVideo(spotID: 802555, apiKey: "ca80ed7018734d16787dbda24c9edd26c84c15b8")
+    private let interstitialVideo = NADInterstitialVideo(spotID: 802557, apiKey: "b6a97b05dd088b67f68fe6f155fb3091f302b48b")
     private let locationManager = CLLocationManager.init()
     
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ class VideoViewController: UIViewController {
         self.interstitialVideo.isLocationEnabled = false
         self.interstitialVideo.isMuteStartPlaying = false
         self.interstitialVideo.delegate = self
-        self.interstitialVideo.addFallbackFullboard(withSpotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
+        self.interstitialVideo.addFallbackFullboard(withSpotID: 485504, apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
     }
     
     @IBAction func loadReward(_ sender: Any) {
@@ -70,7 +70,16 @@ extension VideoViewController : NADRewardedVideoDelegate {
     
     func nadRewardVideoAdDidReceiveAd(_ nadRewardedVideoAd: NADRewardedVideo!)
     {
-        print(#function)
+        var adType: String
+        switch nadRewardedVideoAd.adType {
+        case .normal:
+            adType = "normal"
+        case .playable:
+            adType = "playable"
+        default:
+            adType = "unknown"
+        }
+        print(#function + " : Ad Type = " + adType)
     }
     
     func nadRewardVideoAd(_ nadRewardedVideoAd: NADRewardedVideo!, didFailToLoadWithError error: Error!)
@@ -122,7 +131,16 @@ extension VideoViewController : NADRewardedVideoDelegate {
 extension VideoViewController : NADInterstitialVideoDelegate {
     func nadInterstitialVideoAdDidReceiveAd(_ nadInterstitialVideoAd: NADInterstitialVideo!)
     {
-        print(#function)
+        var adType: String
+        switch nadInterstitialVideoAd.adType {
+        case .normal:
+            adType = "normal"
+        case .playable:
+            adType = "playable"
+        default:
+            adType = "unknown"
+        }
+        print(#function + " : Ad Type = " + adType)
     }
     
     func nadInterstitialVideoAd(_ nadInterstitialVideoAd: NADInterstitialVideo!, didFailToLoadWithError error: Error!)

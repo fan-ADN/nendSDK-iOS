@@ -74,7 +74,7 @@ class NativeAdRssTableViewController: UITableViewController, NADNativeTableViewH
         // 6行目は広告行のみ
         placer.addFixedIndexPath(IndexPath(row: 6, section: 0))
         
-        self.helper = NADNativeTableViewHelper(tableView: self.tableView, spotId: "485507", apiKey: "31e861edb574cfa0fb676ebdf0a0b9a0621e19fc", advertisingExplicitly: .PR, adPlacement: placer, delegate: self)
+        self.helper = NADNativeTableViewHelper(tableView: self.tableView, spotID: 485507, apiKey: "31e861edb574cfa0fb676ebdf0a0b9a0621e19fc", advertisingExplicitly: .PR, adPlacement: placer, delegate: self)
 
     }
 

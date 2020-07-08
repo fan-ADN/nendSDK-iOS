@@ -20,7 +20,7 @@ class VideoNativeViewController: UIViewController {
     @IBOutlet private weak var logoImageView: UIImageView!
     @IBOutlet private weak var callToActionButton: UIButton!
 
-    private let loader = NADNativeVideoLoader(spotId: AdSpaces.videoNativeAdSpotId, apiKey: AdSpaces.videoNativeAdApiKey, clickAction: .fullScreen)
+    private let loader = NADNativeVideoLoader(spotID: AdSpaces.videoNativeAdSpotId, apiKey: AdSpaces.videoNativeAdApiKey, clickAction: .fullScreen)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class VideoNativeViewController: UIViewController {
         userFeature.setBirthdayWithYear(2000, month: 1, day: 1)
         loader.userFeature = userFeature
         loader.isLocationEnabled = false
-        loader.setFillerStaticNativeAdId("485500", apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071")
+        loader.setFillerStaticNativeAdID(485500, apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071")
         
         videoView.delegate = self
         // Enable this line if your Interface Builder does not configure rootViewController property.

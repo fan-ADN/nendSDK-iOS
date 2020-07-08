@@ -31,8 +31,8 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
         // コードでバナー広告を生成(広告サイズの自動調整を行う場合)
         nadViewManually = NADView(isAdjustAdSize: true)
         
-        // 広告枠のapikey/spotidを設定(必須)
-        nadViewManually.setNendID("a6eca9dd074372c898dd1df549301f277c53f2b9", spotID: "3172")
+        // 広告枠のspotid/apikeyを設定(必須)
+        nadViewManually.setNendID(3172, apiKey: "a6eca9dd074372c898dd1df549301f277c53f2b9")
         
         // delegateを受けるオブジェクトを指定(必須)
         nadViewManually.delegate = self

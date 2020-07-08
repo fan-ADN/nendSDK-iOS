@@ -76,7 +76,19 @@
 
 - (void)nadRewardVideoAdDidReceiveAd:(NADRewardedVideo *)nadRewardedVideoAd
 {
-    NSLog(@"%s", __FUNCTION__);
+    NSString *adType;
+    switch (nadRewardedVideoAd.adType) {
+        case NADVideoAdTypeNormal:
+            adType = @"normal";
+            break;
+        case NADVideoAdTypePlayable:
+            adType = @"playable";
+            break;
+        default:
+            adType = @"unknown";
+            break;
+    }
+    NSLog(@"%s : Ad Type = %@", __FUNCTION__, adType);
 }
 
 - (void)nadRewardVideoAd:(NADRewardedVideo *)nadRewardedVideoAd didFailToLoadWithError:(NSError *)error
@@ -128,7 +140,19 @@
 
 - (void)nadInterstitialVideoAdDidReceiveAd:(NADInterstitialVideo *)nadInterstitialVideoAd
 {
-    NSLog(@"%s", __FUNCTION__);
+    NSString *adType;
+    switch (nadInterstitialVideoAd.adType) {
+        case NADVideoAdTypeNormal:
+            adType = @"normal";
+            break;
+        case NADVideoAdTypePlayable:
+            adType = @"playable";
+            break;
+        default:
+            adType = @"unknown";
+            break;
+    }
+    NSLog(@"%s : Ad Type = %@", __FUNCTION__, adType);
 }
 
 - (void)nadInterstitialVideoAd:(NADInterstitialVideo *)nadInterstitialVideoAd didFailToLoadWithError:(NSError *)error

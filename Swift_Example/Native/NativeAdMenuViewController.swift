@@ -22,9 +22,9 @@ class NativeAdMenuViewController: UITableViewController {
     ]
     
     fileprivate let details = [
-        (apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071", spotId: "485500", nibName: "NativeAdViewSmallSquare"),
-        (apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5", spotId: "485504", nibName: "NativeAdViewLargeWide"),
-        (apiKey: "31e861edb574cfa0fb676ebdf0a0b9a0621e19fc", spotId: "485507", nibName: "NativeAdViewTextOnly")
+        (apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071", spotId: 485500, nibName: "NativeAdViewSmallSquare"),
+        (apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5", spotId: 485504, nibName: "NativeAdViewLargeWide"),
+        (apiKey: "31e861edb574cfa0fb676ebdf0a0b9a0621e19fc", spotId: 485507, nibName: "NativeAdViewTextOnly")
     ]
     
     override func viewDidLoad() {

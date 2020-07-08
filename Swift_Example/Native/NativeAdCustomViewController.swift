@@ -39,7 +39,7 @@ class NativeAdCustomViewController: UIViewController, NADNativeDelegate {
         self.actionButtonTextLabel.layer.cornerRadius = 0
         self.prTextLabel.baselineAdjustment = .alignCenters
         
-        self.client = NADNativeClient(spotId: "485504", apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
+        self.client = NADNativeClient(spotID: 485504, apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
         
         weak var weakSelf = self
         self.client.load() { (ad, error) in

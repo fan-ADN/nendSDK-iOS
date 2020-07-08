@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NADLogger.setLogLevel(.debug)
         
-        NADInterstitial.sharedInstance().loadAd(withApiKey: "308c2499c75c4a192f03c02b2fcebd16dcb45cc9", spotId: "213208")
+        NADInterstitial.sharedInstance().loadAd(withSpotID: 213208, apiKey: "308c2499c75c4a192f03c02b2fcebd16dcb45cc9")
 
         return true
     }

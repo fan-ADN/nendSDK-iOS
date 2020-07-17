@@ -8,7 +8,7 @@
 import UIKit
 import NendAd
 
-class InterstitialInTransitionViewController: UIViewController, NADInterstitialDelegate {
+class InterstitialInTransitionViewController: UIViewController, NADInterstitialLoadingDelegate, NADInterstitialClickDelegate {
 
     var isShown: Bool = false
     
@@ -19,7 +19,8 @@ class InterstitialInTransitionViewController: UIViewController, NADInterstitialD
         
         self.title = "InterstitialAd"
         
-        NADInterstitial.sharedInstance().delegate = self
+        NADInterstitial.sharedInstance()?.loadingDelegate = self
+        NADInterstitial.sharedInstance()?.clickDelegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -50,7 +51,7 @@ class InterstitialInTransitionViewController: UIViewController, NADInterstitialD
         isShown = true
     }
 
-    // MARK: NADInterstitialDelegate
+    // MARK: NADInterstitialLoadingDelegate
     
     func didFinishLoadInterstitialAd(withStatus status: NADInterstitialStatusCode) {
         switch(status){
@@ -66,7 +67,9 @@ class InterstitialInTransitionViewController: UIViewController, NADInterstitialD
             break
         }
     }
-    
+
+    // MARK: NADInterstitialClickDelegate
+
     func didClick(with type: NADInterstitialClickType) {
         switch(type){
         case .DOWNLOAD:

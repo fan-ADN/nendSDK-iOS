@@ -8,7 +8,7 @@
 import UIKit
 import NendAd
 
-class InterstitialViewController: UIViewController, NADInterstitialDelegate {
+class InterstitialViewController: UIViewController, NADInterstitialLoadingDelegate, NADInterstitialClickDelegate {
 
     @IBOutlet weak var showButton: UIButton!
 
@@ -19,7 +19,8 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
         
         self.title = "InterstitialAd"
 
-        NADInterstitial.sharedInstance().delegate = self
+        NADInterstitial.sharedInstance()?.loadingDelegate = self
+        NADInterstitial.sharedInstance()?.clickDelegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,7 +58,7 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
         }
     }
 
-    // MARK: NADInterstitialDelegate
+    // MARK: NADInterstitialLoadingDelegate
     
     func didFinishLoadInterstitialAd(withStatus status: NADInterstitialStatusCode) {
         switch(status){
@@ -73,7 +74,9 @@ class InterstitialViewController: UIViewController, NADInterstitialDelegate {
             break
         }
     }
-    
+
+    // MARK: NADInterstitialClickDelegate
+
     func didClick(with type: NADInterstitialClickType) {
         switch(type){
         case .DOWNLOAD:

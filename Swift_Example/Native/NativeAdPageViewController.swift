@@ -31,8 +31,6 @@ class NativeAdPageViewController: UIViewController, UIPageViewControllerDelegate
         self.pageViewController.view.frame = self.view.frame
         self.view.addSubview(self.pageViewController.view)
         
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
         // 4ページ分の広告を先にまとめて取得
         let group = DispatchGroup()
         DispatchQueue.concurrentPerform(iterations: 4) { (i) -> Void in
@@ -49,7 +47,6 @@ class NativeAdPageViewController: UIViewController, UIPageViewControllerDelegate
             })
         }
         group.notify(queue: DispatchQueue.main) { () -> Void in
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             if 0 < self.contentViewControllers.count {
                 self.pageViewController.setViewControllers([self.contentViewControllers.first!], direction: .forward, animated: false, completion: nil)
             }

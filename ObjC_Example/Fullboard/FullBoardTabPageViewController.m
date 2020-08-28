@@ -33,8 +33,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    
     self.title = @"Tab";
     
     self.indicator.hidden = YES;
@@ -46,8 +44,6 @@
     __weak typeof(self) weakSelf = self;
     self.loader = [[NADFullBoardLoader alloc] initWithSpotId:@"485504" apiKey:@"30fda4b3386e793a14b27bedb4dcd29f03d638e5"];
     [self.loader loadAdWithCompletionHandler:^(NADFullBoard *ad, NADFullBoardLoaderError error) {
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        
         if (weakSelf && ad) {
             weakSelf.indicator.hidden = NO;
             weakSelf.tabContainer.hidden = NO;

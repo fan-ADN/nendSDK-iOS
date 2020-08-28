@@ -74,7 +74,6 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
     func initAd() {
         self.client = NADNativeClient(spotID: 485504, apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
         
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let group = DispatchGroup()
         DispatchQueue.concurrentPerform(iterations: adCount) { (i) -> Void in
             group.enter()
@@ -93,7 +92,6 @@ class NativeAdCarouselCell: UITableViewCell, UIScrollViewDelegate, NADNativeDele
             })
         }
         group.notify(queue: DispatchQueue.main) { () -> Void in
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             self.setAd()
         }
     }

@@ -134,9 +134,7 @@ class InFeedTableViewController: UITableViewController {
         controller.registerAdSources([centerVideoAd, nativeAd])
         controller.delegate = self
 
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         videoAdLoader.loadAd { [weak self] (ad: NADNativeVideo?, error: Error?) in
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             guard let `self` = self else { return }
             self.items += (1...50).map { "Item \($0)" }
             

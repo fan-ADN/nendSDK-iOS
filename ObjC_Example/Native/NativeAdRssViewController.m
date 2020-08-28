@@ -52,8 +52,6 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"FeedWithAdCell2" bundle:nil] forCellReuseIdentifier:@"FeedWithAdCell2"];
     [self.tableView registerNib:[UINib nibWithNibName:@"FeedWithAdCell3" bundle:nil] forCellReuseIdentifier:@"FeedWithAdCell3"];
 
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-
     NSMutableArray<Feed *> *items = [NSMutableArray array];
     for (NSInteger i = 0; i < 50; i++) {
         Feed *feed = [Feed new];

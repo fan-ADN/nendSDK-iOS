@@ -36,10 +36,8 @@
 //    self.videoView.rootViewController = self;
     
     // load ads
-    UIApplication.sharedApplication.networkActivityIndicatorVisible = YES;
     __weak typeof(self) weakSelf = self;
     [self.adLoader loadAdWithCompletionHandler:^(NADNativeVideo * _Nullable ad, NSError * _Nullable error) {
-        UIApplication.sharedApplication.networkActivityIndicatorVisible = NO;
         if (weakSelf) {
             if (ad) {
                 if (ad.hasVideo) {

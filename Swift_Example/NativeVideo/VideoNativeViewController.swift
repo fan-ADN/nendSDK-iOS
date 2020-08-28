@@ -27,8 +27,6 @@ class VideoNativeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-
         // optional settings
         loader.userId = "guestuser"
         let userFeature = NADUserFeature()
@@ -44,7 +42,6 @@ class VideoNativeViewController: UIViewController {
                 
         // load ads
         loader.loadAd { [weak self] (ad, error) in
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             guard let `self` = self else { return }
             if let videoAd = ad {
                 if videoAd.hasVideo {

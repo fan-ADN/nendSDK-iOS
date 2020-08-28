@@ -90,7 +90,6 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
         self.adViewsL = [NSMutableArray array];
         
         // 5ページ分の広告を先にまとめて取得　縦画面
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         __weak typeof(self) weakSelf = self;
         dispatch_group_t group = dispatch_group_create();
         dispatch_apply(adCount, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(size_t i) {
@@ -114,7 +113,6 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
         });
         
         dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             // 広告ビューを描画
             [self setAd];
         });

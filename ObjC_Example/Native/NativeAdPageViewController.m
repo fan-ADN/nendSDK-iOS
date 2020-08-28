@@ -38,8 +38,6 @@ static const NSInteger kNativeAdCount = 5;
     self.client = [[NADNativeClient alloc] initWithSpotId:@"485500" apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
     self.contentViewControllers = [NSMutableArray array];
 
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-
     // 5ページ分の広告を先にまとめて取得
     __weak typeof(self) weakSelf = self;
     dispatch_group_t group = dispatch_group_create();
@@ -60,7 +58,6 @@ static const NSInteger kNativeAdCount = 5;
         }];
     });
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         if (0 < self.contentViewControllers.count) {
             [self.pageViewController setViewControllers:@[ self.contentViewControllers[0] ] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
         }

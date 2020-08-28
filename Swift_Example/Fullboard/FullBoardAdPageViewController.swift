@@ -49,9 +49,6 @@ class FullBoardAdPageViewController: UIViewController, UIPageViewControllerDataS
                 }
                 group.leave();
             }
-            group.notify(queue: DispatchQueue.main) {
-                UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            }
         }
     }
     

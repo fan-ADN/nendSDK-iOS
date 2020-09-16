@@ -129,6 +129,8 @@
 		B54CAEA719DE5DF9003C6616 /* BannerView320x100Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA219DE5DF9003C6616 /* BannerView320x100Controller.swift */; };
 		B54CAEA819DE5DF9003C6616 /* BannerView728x90Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */; };
 		B54CAEAC19DE5E15003C6616 /* InterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */; };
+		B5F08FDF251234BB00AFE77F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F08FDE251234BB00AFE77F /* StoreKit.framework */; };
+		B5F08FE0251234C200AFE77F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F08FDE251234BB00AFE77F /* StoreKit.framework */; };
 		CC7427B42457C62A004A7838 /* Interstitial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427B22457C62A004A7838 /* Interstitial.storyboard */; };
 		CC7427B72457C6A2004A7838 /* Fullboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427B52457C6A2004A7838 /* Fullboard.storyboard */; };
 		CC7427BA2457C7E6004A7838 /* Native.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427B82457C7E6004A7838 /* Native.storyboard */; };
@@ -338,6 +340,7 @@
 		B54CAEA219DE5DF9003C6616 /* BannerView320x100Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView320x100Controller.swift; sourceTree = "<group>"; };
 		B54CAEA319DE5DF9003C6616 /* BannerView728x90Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView728x90Controller.swift; sourceTree = "<group>"; };
 		B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialViewController.swift; sourceTree = "<group>"; };
+		B5F08FDE251234BB00AFE77F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CC7427B32457C62A004A7838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interstitial.storyboard; sourceTree = "<group>"; };
 		CC7427B62457C6A2004A7838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Fullboard.storyboard; sourceTree = "<group>"; };
 		CC7427B92457C7E6004A7838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Native.storyboard; sourceTree = "<group>"; };
@@ -380,6 +383,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F08FE0251234C200AFE77F /* StoreKit.framework in Frameworks */,
 				4F16A41121CA14F500E86F64 /* CoreLocation.framework in Frameworks */,
 				CE377C9D1F1DF39700F544FE /* CoreMedia.framework in Frameworks */,
 				4F9473E6248897770066AB23 /* AVKit.framework in Frameworks */,
@@ -398,6 +402,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F08FDF251234BB00AFE77F /* StoreKit.framework in Frameworks */,
 				4F16A41221CA14FB00E86F64 /* CoreLocation.framework in Frameworks */,
 				CEB2EA491E2E1AA800A826DE /* ImageIO.framework in Frameworks */,
 				4F9473E32488974E0066AB23 /* AVKit.framework in Frameworks */,
@@ -437,6 +442,7 @@
 		3B33422F17990B9E001D0A08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5F08FDE251234BB00AFE77F /* StoreKit.framework */,
 				4F9473E4248897570066AB23 /* libxml2.tbd */,
 				4F9473E22488974E0066AB23 /* AVKit.framework */,
 				4F16A41021CA14F500E86F64 /* CoreLocation.framework */,

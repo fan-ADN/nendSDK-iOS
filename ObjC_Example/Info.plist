@@ -44,5 +44,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>SKAdNetworkItems</key>
+    <array>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>eh6m2bh4zr.skadnetwork</string>
+        </dict>
+    </array>
 </dict>
 </plist>

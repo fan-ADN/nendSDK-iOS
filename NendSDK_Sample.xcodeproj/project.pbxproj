@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F00280825F0B17B0060C004 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F00280725F0B17B0060C004 /* AppTrackingTransparency.framework */; };
+		4F00280925F0B1830060C004 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F00280725F0B17B0060C004 /* AppTrackingTransparency.framework */; };
 		4F16A41121CA14F500E86F64 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F16A41021CA14F500E86F64 /* CoreLocation.framework */; };
 		4F16A41221CA14FB00E86F64 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F16A41021CA14F500E86F64 /* CoreLocation.framework */; };
 		4F28261B1D1CF659001484EE /* NativeAdNoNibTelopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */; };
@@ -179,6 +181,7 @@
 		3B33423417990B9E001D0A08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3B33426517991B79001D0A08 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3B33426717991B7E001D0A08 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		4F00280725F0B17B0060C004 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		4F16A41021CA14F500E86F64 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4F2826191D1CF659001484EE /* NativeAdNoNibTelopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdNoNibTelopViewController.h; sourceTree = "<group>"; };
 		4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdNoNibTelopViewController.m; sourceTree = "<group>"; };
@@ -384,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5F08FE0251234C200AFE77F /* StoreKit.framework in Frameworks */,
+				4F00280925F0B1830060C004 /* AppTrackingTransparency.framework in Frameworks */,
 				4F16A41121CA14F500E86F64 /* CoreLocation.framework in Frameworks */,
 				CE377C9D1F1DF39700F544FE /* CoreMedia.framework in Frameworks */,
 				4F9473E6248897770066AB23 /* AVKit.framework in Frameworks */,
@@ -403,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5F08FDF251234BB00AFE77F /* StoreKit.framework in Frameworks */,
+				4F00280825F0B17B0060C004 /* AppTrackingTransparency.framework in Frameworks */,
 				4F16A41221CA14FB00E86F64 /* CoreLocation.framework in Frameworks */,
 				CEB2EA491E2E1AA800A826DE /* ImageIO.framework in Frameworks */,
 				4F9473E32488974E0066AB23 /* AVKit.framework in Frameworks */,
@@ -442,6 +447,7 @@
 		3B33422F17990B9E001D0A08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F00280725F0B17B0060C004 /* AppTrackingTransparency.framework */,
 				B5F08FDE251234BB00AFE77F /* StoreKit.framework */,
 				4F9473E4248897570066AB23 /* libxml2.tbd */,
 				4F9473E22488974E0066AB23 /* AVKit.framework */,

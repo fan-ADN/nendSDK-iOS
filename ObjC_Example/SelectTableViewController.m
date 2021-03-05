@@ -11,6 +11,8 @@
 #import "AdInterstitialViewController.h"
 #import "NativeAdViewController.h"
 
+@import AppTrackingTransparency;
+
 static NSString *const CellIdentifier = @"Cell";
 
 @interface SelectTableViewController ()
@@ -29,12 +31,32 @@ static NSString *const CellIdentifier = @"Cell";
 
     self.items = @[ @"Banner", @"Interstitial", @"Native", @"FullBoard", @"Video", @"VideoNative" ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
+    
+    if (@available(iOS 14.0, *)) {
+        [self usingATTConsentDialog];
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)usingATTConsentDialog API_AVAILABLE(ios(14.0)) {
+    if ([ATTrackingManager trackingAuthorizationStatus] == ATTrackingManagerAuthorizationStatusNotDetermined) {
+        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+            switch (status) {
+                case ATTrackingManagerAuthorizationStatusAuthorized:
+                case ATTrackingManagerAuthorizationStatusDenied:
+                case ATTrackingManagerAuthorizationStatusNotDetermined:
+                case ATTrackingManagerAuthorizationStatusRestricted:
+                    break;
+                default:
+                    break;
+            }
+        }];
+    }
 }
 
 #pragma mark - Table view data source

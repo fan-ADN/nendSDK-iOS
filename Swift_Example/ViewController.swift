@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AppTrackingTransparency
 import NendAd
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -26,6 +27,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.title = "SwiftExample"
+        if #available(iOS 14, *) {
+            usingATTConsentDialog()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,6 +43,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    @available(iOS 14, *)
+    private func usingATTConsentDialog() {
+        if (ATTrackingManager.trackingAuthorizationStatus == .notDetermined) {
+            ATTrackingManager.requestTrackingAuthorization { (status) in
+                switch (status) {
+                case.authorized: fallthrough
+                case.denied: fallthrough
+                case.notDetermined: fallthrough
+                case.restricted: fallthrough
+                default:
+                    break
+                }
+            }
+        }
     }
     
     // MARK: UITableViewDataSource

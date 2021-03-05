@@ -27,7 +27,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>It's a demo that uses location data.</string>
+	<string>It&apos;s a demo that uses location data.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -44,12 +44,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>SKAdNetworkItems</key>
-    <array>
-        <dict>
-            <key>SKAdNetworkIdentifier</key>
-            <string>eh6m2bh4zr.skadnetwork</string>
-        </dict>
-    </array>
+	<key>SKAdNetworkItems</key>
+	<array>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>eh6m2bh4zr.skadnetwork</string>
+		</dict>
+	</array>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>許可することでユーザーにより興味のある広告を表示します。</string>
 </dict>
 </plist>

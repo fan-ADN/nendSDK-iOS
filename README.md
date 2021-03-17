@@ -1,6 +1,6 @@
 # nendSDK-iOS Sample Project
 
-![ロゴ](https://github.com/fan-ADN/nendSDK-iOS/blob/master/Sample/NendSDK_Sample/Images.xcassets/AppIcon.appiconset/icon-60%403x.png)
+![ロゴ](https://user-images.githubusercontent.com/9563381/31269103-17daebce-aaba-11e7-9899-742435c4ef20.png)
 
 ## Overview
 iOS版nendSDKのサンプルプロジェクトになります。  
@@ -34,13 +34,13 @@ https://github.com/fan-ADN/nendSDK-iOS
 こちらのリンクを開き、リポジトリをクローンまたはzipをダウンロードします。
 
 #### 2. nendSDKをプロジェクトに導入する
-ターミナルでSampleディレクトリに移動し、下記コマンドを実行します。
+ターミナルでnendSDK-iOSディレクトリに移動し、下記コマンドを実行します。
 ```
 $ pod install
 ```
 
 #### 3. ワークスペースプロジェクトをXcodeで開く
-Sampleディレクトリにある下記のワークスペースプロジェクトをXcodeで開きます。
+nendSDK-iOSディレクトリにある下記のワークスペースプロジェクトをXcodeで開きます。
 ```
 NendSDK_Sample.xcworkspace
 ```

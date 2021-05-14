@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		4F00280825F0B17B0060C004 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F00280725F0B17B0060C004 /* AppTrackingTransparency.framework */; };
 		4F00280925F0B1830060C004 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F00280725F0B17B0060C004 /* AppTrackingTransparency.framework */; };
-		4F16A41121CA14F500E86F64 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F16A41021CA14F500E86F64 /* CoreLocation.framework */; };
-		4F16A41221CA14FB00E86F64 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F16A41021CA14F500E86F64 /* CoreLocation.framework */; };
 		4F28261B1D1CF659001484EE /* NativeAdNoNibTelopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */; };
 		4F28261E1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261D1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m */; };
 		4F9473E32488974E0066AB23 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9473E22488974E0066AB23 /* AVKit.framework */; };
@@ -388,7 +386,6 @@
 			files = (
 				B5F08FE0251234C200AFE77F /* StoreKit.framework in Frameworks */,
 				4F00280925F0B1830060C004 /* AppTrackingTransparency.framework in Frameworks */,
-				4F16A41121CA14F500E86F64 /* CoreLocation.framework in Frameworks */,
 				CE377C9D1F1DF39700F544FE /* CoreMedia.framework in Frameworks */,
 				4F9473E6248897770066AB23 /* AVKit.framework in Frameworks */,
 				CEB2EA4C1E2E1AB600A826DE /* ImageIO.framework in Frameworks */,
@@ -408,7 +405,6 @@
 			files = (
 				B5F08FDF251234BB00AFE77F /* StoreKit.framework in Frameworks */,
 				4F00280825F0B17B0060C004 /* AppTrackingTransparency.framework in Frameworks */,
-				4F16A41221CA14FB00E86F64 /* CoreLocation.framework in Frameworks */,
 				CEB2EA491E2E1AA800A826DE /* ImageIO.framework in Frameworks */,
 				4F9473E32488974E0066AB23 /* AVKit.framework in Frameworks */,
 				CE377C821F1DE40B00F544FE /* CoreMedia.framework in Frameworks */,

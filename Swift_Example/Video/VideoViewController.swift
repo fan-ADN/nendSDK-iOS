@@ -5,29 +5,21 @@
 //  Copyright © 2017年 FAN Communications. All rights reserved.
 //
 
-// このサンプルは広告配信に位置情報をオプションで利用しています。
-// This sample uses location data as an option for ad supply.
-
 import UIKit
-import CoreLocation
 import NendAd
 
 class VideoViewController: UIViewController {
     
     private let rewardedVideo = NADRewardedVideo(spotID: 802555, apiKey: "ca80ed7018734d16787dbda24c9edd26c84c15b8")
     private let interstitialVideo = NADInterstitialVideo(spotID: 802557, apiKey: "b6a97b05dd088b67f68fe6f155fb3091f302b48b")
-    private let locationManager = CLLocationManager.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        locationManager.requestWhenInUseAuthorization()
         
         self.rewardedVideo.userId = "user id"
         self.rewardedVideo.delegate = self
         
         self.interstitialVideo.userId = "user id"
-        self.interstitialVideo.isLocationEnabled = false
         self.interstitialVideo.isMuteStartPlaying = false
         self.interstitialVideo.delegate = self
         self.interstitialVideo.addFallbackFullboard(withSpotID: 485504, apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")

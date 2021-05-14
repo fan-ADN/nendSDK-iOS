@@ -28,7 +28,6 @@
     userFeature.gender = NADGenderFemale;
     userFeature.age = 20;
     self.adLoader.userFeature = userFeature;
-    self.adLoader.isLocationEnabled = NO;
     [self.adLoader setFillerStaticNativeAdId:@"485500" apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
     
     self.videoView.delegate = self;

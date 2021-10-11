@@ -43,8 +43,9 @@ class VideoNativePageViewController: UIPageViewController {
         title = "Page"
         dataSource = self
         
+        let externalStoryboard = UIStoryboard(name: "Fullboard", bundle: nil)
         for i in 0..<4 {
-            if let content = storyboard?.instantiateViewController(withIdentifier: "FullBoardPageContent") as? FullBoardAdContentViewController {
+            if let content = externalStoryboard.instantiateViewController(withIdentifier: "FullBoardPageContent") as? FullBoardAdContentViewController {
                 content.number = "\(i + 1)"
                 contentViewControllers.append(content)
             }

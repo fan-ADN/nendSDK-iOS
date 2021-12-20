@@ -1,3 +1,9 @@
+//
+//  TopList.swift
+//  SwiftUI_Example
+//
+//  Copyright © 2021 FAN Communications. All rights reserved.
+//
 import SwiftUI
 
 struct TopList: View {

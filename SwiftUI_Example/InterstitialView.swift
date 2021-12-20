@@ -2,8 +2,7 @@
 //  InterstitialView.swift
 //  SwiftUI_Example
 //
-//  Created by t_kinami on 2021/12/20.
-//  Copyright © 2021 F@N Communications. All rights reserved.
+//  Copyright © 2021 FAN Communications. All rights reserved.
 //
 
 import SwiftUI

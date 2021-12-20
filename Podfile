@@ -10,3 +10,7 @@ end
 target 'ObjC_Example' do
     pod 'NendSDK_iOS'
 end
+
+target 'SwiftUI_Example' do
+    pod 'NendSDK_iOS'
+end

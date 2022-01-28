@@ -2,14 +2,101 @@
 //  InterstitialView.swift
 //  SwiftUI_Example
 //
-//  Copyright © 2021 FAN Communications. All rights reserved.
+//  Copyright © 2022 FAN Communications. All rights reserved.
 //
 
 import SwiftUI
+import NendAd
 
 struct InterstitialView: View {
+    
+    private let interstitialDelegate = InterstitialDelegate()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+            //Loadボタン
+            Button(action: {
+                LoadTapped()
+            }) {
+                Text("Load")
+            }
+            Spacer()
+            //Showボタン
+            Button(action: {
+                ShowTapped()
+            }) {
+                Text("Show")
+            }
+            Spacer()
+        }
+    }
+    
+    func LoadTapped(){
+        NADInterstitial.sharedInstance().loadAd(withSpotID: 213208, apiKey: "308c2499c75c4a192f03c02b2fcebd16dcb45cc9")
+        NADInterstitial.sharedInstance().loadingDelegate = interstitialDelegate
+        NADInterstitial.sharedInstance().clickDelegate = interstitialDelegate
+    }
+    
+    
+    func ShowTapped(){
+        NADInterstitial.sharedInstance().showAd(from: getFrontViewController())
+    }
+    
+    //広告の表示先となるViewControllerを返すメソッド
+    func getFrontViewController() -> UIViewController? {
+        let keyWindow = UIApplication.shared.connectedScenes
+            .filter({$0.activationState == .foregroundActive})
+            .map({$0 as? UIWindowScene})
+            .compactMap({$0})
+            .first?.windows
+            .filter({$0.isKeyWindow}).first
+        
+        let vc = keyWindow?.rootViewController
+        guard let _vc = vc?.presentedViewController else {
+            return vc
+        }
+        return _vc
+    }
+    
+}
+
+//Delegate
+class InterstitialDelegate: NSObject, NADInterstitialLoadingDelegate, NADInterstitialClickDelegate {
+    
+    func didFinishLoadInterstitialAd(withStatus status: NADInterstitialStatusCode) {
+        switch(status){
+        case .SUCCESS:
+            print("SUCCESS")
+            break
+        case .INVALID_RESPONSE_TYPE:
+            print("INVALID_RESPONSE_TYPE")
+            break
+        case .FAILED_AD_REQUEST:
+            print("FAILED_AD_REQUEST")
+            break
+        case .FAILED_AD_DOWNLOAD:
+            print("FAILED_AD_DOWNLOAD")
+            break
+        @unknown default:
+            break
+        }
+    }
+    
+    func didClick(with type: NADInterstitialClickType) {
+        switch(type){
+        case .DOWNLOAD:
+            print("DOWNLOAD")
+            break
+        case .CLOSE:
+            print("CLOSE")
+            break
+        case .INFORMATION:
+            print("INFORMATION")
+            break
+        @unknown default:
+            break
+        }
     }
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1727F727A7D7C400D482E9 /* RewardedVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1727F627A7D7C400D482E9 /* RewardedVideo.swift */; };
+		1E1727F927A7D7F900D482E9 /* InterstitialVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1727F827A7D7F900D482E9 /* InterstitialVideo.swift */; };
 		418F5D003AD795254CF1D6D3 /* Pods_ObjC_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5400DF802B2AA26B07D47186 /* Pods_ObjC_Example.framework */; };
 		4F00280825F0B17B0060C004 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F00280725F0B17B0060C004 /* AppTrackingTransparency.framework */; };
 		4F00280925F0B1830060C004 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F00280725F0B17B0060C004 /* AppTrackingTransparency.framework */; };
@@ -190,6 +192,8 @@
 
 /* Begin PBXFileReference section */
 		0D94B08B8F731857E37575B2 /* Pods-SwiftUI_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI_Example.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUI_Example/Pods-SwiftUI_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		1E1727F627A7D7C400D482E9 /* RewardedVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedVideo.swift; sourceTree = "<group>"; };
+		1E1727F827A7D7F900D482E9 /* InterstitialVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialVideo.swift; sourceTree = "<group>"; };
 		1EE5EAA6AB4CE093A04A424C /* Pods_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B33423017990B9E001D0A08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B33423217990B9E001D0A08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -468,6 +472,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E1727FA27A7D81400D482E9 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				4F3AC07427706F64003D0C7F /* VideoView.swift */,
+				1E1727F627A7D7C400D482E9 /* RewardedVideo.swift */,
+				1E1727F827A7D7F900D482E9 /* InterstitialVideo.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 		3B33422417990B9E001D0A08 = {
 			isa = PBXGroup;
 			children = (
@@ -539,7 +553,7 @@
 				4F3AC06E27706F3D003D0C7F /* InterstitialView.swift */,
 				4F3AC07027706F4A003D0C7F /* NativeView.swift */,
 				4F3AC07227706F57003D0C7F /* FullBoardView.swift */,
-				4F3AC07427706F64003D0C7F /* VideoView.swift */,
+				1E1727FA27A7D81400D482E9 /* Video */,
 				4F3AC07627706F70003D0C7F /* NativeVideoView.swift */,
 				4F3AC07827706FF4003D0C7F /* Helpers */,
 				4F3AC06227706D98003D0C7F /* Assets.xcassets */,
@@ -1240,6 +1254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E1727F727A7D7C400D482E9 /* RewardedVideo.swift in Sources */,
 				4F3AC07727706F70003D0C7F /* NativeVideoView.swift in Sources */,
 				4F3AC06D27706F2A003D0C7F /* BannerView.swift in Sources */,
 				4F3AC07327706F57003D0C7F /* FullBoardView.swift in Sources */,
@@ -1248,6 +1263,7 @@
 				4F3AC06F27706F3D003D0C7F /* InterstitialView.swift in Sources */,
 				4F3AC07527706F64003D0C7F /* VideoView.swift in Sources */,
 				4F3AC05F27706D96003D0C7F /* SwiftUI_ExampleApp.swift in Sources */,
+				1E1727F927A7D7F900D482E9 /* InterstitialVideo.swift in Sources */,
 				4F3AC06B27706EEC003D0C7F /* TopList.swift in Sources */,
 				4F3AC07127706F4A003D0C7F /* NativeView.swift in Sources */,
 			);

@@ -18,6 +18,7 @@ struct BannerView: View {
             BannerViewWrapper()
                 .frame(width: 320, height: 50)
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

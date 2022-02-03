@@ -15,6 +15,13 @@ struct InterstitialView: View {
     var body: some View {
         VStack {
             Spacer()
+            //Loadボタン
+            Button(action: {
+                LoadTapped()
+            }) {
+                Text("Load")
+            }
+            Spacer()
             //Showボタン
             Button(action: {
                 showTapped()
@@ -26,9 +33,12 @@ struct InterstitialView: View {
     }
     
     init() {
-        NADInterstitial.sharedInstance().loadAd(withSpotID: 213208, apiKey: "308c2499c75c4a192f03c02b2fcebd16dcb45cc9")
         NADInterstitial.sharedInstance().loadingDelegate = interstitialDelegate
         NADInterstitial.sharedInstance().clickDelegate = interstitialDelegate
+    }
+    
+    func LoadTapped() {
+        NADInterstitial.sharedInstance().loadAd(withSpotID: 213208, apiKey: "308c2499c75c4a192f03c02b2fcebd16dcb45cc9")
     }
     
     func showTapped() {

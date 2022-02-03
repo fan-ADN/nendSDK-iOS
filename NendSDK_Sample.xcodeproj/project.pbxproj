@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1727FC27AB69A200D482E9 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1727FB27AB69A200D482E9 /* Util.swift */; };
 		418F5D003AD795254CF1D6D3 /* Pods_ObjC_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5400DF802B2AA26B07D47186 /* Pods_ObjC_Example.framework */; };
 		4F00280825F0B17B0060C004 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F00280725F0B17B0060C004 /* AppTrackingTransparency.framework */; };
 		4F00280925F0B1830060C004 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F00280725F0B17B0060C004 /* AppTrackingTransparency.framework */; };
@@ -190,6 +191,7 @@
 
 /* Begin PBXFileReference section */
 		0D94B08B8F731857E37575B2 /* Pods-SwiftUI_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI_Example.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUI_Example/Pods-SwiftUI_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		1E1727FB27AB69A200D482E9 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		1EE5EAA6AB4CE093A04A424C /* Pods_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B33423017990B9E001D0A08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B33423217990B9E001D0A08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -560,6 +562,7 @@
 			isa = PBXGroup;
 			children = (
 				4F3AC07927706FF4003D0C7F /* ListRow.swift */,
+				1E1727FB27AB69A200D482E9 /* Util.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1243,6 +1246,7 @@
 				4F3AC07727706F70003D0C7F /* NativeVideoView.swift in Sources */,
 				4F3AC06D27706F2A003D0C7F /* BannerView.swift in Sources */,
 				4F3AC07327706F57003D0C7F /* FullBoardView.swift in Sources */,
+				1E1727FC27AB69A200D482E9 /* Util.swift in Sources */,
 				4F3AC06127706D96003D0C7F /* ContentView.swift in Sources */,
 				4F3AC07A27706FF4003D0C7F /* ListRow.swift in Sources */,
 				4F3AC06F27706F3D003D0C7F /* InterstitialView.swift in Sources */,

@@ -15,16 +15,9 @@ struct InterstitialView: View {
     var body: some View {
         VStack {
             Spacer()
-            //Loadボタン
-            Button(action: {
-                LoadTapped()
-            }) {
-                Text("Load")
-            }
-            Spacer()
             //Showボタン
             Button(action: {
-                ShowTapped()
+                showTapped()
             }) {
                 Text("Show")
             }
@@ -32,33 +25,15 @@ struct InterstitialView: View {
         }
     }
     
-    func LoadTapped(){
+    init() {
         NADInterstitial.sharedInstance().loadAd(withSpotID: 213208, apiKey: "308c2499c75c4a192f03c02b2fcebd16dcb45cc9")
         NADInterstitial.sharedInstance().loadingDelegate = interstitialDelegate
         NADInterstitial.sharedInstance().clickDelegate = interstitialDelegate
     }
     
-    
-    func ShowTapped(){
-        NADInterstitial.sharedInstance().showAd(from: getFrontViewController())
+    func showTapped() {
+        NADInterstitial.sharedInstance().showAd(from:    Util.getFrontViewController())
     }
-    
-    //広告の表示先となるViewControllerを返すメソッド
-    func getFrontViewController() -> UIViewController? {
-        let keyWindow = UIApplication.shared.connectedScenes
-            .filter({$0.activationState == .foregroundActive})
-            .map({$0 as? UIWindowScene})
-            .compactMap({$0})
-            .first?.windows
-            .filter({$0.isKeyWindow}).first
-        
-        let vc = keyWindow?.rootViewController
-        guard let _vc = vc?.presentedViewController else {
-            return vc
-        }
-        return _vc
-    }
-    
 }
 
 //Delegate

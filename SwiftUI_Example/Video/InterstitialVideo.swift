@@ -36,8 +36,11 @@ struct InterstitialVideo: View {
         }
     }
     
-    func LoadTapped(){
+    init() {
         interstitialVideo.delegate = videoDelegate
+    }
+    
+    func LoadTapped(){
         self.interstitialVideo.loadAd()
     }
     

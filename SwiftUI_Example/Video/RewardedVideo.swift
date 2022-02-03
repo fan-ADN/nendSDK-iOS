@@ -36,8 +36,11 @@ struct RewardedVideo: View {
         }
     }
     
-    func LoadTapped(){
+    init() {
         rewardedVideo.delegate = videoDelegate
+    }
+    
+    func LoadTapped(){
         self.rewardedVideo.loadAd()
     }
     

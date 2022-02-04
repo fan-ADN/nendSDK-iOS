@@ -10,54 +10,88 @@ import NendAd
 
 struct NativeVideoView: View {
     
-    @ObservedObject var viewModel: ExternalModel = ExternalModel()
-    
     var body: some View {
         VStack {
             Group{
-                Spacer()
-                Text(self.viewModel.title)
-                    .frame(maxWidth: .infinity,maxHeight:50,alignment: .leading)
-                Text(self.viewModel.explanation)
-                    .frame(maxWidth: .infinity,maxHeight:50,alignment: .leading)
-                Text(self.viewModel.advertiserName)
-                    .frame(maxWidth: .infinity,maxHeight:50,alignment: .leading)
-                //                Image(self.viewModel.logo)
-                Spacer()
-                //Showボタン
-                Button(action: {
-                    self.viewModel.LoadAd()
-                }) {
-                    Text("Show")
-                }
-                Spacer()
+                NativeVideoAdWrapper()
             }
+        }
+    }
+    
+    struct NativeVideoAdWrapper : UIViewRepresentable {
+        
+        func makeUIView(context: Context) -> some AdView {
+            return AdView()
+        }
+        
+        func updateUIView(_ uiView: UIViewType, context: Context) {
         }
     }
 }
 
-class ExternalModel: ObservableObject{
-    @Published var title:String = ""
-    @Published var explanation:String = ""
-    @Published var advertiserName:String = ""
-    //    @Published var logo:Image
+class AdView: UIView, ObservableObject {
+    
+    var videoView : NADNativeVideoView!
     let nativeVideoDelegate = NativeVideoDelegate()
     let videoAdLoader = NADNativeVideoLoader(spotID: 887595, apiKey: "e7c1e68e7c16e94270bf39719b60534596b1e70d", clickAction: .fullScreen)
     
-    func LoadAd(){
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        videoView = NADNativeVideoView(rootViewController: getFrontViewController()!)
         videoAdLoader.loadAd { (ad, error) in
             if let videoAd = ad {
-                // success
                 videoAd.delegate = self.nativeVideoDelegate
-                self.title = "Title : " + videoAd.title!
-                self.explanation = "Explanation : " + videoAd.explanation!
-                self.advertiserName = "AdvertiserName : " + videoAd.advertiserName!
+                self.videoView.videoAd = videoAd
+                self.addSubview(self.videoView)
             } else {
                 // failure
             }
         }
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func getFrontViewController() -> UIViewController? {
+        let keyWindow = UIApplication.shared.connectedScenes
+            .filter({$0.activationState == .foregroundActive})
+            .map({$0 as? UIWindowScene})
+            .compactMap({$0})
+            .first?.windows
+            .filter({$0.isKeyWindow}).first
+        
+        let vc = keyWindow?.rootViewController
+        guard let _vc = vc?.presentedViewController else {
+            return vc
+        }
+        return _vc
+    }
 }
+
+//class ExternalModel: ObservableObject{
+//    @Published var title:String = ""
+//    @Published var explanation:String = ""
+//    @Published var advertiserName:String = ""
+//
+//    let nativeVideoDelegate = NativeVideoDelegate()
+//    let videoAdLoader = NADNativeVideoLoader(spotID: 887595, apiKey: "e7c1e68e7c16e94270bf39719b60534596b1e70d", clickAction: .fullScreen)
+//
+//    func LoadAd(){
+//        videoAdLoader.loadAd { (ad, error) in
+//            if let videoAd = ad {
+//                // success
+//                videoAd.delegate = self.nativeVideoDelegate
+//                self.title = "Title : " + videoAd.title!
+//                self.explanation = "Explanation : " + videoAd.explanation!
+//                self.advertiserName = "AdvertiserName : " + videoAd.advertiserName!
+//            } else {
+//                // failure
+//            }
+//        }
+//    }
+//}
 
 class NativeVideoDelegate: NSObject, NADNativeVideoDelegate{
     func nadNativeVideoDidImpression(_ ad: NADNativeVideo) {

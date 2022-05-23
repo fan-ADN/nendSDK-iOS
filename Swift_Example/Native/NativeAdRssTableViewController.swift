@@ -50,11 +50,11 @@ class NativeAdRssTableViewController: UITableViewController, NADNativeTableViewH
         for _ in 1...50 {
             let random = arc4random_uniform(2)
             if 0 == random {
-                items.append(Feed(isAd: false, title: "nendバナーカスタマイズ事例",
-                    category: "ニュースリリース", link: "http://adn-mobasia.net/archives/1318"))
+                items.append(Feed(isAd: false, title: "nend板 ニュース",
+                    category: "ニュースリリース", link: "https://board.nend.net/#news"))
             } else {
-                items.append(Feed(isAd: false, title: "スマホでプレイ中のゲームの攻略情報を自動配信と検索で一つに集約できるアプリ「ゲーマグ」提供開始",
-                    category: "ニュースリリース", link: "http://gamag.jp/"))
+                items.append(Feed(isAd: false, title: "アプリを開く、深夜が始まる。GERAは、お笑いラジオが無料で聞けるアプリです。",
+                    category: "ニュースリリース", link: "https://gera.fan/"))
             }
         }
         

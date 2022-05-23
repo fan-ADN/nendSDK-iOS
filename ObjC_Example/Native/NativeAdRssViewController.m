@@ -57,11 +57,11 @@
         Feed *feed = [Feed new];
         u_int32_t random = arc4random_uniform(2);
         if (0 == random) {
-            feed.title = @"nendバナーカスタマイズ事例";
-            feed.link = @"http://adn-mobasia.net/archives/1318";
+            feed.title = @"nend板 ニュース";
+            feed.link = @"https://board.nend.net/#news";
         } else {
-            feed.title = @"スマホでプレイ中のゲームの攻略情報を自動配信と検索で一つに集約できるアプリ「ゲーマグ」提供開始";
-            feed.link = @"http://gamag.jp/";
+            feed.title = @"アプリを開く、深夜が始まる。GERAは、お笑いラジオが無料で聞けるアプリです。";
+            feed.link = @"https://gera.fan/";
         }
         feed.category = @"ニュースリリース";
         [items addObject:feed];

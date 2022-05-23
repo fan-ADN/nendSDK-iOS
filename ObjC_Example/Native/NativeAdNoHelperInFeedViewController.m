@@ -105,8 +105,8 @@ static NSString *const reuseAdIdentifier = @"AdCell";
         return cell;
     } else {
         UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
-        cell.textLabel.text = [NSString stringWithFormat:@"%ld スマホでプレイ中のゲームの攻略情報を自動配信と検索で一つに集約できるアプリ「ゲーマグ」提供開始", (long)indexPath.row];
-        cell.detailTextLabel.text = @"http://gamag.jp/";
+        cell.textLabel.text = [NSString stringWithFormat:@"%ld アプリを開く、深夜が始まる。GERAは、お笑いラジオが無料で聞けるアプリです。", (long)indexPath.row];
+        cell.detailTextLabel.text = @"https://gera.fan/";
         return cell;
     }
 }

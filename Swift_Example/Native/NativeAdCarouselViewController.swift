@@ -30,14 +30,23 @@ class NativeAdCarouselViewController: UITableViewController {
             self.items.append("Item\(i)")
         }
         
-        let orientation = UIApplication.shared.statusBarOrientation
-        switch (orientation) {
-            case UIInterfaceOrientation.portrait, UIInterfaceOrientation.portraitUpsideDown:
-                self.direction = 1
-            case UIInterfaceOrientation.landscapeLeft, UIInterfaceOrientation.landscapeRight:
-                self.direction = 2
-            default:
-                self.direction = 0
+        // 画面向きの判定
+        var isLandscape: Bool{
+            if #available(iOS 13.0, *) {
+                return UIApplication.shared.windows
+                    .first?
+                    .windowScene?
+                    .interfaceOrientation
+                    .isLandscape ?? false
+            } else {
+                return UIApplication.shared.statusBarOrientation.isLandscape
+            }
+        }
+        
+        if isLandscape == true {
+            self.direction = 2
+        } else {
+            self.direction = 1
         }
     }
     

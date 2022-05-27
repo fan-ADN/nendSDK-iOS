@@ -30,19 +30,23 @@ static const float cellLandscape = 200.f;
     }
     
     // 画面向きの判定
-    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-    switch (orientation) {
-        case UIInterfaceOrientationPortrait:
-        case UIDeviceOrientationPortraitUpsideDown:
-            self.direction = @1;
-            break;
-        case UIDeviceOrientationLandscapeRight:
-        case UIDeviceOrientationLandscapeLeft:
-            self.direction = @2;
-            break;
-        case UIDeviceOrientationUnknown:
-            self.direction = @0;
-            break;
+    BOOL isLandscape;
+    
+    if (@available(iOS 13.0, *)) {
+        UIWindowScene *windowScene = [[[UIApplication sharedApplication] windows] firstObject].windowScene;
+        if (windowScene == nil) {
+            isLandscape = NO;
+        } else {
+            isLandscape = UIInterfaceOrientationIsLandscape(windowScene.interfaceOrientation);
+        }
+    } else {
+        isLandscape = UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation);
+    }
+    
+    if (isLandscape == YES) {
+        self.direction = @2;
+    } else {
+        self.direction = @1;
     }
 }
 

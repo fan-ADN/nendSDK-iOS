@@ -27,9 +27,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.title = "SwiftExample"
-        if #available(iOS 14, *) {
-            usingATTConsentDialog()
-        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,6 +40,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        if #available(iOS 14, *) {
+            usingATTConsentDialog()
+        }
     }
     
     @available(iOS 14, *)

@@ -31,6 +31,11 @@ static NSString *const CellIdentifier = @"Cell";
 
     self.items = @[ @"Banner", @"Interstitial", @"Native", @"FullBoard", @"Video", @"VideoNative" ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
     if (@available(iOS 14.0, *)) {
         [self usingATTConsentDialog];

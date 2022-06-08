@@ -87,7 +87,14 @@
     NSIndexPath *reuseIndexPath = [self.helper actualIndexPathForOriginalIndexPath:indexPath];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:reuseIndexPath];
     // 引数のindexPathをそのまま使用
-    cell.textLabel.text = self.items[indexPath.row];
+    if (@available(iOS 14.0, *)) {
+        UIListContentConfiguration *content = [cell defaultContentConfiguration];
+        [content setText:self.items[indexPath.row]];
+        [cell setContentConfiguration:content];
+    } else {
+        cell.textLabel.text = self.items[indexPath.row];
+    }
+    
     return cell;
 }
 

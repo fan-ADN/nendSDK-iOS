@@ -70,7 +70,13 @@ class NativeAdInFeedTableViewController: UITableViewController, NADNativeTableVi
         let reuseIndexPath = self.helper.actualIndexPath(forOriginalIndexPath: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: reuseIndexPath!)
         // 引数のindexPathをそのまま使用
-        cell.textLabel!.text = self.items[indexPath.row]
+        if #available(iOS 14.0, *) {
+            var content = cell.defaultContentConfiguration()
+            content.text = self.items[indexPath.row]
+            cell.contentConfiguration = content
+        } else {
+            cell.textLabel!.text = self.items[indexPath.row]
+        }
         return cell
     }
 

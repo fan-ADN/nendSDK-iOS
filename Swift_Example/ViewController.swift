@@ -69,7 +69,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ table: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "Cell")
-        cell.textLabel!.text = self.items[indexPath.row].name
+        if #available(iOS 14.0, *) {
+            var content = cell.defaultContentConfiguration()
+            content.text = self.items[indexPath.row].name
+            cell.contentConfiguration = content
+        } else {
+            cell.textLabel!.text = self.items[indexPath.row].name
+        }
         return cell
     }
     

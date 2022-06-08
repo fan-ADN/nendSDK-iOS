@@ -52,9 +52,16 @@ static NSString *const CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = self.items[indexPath.row];
-    cell.detailTextLabel.numberOfLines = 0;
-    cell.detailTextLabel.text = self.details[indexPath.row];
+    if (@available(iOS 14.0, *)) {
+        UIListContentConfiguration *content = [cell defaultContentConfiguration];
+        [content setText:self.items[indexPath.row]];
+        [content setSecondaryText:self.details[indexPath.row]];
+        [cell setContentConfiguration:content];
+    } else {
+        cell.textLabel.text = self.items[indexPath.row];
+        cell.detailTextLabel.numberOfLines = 0;
+        cell.detailTextLabel.text = self.details[indexPath.row];
+    }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;

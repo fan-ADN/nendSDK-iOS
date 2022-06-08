@@ -31,8 +31,14 @@ class BannerExamplesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BannerExamplesCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel!.text = self.items[indexPath.row].name
-
+        if #available(iOS 14.0, *) {
+            var content = cell.defaultContentConfiguration()
+            content.text = self.items[indexPath.row].name
+            cell.contentConfiguration = content
+        } else {
+            cell.textLabel!.text = self.items[indexPath.row].name
+        }
+        
         return cell
     }
 

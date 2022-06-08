@@ -105,8 +105,19 @@ static NSString *const reuseAdIdentifier = @"AdCell";
         return cell;
     } else {
         UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
-        cell.textLabel.text = [NSString stringWithFormat:@"%ld アプリを開く、深夜が始まる。GERAは、お笑いラジオが無料で聞けるアプリです。", (long)indexPath.row];
-        cell.detailTextLabel.text = @"https://gera.fan/";
+        NSString *textFirst = [NSString stringWithFormat:@"%ld アプリを開く、深夜が始まる。GERAは、お笑いラジオが無料で聞けるアプリです。", (long)indexPath.row];
+        NSString *textSecond = @"https://gera.fan/";
+        
+        if (@available(iOS 14.0, *)) {
+            UIListContentConfiguration *content = [cell defaultContentConfiguration];
+            [content setText:textFirst];
+            [content setSecondaryText:textSecond];
+            [cell setContentConfiguration:content];
+        } else {
+            cell.textLabel.text = textFirst;
+            cell.detailTextLabel.text = textSecond;
+        }
+        
         return cell;
     }
 }

@@ -63,7 +63,13 @@ static NSString *const CellIdentifier = @"Cell";
 
     // Configure the cell...
     NSString *size = self.items[indexPath.row][@"size"];
-    cell.textLabel.text = size;
+    if (@available(iOS 14.0, *)) {
+        UIListContentConfiguration *content = [cell defaultContentConfiguration];
+        [content setText:size];
+        [cell setContentConfiguration:content];
+    } else {
+        cell.textLabel.text = size;
+    }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
     return cell;

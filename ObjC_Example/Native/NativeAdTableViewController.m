@@ -71,7 +71,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     // Configure the cell...
-    cell.textLabel.text = self.items[indexPath.row][@"title"];
+    if (@available(iOS 14.0, *)) {
+        UIListContentConfiguration *content = [cell defaultContentConfiguration];
+        [content setText:self.items[indexPath.row][@"title"]];
+        [cell setContentConfiguration:content];
+    } else {
+        cell.textLabel.text = self.items[indexPath.row][@"title"];
+    }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
     return cell;

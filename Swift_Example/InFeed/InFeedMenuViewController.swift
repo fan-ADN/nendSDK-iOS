@@ -42,7 +42,13 @@ class InFeedMenuViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel!.text = items[indexPath.row].title
+        if #available(iOS 14.0, *) {
+            var content = cell.defaultContentConfiguration()
+            content.text = self.items[indexPath.row].title
+            cell.contentConfiguration = content
+        } else {
+            cell.textLabel!.text = self.items[indexPath.row].title
+        }
         cell.accessoryType = .disclosureIndicator
 
         return cell

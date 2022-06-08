@@ -37,8 +37,15 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    if (@available(iOS 14.0, *)) {
+        UIListContentConfiguration *content = [cell defaultContentConfiguration];
+        [content setText:self.items[indexPath.row]];
+        [cell setContentConfiguration:content];
+    } else {
+        cell.textLabel.text = self.items[indexPath.row];
+    }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = self.items[indexPath.row];
+    
     return cell;
 }
 

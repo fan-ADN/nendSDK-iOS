@@ -31,7 +31,13 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel!.text = self.items[indexPath.row]
+        if #available(iOS 14.0, *) {
+            var content = cell.defaultContentConfiguration()
+            content.text = self.items[indexPath.row]
+            cell.contentConfiguration = content
+        } else {
+            cell.textLabel!.text = self.items[indexPath.row]
+        }
         cell.accessoryType = .disclosureIndicator
         return cell
     }

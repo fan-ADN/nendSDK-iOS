@@ -228,7 +228,13 @@ extension InFeedTableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let originalIndexPath = controller.getOriginalIndexPath(from: indexPath)
-        cell.textLabel!.text = items[originalIndexPath.row]
+        if #available(iOS 14.0, *) {
+            var content = cell.defaultContentConfiguration()
+            content.text = items[originalIndexPath.row]
+            cell.contentConfiguration = content
+        } else {
+            cell.textLabel!.text = items[originalIndexPath.row]
+        }
         return cell
     }
     

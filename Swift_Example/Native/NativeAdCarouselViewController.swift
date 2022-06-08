@@ -110,7 +110,13 @@ class NativeAdCarouselViewController: UITableViewController {
                 cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: rowId)
             }
             
-            cell!.textLabel!.text = self.items[indexPath.row]
+            if #available(iOS 14.0, *) {
+                var content = cell!.defaultContentConfiguration()
+                content.text = self.items[indexPath.row]
+                cell!.contentConfiguration = content
+            } else {
+                cell!.textLabel!.text = self.items[indexPath.row]
+            }
             return cell!
         }
     }

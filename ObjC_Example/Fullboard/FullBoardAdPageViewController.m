@@ -45,9 +45,7 @@
     self.loader = [[NADFullBoardLoader alloc] initWithSpotId:@"485504" apiKey:@"30fda4b3386e793a14b27bedb4dcd29f03d638e5"];
     
     __weak typeof(self) weakSelf = self;
-    dispatch_group_t group = dispatch_group_create();
     for (NSInteger i = 0; i < 2; i++) {
-        dispatch_group_enter(group);
         __block NSInteger insertIndex = 0 == i ? 2 : 4;
         [self.loader loadAdWithCompletionHandler:^(NADFullBoard *ad, NADFullBoardLoaderError error) {
             if (ad) {
@@ -55,7 +53,6 @@
                 adViewController.delegate = weakSelf;
                 [weakSelf.contentViewControllers insertObject:adViewController atIndex:insertIndex];
             }
-            dispatch_group_leave(group);
         }];
     }
     

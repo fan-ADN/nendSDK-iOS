@@ -70,7 +70,7 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
     self.scrollView.pagingEnabled = NO;
     self.scrollView.bounces = NO;
     self.scrollView.decelerationRate = 0.3;
-    [self addSubview:self.scrollView];
+    [self.contentView addSubview:self.scrollView];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(layoutUpdate:) name:@"layoutUpdate" object:nil];
     
     // 自動スクロール

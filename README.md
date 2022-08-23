@@ -9,7 +9,7 @@ nendSDKの導入方法については [Wiki](https://github.com/fan-ADN/nendSDK-
 
 ## Requirement
 * **Xcode 13**以上
-* iOS 9.0以上
+* iOS 10.0以上
 
 ## Usage
 ### CocoaPodsをインストール

@@ -80,9 +80,7 @@ class InFeedCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
         title = "Collection"
         
-        if #available(iOS 10.0, *) {
-            collectionView?.prefetchDataSource = self
-        }
+        collectionView?.prefetchDataSource = self
         
         items = Array(repeating: [UIColor.red, UIColor.green, UIColor.blue], count: 10).reduce(into: [UIColor]()) { $0.append(contentsOf: $1) }
         
@@ -117,7 +115,6 @@ class InFeedCollectionViewController: UICollectionViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 }
 
 // MARK: - UICollectionViewDelegate & UICollectionViewDataSource

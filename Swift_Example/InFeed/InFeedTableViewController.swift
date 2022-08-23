@@ -101,9 +101,7 @@ class InFeedTableViewController: UITableViewController {
         
         title = "Table"
         
-        if #available(iOS 10.0, *) {
-            tableView.prefetchDataSource = self
-        }
+        tableView.prefetchDataSource = self
         
         let refresh = UIRefreshControl()
         refreshControl = refresh

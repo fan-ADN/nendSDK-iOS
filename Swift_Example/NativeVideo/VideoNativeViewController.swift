@@ -27,12 +27,6 @@ class VideoNativeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        // optional settings
-        loader.userId = "guestuser"
-        let userFeature = NADUserFeature()
-        userFeature.gender = .male
-        userFeature.setBirthdayWithYear(2000, month: 1, day: 1)
-        loader.userFeature = userFeature
         loader.setFillerStaticNativeAdID(485500, apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071")
         
         videoView.delegate = self

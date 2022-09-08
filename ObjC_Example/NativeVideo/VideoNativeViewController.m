@@ -22,12 +22,6 @@
     self.adLoader = [[NADNativeVideoLoader alloc] initWithSpotId:@"887595"
                                                           apiKey:@"e7c1e68e7c16e94270bf39719b60534596b1e70d"];
     
-    // optional settings
-    self.adLoader.userId = @"guestuser";
-    NADUserFeature *userFeature = [NADUserFeature new];
-    userFeature.gender = NADGenderFemale;
-    userFeature.age = 20;
-    self.adLoader.userFeature = userFeature;
     [self.adLoader setFillerStaticNativeAdId:@"485500" apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
     
     self.videoView.delegate = self;

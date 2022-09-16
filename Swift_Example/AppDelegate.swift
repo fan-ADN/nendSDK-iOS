@@ -9,6 +9,7 @@ import UIKit
 import NendAd
 
 extension UINavigationController{
+    
     open override var shouldAutorotate : Bool {
         return true
     }
@@ -30,6 +31,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NADLogger.setLogLevel(.debug)
         
         NADInterstitial.sharedInstance().loadAd(withSpotID: 213208, apiKey: "308c2499c75c4a192f03c02b2fcebd16dcb45cc9")
+        
+        if #available(iOS 13.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithDefaultBackground()
+            navBarAppearance.backgroundColor = UIColor.systemBackground
+            UINavigationBar.appearance().standardAppearance = navBarAppearance
+            UINavigationBar.appearance().compactAppearance = navBarAppearance
+            UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+        }
 
         return true
     }

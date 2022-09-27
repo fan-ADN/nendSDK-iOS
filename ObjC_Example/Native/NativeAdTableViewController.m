@@ -46,7 +46,7 @@
     if ([segue.destinationViewController isKindOfClass:[NativeAdViewController class]]) {
         NativeAdViewController *vc = (NativeAdViewController *)destinationViewController;
         NSDictionary *item = self.items[indexPath.row];
-        vc.spotId = item[@"spot"];
+        vc.spotId = [item[@"spot"] intValue];
         vc.apiKey = item[@"api"];
         vc.nib = item[@"nib"];
     }

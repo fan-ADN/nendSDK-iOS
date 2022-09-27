@@ -20,13 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.rewardedVideo = [[NADRewardedVideo alloc] initWithSpotId:@"802555" apiKey:@"ca80ed7018734d16787dbda24c9edd26c84c15b8"];
+    self.rewardedVideo = [[NADRewardedVideo alloc] initWithSpotID:802555 apiKey:@"ca80ed7018734d16787dbda24c9edd26c84c15b8"];
     self.rewardedVideo.delegate = self;
     
-    self.interstitialVideo = [[NADInterstitialVideo alloc] initWithSpotId:@"802557" apiKey:@"b6a97b05dd088b67f68fe6f155fb3091f302b48b"];
+    self.interstitialVideo = [[NADInterstitialVideo alloc] initWithSpotID:802557 apiKey:@"b6a97b05dd088b67f68fe6f155fb3091f302b48b"];
     self.interstitialVideo.delegate = self;
     self.interstitialVideo.isMuteStartPlaying = NO;
-    [self.interstitialVideo addFallbackFullboardWithSpotId:@"485504" apiKey:@"30fda4b3386e793a14b27bedb4dcd29f03d638e5"];
+    [self.interstitialVideo addFallbackFullboardWithSpotID:485504 apiKey:@"30fda4b3386e793a14b27bedb4dcd29f03d638e5"];
 }
 
 - (IBAction)loadReward:(id)sender {

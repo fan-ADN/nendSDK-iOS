@@ -9,7 +9,7 @@
 
 #import <NendAd/NADInterstitial.h>
 
-@interface AdInterstitialViewController () <NADInterstitialDelegate>
+@interface AdInterstitialViewController () <NADInterstitialLoadingDelegate,NADInterstitialClickDelegate>
 
 @property (nonatomic, weak) IBOutlet UIButton *showButton;
 
@@ -32,11 +32,12 @@
 
     self.title = @"Interstitial";
 
-    // デリゲートを設定します
-    [NADInterstitial sharedInstance].delegate = self;
+    // NADInterstitialLoadingDelegate, NADInterstitialClickDelegate プロトコルを実装したクラスを delegate プロパティにセットします
+    [NADInterstitial sharedInstance].loadingDelegate = self;
+    [NADInterstitial sharedInstance].clickDelegate = self;
 
     // 広告の読み込みを行います
-    [[NADInterstitial sharedInstance] loadAdWithApiKey:@"308c2499c75c4a192f03c02b2fcebd16dcb45cc9" spotId:@"213208"];
+    [[NADInterstitial sharedInstance] loadAdWithSpotID:213208 apiKey:@"308c2499c75c4a192f03c02b2fcebd16dcb45cc9"];
 
     self.showButton.enabled = NO;
 }

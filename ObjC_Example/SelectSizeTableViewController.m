@@ -90,10 +90,10 @@ static NSString *const CellIdentifier = @"Cell";
     NSDictionary *item = sender;
     if ([viewController isKindOfClass:[AdViewController class]]) {
         ((AdViewController *)viewController).apiKey = item[@"api_key"];
-        ((AdViewController *)viewController).spotId = item[@"spot_id"];
+        ((AdViewController *)viewController).spotId = [item[@"spot_id"] intValue];
     } else if ([viewController isKindOfClass:[AdAdjustViewController class]]) {
         ((AdAdjustViewController *)viewController).apiKey = item[@"api_key"];
-        ((AdAdjustViewController *)viewController).spotId = item[@"spot_id"];
+        ((AdAdjustViewController *)viewController).spotId = [item[@"spot_id"] intValue];
     }
     viewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 }

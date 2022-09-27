@@ -62,7 +62,7 @@
 
     [self.view bringSubviewToFront:self.indicator];
 
-    self.client = [[NADNativeClient alloc] initWithSpotId:self.spotId apiKey:self.apiKey];
+    self.client = [[NADNativeClient alloc] initWithSpotID:self.spotId apiKey:self.apiKey];
     
     __weak typeof(self) weakSelf = self;
     [self.client loadWithCompletionBlock:^(NADNative *ad, NSError *error) {

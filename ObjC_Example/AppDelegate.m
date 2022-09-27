@@ -22,7 +22,7 @@
     [NADLogger setLogLevel:NADLogLevelDebug];
 
     // インタースティシャル広告の読み込みを行います
-    [[NADInterstitial sharedInstance] loadAdWithApiKey:@"308c2499c75c4a192f03c02b2fcebd16dcb45cc9" spotId:@"213208"];
+    [[NADInterstitial sharedInstance] loadAdWithSpotID:213208 apiKey:@"308c2499c75c4a192f03c02b2fcebd16dcb45cc9"];
     
     if (@available(iOS 13.0, *)) {
         UINavigationBarAppearance *navBarAppearance = [[UINavigationBarAppearance alloc] init];

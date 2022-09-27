@@ -19,10 +19,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    self.adLoader = [[NADNativeVideoLoader alloc] initWithSpotId:@"887595"
+    self.adLoader = [[NADNativeVideoLoader alloc] initWithSpotID:887595
                                                           apiKey:@"e7c1e68e7c16e94270bf39719b60534596b1e70d"];
     
-    [self.adLoader setFillerStaticNativeAdId:@"485500" apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
+    [self.adLoader setFillerStaticNativeAdID:485500 apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
     
     self.videoView.delegate = self;
     // Enable this line if your Interface Builder does not configure rootViewController property.

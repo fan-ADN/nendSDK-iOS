@@ -9,7 +9,7 @@
 
 @interface NativeAdViewController : UIViewController
 
-@property (nonatomic, copy) NSString *spotId;
+@property (nonatomic) NSInteger spotId;
 @property (nonatomic, copy) NSString *apiKey;
 @property (nonatomic, copy) NSString *nib;
 

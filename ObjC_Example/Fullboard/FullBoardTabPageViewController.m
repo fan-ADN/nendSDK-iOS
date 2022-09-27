@@ -42,7 +42,7 @@
     self.pageViewController.dataSource = self;
     
     __weak typeof(self) weakSelf = self;
-    self.loader = [[NADFullBoardLoader alloc] initWithSpotId:@"485504" apiKey:@"30fda4b3386e793a14b27bedb4dcd29f03d638e5"];
+    self.loader = [[NADFullBoardLoader alloc] initWithSpotID:485504 apiKey:@"30fda4b3386e793a14b27bedb4dcd29f03d638e5"];
     [self.loader loadAdWithCompletionHandler:^(NADFullBoard *ad, NADFullBoardLoaderError error) {
         if (weakSelf && ad) {
             weakSelf.indicator.hidden = NO;

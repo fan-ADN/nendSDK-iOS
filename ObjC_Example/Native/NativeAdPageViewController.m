@@ -35,7 +35,7 @@ static const NSInteger kNativeAdCount = 5;
     self.pageViewController.view.frame = self.view.frame;
     [self.view addSubview:self.pageViewController.view];
 
-    self.client = [[NADNativeClient alloc] initWithSpotId:@"485500" apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
+    self.client = [[NADNativeClient alloc] initWithSpotID:485500 apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
     self.contentViewControllers = [NSMutableArray array];
 
     // 5ページ分の広告を先にまとめて取得

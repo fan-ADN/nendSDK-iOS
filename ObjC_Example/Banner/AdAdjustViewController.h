@@ -10,6 +10,6 @@
 @interface AdAdjustViewController : UIViewController
 
 @property (nonatomic, copy) NSString *apiKey;
-@property (nonatomic, copy) NSString *spotId;
+@property (nonatomic) NSInteger spotId;
 
 @end

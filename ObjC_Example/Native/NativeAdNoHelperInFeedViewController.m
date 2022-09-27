@@ -32,7 +32,7 @@ static NSString *const reuseAdIdentifier = @"AdCell";
     
     // Do any additional setup after loading the view.
 
-    self.client = [[NADNativeClient alloc] initWithSpotId:@"485500"
+    self.client = [[NADNativeClient alloc] initWithSpotID:485500
                                                    apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
 
     // Max 5

@@ -93,7 +93,7 @@
     //    [placer addFixedIndexPath:[NSIndexPath indexPathForRow:16 inSection:0]];
     
     self.helper = [NADNativeTableViewHelper helperWithTableView:self.tableView
-                                                         spotId:@"485500"
+                                                         spotID:485500
                                                          apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"
                                           advertisingExplicitly:NADNativeAdvertisingExplicitlyPR
                                                     adPlacement:placer

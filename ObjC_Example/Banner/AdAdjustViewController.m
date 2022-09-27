@@ -32,7 +32,7 @@
     self.nadView = [[NADView alloc] initWithIsAdjustAdSize:YES];
 
     // 広告枠のapikey/spotidを設定します(必須)
-    [self.nadView setNendID:self.apiKey spotID:self.spotId];
+    [self.nadView setNendID:self.spotId apiKey:self.apiKey];
 
     // delegateを受けるオブジェクトを指定(任意)
     (self.nadView).delegate = self;

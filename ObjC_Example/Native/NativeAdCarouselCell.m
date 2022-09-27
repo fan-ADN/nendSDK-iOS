@@ -84,7 +84,7 @@ static const float adLandscapeHeight = 200.f; // 横向き　広告高さ
 
 - (void) initAd {
     if (self) {
-        self.client = [[NADNativeClient alloc] initWithSpotId:@"485504" apiKey:@"30fda4b3386e793a14b27bedb4dcd29f03d638e5"];
+        self.client = [[NADNativeClient alloc] initWithSpotID:485504 apiKey:@"30fda4b3386e793a14b27bedb4dcd29f03d638e5"];
         self.ads = [NSMutableArray array];
         self.adViewsP = [NSMutableArray array];
         self.adViewsL = [NSMutableArray array];

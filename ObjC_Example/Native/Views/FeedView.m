@@ -59,7 +59,7 @@
 
 - (void)tapped:(id)sender
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.link]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.link] options:@{} completionHandler:nil];
 }
 
 

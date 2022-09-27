@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol InFeedAdSource: class {
+protocol InFeedAdSource: AnyObject {
     
     var position: InFeedPosition { get }
     var loadedIndexPaths: [IndexPath] { get }

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -88,7 +89,7 @@
                                     <constraint firstAttribute="width" id="nqC-XL-qv6"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TC6-aC-BkN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TC6-aC-BkN">
                                 <rect key="frame" x="79.5" y="700.5" width="255" height="45"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -138,7 +139,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Wpe-xO-DJs" firstAttribute="top" secondItem="hCq-qW-hY4" secondAttribute="bottom" id="0Y5-sJ-wZY"/>
                             <constraint firstItem="Wr0-2o-Lqg" firstAttribute="height" secondItem="W1l-wc-62U" secondAttribute="height" multiplier="0.05" id="0ri-lO-ZYV"/>
@@ -150,13 +151,10 @@
                             <constraint firstItem="bxq-dA-Uio" firstAttribute="height" secondItem="hCq-qW-hY4" secondAttribute="height" id="4cE-Ad-1CU"/>
                             <constraint firstItem="hCq-qW-hY4" firstAttribute="leading" secondItem="W1l-wc-62U" secondAttribute="leading" id="6TW-0N-RIH"/>
                             <constraint firstItem="c7m-LE-n36" firstAttribute="centerX" secondItem="Wpe-xO-DJs" secondAttribute="centerX" id="6n3-eF-egQ"/>
-                            <constraint firstItem="Ul0-kz-IhW" firstAttribute="width" secondItem="W1l-wc-62U" secondAttribute="width" multiplier="0.5" id="Axe-Zt-dRV"/>
-                            <constraint firstItem="Ul0-kz-IhW" firstAttribute="centerY" secondItem="W1l-wc-62U" secondAttribute="centerY" id="BZA-Yb-3u6"/>
                             <constraint firstItem="UDq-Xo-rVN" firstAttribute="height" secondItem="Wr0-2o-Lqg" secondAttribute="height" id="BsP-xY-cpZ"/>
                             <constraint firstItem="ofo-H0-MzB" firstAttribute="leading" secondItem="hCq-qW-hY4" secondAttribute="leading" id="Ce3-7Y-uGl"/>
                             <constraint firstItem="wTF-BO-8O1" firstAttribute="height" secondItem="hCq-qW-hY4" secondAttribute="height" id="Elx-yd-Izd"/>
                             <constraint firstItem="c7m-LE-n36" firstAttribute="height" secondItem="W1l-wc-62U" secondAttribute="height" multiplier="0.2" id="Fj7-gc-FKW"/>
-                            <constraint firstAttribute="trailing" secondItem="lTm-5J-cg4" secondAttribute="trailing" id="G1R-HG-wnu"/>
                             <constraint firstItem="bxq-dA-Uio" firstAttribute="leading" secondItem="hCq-qW-hY4" secondAttribute="leading" id="GVc-UO-JR3"/>
                             <constraint firstItem="Wr0-2o-Lqg" firstAttribute="centerX" secondItem="Wpe-xO-DJs" secondAttribute="centerX" id="GcT-6a-Iem"/>
                             <constraint firstItem="Rto-OT-b3z" firstAttribute="top" secondItem="Jba-D9-0Do" secondAttribute="bottom" id="IYs-fr-Fl2"/>
@@ -175,9 +173,7 @@
                             <constraint firstItem="UDq-Xo-rVN" firstAttribute="bottom" secondItem="Jba-D9-0Do" secondAttribute="top" id="YuL-I2-hnO"/>
                             <constraint firstItem="Wr0-2o-Lqg" firstAttribute="top" secondItem="ofo-H0-MzB" secondAttribute="bottom" id="ZUb-MD-d3u"/>
                             <constraint firstItem="c7m-LE-n36" firstAttribute="width" secondItem="Wr0-2o-Lqg" secondAttribute="width" id="cxt-eT-HAD"/>
-                            <constraint firstItem="lTm-5J-cg4" firstAttribute="centerY" secondItem="W1l-wc-62U" secondAttribute="centerY" id="esJ-8e-RWe"/>
                             <constraint firstItem="57x-EW-9or" firstAttribute="height" secondItem="hCq-qW-hY4" secondAttribute="height" id="fAI-3f-Npl"/>
-                            <constraint firstItem="lTm-5J-cg4" firstAttribute="width" secondItem="Ul0-kz-IhW" secondAttribute="width" id="fxi-IW-4tf"/>
                             <constraint firstItem="c7m-LE-n36" firstAttribute="top" secondItem="wTF-BO-8O1" secondAttribute="bottom" id="gOm-B2-heG"/>
                             <constraint firstItem="hCq-qW-hY4" firstAttribute="height" secondItem="W1l-wc-62U" secondAttribute="height" multiplier="0.04" id="hb8-fc-1N4"/>
                             <constraint firstItem="Wpe-xO-DJs" firstAttribute="centerX" secondItem="W1l-wc-62U" secondAttribute="centerX" id="iBC-ib-gZD"/>
@@ -191,7 +187,6 @@
                             <constraint firstItem="Wpe-xO-DJs" firstAttribute="height" secondItem="W1l-wc-62U" secondAttribute="height" multiplier="0.1" id="tOx-4s-drG"/>
                             <constraint firstItem="UDq-Xo-rVN" firstAttribute="centerX" secondItem="Wpe-xO-DJs" secondAttribute="centerX" id="uha-EU-aLT"/>
                             <constraint firstItem="TC6-aC-BkN" firstAttribute="bottom" secondItem="bxq-dA-Uio" secondAttribute="top" id="vBQ-N9-k2i"/>
-                            <constraint firstItem="Ul0-kz-IhW" firstAttribute="leading" secondItem="W1l-wc-62U" secondAttribute="leading" id="wB7-lc-VHc"/>
                             <constraint firstItem="nrQ-Cl-K5g" firstAttribute="top" secondItem="c7m-LE-n36" secondAttribute="bottom" id="x7L-Hp-h2t"/>
                             <constraint firstItem="ofo-H0-MzB" firstAttribute="height" secondItem="hCq-qW-hY4" secondAttribute="height" id="xi5-qf-7bV"/>
                             <constraint firstItem="wTF-BO-8O1" firstAttribute="top" secondItem="Wr0-2o-Lqg" secondAttribute="bottom" id="z4a-UR-GwK"/>
@@ -213,9 +208,9 @@
                                 <exclude reference="TXm-Wa-hoK"/>
                                 <exclude reference="gOm-B2-heG"/>
                                 <exclude reference="oe8-G5-ACa"/>
-                                <exclude reference="r22-po-wbl"/>
                                 <exclude reference="TLi-ez-NSV"/>
                                 <exclude reference="x7L-Hp-h2t"/>
+                                <exclude reference="r22-po-wbl"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -229,8 +224,8 @@
                                 <include reference="Jrg-BJ-Edw"/>
                                 <include reference="TXm-Wa-hoK"/>
                                 <include reference="oe8-G5-ACa"/>
-                                <include reference="r22-po-wbl"/>
                                 <include reference="TLi-ez-NSV"/>
+                                <include reference="r22-po-wbl"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -255,8 +250,8 @@
                                 <include reference="Jrg-BJ-Edw"/>
                                 <include reference="TXm-Wa-hoK"/>
                                 <include reference="oe8-G5-ACa"/>
-                                <include reference="r22-po-wbl"/>
                                 <include reference="TLi-ez-NSV"/>
+                                <include reference="r22-po-wbl"/>
                             </mask>
                         </variation>
                     </view>
@@ -342,7 +337,7 @@
                                     <constraint firstAttribute="width" constant="80" id="Rty-8n-8Ia"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuc-aF-24k">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuc-aF-24k">
                                 <rect key="frame" x="175" y="367" width="152" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -351,13 +346,13 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baV-JL-L8H">
-                                <rect key="frame" x="335" y="52" width="74" height="24"/>
+                                <rect key="frame" x="335" y="52" width="74" height="21"/>
                                 <connections>
                                     <segue destination="hT3-Ik-kKI" kind="show" id="q3p-Co-ds9"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fER-6k-nEK" firstAttribute="top" secondItem="VSd-63-oUl" secondAttribute="bottom" constant="8" id="0ib-Ub-YFy"/>
                             <constraint firstItem="fbX-G4-OKa" firstAttribute="leading" secondItem="GfW-jf-Zo5" secondAttribute="leading" id="2Qc-cL-28z"/>
@@ -403,4 +398,9 @@
             <point key="canvasLocation" x="-843" y="-844"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

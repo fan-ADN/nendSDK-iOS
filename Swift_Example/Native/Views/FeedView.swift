@@ -57,6 +57,6 @@ class FeedView: UIView {
     var link: String?
     
     @objc func tapped(_ sender: AnyObject) {
-        UIApplication.shared.openURL(URL(string: self.link!)!)
+        UIApplication.shared.open(URL(string: self.link!)!, options: [:], completionHandler: nil)
     }
 }

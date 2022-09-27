@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Delegate: class {
+protocol Delegate: AnyObject {
     func numberOfSections() -> Int
     func numberOfItems(inSection section: Int) -> Int
     func controller(_ controller: InFeedController, didLoadAdAtIndexPath indexPath: IndexPath)

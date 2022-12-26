@@ -14,6 +14,17 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
     
     fileprivate var nadViewManually: NADView!
     
+    @IBOutlet weak var labelDidClickAd: UILabel!
+    @IBOutlet weak var labelDidReceiveAd: UILabel!
+    @IBOutlet weak var labelDidFinishLoad: UILabel!
+    @IBOutlet weak var labelDidFailToReceiveAd: UILabel!
+    @IBOutlet weak var labelDidClickInformation: UILabel!
+    private var countDidClickAd = 0
+    private var countDidReceiveAd = 0
+    private var countDidFinishLoad = 0
+    private var countDidFailToReceiveAd = 0
+    private var countDidClickInformation = 0
+    
     // ------------------------------------------------------------------------------------------------
     // NADViewを生成、ロード開始
     // ------------------------------------------------------------------------------------------------
@@ -184,6 +195,8 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
         } else {
             
         }
+        countDidFinishLoad += 1
+        labelDidFinishLoad.text = "DidFinishLoad: \(countDidFinishLoad)"
     }
     
     // 以下は広告受信成功ごとに通知される任意メソッドです。
@@ -195,6 +208,8 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
         } else {
             
         }
+        countDidReceiveAd += 1
+        labelDidReceiveAd.text = "DidReceiveAd: \(countDidReceiveAd)"
     }
     
     // 以下は広告受信失敗ごとに通知される任意メソッドです。
@@ -233,6 +248,8 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
         } else {
             
         }
+        countDidFailToReceiveAd += 1
+        labelDidFailToReceiveAd.text = "DidFailToReceiveAd: \(countDidFailToReceiveAd)"
     }
     
     // 以下はバナー広告がクリックされるごとに通知される任意メソッドです。
@@ -244,6 +261,8 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
         } else {
             
         }
+        countDidClickAd += 1
+        labelDidClickAd.text = "DidClickAd: \(countDidClickAd)"
     }
 
     // 以下はインフォメーションボタンがクリックされるごとに通知される任意メソッドです。
@@ -255,5 +274,7 @@ class BannerView320x50Controller: UIViewController, NADViewDelegate {
         } else {
             
         }
+        countDidClickInformation += 1
+        labelDidClickInformation.text = "DidClickInformation: \(countDidClickInformation)"
     }
 }

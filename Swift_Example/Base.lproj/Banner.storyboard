@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,11 +17,11 @@
                         <viewControllerLayoutGuide type="bottom" id="uHA-dm-Yg2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="F2o-QI-JhL">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XvV-XB-oXW" customClass="NADView">
-                                <rect key="frame" x="47" y="46" width="320" height="50"/>
+                                <rect key="frame" x="36.666666666666657" y="2" width="320" height="50"/>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8xN-Zg-Ihv"/>
@@ -26,20 +29,83 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="a6eca9dd074372c898dd1df549301f277c53f2b9"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="3172"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="nendSpotID">
+                                        <integer key="value" value="3172"/>
+                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelDidClickAd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5y1-wB-NbR" userLabel="Label Did Click Ad">
+                                <rect key="frame" x="0.0" y="72" width="393" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="labelDidClickAd"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelDidReceiveAd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ND8-ym-3rb">
+                                <rect key="frame" x="0.0" y="95" width="393" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="labelDidReceiveAd"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelDidFinishLoad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOR-Ee-zoF">
+                                <rect key="frame" x="0.0" y="118" width="393" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="labelDidFinishLoad"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelDidFailToReceiveAd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujz-AD-Jwc">
+                                <rect key="frame" x="0.0" y="141" width="393" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="labelDidFailToReceiveAd"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelDidClickInformation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LoO-Tw-XhX">
+                                <rect key="frame" x="0.0" y="164" width="393" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="labelDidClickInformation"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="GOR-Ee-zoF" firstAttribute="leading" secondItem="F2o-QI-JhL" secondAttribute="leading" id="1RQ-E6-df4"/>
+                            <constraint firstItem="LoO-Tw-XhX" firstAttribute="trailing" secondItem="F2o-QI-JhL" secondAttribute="trailing" id="4pN-eU-OPP"/>
+                            <constraint firstItem="GOR-Ee-zoF" firstAttribute="top" secondItem="ND8-ym-3rb" secondAttribute="bottom" constant="2" id="7GE-dN-RNP"/>
+                            <constraint firstItem="LoO-Tw-XhX" firstAttribute="top" secondItem="ujz-AD-Jwc" secondAttribute="bottom" constant="2" id="9uO-RJ-ePy"/>
+                            <constraint firstItem="ND8-ym-3rb" firstAttribute="top" secondItem="5y1-wB-NbR" secondAttribute="bottom" constant="2" id="Frp-4f-tDJ"/>
+                            <constraint firstItem="ujz-AD-Jwc" firstAttribute="top" secondItem="GOR-Ee-zoF" secondAttribute="bottom" constant="2" id="HVP-na-eqa"/>
                             <constraint firstAttribute="centerX" secondItem="XvV-XB-oXW" secondAttribute="centerX" id="Lcr-Qh-mrB"/>
+                            <constraint firstItem="LoO-Tw-XhX" firstAttribute="top" secondItem="ujz-AD-Jwc" secondAttribute="bottom" constant="2" id="Lkq-Ub-rrY"/>
+                            <constraint firstItem="GOR-Ee-zoF" firstAttribute="top" secondItem="ND8-ym-3rb" secondAttribute="bottom" constant="2" id="PWm-7u-AkJ"/>
+                            <constraint firstItem="GOR-Ee-zoF" firstAttribute="trailing" secondItem="F2o-QI-JhL" secondAttribute="trailing" id="RK1-us-HcN"/>
+                            <constraint firstItem="GOR-Ee-zoF" firstAttribute="top" secondItem="ND8-ym-3rb" secondAttribute="bottom" constant="2" id="SJt-3A-FeS"/>
+                            <constraint firstItem="LoO-Tw-XhX" firstAttribute="leading" secondItem="F2o-QI-JhL" secondAttribute="leading" id="SYV-Fv-00b"/>
+                            <constraint firstItem="ujz-AD-Jwc" firstAttribute="leading" secondItem="F2o-QI-JhL" secondAttribute="leading" id="XHZ-qI-kc8"/>
+                            <constraint firstItem="ND8-ym-3rb" firstAttribute="trailing" secondItem="F2o-QI-JhL" secondAttribute="trailing" id="cEZ-Aj-Obw"/>
+                            <constraint firstItem="ND8-ym-3rb" firstAttribute="leading" secondItem="F2o-QI-JhL" secondAttribute="leading" id="iox-hx-PBV"/>
+                            <constraint firstItem="ND8-ym-3rb" firstAttribute="top" secondItem="5y1-wB-NbR" secondAttribute="bottom" constant="2" id="lEP-XW-FLM"/>
+                            <constraint firstItem="ujz-AD-Jwc" firstAttribute="top" secondItem="GOR-Ee-zoF" secondAttribute="bottom" constant="2" id="mDr-J3-cSe"/>
+                            <constraint firstItem="ujz-AD-Jwc" firstAttribute="trailing" secondItem="F2o-QI-JhL" secondAttribute="trailing" id="mVf-5t-Whl"/>
+                            <constraint firstItem="ND8-ym-3rb" firstAttribute="top" secondItem="5y1-wB-NbR" secondAttribute="bottom" constant="2" id="nJj-Vo-UKZ"/>
+                            <constraint firstItem="5y1-wB-NbR" firstAttribute="top" secondItem="XvV-XB-oXW" secondAttribute="bottom" constant="20" id="rNf-IM-mDY"/>
                             <constraint firstItem="XvV-XB-oXW" firstAttribute="top" secondItem="kRi-LQ-OkA" secondAttribute="bottom" constant="2" id="svJ-bB-5bc"/>
+                            <constraint firstItem="5y1-wB-NbR" firstAttribute="leading" secondItem="F2o-QI-JhL" secondAttribute="leading" id="vPH-Vv-wXO"/>
+                            <constraint firstItem="5y1-wB-NbR" firstAttribute="trailing" secondItem="F2o-QI-JhL" secondAttribute="trailing" id="vrv-Sh-8Ib"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zsj-63-FXc"/>
                     <connections>
                         <outlet property="bannerViewFromNib" destination="XvV-XB-oXW" id="AP8-kk-10Q"/>
+                        <outlet property="labelDidClickAd" destination="5y1-wB-NbR" id="1Vg-Ja-5ZA"/>
+                        <outlet property="labelDidClickInformation" destination="LoO-Tw-XhX" id="mKw-rH-1Ne"/>
+                        <outlet property="labelDidFailToReceiveAd" destination="ujz-AD-Jwc" id="Nog-wY-rRI"/>
+                        <outlet property="labelDidFinishLoad" destination="GOR-Ee-zoF" id="YC8-EU-3wg"/>
+                        <outlet property="labelDidReceiveAd" destination="ND8-ym-3rb" id="URe-9f-Ol2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEq-ql-tf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -51,15 +117,15 @@
             <objects>
                 <tableViewController storyboardIdentifier="BannerExamplesViewController" id="IFc-W5-lhh" customClass="BannerExamplesViewController" customModule="Swift_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gKg-LI-izW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BannerExamplesCell" id="YzB-mP-dOL">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YzB-mP-dOL" id="MkD-3l-8jg">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -91,11 +157,11 @@
                         <viewControllerLayoutGuide type="bottom" id="TCz-Vd-jLy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vlH-EM-Ut1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNH-4Z-Aje" customClass="NADView">
-                                <rect key="frame" x="47" y="52" width="320" height="100"/>
+                                <rect key="frame" x="36.666666666666657" y="8" width="320" height="100"/>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="9g0-Ea-5BC"/>
@@ -103,12 +169,14 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="eb5ca11fa8e46315c2df1b8e283149049e8d235e"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70996"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="nendSpotID">
+                                        <integer key="value" value="70996"/>
+                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dNH-4Z-Aje" firstAttribute="top" secondItem="1i1-50-GQ2" secondAttribute="bottom" constant="8" id="R1F-Wg-I4H"/>
                             <constraint firstAttribute="centerX" secondItem="dNH-4Z-Aje" secondAttribute="centerX" id="zL8-mn-HBL"/>
@@ -132,11 +200,11 @@
                         <viewControllerLayoutGuide type="bottom" id="RRI-1u-3Q2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eIl-Ws-uPZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-V8-cZh" customClass="NADView">
-                                <rect key="frame" x="57" y="49" width="300" height="100"/>
+                                <rect key="frame" x="46.666666666666657" y="5" width="300" height="100"/>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="WNd-qc-LTG"/>
@@ -144,12 +212,14 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="25eb32adddc4f7311c3ec7b28eac3b72bbca5656"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70998"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="nendSpotID">
+                                        <integer key="value" value="70998"/>
+                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zNg-V8-cZh" firstAttribute="top" secondItem="cZh-Ud-ySM" secondAttribute="bottom" constant="5" id="tp3-9c-W2U"/>
                             <constraint firstAttribute="centerX" secondItem="zNg-V8-cZh" secondAttribute="centerX" id="zi4-zI-5Id"/>
@@ -173,11 +243,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Zjd-kL-c3f"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bvd-3K-jqr">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4D-65-gRL" customClass="NADView">
-                                <rect key="frame" x="57" y="243" width="300" height="250"/>
+                                <rect key="frame" x="46.666666666666657" y="266.66666666666669" width="300" height="250.00000000000006"/>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="FMs-h3-bie"/>
@@ -185,12 +255,14 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="88d88a288fdea5c01d17ea8e494168e834860fd6"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70356"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="nendSpotID">
+                                        <integer key="value" value="70356"/>
+                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isAdjustAdSize" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="N4D-65-gRL" secondAttribute="centerX" id="Gf3-Bs-Bd2"/>
                             <constraint firstAttribute="centerY" secondItem="N4D-65-gRL" secondAttribute="centerY" id="vPE-O8-Dkg"/>
@@ -214,22 +286,24 @@
                         <viewControllerLayoutGuide type="bottom" id="XGR-y2-J9P"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4Ji-Gq-kNO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZh-Sy-8RU" customClass="NADView">
-                                <rect key="frame" x="-157" y="51" width="728" height="90"/>
+                                <rect key="frame" x="-167.66666666666666" y="7" width="728.33333333333337" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="728" id="3Yq-fS-tXH"/>
                                     <constraint firstAttribute="height" constant="90" id="tio-0M-hU5"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="nendApiKey" value="2e0b9e0b3f40d952e6000f1a8c4d455fffc4ca3a"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="nendSpotID" value="70999"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="nendSpotID">
+                                        <integer key="value" value="70999"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="jZh-Sy-8RU" secondAttribute="centerX" id="eXS-cP-XnL"/>
                             <constraint firstItem="jZh-Sy-8RU" firstAttribute="top" secondItem="eFT-XL-UFl" secondAttribute="bottom" constant="7" id="haA-ef-q7N"/>
@@ -245,4 +319,9 @@
             <point key="canvasLocation" x="460" y="1940"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -29,7 +29,8 @@ class InterstitialViewController: UIViewController, NADInterstitialLoadingDelega
     }
     
     deinit {
-        NADInterstitial.sharedInstance().delegate = nil
+        NADInterstitial.sharedInstance().loadingDelegate = nil
+        NADInterstitial.sharedInstance().clickDelegate = nil
     }
     
     // MARK: Actions

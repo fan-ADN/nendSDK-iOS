@@ -22,7 +22,8 @@
 - (void)dealloc
 {
     // 解放時、デリゲートにnilを設定します
-    [NADInterstitial sharedInstance].delegate = nil;
+    [NADInterstitial sharedInstance].loadingDelegate = nil;
+    [NADInterstitial sharedInstance].clickDelegate = nil;
 }
 
 - (void)viewDidLoad

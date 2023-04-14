@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,13 +13,10 @@
         <scene sceneID="EC7-AZ-0Zz">
             <objects>
                 <viewController id="6d7-HA-emQ" customClass="FullBoardAdWebViewController" customModule="Swift_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NgV-Yr-JdE"/>
-                        <viewControllerLayoutGuide type="bottom" id="hgy-TS-hDa"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BPz-gm-id3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cmY-Xd-JBq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
@@ -38,16 +36,12 @@
         <scene sceneID="t0y-ux-m34">
             <objects>
                 <viewController id="oKN-AV-ig6" customClass="FullBoardTabPageViewController" customModule="Swift_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fxY-AJ-rUV"/>
-                        <viewControllerLayoutGuide type="bottom" id="OGt-vZ-tPj"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ovd-p8-pIe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Hq-bl-N2i">
-                                <rect key="frame" x="4" y="0.0" width="406" height="40"/>
+                                <rect key="frame" x="4" y="48" width="406" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPo-kh-7kr">
                                         <rect key="frame" x="0.0" y="5" width="135.5" height="30"/>
@@ -107,31 +101,32 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvp-P3-mzR">
-                                <rect key="frame" x="0.0" y="40" width="135.5" height="2"/>
+                                <rect key="frame" x="0.0" y="88" width="135.5" height="2"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="srx-yf-RAB"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ksn-H3-B8m">
-                                <rect key="frame" x="4" y="42" width="406" height="766"/>
+                                <rect key="frame" x="4" y="90" width="406" height="748"/>
                                 <connections>
                                     <segue destination="YAt-Rx-hsS" kind="embed" id="6Ws-yH-esn"/>
                                 </connections>
                             </containerView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="siH-fd-IlP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rvp-P3-mzR" firstAttribute="width" secondItem="JPo-kh-7kr" secondAttribute="width" id="4gm-gq-vVf"/>
                             <constraint firstItem="Ksn-H3-B8m" firstAttribute="leading" secondItem="ovd-p8-pIe" secondAttribute="leadingMargin" constant="-16" id="F6A-R0-4hY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5Hq-bl-N2i" secondAttribute="trailing" constant="-16" id="Jd3-9o-POD"/>
                             <constraint firstItem="rvp-P3-mzR" firstAttribute="top" secondItem="5Hq-bl-N2i" secondAttribute="bottom" id="OaV-dJ-UAV"/>
-                            <constraint firstItem="rvp-P3-mzR" firstAttribute="leading" secondItem="ovd-p8-pIe" secondAttribute="leading" id="e4g-VG-FkT"/>
+                            <constraint firstItem="rvp-P3-mzR" firstAttribute="leading" secondItem="siH-fd-IlP" secondAttribute="leading" id="e4g-VG-FkT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ksn-H3-B8m" secondAttribute="trailing" constant="-16" id="eUt-Yh-J45"/>
-                            <constraint firstItem="5Hq-bl-N2i" firstAttribute="top" secondItem="fxY-AJ-rUV" secondAttribute="bottom" id="k0B-Lm-QFJ"/>
+                            <constraint firstItem="5Hq-bl-N2i" firstAttribute="top" secondItem="siH-fd-IlP" secondAttribute="top" id="k0B-Lm-QFJ"/>
                             <constraint firstItem="5Hq-bl-N2i" firstAttribute="leading" secondItem="ovd-p8-pIe" secondAttribute="leadingMargin" constant="-16" id="lNa-IX-qTr"/>
                             <constraint firstItem="Ksn-H3-B8m" firstAttribute="top" secondItem="rvp-P3-mzR" secondAttribute="bottom" id="vDq-On-DHf"/>
-                            <constraint firstItem="OGt-vZ-tPj" firstAttribute="top" secondItem="Ksn-H3-B8m" secondAttribute="bottom" id="wZi-fy-wAJ"/>
+                            <constraint firstItem="siH-fd-IlP" firstAttribute="bottom" secondItem="Ksn-H3-B8m" secondAttribute="bottom" id="wZi-fy-wAJ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -154,7 +149,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="PLz-s1-xyn" detailTextLabel="Nyd-lp-LYw" style="IBUITableViewCellStyleSubtitle" id="9uY-Cv-TlJ">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="88"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9uY-Cv-TlJ" id="VEa-Hb-N94">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
@@ -198,16 +193,12 @@
         <scene sceneID="Hr5-TZ-Mb4">
             <objects>
                 <viewController id="bGe-fG-PcW" customClass="FullBoardAdViewController" customModule="Swift_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6JV-gh-UfK"/>
-                        <viewControllerLayoutGuide type="bottom" id="AcA-tt-WeO"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0vZ-xW-HHA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtz-LH-907">
-                                <rect key="frame" x="54" y="406" width="88" height="30"/>
+                                <rect key="frame" x="54" y="404" width="88" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="rN4-jd-Rm3"/>
                                 </constraints>
@@ -217,7 +208,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAM-pB-h01">
-                                <rect key="frame" x="272" y="406" width="88" height="30"/>
+                                <rect key="frame" x="272" y="404" width="88" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="MQg-Cx-O2a"/>
                                 </constraints>
@@ -227,6 +218,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="v4d-ad-0uP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="ZAM-pB-h01" secondAttribute="trailing" constant="34" id="4I9-I0-in7"/>
@@ -245,15 +237,27 @@
         <scene sceneID="xhp-LL-mcM">
             <objects>
                 <viewController id="SOv-6Z-Y2e" customClass="FullBoardAdPageViewController" customModule="Swift_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4Mw-bX-kbg"/>
-                        <viewControllerLayoutGuide type="bottom" id="eOJ-Sr-wJZ"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iVR-iq-WXG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ht-BA-enT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mJn-o2-56q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6ht-BA-enT" firstAttribute="top" secondItem="iVR-iq-WXG" secondAttribute="top" id="13m-oZ-Xgf"/>
+                            <constraint firstItem="mJn-o2-56q" firstAttribute="bottom" secondItem="6ht-BA-enT" secondAttribute="bottom" id="3jd-6r-fkn"/>
+                            <constraint firstItem="6ht-BA-enT" firstAttribute="leading" secondItem="mJn-o2-56q" secondAttribute="leading" id="Mk6-MD-bIP"/>
+                            <constraint firstItem="mJn-o2-56q" firstAttribute="trailing" secondItem="6ht-BA-enT" secondAttribute="trailing" id="Mxa-dw-tXw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="6ht-BA-enT" id="cV3-fJ-ZMW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilA-I7-8b5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -263,10 +267,6 @@
         <scene sceneID="67h-qG-b5y">
             <objects>
                 <viewController storyboardIdentifier="FullBoardPageContent" id="ZSb-30-Ml9" customClass="FullBoardAdContentViewController" customModule="Swift_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SDC-sy-73A"/>
-                        <viewControllerLayoutGuide type="bottom" id="1A0-H8-CKu"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d64-dp-TW0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,12 +278,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Z9-f0-ZOg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xV4-Lp-CHw" firstAttribute="bottom" secondItem="1A0-H8-CKu" secondAttribute="top" id="S9U-WJ-M5Q"/>
+                            <constraint firstItem="xV4-Lp-CHw" firstAttribute="bottom" secondItem="5Z9-f0-ZOg" secondAttribute="bottom" id="S9U-WJ-M5Q"/>
                             <constraint firstItem="xV4-Lp-CHw" firstAttribute="top" secondItem="d64-dp-TW0" secondAttribute="top" id="dEd-1Z-siw"/>
-                            <constraint firstItem="xV4-Lp-CHw" firstAttribute="leading" secondItem="d64-dp-TW0" secondAttribute="leading" id="fzH-Ae-Z9q"/>
-                            <constraint firstAttribute="trailing" secondItem="xV4-Lp-CHw" secondAttribute="trailing" id="jdp-SH-7BI"/>
+                            <constraint firstItem="xV4-Lp-CHw" firstAttribute="leading" secondItem="5Z9-f0-ZOg" secondAttribute="leading" id="fzH-Ae-Z9q"/>
+                            <constraint firstItem="5Z9-f0-ZOg" firstAttribute="trailing" secondItem="xV4-Lp-CHw" secondAttribute="trailing" id="jdp-SH-7BI"/>
                         </constraints>
                     </view>
                     <connections>

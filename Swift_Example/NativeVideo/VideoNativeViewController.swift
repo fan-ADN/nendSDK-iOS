@@ -10,28 +10,69 @@ import Foundation
 import NendAd
 
 class VideoNativeViewController: UIViewController {
-
-    @IBOutlet private weak var videoView: NADNativeVideoView!
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var descriptionLabel: UILabel!
-    @IBOutlet private weak var advertiserNameLabel: UILabel!
-    @IBOutlet private weak var userRatingLabel: UILabel!
-    @IBOutlet private weak var userRatingCountLabel: UILabel!
-    @IBOutlet private weak var logoImageView: UIImageView!
-    @IBOutlet private weak var callToActionButton: UIButton!
-
+    
+    @IBOutlet weak var container: UIView!
+    
+    @IBOutlet weak var widthConstrainOnPortrait: NSLayoutConstraint!
+    @IBOutlet weak var alignmentConstraintPortrait: NSLayoutConstraint!
+    
+    private var adView: NativeVideoAdBaseView!
     private let loader = NADNativeVideoLoader(spotID: AdSpaces.videoNativeAdSpotId, apiKey: AdSpaces.videoNativeAdApiKey, clickAction: .fullScreen)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let isPortrait = checkDeviceOrientation();
+        setNativeAd(withOrientation: isPortrait)
+        loadNativeVideoAd()
+    }
+        
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        let isPortrait = checkDeviceOrientation();
+        setNativeAd(withOrientation: isPortrait)
+        loadNativeVideoAd()
+    }
+    
+    private func checkDeviceOrientation() -> Bool {
+        let orientation = UIDevice.current.orientation
+        var isPortrait = orientation.isPortrait
+        let isLandscape = orientation.isLandscape
+        
+        if !isLandscape && !isPortrait {
+            isPortrait = UIScreen.main.bounds.width < UIScreen.main.bounds.height;
+        }
+        return isPortrait
+    }
+    
+    private func setNativeAd(withOrientation isPortrait: Bool){
+        if(adView != nil) {
+            adView.removeFromSuperview()
+        }
+        
+        if (isPortrait) {
+            adView = NativeVideoAdPortraitView()
+            widthConstrainOnPortrait.priority = UILayoutPriority(1000)
+            alignmentConstraintPortrait.priority = UILayoutPriority(1000)
+        } else {
+            adView = NativeVideoAdLandscapeView()
+            widthConstrainOnPortrait.priority = UILayoutPriority(0)
+            alignmentConstraintPortrait.priority = UILayoutPriority(0)
+        }
+        self.container.addSubview(adView)
+    }
+    
+    private func loadNativeVideoAd() {
         // Do any additional setup after loading the view.
         
         loader.setFillerStaticNativeAdID(485500, apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071")
         
-        videoView.delegate = self
         // Enable this line if your Interface Builder does not configure rootViewController property.
-//        videoView.rootViewController = self
+        //adView.videoAdView.rootViewController = self
                 
         // load ads
         loader.loadAd { [weak self] (ad, error) in
@@ -39,25 +80,28 @@ class VideoNativeViewController: UIViewController {
             if let videoAd = ad {
                 if videoAd.hasVideo {
                     videoAd.delegate = self
-                    self.titleLabel.text = "title:\n\(videoAd.title ?? "null")"
-                    self.descriptionLabel.text = "description:\n \(videoAd.explanation ?? "null")"
-                    self.advertiserNameLabel.text = "advertiserName:\n\(videoAd.advertiserName ?? "null")"
+                    self.adView.videoAdView.delegate = self
+                        
+                    self.adView.setTitle("title:\n\(videoAd.title ?? "null")")
+                    self.adView.setDescription("description:\n \(videoAd.explanation ?? "null")")
+                    self.adView.setAdvertiser("advertiserName:\n\(videoAd.advertiserName ?? "null")")
+                        
                     if videoAd.userRating != -1.0 && videoAd.userRatingCount != -1 {
-                        self.userRatingLabel.text = "userRating:\n\(videoAd.userRating)"
-                        self.userRatingCountLabel.text = "userRatingCount:\n\(videoAd.userRatingCount)"
+                        self.adView.setUserRating("userRating:\n\(videoAd.userRating)")
+                        self.adView.setUserRatingCount("userRatingCount:\n\(videoAd.userRatingCount)")
                     }
                     if let logoImage = videoAd.logoImage {
-                        self.logoImageView.image = logoImage
+                        self.adView.setLogo(logoImage)
                     } else {
                         videoAd.downloadLogoImage { image in
-                            if let logoImage = image { self.logoImageView.image = logoImage }
+                            if let logoImage = image { self.adView.setLogo(logoImage) }
                         }
                     }
-                    self.callToActionButton.setTitle(videoAd.callToAction, for: .normal)
-                    videoAd.registerInteractionViews([self.callToActionButton])
-
+                    self.adView.setCtaButton(videoAd.callToAction)
+                    videoAd.registerInteractionViews([self.adView.ctaButton])
+                    
                     videoAd.isMutedOnFullScreen = true
-                    self.videoView.videoAd = videoAd
+                    self.adView.setVideoAd(videoAd)
                 } else if let staticNativeAd = videoAd.staticNativeAd {
                     print("nativeAd: \(staticNativeAd)")
                     // display native ads...
@@ -66,13 +110,8 @@ class VideoNativeViewController: UIViewController {
                 print("error: \(error!)")
             }
         }
-    }
         
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
 }
 
 // MARK: - NADNativeVideoDelegate

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		384ED54B31F94B7E7405326B /* Pods_ObjC_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A42DB80D48AB03901FEE58 /* Pods_ObjC_Example.framework */; };
 		4F00280825F0B17B0060C004 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F00280725F0B17B0060C004 /* AppTrackingTransparency.framework */; };
 		4F00280925F0B1830060C004 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F00280725F0B17B0060C004 /* AppTrackingTransparency.framework */; };
 		4F28261B1D1CF659001484EE /* NativeAdNoNibTelopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F28261A1D1CF659001484EE /* NativeAdNoNibTelopViewController.m */; };
@@ -132,6 +133,7 @@
 		B54CAEAC19DE5E15003C6616 /* InterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54CAEAB19DE5E15003C6616 /* InterstitialViewController.swift */; };
 		B5F08FDF251234BB00AFE77F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F08FDE251234BB00AFE77F /* StoreKit.framework */; };
 		B5F08FE0251234C200AFE77F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F08FDE251234BB00AFE77F /* StoreKit.framework */; };
+		BC4E1B1B136841245AB60661 /* Pods_Swift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39287205601D868918DBE239 /* Pods_Swift_Example.framework */; };
 		CC7427B42457C62A004A7838 /* Interstitial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427B22457C62A004A7838 /* Interstitial.storyboard */; };
 		CC7427B72457C6A2004A7838 /* Fullboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427B52457C6A2004A7838 /* Fullboard.storyboard */; };
 		CC7427BA2457C7E6004A7838 /* Native.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7427B82457C7E6004A7838 /* Native.storyboard */; };
@@ -172,6 +174,14 @@
 		CEB2EA6F1E2F43F400A826DE /* FullBoardAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA6E1E2F43F400A826DE /* FullBoardAdViewController.swift */; };
 		CEB2EA721E2F46C200A826DE /* FullBoardAdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA711E2F46C200A826DE /* FullBoardAdPageViewController.swift */; };
 		CEB2EA751E2F472800A826DE /* FullBoardAdContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA741E2F472800A826DE /* FullBoardAdContentViewController.swift */; };
+		F3BE9F0929ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BE9F0829ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift */; };
+		F3BE9F0A29ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BE9F0829ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift */; };
+		F3E08E1E29ECD47900808A4C /* NativeVideoAdPortraitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E08E1D29ECD47900808A4C /* NativeVideoAdPortraitView.xib */; };
+		F3E08E1F29ECD47900808A4C /* NativeVideoAdPortraitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E08E1D29ECD47900808A4C /* NativeVideoAdPortraitView.xib */; };
+		F3E08E2429ECE8F700808A4C /* NativeVideoAdLandscapeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E08E2329ECE8F700808A4C /* NativeVideoAdLandscapeView.xib */; };
+		F3E08E2529ECE8F700808A4C /* NativeVideoAdLandscapeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E08E2329ECE8F700808A4C /* NativeVideoAdLandscapeView.xib */; };
+		F3EE1D8929EEA76800E00F97 /* NativeVideoAdPortraitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE1D8829EEA76800E00F97 /* NativeVideoAdPortraitView.swift */; };
+		F3EE1D8B29EEA77E00E00F97 /* NativeVideoAdLandscapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE1D8A29EEA77E00E00F97 /* NativeVideoAdLandscapeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +195,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1663B7A1E128C78E1CDD28A7 /* Pods-Swift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Example.debug.xcconfig"; path = "Target Support Files/Pods-Swift_Example/Pods-Swift_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		1C5BD1F94B3F9764C6D4F7EB /* Pods-Swift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Example.release.xcconfig"; path = "Target Support Files/Pods-Swift_Example/Pods-Swift_Example.release.xcconfig"; sourceTree = "<group>"; };
+		39287205601D868918DBE239 /* Pods_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B33423017990B9E001D0A08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B33423217990B9E001D0A08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3B33423417990B9E001D0A08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -198,6 +211,7 @@
 		4F28261D1D1CF7F1001484EE /* NativeAdNoNibTelopTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdNoNibTelopTextView.m; sourceTree = "<group>"; };
 		4F9473E22488974E0066AB23 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		4F9473E4248897570066AB23 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		4FA8D2EFC96818468E2BA0AD /* Pods-ObjC_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjC_Example.debug.xcconfig"; path = "Target Support Files/Pods-ObjC_Example/Pods-ObjC_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4FE8F4131D828A2700F577B1 /* AdInterstitialInTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdInterstitialInTransitionViewController.h; sourceTree = "<group>"; };
 		4FE8F4141D828A2700F577B1 /* AdInterstitialInTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdInterstitialInTransitionViewController.m; sourceTree = "<group>"; };
 		4FE8F4161D828DCD00F577B1 /* SelectInterstitialTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectInterstitialTableViewController.h; sourceTree = "<group>"; };
@@ -390,6 +404,13 @@
 		CEB2EA6E1E2F43F400A826DE /* FullBoardAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullBoardAdViewController.swift; sourceTree = "<group>"; };
 		CEB2EA711E2F46C200A826DE /* FullBoardAdPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullBoardAdPageViewController.swift; sourceTree = "<group>"; };
 		CEB2EA741E2F472800A826DE /* FullBoardAdContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullBoardAdContentViewController.swift; sourceTree = "<group>"; };
+		CF05F35AF0873EC54C5845B5 /* Pods-ObjC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjC_Example.release.xcconfig"; path = "Target Support Files/Pods-ObjC_Example/Pods-ObjC_Example.release.xcconfig"; sourceTree = "<group>"; };
+		F3BE9F0829ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeVideoAdBaseView.swift; sourceTree = "<group>"; };
+		F3E08E1D29ECD47900808A4C /* NativeVideoAdPortraitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeVideoAdPortraitView.xib; sourceTree = "<group>"; };
+		F3E08E2329ECE8F700808A4C /* NativeVideoAdLandscapeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeVideoAdLandscapeView.xib; sourceTree = "<group>"; };
+		F3EE1D8829EEA76800E00F97 /* NativeVideoAdPortraitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeVideoAdPortraitView.swift; sourceTree = "<group>"; };
+		F3EE1D8A29EEA77E00E00F97 /* NativeVideoAdLandscapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeVideoAdLandscapeView.swift; sourceTree = "<group>"; };
+		F7A42DB80D48AB03901FEE58 /* Pods_ObjC_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjC_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +430,7 @@
 				CEB2EA4E1E2E1ABF00A826DE /* AdSupport.framework in Frameworks */,
 				CEB2EA4D1E2E1AB900A826DE /* Security.framework in Frameworks */,
 				4F9473E72488977F0066AB23 /* libxml2.tbd in Frameworks */,
+				384ED54B31F94B7E7405326B /* Pods_ObjC_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,12 +457,24 @@
 				CE377C7A1F1DE3ED00F544FE /* AVFoundation.framework in Frameworks */,
 				CEB2EA4B1E2E1AB000A826DE /* AdSupport.framework in Frameworks */,
 				4F9473E52488976E0066AB23 /* libxml2.tbd in Frameworks */,
+				BC4E1B1B136841245AB60661 /* Pods_Swift_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1104C06BF6581BAC4B237ECA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FA8D2EFC96818468E2BA0AD /* Pods-ObjC_Example.debug.xcconfig */,
+				CF05F35AF0873EC54C5845B5 /* Pods-ObjC_Example.release.xcconfig */,
+				1663B7A1E128C78E1CDD28A7 /* Pods-Swift_Example.debug.xcconfig */,
+				1C5BD1F94B3F9764C6D4F7EB /* Pods-Swift_Example.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3B33422417990B9E001D0A08 = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +483,7 @@
 				AD3EC630291E67D300739BAD /* BannerUITests */,
 				3B33422F17990B9E001D0A08 /* Frameworks */,
 				3B33422E17990B9E001D0A08 /* Products */,
+				1104C06BF6581BAC4B237ECA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -481,6 +516,8 @@
 				3B33423017990B9E001D0A08 /* UIKit.framework */,
 				3B33423217990B9E001D0A08 /* Foundation.framework */,
 				3B33423417990B9E001D0A08 /* CoreGraphics.framework */,
+				F7A42DB80D48AB03901FEE58 /* Pods_ObjC_Example.framework */,
+				39287205601D868918DBE239 /* Pods_Swift_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -612,6 +649,8 @@
 		CCD29E56242B5A2F0036B0C8 /* NativeVideo */ = {
 			isa = PBXGroup;
 			children = (
+				F3E08E1929ECD3CE00808A4C /* View */,
+				F3E08E0F29ECD1BE00808A4C /* IInterfaceBuilders */,
 				694C43C720DC87C000F7F5DE /* AdSpaces.swift */,
 				69C131EF20AD65F400886D9F /* VideoNativeViewController.swift */,
 				69613D1F20BFB0F500518EB7 /* VideoNativePageViewController.swift */,
@@ -860,6 +899,25 @@
 			path = Interstitial;
 			sourceTree = "<group>";
 		};
+		F3E08E0F29ECD1BE00808A4C /* IInterfaceBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				F3E08E1D29ECD47900808A4C /* NativeVideoAdPortraitView.xib */,
+				F3E08E2329ECE8F700808A4C /* NativeVideoAdLandscapeView.xib */,
+			);
+			path = IInterfaceBuilders;
+			sourceTree = "<group>";
+		};
+		F3E08E1929ECD3CE00808A4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3BE9F0829ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift */,
+				F3EE1D8829EEA76800E00F97 /* NativeVideoAdPortraitView.swift */,
+				F3EE1D8A29EEA77E00E00F97 /* NativeVideoAdLandscapeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -867,9 +925,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 690C28981B797DF200C92232 /* Build configuration list for PBXNativeTarget "ObjC_Example" */;
 			buildPhases = (
+				526554CFF2B64985370A859D /* [CP] Check Pods Manifest.lock */,
 				690C28701B797DF100C92232 /* Sources */,
 				690C28711B797DF100C92232 /* Frameworks */,
 				690C28721B797DF100C92232 /* Resources */,
+				F06392B2BB2E78B37B9E9E79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -902,9 +962,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B54CAE9919DE5BA9003C6616 /* Build configuration list for PBXNativeTarget "Swift_Example" */;
 			buildPhases = (
+				4DF9B0D69159AB925F53EF33 /* [CP] Check Pods Manifest.lock */,
 				B54CAE7519DE5BA9003C6616 /* Sources */,
 				B54CAE7619DE5BA9003C6616 /* Frameworks */,
 				B54CAE7719DE5BA9003C6616 /* Resources */,
+				166C4B1C2A4711E3AD779B80 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -927,7 +989,7 @@
 				TargetAttributes = {
 					690C28731B797DF100C92232 = {
 						CreatedOnToolsVersion = 6.4;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1420;
 						ProvisioningStyle = Automatic;
 					};
 					AD3EC62E291E67D200739BAD = {
@@ -967,6 +1029,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E08E2529ECE8F700808A4C /* NativeVideoAdLandscapeView.xib in Resources */,
 				690C29231B79A22500C92232 /* native.plist in Resources */,
 				69CEC63D1BD752D600F352DE /* FeedCell2.xib in Resources */,
 				CC7427BD2457C8EE004A7838 /* Banner.storyboard in Resources */,
@@ -990,6 +1053,7 @@
 				690C291F1B799FC400C92232 /* NativeAdViewSmallWide.xib in Resources */,
 				8BD078EC1C9A42B0003ABB82 /* NativeAdCarouselPortraitView.xib in Resources */,
 				CC7427B72457C6A2004A7838 /* Fullboard.storyboard in Resources */,
+				F3E08E1F29ECD47900808A4C /* NativeVideoAdPortraitView.xib in Resources */,
 				690C29211B799FC400C92232 /* NativeAdViewTextOnly.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1022,9 +1086,11 @@
 				69ED188D1BD8CDC500CBEDD0 /* FeedAdCell.xib in Resources */,
 				69ED18921BD8CDC500CBEDD0 /* FeedWithAdCell2.xib in Resources */,
 				69ED18911BD8CDC500CBEDD0 /* FeedCell4.xib in Resources */,
+				F3E08E1E29ECD47900808A4C /* NativeVideoAdPortraitView.xib in Resources */,
 				69ED187E1BD8BEF300CBEDD0 /* NativeAdViewSmallSquare.xib in Resources */,
 				B54CAE8519DE5BA9003C6616 /* Images.xcassets in Resources */,
 				69ED187D1BD8BEF300CBEDD0 /* NativeAdViewSmallWide.xib in Resources */,
+				F3E08E2429ECE8F700808A4C /* NativeVideoAdLandscapeView.xib in Resources */,
 				69ED187F1BD8BEF300CBEDD0 /* NativeAdViewTextOnly.xib in Resources */,
 				CC7427CA2457CD78004A7838 /* Fullboard.storyboard in Resources */,
 				69829E101BE1C2EA00EBFE0A /* FeedWithAdCell3.xib in Resources */,
@@ -1032,6 +1098,89 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		166C4B1C2A4711E3AD779B80 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift_Example/Pods-Swift_Example-resources.sh",
+				"${PODS_ROOT}/NendSDK_iOS/NendAdResource.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NendAdResource.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swift_Example/Pods-Swift_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DF9B0D69159AB925F53EF33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swift_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		526554CFF2B64985370A859D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ObjC_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F06392B2BB2E78B37B9E9E79 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ObjC_Example/Pods-ObjC_Example-resources.sh",
+				"${PODS_ROOT}/NendSDK_iOS/NendAdResource.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NendAdResource.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ObjC_Example/Pods-ObjC_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		690C28701B797DF100C92232 /* Sources */ = {
@@ -1083,6 +1232,7 @@
 				690C287C1B797DF100C92232 /* AppDelegate.m in Sources */,
 				690C28791B797DF100C92232 /* main.m in Sources */,
 				4FE8F4151D828A2700F577B1 /* AdInterstitialInTransitionViewController.m in Sources */,
+				F3BE9F0A29ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1115,11 +1265,13 @@
 				693A21781B79EEC9004B6680 /* NativeAdMenuViewController.swift in Sources */,
 				694C43C820DC87C000F7F5DE /* AdSpaces.swift in Sources */,
 				69C131F020AD65F400886D9F /* VideoNativeViewController.swift in Sources */,
+				F3BE9F0929ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift in Sources */,
 				69FE0E8A20A1430600FAEA05 /* InReadVideoAd.swift in Sources */,
 				698C8B061BE1F76C00BF8811 /* NativeAdPageViewController.swift in Sources */,
 				69ED18741BD8BE1B00CBEDD0 /* NativeAdCellView.swift in Sources */,
 				CEB2EA6F1E2F43F400A826DE /* FullBoardAdViewController.swift in Sources */,
 				69D67F5820AA996700A9824B /* InFeedTableViewController.swift in Sources */,
+				F3EE1D8929EEA76800E00F97 /* NativeVideoAdPortraitView.swift in Sources */,
 				69C55FCD1BD9FC5300D0E34A /* NativeAdCollectionViewController.swift in Sources */,
 				69ED18761BD8BE8C00CBEDD0 /* NativeAdCollectionView.swift in Sources */,
 				69613D2020BFB0F500518EB7 /* VideoNativePageViewController.swift in Sources */,
@@ -1134,6 +1286,7 @@
 				8B1C843E1CB51B4000EE385C /* NativeAdCarouselCell.swift in Sources */,
 				CEB2EA751E2F472800A826DE /* FullBoardAdContentViewController.swift in Sources */,
 				B54CAEA519DE5DF9003C6616 /* BannerView300x250Controller.swift in Sources */,
+				F3EE1D8B29EEA77E00E00F97 /* NativeVideoAdLandscapeView.swift in Sources */,
 				8B1C843F1CB51B4000EE385C /* NativeAdCarouselViewController.swift in Sources */,
 				CC7427D72457D1E3004A7838 /* BannerExamplesViewController.swift in Sources */,
 				B54CAEA619DE5DF9003C6616 /* BannerView320x50Controller.swift in Sources */,
@@ -1381,6 +1534,7 @@
 		};
 		690C28941B797DF200C92232 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FA8D2EFC96818468E2BA0AD /* Pods-ObjC_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1417,11 +1571,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.nend.ObjC-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		690C28951B797DF200C92232 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF05F35AF0873EC54C5845B5 /* Pods-ObjC_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1456,6 +1613,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.nend.ObjC-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1531,6 +1689,7 @@
 		};
 		B54CAE9519DE5BA9003C6616 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1663B7A1E128C78E1CDD28A7 /* Pods-Swift_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_Swift;
 				CLANG_ENABLE_MODULES = YES;
@@ -1575,6 +1734,7 @@
 		};
 		B54CAE9619DE5BA9003C6616 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C5BD1F94B3F9764C6D4F7EB /* Pods-Swift_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_Swift;
 				CLANG_ENABLE_MODULES = YES;

@@ -4,56 +4,104 @@
 //
 //  Copyright © 2018年 FAN Communications. All rights reserved.
 //
-
+#import <UIKit/UIKit.h>
+#import "NativeVideoAdBaseView.h"
+#import "NativeVideoAdPortraitView.h"
+#import "NativeVideoAdLandscapeView.h"
 #import "VideoNativeViewController.h"
 
-@interface VideoNativeViewController () <NADNativeVideoDelegate, NADNativeVideoViewDelegate>
-
-@property (nonatomic) NADNativeVideoLoader *adLoader;
-
-@end
+@import NendAd;
 
 @implementation VideoNativeViewController
 
-- (void)viewDidLoad {
+NADNativeVideoLoader *adLoader;
+NativeVideoAdBaseView *adView;
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    self.adLoader = [[NADNativeVideoLoader alloc] initWithSpotID:887595
-                                                          apiKey:@"e7c1e68e7c16e94270bf39719b60534596b1e70d"];
+    BOOL isPortrait = [self checkDeviceOrientation];
+    [self setAdLoaderWithOrientation: isPortrait];
+    [self setNativeAdWithOrientation: isPortrait];
+    [self loadNativeVideoAd];
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    BOOL isPortrait = [self checkDeviceOrientation];
+    [self setAdLoaderWithOrientation: isPortrait];
+    [self setNativeAdWithOrientation: isPortrait];
+    [self loadNativeVideoAd];
+}
+
+- (BOOL) checkDeviceOrientation
+{
+    UIDeviceOrientation orientation = UIDevice.currentDevice.orientation;
+    return UIDeviceOrientationIsPortrait(orientation);
+}
+
+- (void)setNativeAdWithOrientation:(BOOL)isPortrait
+{
+    if(adView != nil) {
+        [adView removeFromSuperview];
+    }
     
-    [self.adLoader setFillerStaticNativeAdID:485500 apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
+    if(isPortrait){
+        adView = NativeVideoAdPortraitView.new;
+    } else {
+        adView = NativeVideoAdLandscapeView.new;
+    }
+    [self.view addSubview: adView];
+}
+
+- (void)setAdLoaderWithOrientation:(BOOL)isPortrait
+{
+    if(adLoader != nil) {
+        adLoader = nil;
+    }
+    if(isPortrait) {
+        adLoader = [[NADNativeVideoLoader alloc] initWithSpotID:887595
+                                                              apiKey:@"e7c1e68e7c16e94270bf39719b60534596b1e70d"];
+    } else {
+        adLoader = [[NADNativeVideoLoader alloc] initWithSpotID:887596
+                                                              apiKey:@"8a074ba6a82ca1db39002381239357f9fc68e020"];
+    }
+    [adLoader setFillerStaticNativeAdID:485500 apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
+}
+
+- (void) loadNativeVideoAd {
     
-    self.videoView.delegate = self;
     // Enable this line if your Interface Builder does not configure rootViewController property.
-//    self.videoView.rootViewController = self;
+//    adView.videoAdView.rootViewController = self;
     
     // load ads
     __weak typeof(self) weakSelf = self;
-    [self.adLoader loadAdWithCompletionHandler:^(NADNativeVideo * _Nullable ad, NSError * _Nullable error) {
+    [adLoader loadAdWithCompletionHandler:^(NADNativeVideo * _Nullable ad, NSError * _Nullable error) {
         if (weakSelf) {
             if (ad) {
                 if (ad.hasVideo) {
                     ad.delegate = weakSelf;
-                    weakSelf.titleLabel.text = [NSString stringWithFormat:@"title:\n%@", ad.title];
-                    weakSelf.descriptionLabel.text = [NSString stringWithFormat:@"description:\n%@", ad.explanation];
-                    weakSelf.advertiserNameLabel.text = [NSString stringWithFormat:@"advertiserName:\n%@", ad.advertiserName];
-                    weakSelf.userRatingLabel.text = [NSString stringWithFormat:@"userRating:\n%f", ad.userRating];
-                    weakSelf.userRatingCountLabel.text = [NSString stringWithFormat:@"userRatingCount:\n%ld", (long)ad.userRatingCount];
+                    ad.mutedOnFullScreen = NO;
+                    [adView setVideoAd: ad];
+                    
+                    [adView setTitle: [NSString stringWithFormat:@"title:\n%@", ad.title]];
+                    [adView setDescription: [NSString stringWithFormat:@"description:\n%@", ad.explanation]];
+                    [adView setAdvertiser: [NSString stringWithFormat:@"advertiserName:\n%@", ad.advertiserName]];
+                    [adView setUserRating: [NSString stringWithFormat:@"userRating:\n%f", ad.userRating]];
+                    [adView setUserRatingCount: [NSString stringWithFormat:@"userRatingCount:\n%ld", (long)ad.userRatingCount]];
                     if (ad.logoImage) {
-                        weakSelf.logoImageView.image = ad.logoImage;
+                        [adView setLogo: ad.logoImage];
                     } else {
                         [ad downloadLogoImageWithCompletionHandler:^(UIImage * _Nullable image) {
                             if (weakSelf && image) {
-                                weakSelf.logoImageView.image = image;
+                                [adView setLogo: image];
                             }
                         }];
                     }
-                    [weakSelf.callToActionButton setTitle:ad.callToAction forState:UIControlStateNormal];
-                    [ad registerInteractionViews:@[weakSelf.callToActionButton]];
-                    
-                    ad.mutedOnFullScreen = NO;
-                    weakSelf.videoView.videoAd = ad;
+                    [adView setCtaButtonLabel: ad.callToAction];
+                    [ad registerInteractionViews: @[adView.ctaButton]];
                 } else {
                     NADNative *staticNativeAd = ad.staticNativeAd;
                     NSLog(@"nativeAd: %@", staticNativeAd);
@@ -69,11 +117,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (BOOL)shouldAutorotate
-{
-    return NO;
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations

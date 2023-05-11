@@ -33,7 +33,7 @@ class VideoNativePageContentViewController: UIViewController {
 
 class VideoNativePageViewController: UIPageViewController {
 
-    private let adLoader = NADNativeVideoLoader(spotID: AdSpaces.videoNativeAdSpotId, apiKey: AdSpaces.videoNativeAdApiKey, clickAction: .LP)
+    private let adLoader = NADNativeVideoLoader(spotID: AdSpaces.videoNativeAdPortraitSpotId, apiKey: AdSpaces.videoNativeAdPortraitApiKey, clickAction: .LP)
     private var contentViewControllers = [UIViewController]()
     
     override func viewDidLoad() {

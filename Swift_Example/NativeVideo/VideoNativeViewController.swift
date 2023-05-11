@@ -11,18 +11,14 @@ import NendAd
 
 class VideoNativeViewController: UIViewController {
     
-    @IBOutlet weak var container: UIView!
-    
-    @IBOutlet weak var widthConstrainOnPortrait: NSLayoutConstraint!
-    @IBOutlet weak var alignmentConstraintPortrait: NSLayoutConstraint!
-    
     private var adView: NativeVideoAdBaseView!
-    private let loader = NADNativeVideoLoader(spotID: AdSpaces.videoNativeAdSpotId, apiKey: AdSpaces.videoNativeAdApiKey, clickAction: .fullScreen)
+    private var loader: NADNativeVideoLoader!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let isPortrait = checkDeviceOrientation();
+        setAdLoader(withOrientation: isPortrait)
         setNativeAd(withOrientation: isPortrait)
         loadNativeVideoAd()
     }
@@ -34,6 +30,7 @@ class VideoNativeViewController: UIViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         let isPortrait = checkDeviceOrientation();
+        setAdLoader(withOrientation: isPortrait)
         setNativeAd(withOrientation: isPortrait)
         loadNativeVideoAd()
     }
@@ -56,14 +53,18 @@ class VideoNativeViewController: UIViewController {
         
         if (isPortrait) {
             adView = NativeVideoAdPortraitView()
-            widthConstrainOnPortrait.priority = UILayoutPriority(1000)
-            alignmentConstraintPortrait.priority = UILayoutPriority(1000)
         } else {
             adView = NativeVideoAdLandscapeView()
-            widthConstrainOnPortrait.priority = UILayoutPriority(0)
-            alignmentConstraintPortrait.priority = UILayoutPriority(0)
         }
-        self.container.addSubview(adView)
+        self.view.addSubview(adView)
+    }
+    
+    private func setAdLoader(withOrientation isPortrait: Bool) {
+        if(isPortrait) {
+            loader = NADNativeVideoLoader(spotID: AdSpaces.videoNativeAdPortraitSpotId, apiKey: AdSpaces.videoNativeAdPortraitApiKey, clickAction: .fullScreen)
+        } else {
+            loader = NADNativeVideoLoader(spotID: AdSpaces.videoNativeAdLandscapeSpotId, apiKey: AdSpaces.videoNativeAdLandscapeApiKey, clickAction: .fullScreen)
+        }
     }
     
     private func loadNativeVideoAd() {

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -281,30 +281,10 @@
                     <view key="view" contentMode="scaleToFill" id="MPI-6f-wDy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YRL-4C-kbA">
-                                <rect key="frame" x="0.0" y="241" width="414" height="414"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="YRL-4C-kbA" secondAttribute="height" multiplier="1:1" id="3gP-sm-fsC"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="EIC-L0-hxy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="YRL-4C-kbA" firstAttribute="centerX" secondItem="MPI-6f-wDy" secondAttribute="centerX" id="ZOx-pX-QkH"/>
-                            <constraint firstItem="EIC-L0-hxy" firstAttribute="width" secondItem="YRL-4C-kbA" secondAttribute="width" id="cXM-5x-6mt"/>
-                            <constraint firstItem="EIC-L0-hxy" firstAttribute="height" secondItem="YRL-4C-kbA" secondAttribute="height" priority="500" id="mNC-sn-5q2"/>
-                            <constraint firstItem="YRL-4C-kbA" firstAttribute="centerY" secondItem="MPI-6f-wDy" secondAttribute="centerY" priority="500" id="oQ4-H0-GND"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
-                    <connections>
-                        <outlet property="alignmentConstraintPortrait" destination="ZOx-pX-QkH" id="vzc-nC-cbk"/>
-                        <outlet property="container" destination="YRL-4C-kbA" id="t63-sy-7K5"/>
-                        <outlet property="widthConstrainOnPortrait" destination="cXM-5x-6mt" id="Z6l-um-hxL"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xuA-BO-pek" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

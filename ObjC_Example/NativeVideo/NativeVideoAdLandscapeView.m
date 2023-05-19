@@ -29,8 +29,7 @@
 
 - (void) loadXib
 {
-    NSString* className = NSStringFromClass([self class]);
-    UIView *view = [[[NSBundle mainBundle] loadNibNamed: className owner:self options:0] firstObject];
+    UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"NativeVideoAdLandscapeView" owner:self options:nil] firstObject];
     [self addSubview: view];
 }
 

@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NativeVideoAdBaseView" customModule="ObjC_Example" customModuleProvider="target">
             <connections>
                 <outlet property="advertiserLabel" destination="Gd6-PU-gu3" id="5OH-ih-9io"/>
-                <outlet property="ctaButton" destination="4K1-yK-eG0" id="bJY-6H-Gxj"/>
+                <outlet property="ctaButton" destination="4K1-yK-eG0" id="Cdb-4a-sOG"/>
                 <outlet property="descriptionLabel" destination="ktf-Bc-WCE" id="vyb-Ke-1Pn"/>
                 <outlet property="logoImageView" destination="hqX-00-jOW" id="oy0-4v-kwy"/>
                 <outlet property="titleLabel" destination="Ykd-iW-ASC" id="2YP-4Q-gvB"/>

@@ -181,7 +181,6 @@
 		F36E60142A0A42F700A5B1AA /* NativeVideoAdBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F36E60132A0A42F700A5B1AA /* NativeVideoAdBaseView.m */; };
 		F37378CD2A0A2F9800DA58CA /* NativeVideoAdBaseView.h in Sources */ = {isa = PBXBuildFile; fileRef = F37378CC2A0A2F9800DA58CA /* NativeVideoAdBaseView.h */; };
 		F3BE9F0929ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BE9F0829ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift */; };
-		F3BE9F0A29ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BE9F0829ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift */; };
 		F3E08E1E29ECD47900808A4C /* NativeVideoAdPortraitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E08E1D29ECD47900808A4C /* NativeVideoAdPortraitView.xib */; };
 		F3E08E2429ECE8F700808A4C /* NativeVideoAdLandscapeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E08E2329ECE8F700808A4C /* NativeVideoAdLandscapeView.xib */; };
 		F3EE1D8929EEA76800E00F97 /* NativeVideoAdPortraitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE1D8829EEA76800E00F97 /* NativeVideoAdPortraitView.swift */; };
@@ -1272,7 +1271,6 @@
 				F36E60122A0A391A00A5B1AA /* NativeVideoAdLandscapeView.m in Sources */,
 				690C28791B797DF100C92232 /* main.m in Sources */,
 				4FE8F4151D828A2700F577B1 /* AdInterstitialInTransitionViewController.m in Sources */,
-				F3BE9F0A29ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

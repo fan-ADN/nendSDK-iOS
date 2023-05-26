@@ -661,7 +661,7 @@
 			isa = PBXGroup;
 			children = (
 				F3E08E1929ECD3CE00808A4C /* View */,
-				F3E08E0F29ECD1BE00808A4C /* IInterfaceBuilders */,
+				F3E08E0F29ECD1BE00808A4C /* InterfaceBuilders */,
 				694C43C720DC87C000F7F5DE /* AdSpaces.swift */,
 				69C131EF20AD65F400886D9F /* VideoNativeViewController.swift */,
 				69613D1F20BFB0F500518EB7 /* VideoNativePageViewController.swift */,
@@ -934,13 +934,13 @@
 			name = InterfaceBuilders;
 			sourceTree = "<group>";
 		};
-		F3E08E0F29ECD1BE00808A4C /* IInterfaceBuilders */ = {
+		F3E08E0F29ECD1BE00808A4C /* InterfaceBuilders */ = {
 			isa = PBXGroup;
 			children = (
 				F3E08E1D29ECD47900808A4C /* NativeVideoAdPortraitView.xib */,
 				F3E08E2329ECE8F700808A4C /* NativeVideoAdLandscapeView.xib */,
 			);
-			path = IInterfaceBuilders;
+			path = InterfaceBuilders;
 			sourceTree = "<group>";
 		};
 		F3E08E1929ECD3CE00808A4C /* View */ = {

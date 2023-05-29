@@ -38,8 +38,17 @@ NativeVideoAdBaseView *adView;
 
 - (BOOL) checkDeviceOrientation
 {
+    CGRect frame = [[UIScreen mainScreen] bounds];
+    
     UIDeviceOrientation orientation = UIDevice.currentDevice.orientation;
-    return UIDeviceOrientationIsPortrait(orientation);
+    BOOL isPortrait = UIDeviceOrientationIsPortrait(orientation);
+    BOOL isLandscape = UIDeviceOrientationIsLandscape(orientation);
+    
+    if(!isPortrait && !isLandscape) {
+        isPortrait = frame.size.width < frame.size.height;
+    }
+    
+    return isPortrait;
 }
 
 - (void)setNativeAdWithOrientation:(BOOL)isPortrait
@@ -119,10 +128,10 @@ NativeVideoAdBaseView *adView;
     // Dispose of any resources that can be recreated.
 }
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations
-{
-    return UIInterfaceOrientationMaskPortrait;
-}
+//- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+//{
+//    return UIInterfaceOrientationMaskPortrait;
+//}
 
 #pragma mark - NADNativeVideoDelegate
 

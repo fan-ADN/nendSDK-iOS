@@ -9,20 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NativeVideoAdBaseView" customModule="ObjC_Example" customModuleProvider="target">
-            <connections>
-                <outlet property="advertiserLabel" destination="Gd6-PU-gu3" id="5OH-ih-9io"/>
-                <outlet property="ctaButton" destination="4K1-yK-eG0" id="Cdb-4a-sOG"/>
-                <outlet property="descriptionLabel" destination="ktf-Bc-WCE" id="vyb-Ke-1Pn"/>
-                <outlet property="logoImageView" destination="hqX-00-jOW" id="oy0-4v-kwy"/>
-                <outlet property="titleLabel" destination="Ykd-iW-ASC" id="2YP-4Q-gvB"/>
-                <outlet property="userRatingCountLabel" destination="P6S-kK-g8k" id="2VH-VV-Fbn"/>
-                <outlet property="userRatingLabel" destination="cZ4-PT-L6l" id="lgm-69-5Yx"/>
-                <outlet property="videoAdView" destination="TyO-EO-f8K" id="OW2-Ew-bzs"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Native Video Ad Landscape View">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Native Video Ad Landscape View" customClass="NativeVideoAdLandscapeView" customModule="ObjC_Example" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="550" height="350"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -109,6 +98,16 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="advertiserLabel" destination="Gd6-PU-gu3" id="6iG-WV-z5I"/>
+                <outlet property="ctaButton" destination="4K1-yK-eG0" id="bDT-8g-aPr"/>
+                <outlet property="descriptionLabel" destination="ktf-Bc-WCE" id="doN-Ik-xbi"/>
+                <outlet property="logoImageView" destination="hqX-00-jOW" id="Xpl-Pj-wmg"/>
+                <outlet property="titleLabel" destination="Ykd-iW-ASC" id="RKR-rH-bBR"/>
+                <outlet property="userRatingCountLabel" destination="P6S-kK-g8k" id="Gqd-uN-VQu"/>
+                <outlet property="userRatingLabel" destination="cZ4-PT-L6l" id="ehD-r6-Flj"/>
+                <outlet property="videoAdView" destination="TyO-EO-f8K" id="l2w-XA-mMs"/>
+            </connections>
             <point key="canvasLocation" x="138.93129770992365" y="20.422535211267608"/>
         </view>
     </objects>

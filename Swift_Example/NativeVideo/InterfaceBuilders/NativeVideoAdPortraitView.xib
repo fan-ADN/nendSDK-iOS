@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NativeVideoAdPortraitView" customModule="Swift_Example" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NativeVideoAdBaseView" customModule="Swift_Example" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -64,7 +64,7 @@
                         <constraint firstAttribute="width" constant="80" id="qmP-b1-t7d"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbS-LE-LmX" userLabel="Call To Action Button">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRU-cr-3On">
                     <rect key="frame" x="168" y="318" width="152" height="35"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Button"/>
@@ -73,13 +73,13 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="GbS-LE-LmX" firstAttribute="trailing" secondItem="pmD-7o-1fG" secondAttribute="trailing" id="0xZ-68-Qm9"/>
                 <constraint firstItem="pmD-7o-1fG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1hq-ey-slh"/>
                 <constraint firstItem="JkB-qi-mNO" firstAttribute="leading" secondItem="pmD-7o-1fG" secondAttribute="leading" id="7ED-yp-jWL"/>
                 <constraint firstItem="24a-Bl-Ag0" firstAttribute="leading" secondItem="pmD-7o-1fG" secondAttribute="trailing" constant="8" id="7Z2-vB-7Hh"/>
-                <constraint firstItem="GbS-LE-LmX" firstAttribute="bottom" secondItem="JkB-qi-mNO" secondAttribute="bottom" id="ACG-Go-DFt"/>
                 <constraint firstItem="pmD-7o-1fG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DI4-Ad-Qzg"/>
                 <constraint firstItem="Sro-0E-RR6" firstAttribute="top" secondItem="6gi-g9-d39" secondAttribute="bottom" constant="8" id="DUb-vv-Ve2"/>
+                <constraint firstItem="bRU-cr-3On" firstAttribute="leading" secondItem="JkB-qi-mNO" secondAttribute="trailing" constant="8" id="Hbd-mB-43x"/>
+                <constraint firstItem="bRU-cr-3On" firstAttribute="bottom" secondItem="JkB-qi-mNO" secondAttribute="bottom" id="Ip1-Dn-VVg"/>
                 <constraint firstItem="B9Z-Oe-lKk" firstAttribute="leading" secondItem="pmD-7o-1fG" secondAttribute="leading" id="KoX-m7-tJa"/>
                 <constraint firstItem="e35-ff-kAP" firstAttribute="top" secondItem="knQ-kn-3n6" secondAttribute="bottom" constant="8" id="Lb1-qA-uYl"/>
                 <constraint firstItem="JkB-qi-mNO" firstAttribute="top" secondItem="B9Z-Oe-lKk" secondAttribute="bottom" constant="8" id="UCO-xD-asj"/>
@@ -87,10 +87,10 @@
                 <constraint firstItem="Sro-0E-RR6" firstAttribute="trailing" secondItem="pmD-7o-1fG" secondAttribute="trailing" id="XYL-Cj-ahu"/>
                 <constraint firstItem="B9Z-Oe-lKk" firstAttribute="trailing" secondItem="pmD-7o-1fG" secondAttribute="trailing" id="ayp-Bh-bSN"/>
                 <constraint firstItem="e35-ff-kAP" firstAttribute="leading" secondItem="pmD-7o-1fG" secondAttribute="leading" id="bFN-tp-GY3"/>
+                <constraint firstItem="bRU-cr-3On" firstAttribute="trailing" secondItem="pmD-7o-1fG" secondAttribute="trailing" id="eCt-f2-9gh"/>
                 <constraint firstItem="e35-ff-kAP" firstAttribute="trailing" secondItem="pmD-7o-1fG" secondAttribute="trailing" id="iit-A2-7oF"/>
                 <constraint firstItem="6gi-g9-d39" firstAttribute="trailing" secondItem="pmD-7o-1fG" secondAttribute="trailing" id="k6N-j7-PZG"/>
                 <constraint firstItem="6gi-g9-d39" firstAttribute="top" secondItem="pmD-7o-1fG" secondAttribute="bottom" constant="8" id="mmm-wL-wJx"/>
-                <constraint firstItem="GbS-LE-LmX" firstAttribute="leading" secondItem="JkB-qi-mNO" secondAttribute="trailing" constant="8" id="qd6-wV-pvt"/>
                 <constraint firstItem="Sro-0E-RR6" firstAttribute="leading" secondItem="pmD-7o-1fG" secondAttribute="leading" id="r4H-36-PCU"/>
                 <constraint firstItem="6gi-g9-d39" firstAttribute="leading" secondItem="pmD-7o-1fG" secondAttribute="leading" id="txK-fS-4Ko"/>
                 <constraint firstItem="24a-Bl-Ag0" firstAttribute="top" secondItem="pmD-7o-1fG" secondAttribute="top" id="vNM-KV-5xp"/>
@@ -102,7 +102,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="advertiserLabel" destination="knQ-kn-3n6" id="fCs-nE-8Rl"/>
-                <outlet property="ctaButton" destination="GbS-LE-LmX" id="U2T-fg-dxE"/>
+                <outlet property="ctaButton" destination="bRU-cr-3On" id="zff-Q5-MZ0"/>
                 <outlet property="descriptionLabel" destination="Sro-0E-RR6" id="dng-c1-2YL"/>
                 <outlet property="logoImageView" destination="JkB-qi-mNO" id="gLW-hr-pnz"/>
                 <outlet property="titleLabel" destination="6gi-g9-d39" id="1uE-xc-bF6"/>

@@ -10,20 +10,8 @@ import UIKit
 
 class NativeVideoAdPortraitView: NativeVideoAdBaseView {
     
-    override init(frame: CGRect){
-        super.init(frame: frame)
-        loadXib()
-    }
-    
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
-        loadXib()
-    }
-    
-    func loadXib(){
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "NativeVideoAdPortraitView", bundle: bundle)
-        let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
-        self.addSubview(view)
-    }
+    //    static func loadXib() -> Self {
+    //        return UINib(nibName: "NativeVideoAdPortraitView", bundle: nil).instantiate(withOwner: nil, options: nil).first as! Self
+    //    }
+    //}
 }

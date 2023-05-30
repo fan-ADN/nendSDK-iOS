@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NativeVideoAdLandscapeView" customModule="Swift_Example" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NativeVideoAdBaseView" customModule="Swift_Example" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="500" height="350"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -100,7 +100,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="advertiserLabel" destination="NRy-gT-vVK" id="c9Z-mT-l1w"/>
-                <outlet property="ctaButton" destination="bEY-8A-6Su" id="exQ-KZ-GTH"/>
+                <outlet property="ctaButton" destination="bEY-8A-6Su" id="FX1-my-UaZ"/>
                 <outlet property="descriptionLabel" destination="qNL-7G-Bzk" id="XtH-5U-lom"/>
                 <outlet property="logoImageView" destination="JBJ-BD-Ypu" id="OAF-U3-bq9"/>
                 <outlet property="titleLabel" destination="ul0-32-9kG" id="tTt-Mj-uK1"/>

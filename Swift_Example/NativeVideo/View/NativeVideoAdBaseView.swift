@@ -20,6 +20,16 @@ class NativeVideoAdBaseView: UIView {
     @IBOutlet weak var videoAdView: NADNativeVideoView!
     @IBOutlet weak var advertiserLabel: UILabel!
     
+    static func loadPortraitXib() -> NativeVideoAdBaseView {
+        let view = UINib(nibName: "NativeVideoAdPortraitView", bundle: nil).instantiate(withOwner: nil, options: nil).first as! NativeVideoAdBaseView
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        return view
+    }
+    
+    static func loadLandscapeXib() -> NativeVideoAdBaseView {
+        return UINib(nibName: "NativeVideoAdLandscapeView", bundle: nil).instantiate(withOwner: nil, options: nil).first as! NativeVideoAdBaseView
+    }
+    
     func setTitle(_ title: String!){
         self.titleLabel.text = title
     }

@@ -28,12 +28,12 @@ class VideoNativeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        let isPortrait = checkDeviceOrientation();
-        setAdLoader(withOrientation: isPortrait)
-        setNativeAd(withOrientation: isPortrait)
-        loadNativeVideoAd()
-    }
+//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+//        let isPortrait = checkDeviceOrientation();
+//        setAdLoader(withOrientation: isPortrait)
+//        setNativeAd(withOrientation: isPortrait)
+//        loadNativeVideoAd()
+//    }
     
     private func checkDeviceOrientation() -> Bool {
         let orientation = UIDevice.current.orientation
@@ -48,13 +48,13 @@ class VideoNativeViewController: UIViewController {
     
     private func setNativeAd(withOrientation isPortrait: Bool){
         if(adView != nil) {
-            adView.removeFromSuperview()
+            adView = nil
         }
         
         if (isPortrait) {
-            adView = NativeVideoAdPortraitView()
+            adView = NativeVideoAdBaseView.loadPortraitXib()
         } else {
-            adView = NativeVideoAdLandscapeView()
+            adView = NativeVideoAdBaseView.loadLandscapeXib()
         }
         self.view.addSubview(adView)
     }

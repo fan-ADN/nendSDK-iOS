@@ -183,8 +183,6 @@
 		F3BE9F0929ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BE9F0829ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift */; };
 		F3E08E1E29ECD47900808A4C /* NativeVideoAdPortraitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E08E1D29ECD47900808A4C /* NativeVideoAdPortraitView.xib */; };
 		F3E08E2429ECE8F700808A4C /* NativeVideoAdLandscapeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E08E2329ECE8F700808A4C /* NativeVideoAdLandscapeView.xib */; };
-		F3EE1D8929EEA76800E00F97 /* NativeVideoAdPortraitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE1D8829EEA76800E00F97 /* NativeVideoAdPortraitView.swift */; };
-		F3EE1D8B29EEA77E00E00F97 /* NativeVideoAdLandscapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE1D8A29EEA77E00E00F97 /* NativeVideoAdLandscapeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -419,8 +417,6 @@
 		F3BE9F0829ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeVideoAdBaseView.swift; sourceTree = "<group>"; };
 		F3E08E1D29ECD47900808A4C /* NativeVideoAdPortraitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeVideoAdPortraitView.xib; sourceTree = "<group>"; };
 		F3E08E2329ECE8F700808A4C /* NativeVideoAdLandscapeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeVideoAdLandscapeView.xib; sourceTree = "<group>"; };
-		F3EE1D8829EEA76800E00F97 /* NativeVideoAdPortraitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeVideoAdPortraitView.swift; sourceTree = "<group>"; };
-		F3EE1D8A29EEA77E00E00F97 /* NativeVideoAdLandscapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeVideoAdLandscapeView.swift; sourceTree = "<group>"; };
 		F7A42DB80D48AB03901FEE58 /* Pods_ObjC_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjC_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -947,8 +943,6 @@
 			isa = PBXGroup;
 			children = (
 				F3BE9F0829ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift */,
-				F3EE1D8829EEA76800E00F97 /* NativeVideoAdPortraitView.swift */,
-				F3EE1D8A29EEA77E00E00F97 /* NativeVideoAdLandscapeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1311,7 +1305,6 @@
 				69ED18741BD8BE1B00CBEDD0 /* NativeAdCellView.swift in Sources */,
 				CEB2EA6F1E2F43F400A826DE /* FullBoardAdViewController.swift in Sources */,
 				69D67F5820AA996700A9824B /* InFeedTableViewController.swift in Sources */,
-				F3EE1D8929EEA76800E00F97 /* NativeVideoAdPortraitView.swift in Sources */,
 				69C55FCD1BD9FC5300D0E34A /* NativeAdCollectionViewController.swift in Sources */,
 				69ED18761BD8BE8C00CBEDD0 /* NativeAdCollectionView.swift in Sources */,
 				69613D2020BFB0F500518EB7 /* VideoNativePageViewController.swift in Sources */,
@@ -1326,7 +1319,6 @@
 				8B1C843E1CB51B4000EE385C /* NativeAdCarouselCell.swift in Sources */,
 				CEB2EA751E2F472800A826DE /* FullBoardAdContentViewController.swift in Sources */,
 				B54CAEA519DE5DF9003C6616 /* BannerView300x250Controller.swift in Sources */,
-				F3EE1D8B29EEA77E00E00F97 /* NativeVideoAdLandscapeView.swift in Sources */,
 				8B1C843F1CB51B4000EE385C /* NativeAdCarouselViewController.swift in Sources */,
 				CC7427D72457D1E3004A7838 /* BannerExamplesViewController.swift in Sources */,
 				B54CAEA619DE5DF9003C6616 /* BannerView320x50Controller.swift in Sources */,

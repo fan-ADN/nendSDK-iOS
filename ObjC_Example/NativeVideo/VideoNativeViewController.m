@@ -6,8 +6,6 @@
 //
 #import <UIKit/UIKit.h>
 #import "NativeVideoAdBaseView.h"
-#import "NativeVideoAdPortraitView.h"
-#import "NativeVideoAdLandscapeView.h"
 #import "VideoNativeViewController.h"
 
 @import NendAd;
@@ -58,11 +56,12 @@ NativeVideoAdBaseView *adView;
     }
     
     if(isPortrait){
-        adView = NativeVideoAdPortraitView.new;
+        adView = [NativeVideoAdBaseView loadPortraitXib];
     } else {
-        adView = NativeVideoAdLandscapeView.new;
+        adView = [NativeVideoAdBaseView loadLandscapeXib];
     }
-    [self.view addSubview: adView];
+    adView.frame = self.container.bounds;
+    [self.container addSubview: adView];
 }
 
 - (void)setAdLoaderWithOrientation:(BOOL)isPortrait
@@ -83,7 +82,7 @@ NativeVideoAdBaseView *adView;
 - (void) loadNativeVideoAd {
     
     // Enable this line if your Interface Builder does not configure rootViewController property.
-//    adView.videoAdView.rootViewController = self;
+    // adView.videoAdView.rootViewController = self;
     
     // load ads
     __weak typeof(self) weakSelf = self;
@@ -92,8 +91,7 @@ NativeVideoAdBaseView *adView;
             if (ad) {
                 if (ad.hasVideo) {
                     ad.delegate = weakSelf;
-                    ad.mutedOnFullScreen = NO;
-                    [adView setVideoAd: ad];
+                    adView.videoAdView.delegate = weakSelf;
                     
                     [adView setTitle: [NSString stringWithFormat:@"title:\n%@", ad.title]];
                     [adView setDescription: [NSString stringWithFormat:@"description:\n%@", ad.explanation]];
@@ -111,6 +109,9 @@ NativeVideoAdBaseView *adView;
                     }
                     [adView setCtaButtonLabel: ad.callToAction];
                     [ad registerInteractionViews: @[adView.ctaButton]];
+                    ad.mutedOnFullScreen = NO;
+                    
+                    [adView setVideoAd: ad];
                 } else {
                     NADNative *staticNativeAd = ad.staticNativeAd;
                     NSLog(@"nativeAd: %@", staticNativeAd);

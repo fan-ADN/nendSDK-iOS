@@ -16,9 +16,24 @@
                     <view key="view" contentMode="scaleToFill" id="blb-5Z-tlx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfL-1V-LIm">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5JE-qZ-8dJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lfL-1V-LIm" firstAttribute="top" secondItem="5JE-qZ-8dJ" secondAttribute="top" id="Ae3-c6-vwH"/>
+                            <constraint firstItem="5JE-qZ-8dJ" firstAttribute="bottom" secondItem="lfL-1V-LIm" secondAttribute="bottom" id="Iu9-kh-1oP"/>
+                            <constraint firstItem="5JE-qZ-8dJ" firstAttribute="trailing" secondItem="lfL-1V-LIm" secondAttribute="trailing" id="nUg-NN-Q8I"/>
+                            <constraint firstItem="lfL-1V-LIm" firstAttribute="leading" secondItem="5JE-qZ-8dJ" secondAttribute="leading" id="rUC-hL-cZE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="container" destination="lfL-1V-LIm" id="W0j-NE-1Oo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xtW-lA-U16" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

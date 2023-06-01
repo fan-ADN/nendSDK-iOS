@@ -28,4 +28,6 @@
 - (void)setVideoAd:(NADNativeVideo*) videoAd;
 - (void)setAdvertiser:(NSString*) advertiser;
 
++ (NativeVideoAdBaseView*) loadPortraitXib;
++ (NativeVideoAdBaseView*) loadLandscapeXib;
 @end

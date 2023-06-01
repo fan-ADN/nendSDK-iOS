@@ -7,4 +7,6 @@
 //
 @interface VideoNativeViewController: UIViewController <NADNativeVideoViewDelegate, NADNativeVideoDelegate>
 
+@property (weak, nonatomic) IBOutlet UIView *container;
+
 @end

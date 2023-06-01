@@ -176,8 +176,6 @@
 		CEB2EA751E2F472800A826DE /* FullBoardAdContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2EA741E2F472800A826DE /* FullBoardAdContentViewController.swift */; };
 		F3050D4F29F2516600FD8446 /* NativeVideoAdPortraitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3050D4E29F2516600FD8446 /* NativeVideoAdPortraitView.xib */; };
 		F3050D5129F2517400FD8446 /* NativeVideoAdLandscapeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3050D5029F2517400FD8446 /* NativeVideoAdLandscapeView.xib */; };
-		F36E60102A0A36EA00A5B1AA /* NativeVideoAdPortraitView.m in Sources */ = {isa = PBXBuildFile; fileRef = F36E600F2A0A36EA00A5B1AA /* NativeVideoAdPortraitView.m */; };
-		F36E60122A0A391A00A5B1AA /* NativeVideoAdLandscapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F36E60112A0A391A00A5B1AA /* NativeVideoAdLandscapeView.m */; };
 		F36E60142A0A42F700A5B1AA /* NativeVideoAdBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F36E60132A0A42F700A5B1AA /* NativeVideoAdBaseView.m */; };
 		F37378CD2A0A2F9800DA58CA /* NativeVideoAdBaseView.h in Sources */ = {isa = PBXBuildFile; fileRef = F37378CC2A0A2F9800DA58CA /* NativeVideoAdBaseView.h */; };
 		F3BE9F0929ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BE9F0829ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift */; };
@@ -407,12 +405,8 @@
 		CF05F35AF0873EC54C5845B5 /* Pods-ObjC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjC_Example.release.xcconfig"; path = "Target Support Files/Pods-ObjC_Example/Pods-ObjC_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F3050D4E29F2516600FD8446 /* NativeVideoAdPortraitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeVideoAdPortraitView.xib; sourceTree = "<group>"; };
 		F3050D5029F2517400FD8446 /* NativeVideoAdLandscapeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeVideoAdLandscapeView.xib; sourceTree = "<group>"; };
-		F36E600F2A0A36EA00A5B1AA /* NativeVideoAdPortraitView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeVideoAdPortraitView.m; sourceTree = "<group>"; };
-		F36E60112A0A391A00A5B1AA /* NativeVideoAdLandscapeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeVideoAdLandscapeView.m; sourceTree = "<group>"; };
 		F36E60132A0A42F700A5B1AA /* NativeVideoAdBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeVideoAdBaseView.m; sourceTree = "<group>"; };
 		F37378CC2A0A2F9800DA58CA /* NativeVideoAdBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeVideoAdBaseView.h; sourceTree = "<group>"; };
-		F3BB22C32A0CCFAE00D3A3C3 /* NativeVideoAdPortraitView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeVideoAdPortraitView.h; sourceTree = "<group>"; };
-		F3BB22C42A0CD00500D3A3C3 /* NativeVideoAdLandscapeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeVideoAdLandscapeView.h; sourceTree = "<group>"; };
 		F3BB22C52A0CD09C00D3A3C3 /* VideoNativeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoNativeViewController.h; sourceTree = "<group>"; };
 		F3BE9F0829ECF7D5003B6EB0 /* NativeVideoAdBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeVideoAdBaseView.swift; sourceTree = "<group>"; };
 		F3E08E1D29ECD47900808A4C /* NativeVideoAdPortraitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeVideoAdPortraitView.xib; sourceTree = "<group>"; };
@@ -913,10 +907,6 @@
 			children = (
 				F37378CC2A0A2F9800DA58CA /* NativeVideoAdBaseView.h */,
 				F36E60132A0A42F700A5B1AA /* NativeVideoAdBaseView.m */,
-				F36E600F2A0A36EA00A5B1AA /* NativeVideoAdPortraitView.m */,
-				F36E60112A0A391A00A5B1AA /* NativeVideoAdLandscapeView.m */,
-				F3BB22C32A0CCFAE00D3A3C3 /* NativeVideoAdPortraitView.h */,
-				F3BB22C42A0CD00500D3A3C3 /* NativeVideoAdLandscapeView.h */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1227,7 +1217,6 @@
 				690C289E1B79805B00C92232 /* SelectTableViewController.m in Sources */,
 				4FE8F4181D828DCD00F577B1 /* SelectInterstitialTableViewController.m in Sources */,
 				690C290A1B799F9E00C92232 /* NativeAdInFeedViewController.m in Sources */,
-				F36E60102A0A36EA00A5B1AA /* NativeVideoAdPortraitView.m in Sources */,
 				69D46BC61B7C96F60094294A /* UINavigationController+Rotation.m in Sources */,
 				697CD3071E3742E200C2BDBE /* FullBoardAdWebViewController.m in Sources */,
 				690C291B1B799FC400C92232 /* NativeAdCellView.m in Sources */,
@@ -1264,7 +1253,6 @@
 				690C28A41B7984FB00C92232 /* SelectBannerTableViewController.m in Sources */,
 				690C290C1B799F9E00C92232 /* NativeAdPageViewController.m in Sources */,
 				690C287C1B797DF100C92232 /* AppDelegate.m in Sources */,
-				F36E60122A0A391A00A5B1AA /* NativeVideoAdLandscapeView.m in Sources */,
 				690C28791B797DF100C92232 /* main.m in Sources */,
 				4FE8F4151D828A2700F577B1 /* AdInterstitialInTransitionViewController.m in Sources */,
 			);

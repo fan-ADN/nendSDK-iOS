@@ -281,10 +281,25 @@
                     <view key="view" contentMode="scaleToFill" id="MPI-6f-wDy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRv-kS-IVs">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="EIC-L0-hxy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EIC-L0-hxy" firstAttribute="trailing" secondItem="TRv-kS-IVs" secondAttribute="trailing" id="Hi7-hL-IJq"/>
+                            <constraint firstItem="TRv-kS-IVs" firstAttribute="leading" secondItem="EIC-L0-hxy" secondAttribute="leading" id="PEk-yW-nRL"/>
+                            <constraint firstItem="TRv-kS-IVs" firstAttribute="top" secondItem="EIC-L0-hxy" secondAttribute="top" id="aLq-RV-WYR"/>
+                            <constraint firstItem="EIC-L0-hxy" firstAttribute="bottom" secondItem="TRv-kS-IVs" secondAttribute="bottom" id="lTF-lO-OhP"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="container" destination="TRv-kS-IVs" id="0CT-PY-IVN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xuA-BO-pek" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

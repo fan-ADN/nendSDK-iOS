@@ -11,6 +11,8 @@ import NendAd
 
 class VideoNativeViewController: UIViewController {
     
+    @IBOutlet weak var container: UIView!
+    
     private var adView: NativeVideoAdBaseView!
     private var loader: NADNativeVideoLoader!
     
@@ -28,12 +30,12 @@ class VideoNativeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-//        let isPortrait = checkDeviceOrientation();
-//        setAdLoader(withOrientation: isPortrait)
-//        setNativeAd(withOrientation: isPortrait)
-//        loadNativeVideoAd()
-//    }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        let isPortrait = checkDeviceOrientation();
+        setAdLoader(withOrientation: isPortrait)
+        setNativeAd(withOrientation: isPortrait)
+        loadNativeVideoAd()
+    }
     
     private func checkDeviceOrientation() -> Bool {
         let orientation = UIDevice.current.orientation
@@ -56,7 +58,8 @@ class VideoNativeViewController: UIViewController {
         } else {
             adView = NativeVideoAdBaseView.loadLandscapeXib()
         }
-        self.view.addSubview(adView)
+        adView.frame = self.container.bounds
+        self.container.addSubview(adView)
     }
     
     private func setAdLoader(withOrientation isPortrait: Bool) {

@@ -50,7 +50,7 @@ class VideoNativeViewController: UIViewController {
     
     private func setNativeAd(withOrientation isPortrait: Bool){
         if(adView != nil) {
-            adView = nil
+            adView.removeFromSuperview()
         }
         
         if (isPortrait) {
@@ -73,7 +73,7 @@ class VideoNativeViewController: UIViewController {
     private func loadNativeVideoAd() {
         // Do any additional setup after loading the view.
         
-        loader.setFillerStaticNativeAdID(485500, apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071")
+        loader.setFillerStaticNativeAdID(AdSpaces.staticNativeAdSpotId, apiKey: AdSpaces.staticNativeAdApiKey)
         
         // Enable this line if your Interface Builder does not configure rootViewController property.
         //adView.videoAdView.rootViewController = self

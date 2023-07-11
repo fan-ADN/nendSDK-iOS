@@ -142,8 +142,8 @@
                                 [NSLayoutConstraint constraintWithItem:self.nadView
                                                              attribute:NSLayoutAttributeBottom
                                                              relatedBy:NSLayoutRelationEqual
-                                                                toItem:self.bottomLayoutGuide
-                                                             attribute:NSLayoutAttributeTop
+                                                                toItem:self.view.safeAreaLayoutGuide
+                                                             attribute:NSLayoutAttributeBottom
                                                             multiplier:1
                                                               constant:0],
                                 [NSLayoutConstraint constraintWithItem:self.nadView

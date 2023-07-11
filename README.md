@@ -8,8 +8,8 @@ Objective-CとSwiftでの基本的な実装方法と動作確認が行えます�
 nendSDKの導入方法については [Wiki](https://github.com/fan-ADN/nendSDK-iOS/wiki) をご覧ください。
 
 ## Requirement
-* **Xcode 13**以上
-* iOS 10.0以上
+* **Xcode 14.1**以上
+* iOS 11.0以上
 
 ## Usage
 ### CocoaPodsをインストール

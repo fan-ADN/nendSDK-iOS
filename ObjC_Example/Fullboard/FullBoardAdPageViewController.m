@@ -12,6 +12,8 @@
 
 @interface FullBoardAdPageViewController () <UIPageViewControllerDataSource, NADFullBoardViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+
 @property (nonatomic, strong) NSMutableArray<UIViewController *> *contentViewControllers;
 @property (nonatomic, strong) UIPageViewController *pageViewController;
 @property (nonatomic, strong) NADFullBoardLoader *loader;
@@ -28,8 +30,8 @@
                                                               navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
                                                                             options:nil];
     self.pageViewController.dataSource = self;
-    self.pageViewController.view.frame = self.view.frame;
-    [self.view addSubview:self.pageViewController.view];
+    self.pageViewController.view.frame = self.containerView.frame;
+    [self.containerView addSubview:self.pageViewController.view];
     
     self.contentViewControllers = [NSMutableArray array];
     for (int i = 0; i < 5; i++) {

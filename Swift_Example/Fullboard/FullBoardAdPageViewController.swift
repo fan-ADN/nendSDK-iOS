@@ -10,6 +10,9 @@ import NendAd
 
 class FullBoardAdPageViewController: UIViewController, UIPageViewControllerDataSource, NADFullBoardViewDelegate {
     
+    
+    @IBOutlet weak var containerView: UIView!
+    
     private var contentViewControllers = [UIViewController]()
     private var pageViewController: UIPageViewController!
     private var loader = NADFullBoardLoader(spotID: 485504, apiKey: "30fda4b3386e793a14b27bedb4dcd29f03d638e5")
@@ -20,8 +23,8 @@ class FullBoardAdPageViewController: UIViewController, UIPageViewControllerDataS
         
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         self.pageViewController.dataSource = self
-        self.pageViewController.view.frame = self.view.frame
-        self.view.addSubview(self.pageViewController.view)
+        self.pageViewController.view.frame = self.containerView.frame
+        self.containerView.addSubview(self.pageViewController.view)
         
         for i in 0 ..< 5 {
             if let content = self.storyboard?.instantiateViewController(withIdentifier: "FullBoardPageContent") as? FullBoardAdContentViewController {

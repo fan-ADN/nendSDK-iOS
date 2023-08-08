@@ -37,13 +37,13 @@ class VideoNativeViewController: UIViewController {
         setNativeAd(withOrientation: isPortrait)
         loadNativeVideoAd()
     }
-        
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    override func viewWillTransition(to _: CGSize, with _: UIViewControllerTransitionCoordinator) {
         let isPortrait = checkDeviceOrientation();
         setAdLoader(withOrientation: isPortrait)
         setNativeAd(withOrientation: isPortrait)
@@ -82,28 +82,29 @@ class VideoNativeViewController: UIViewController {
         } else {
             adLoader = VideoNativeViewController.landscapeLoader
         }
+        adLoader.setFillerStaticNativeAdID(485500, apiKey: "10d9088b5bd36cf43b295b0774e5dcf7d20a4071")
     }
     
     private func loadNativeVideoAd() {
         // Do any additional setup after loading the view.
         
-        loader.setFillerStaticNativeAdID(AdSpaces.staticNativeAdSpotId, apiKey: AdSpaces.staticNativeAdApiKey)
+        adLoader.setFillerStaticNativeAdID(AdSpaces.staticNativeAdSpotId, apiKey: AdSpaces.staticNativeAdApiKey)
         
         // Enable this line if your Interface Builder does not configure rootViewController property.
         //adView.videoAdView.rootViewController = self
-                
+        
         // load ads
-        loader.loadAd { [weak self] (ad, error) in
+        adLoader.loadAd { [weak self] (ad, error) in
             guard let `self` = self else { return }
             if let videoAd = ad {
                 if videoAd.hasVideo {
                     videoAd.delegate = self
                     self.adView.videoAdView.delegate = self
-                        
+                    
                     self.adView.setTitle("title:\n\(videoAd.title ?? "null")")
                     self.adView.setDescription("description:\n \(videoAd.explanation ?? "null")")
                     self.adView.setAdvertiser("advertiserName:\n\(videoAd.advertiserName ?? "null")")
-                        
+                    
                     if videoAd.userRating != -1.0 && videoAd.userRatingCount != -1 {
                         self.adView.setUserRating("userRating:\n\(videoAd.userRating)")
                         self.adView.setUserRatingCount("userRatingCount:\n\(videoAd.userRatingCount)")
@@ -185,5 +186,5 @@ extension VideoNativeViewController: NADNativeVideoViewDelegate {
     func nadNativeVideoViewDidStopFullScreenPlaying(_ videoView: NADNativeVideoView) {
         print("\(#function)")
     }
-
+    
 }

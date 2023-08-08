@@ -68,11 +68,16 @@ static NADNativeVideoLoader *landscapeLoader;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    
     BOOL isPortrait = [self checkDeviceOrientation];
     [self setAdLoaderWithOrientation: isPortrait];
     [self setNativeAdWithOrientation: isPortrait];
     [self loadNativeVideoAd];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
@@ -116,9 +121,6 @@ static NADNativeVideoLoader *landscapeLoader;
 
 - (void)setAdLoaderWithOrientation:(BOOL)isPortrait
 {
-    if(adLoader != nil) {
-        adLoader = nil;
-    }
     if(isPortrait) {
         adLoader = [VideoNativeViewController portraitLoader];
     } else {
@@ -170,11 +172,6 @@ static NADNativeVideoLoader *landscapeLoader;
             }
         }
     }];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 //- (UIInterfaceOrientationMask)supportedInterfaceOrientations

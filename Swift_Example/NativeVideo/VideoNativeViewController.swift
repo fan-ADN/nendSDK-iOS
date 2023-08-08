@@ -14,7 +14,20 @@ class VideoNativeViewController: UIViewController {
     @IBOutlet weak var container: UIView!
     
     private var adView: NativeVideoAdBaseView!
-    private var loader: NADNativeVideoLoader!
+    private static var portraitAdView: NativeVideoAdBaseView! = {
+        NativeVideoAdBaseView.loadPortraitXib()
+    }()
+    private static var landscapeAdView: NativeVideoAdBaseView! = {
+        NativeVideoAdBaseView.loadLandscapeXib()
+    }()
+    
+    private var adLoader: NADNativeVideoLoader!
+    private static var portraitLoader: NADNativeVideoLoader! = {
+        NADNativeVideoLoader(spotID: AdSpaces.videoNativeAdPortraitSpotId, apiKey: AdSpaces.videoNativeAdPortraitApiKey, clickAction: .fullScreen)
+    }()
+    private static var landscapeLoader: NADNativeVideoLoader! = {
+        NADNativeVideoLoader(spotID: AdSpaces.videoNativeAdLandscapeSpotId, apiKey: AdSpaces.videoNativeAdLandscapeApiKey, clickAction: .fullScreen)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,19 +67,20 @@ class VideoNativeViewController: UIViewController {
         }
         
         if (isPortrait) {
-            adView = NativeVideoAdBaseView.loadPortraitXib()
+            adView = VideoNativeViewController.portraitAdView
         } else {
-            adView = NativeVideoAdBaseView.loadLandscapeXib()
+            adView = VideoNativeViewController.landscapeAdView
         }
+        
         adView.frame = self.container.bounds
         self.container.addSubview(adView)
     }
     
     private func setAdLoader(withOrientation isPortrait: Bool) {
         if(isPortrait) {
-            loader = NADNativeVideoLoader(spotID: AdSpaces.videoNativeAdPortraitSpotId, apiKey: AdSpaces.videoNativeAdPortraitApiKey, clickAction: .fullScreen)
+            adLoader = VideoNativeViewController.portraitLoader
         } else {
-            loader = NADNativeVideoLoader(spotID: AdSpaces.videoNativeAdLandscapeSpotId, apiKey: AdSpaces.videoNativeAdLandscapeApiKey, clickAction: .fullScreen)
+            adLoader = VideoNativeViewController.landscapeLoader
         }
     }
     

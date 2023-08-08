@@ -12,8 +12,57 @@
 
 @implementation VideoNativeViewController
 
-NADNativeVideoLoader *adLoader;
 NativeVideoAdBaseView *adView;
+static NativeVideoAdBaseView *portraitAdView;
+
++ (NativeVideoAdBaseView *) portraitAdView
+{
+    @synchronized(self){
+        if (!portraitAdView) {
+            portraitAdView = [NativeVideoAdBaseView loadPortraitXib];
+        }
+    }
+    return portraitAdView;
+}
+
+static NativeVideoAdBaseView *landscapeAdView;
+
++ (NativeVideoAdBaseView *) landscapeAdView
+{
+    @synchronized(self){
+        if (!landscapeAdView) {
+            landscapeAdView = [NativeVideoAdBaseView loadLandscapeXib];
+        }
+    }
+    return landscapeAdView;
+}
+
+NADNativeVideoLoader *adLoader;
+static NADNativeVideoLoader *portraitLoader;
+
++ (NADNativeVideoLoader *) portraitLoader
+{
+    @synchronized(self){
+        if (!portraitLoader) {
+            portraitLoader = [[NADNativeVideoLoader alloc] initWithSpotID:887595
+                                                                   apiKey:@"e7c1e68e7c16e94270bf39719b60534596b1e70d"];
+        }
+    }
+    return portraitLoader;
+}
+
+static NADNativeVideoLoader *landscapeLoader;
+
++ (NADNativeVideoLoader *) landscapeLoader
+{
+    @synchronized(self){
+        if (!landscapeLoader) {
+            landscapeLoader =  [[NADNativeVideoLoader alloc] initWithSpotID:887596
+                                                                     apiKey:@"8a074ba6a82ca1db39002381239357f9fc68e020"];
+        }
+    }
+    return landscapeLoader;
+}
 
 - (void)viewDidLoad
 {
@@ -56,10 +105,11 @@ NativeVideoAdBaseView *adView;
     }
     
     if(isPortrait){
-        adView = [NativeVideoAdBaseView loadPortraitXib];
+        adView = [VideoNativeViewController portraitAdView];
     } else {
-        adView = [NativeVideoAdBaseView loadLandscapeXib];
+        adView = [VideoNativeViewController landscapeAdView];
     }
+    
     adView.frame = self.container.bounds;
     [self.container addSubview: adView];
 }
@@ -70,11 +120,9 @@ NativeVideoAdBaseView *adView;
         adLoader = nil;
     }
     if(isPortrait) {
-        adLoader = [[NADNativeVideoLoader alloc] initWithSpotID:887595
-                                                              apiKey:@"e7c1e68e7c16e94270bf39719b60534596b1e70d"];
+        adLoader = [VideoNativeViewController portraitLoader];
     } else {
-        adLoader = [[NADNativeVideoLoader alloc] initWithSpotID:887596
-                                                              apiKey:@"8a074ba6a82ca1db39002381239357f9fc68e020"];
+        adLoader = [VideoNativeViewController landscapeLoader];
     }
     [adLoader setFillerStaticNativeAdID:485500 apiKey:@"10d9088b5bd36cf43b295b0774e5dcf7d20a4071"];
 }
@@ -191,6 +239,14 @@ NativeVideoAdBaseView *adView;
 - (void)nadNativeVideoViewDidStopFullScreenPlaying:(NADNativeVideoView *)videoView
 {
     NSLog(@"%s", __FUNCTION__);
+}
+
+- (void)terminate
+{
+    portraitAdView = nil;
+    landscapeAdView = nil;
+    portraitLoader = nil;
+    landscapeLoader = nil;
 }
 
 @end

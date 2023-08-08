@@ -2,7 +2,6 @@
 //  NativeVideoAdBaseView.swift
 //  NendSDK_Sample
 //
-//  Created by 馬場美沙都 on 2023/04/17.
 //  Copyright © 2023 F@N Communications. All rights reserved.
 //
 
